@@ -312,9 +312,9 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
             'latest_window_id': window_id(latest_start), 'today': now.astimezone(TZ).date().isoformat(),
             'last_success_at': iso(now) if successes else (previous or {}).get('last_success_at'),
             'status': status, 'sources': public_sources, 'articles': articles, 'windows': windows,
-            'days': days, 'features': {'topics': settings.get('topics_enabled', True), 'translation': 'local_only'},
+            'days': days, 'features': {'topics': settings.get('topics_enabled', True), 'translation': 'on_demand'},
             'ranking': settings.get('ranking', {}),
-            'ai': {'status': 'local_only', 'message': '云端 AI 已移除；翻译仅在本机按需运行，不上传译文'}}
+            'ai': {'status': 'local_only', 'message': '定时流程不调用 AI；阅读器可按需选择本地引擎或 Gemini 本机接口'}}
 
 
 def run(now, output, state_path):

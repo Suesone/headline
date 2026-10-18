@@ -2,7 +2,7 @@
 
 [打开网页](https://suesone.github.io/headline/) · [源码仓库](https://github.com/Suesone/headline)
 
-每四小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译只在本机按需执行，译文不写入项目文件、不上传 GitHub 或云端翻译服务。**
+每四小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译按需执行，密钥由本机管理，译文不写入项目文件、不上传 GitHub。Chrome / Ollama 为本地推理；可选 Gemini 经本机接口发送原文到 Google。**
 
 ## 当前功能
 
@@ -27,9 +27,29 @@ AFP 的 Fact Check 候选复测仍返回 403，且并非综合新闻流，已从
 
 社区整理或转发不改变内容权利。**本地翻译不等于获得所有媒体条款的豁免或公开传播译文的许可。** 本项目实现私人辅助阅读；原始内容保留来源与链接，不训练模型。
 
-## 本地翻译：面向入门者
+## 按需翻译：面向入门者
 
 完整说明也在网页的 [本地翻译使用说明](https://suesone.github.io/headline/local-guide.html)。
+
+### Gemini API 本机接口（已加入）
+
+Gemini 是 Google 云端推理，不是本地模型。用户已明确接受发送原文；项目不会将译文上传 GitHub。Google 免费档可能处理输入与输出用于服务改进，不能保证服务商不留存内容。密钥仅由本机进程持有，认证时发送 Google，不进入浏览器或仓库。[官方数据条款](https://ai.google.dev/gemini-api/terms)
+
+1. 在 [Google AI Studio](https://aistudio.google.com/api-keys)取得 **Free Tier、未关联计费账户**项目的 API Key。不要启用计费或充值。
+2. 在项目目录运行：
+
+```sh
+python3 -m scripts.local_reader --provider gemini --allow-google-upload --free-tier-confirmed
+```
+
+3. 终端会提示输入密钥，输入不回显，只存于进程内存。不要把密钥发到聊天或写入命令历史。也支持本机已有的 `GEMINI_API_KEY` 环境变量，程序不会打印它。
+4. 打开 **http://127.0.0.1:8765/**，选择 **Gemini API · 原文发送 Google**，再按需翻译。无需安装 Ollama。
+
+默认模型 `gemini-2.5-flash-lite`，当前官方列有免费档；每次启动最多 20 个推理请求。只翻译显示/选中的文字，重复文字使用本页缓存。额度或速率限制（429）会暂停本次启动后续请求，不自动重试、切换模型或付费升级。全文按段发送 Google，可用 `--max-gemini-requests 40` 调整会话上限（最多 100）。
+
+**零费用的前提是你的项目实际处于未关联计费的免费档。程序不能仅凭 API Key 核实账单状态；会话上限也不能为付费项目保证零费用。** 请在 AI Studio 核实 Billing Tier；免费政策、模型或地区不可用时暂停使用。[价格](https://ai.google.dev/gemini-api/docs/pricing) · [计费状态说明](https://ai.google.dev/gemini-api/docs/billing)
+
+关闭阅读器后清空进程密钥，刷新页面清除译文缓存。公开网页不直接调用 Gemini；本机接口也不会接收浏览器传来的密钥、任意模型名或远程 API 地址。没有后台批量翻译、文件上传、Google Search grounding 或持久化云缓存。本轮只用模拟响应测试接口，没有真实密钥或真实 API 调用。
 
 ### 方式一：桌面 Chrome
 
@@ -103,7 +123,7 @@ node --test tests/*.test.cjs
 
 - `public/`：发布的网页、排序与本地翻译客户端；`data/news.json` 只包含新闻快照。
 - `scripts/collect.py`：RSS 获取、清洗、去重、归档。没有云端翻译入口。
-- `scripts/local_reader.py`：只监听本机的阅读器与云功能关闭的 Ollama 适配器。
+- `scripts/local_reader.py`：本机阅读器、云功能关闭的 Ollama，以及明确启用后才调用的 Gemini 接口。
 - `state/news.json`：滚动英文历史；`state/health.json`：免费定时流程的两天运行观察。
 - `archive/`：旧热词页面和云端 AI 代码，仅保留、不发布、不执行。
 - `tests/`：日期边界、去重、来源失败、排序、翻译分段/缓存/取消与本机隔离验证。

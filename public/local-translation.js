@@ -1,4 +1,4 @@
-/* No remote translation endpoints, keys, telemetry, or persistent text cache. */
+/* Browser-local engines or explicit Gemini via loopback gateway; no client keys or persistent text cache. */
 (function (root) {
   'use strict';
   const isLoopback = hostname => ['localhost', '127.0.0.1', '[::1]', '::1'].includes(hostname);
@@ -22,7 +22,7 @@
       this.environment = environment; this.engine = 'browser'; this.browser = null; this.cache = new Map(); this.pending = new Map();
     }
     setEngine(engine) {
-      if (!['browser', 'ollama'].includes(engine)) throw new Error('只支持本地翻译引擎');
+      if (!['browser', 'ollama', 'gemini'].includes(engine)) throw new Error('不支持的翻译引擎');
       this.engine = engine;
     }
     async prepare() {
@@ -35,11 +35,12 @@
         // Only reached from an explicit user translation click; language packs may download.
         this.browser = await this.environment.Translator.create(options);
       } else {
-        if (!isLoopback(this.environment.location.hostname)) throw new Error('Ollama 仅在本地阅读器使用。请在电脑上运行 python3 -m scripts.local_reader，再打开它显示的本机地址。');
+        if (!isLoopback(this.environment.location.hostname)) throw new Error('Ollama / Gemini 接口仅在本地阅读器使用。请按使用说明启动本机接口，再打开它显示的本机地址。');
         const response = await this.environment.fetch('/api/local/status', {cache: 'no-store', signal: AbortSignal.timeout(5000)});
         if (!response.ok) throw new Error('本地阅读器未运行，或 Ollama 尚未准备好。');
         const status = await response.json();
-        if (!status.ready || status.local_only !== true) throw new Error(status.message || '本地模型尚未就绪。');
+        if (!status.ready) throw new Error(status.message || '翻译接口尚未就绪。');
+        if (this.engine === 'gemini' ? status.provider !== 'gemini' || status.local_only !== false || status.cloud_provider !== 'Google' : status.local_only !== true) throw new Error('所选引擎与阅读器不匹配；不会自动切换或发送原文。');
         this.model = status.model;
       }
     }

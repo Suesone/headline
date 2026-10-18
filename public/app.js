@@ -8,6 +8,8 @@ function option(value, text) { const n = el('option',text); n.value = value; ret
 let data, busy = false, controller = null, rendering = 0;
 const limits = new Map(), selected = new Set();
 const translator = new HeadlineLocal.LocalTranslator();
+const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
+const engineNote = () => translator.engine === 'gemini' ? '原文发送 Google；本项目仅在本页保存译文，不上传 GitHub。Google 可能按其条款处理输入与输出。' : '译文只在此页面，未发送云端翻译服务。';
 function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',VOA:'voa',Reuters:'reuters'}[s.publisher] || 'all'); }
 function sourceIcon(s) { return el('span', s.publisher === 'Reuters' ? 'R' : s.id === 'all' ? '榜' : s.publisher, 'source-tile ' + sourceClass(s)); }
 function sourceInfo(id) { return data.sources.find(s => s.id === id); }
@@ -61,8 +63,8 @@ function articleNode(article, rank, featured, board = null) {
   const actions = el('div',undefined,'article-actions');
   const label = el('label',undefined,'selection-label'); const check = el('input'); check.type = 'checkbox'; check.checked = selected.has(article.id); check.dataset.selectArticle = article.id; check.setAttribute('aria-label','选择报道：' + article.title);
   check.addEventListener('change',() => { if (check.checked) selected.add(article.id); else selected.delete(article.id); for (const other of document.querySelectorAll('input[data-select-article]')) if (other.dataset.selectArticle === article.id) other.checked = check.checked; updateSelection(); }); label.append(check,document.createTextNode('选择'));
-  const one = el('button','翻译','text-button'); one.type = 'button'; one.setAttribute('aria-label','本地翻译：' + article.title); one.addEventListener('click',() => translateNodes([...body.querySelectorAll('[data-translation]')]));
-  const full = el('button','全文','text-button'); full.type = 'button'; full.setAttribute('aria-label','本地全文翻译：' + article.title); full.addEventListener('click',() => openFulltext(article));
+  const one = el('button','翻译','text-button'); one.type = 'button'; one.setAttribute('aria-label','翻译报道：' + article.title); one.addEventListener('click',() => translateNodes([...body.querySelectorAll('[data-translation]')]));
+  const full = el('button','全文','text-button'); full.type = 'button'; full.setAttribute('aria-label','全文翻译：' + article.title); full.addEventListener('click',() => openFulltext(article));
   actions.append(label,one,full); body.append(actions); wrap.append(body); return wrap;
 }
 function render() {
@@ -106,18 +108,18 @@ async function translateNodes(nodes) {
   const unique = [...new Set(nodes.map(n => n.dataset.translation))].filter(Boolean);
   if (!unique.length) { $('translation-status').textContent = '当前屏幕没有新闻文字。请先选择报道，或滚动到新闻处点击“翻译”。'; return; }
   const generation = rendering; controller = new AbortController(); setBusy(true);
-  $('translation-status').textContent = '正在准备本地引擎；首次使用浏览器引擎可能需要下载语言包…';
+  $('translation-status').textContent = `正在准备${engineLabel()}引擎；首次使用浏览器引擎可能需要下载语言包…`;
   try {
     translator.setEngine($('translation-engine').value); await translator.prepare();
     for (const [i,text] of unique.entries()) {
       controller.signal.throwIfAborted();
-      $('translation-status').textContent = `正在本机翻译 ${i + 1}/${unique.length} 段，共 ${unique.reduce((sum,t)=>sum+t.length,0)} 个原文字符；重复文字复用缓存。`;
+      $('translation-status').textContent = `正在通过${engineLabel()}翻译 ${i + 1}/${unique.length} 段，共 ${unique.reduce((sum,t)=>sum+t.length,0)} 个原文字符；重复文字复用缓存。`;
       const result = await translator.translate(text,{signal:controller.signal});
       if (generation !== rendering) continue;
       // Update only already rendered text, including its duplicated board/source occurrence.
       for (const node of document.querySelectorAll('[data-translation]')) if (node.dataset.translation === text) { const out = node.nextElementSibling; out.textContent = result; out.hidden = false; }
     }
-    $('translation-status').textContent = `已在本机翻译 ${unique.length} 段。译文只在此页面，未上传。`;
+    $('translation-status').textContent = `已通过${engineLabel()}翻译 ${unique.length} 段。${engineNote()}`;
   } catch (error) { $('translation-status').textContent = error.name === 'AbortError' ? '已停止后续翻译，已完成的译文保留在本页。' : error.message; }
   finally { setBusy(false); controller = null; }
 }
@@ -133,12 +135,12 @@ async function translateFulltext() {
   const text = $('fulltext-input').value.trim(); if (!text) { $('fulltext-status').textContent = '请先粘贴正文或导入 .txt。'; return; }
   controller = new AbortController(); setBusy(true); $('fulltext-input').disabled = true; $('fulltext-file').disabled = true;
   $('fulltext-output').textContent = ''; $('fulltext-output').hidden = true;
-  $('fulltext-status').textContent = '正在准备本地翻译引擎…';
+  $('fulltext-status').textContent = `正在准备${engineLabel()}翻译引擎…`;
   try {
     translator.setEngine($('translation-engine').value); await translator.prepare();
-    const result = await translator.translate(text,{signal:controller.signal,progress:(done,total)=> { $('fulltext-status').textContent = `本机全文翻译：${done}/${total} 段。${text.length} 字符，未上传。`; }});
+    const result = await translator.translate(text,{signal:controller.signal,progress:(done,total)=> { $('fulltext-status').textContent = `${engineLabel()}全文翻译：${done}/${total} 段。${text.length} 字符。${engineNote()}`; }});
     $('fulltext-output').textContent = result; $('fulltext-output').hidden = false;
-    $('fulltext-status').textContent = '全文翻译完成，输入与译文仅在本页保存。';
+    $('fulltext-status').textContent = `全文翻译完成。${engineNote()}`;
   } catch (error) { $('fulltext-status').textContent = error.name === 'AbortError' ? '已停止全文翻译。' : error.message; }
   finally { setBusy(false); $('fulltext-input').disabled = false; $('fulltext-file').disabled = false; controller = null; }
 }
@@ -156,7 +158,7 @@ function initTranslation() {
   $('open-manual-fulltext').addEventListener('click',() => openFulltext());
   new MutationObserver(() => { $('translation-toast').textContent = $('translation-status').textContent; $('translation-toast').hidden = false; }).observe($('translation-status'),{childList:true,subtree:true,characterData:true});
   $('clear-translations').addEventListener('click',clearTranslations);
-  $('translation-engine').addEventListener('change',() => { translator.setEngine($('translation-engine').value); $('translation-status').textContent = '已切换本地引擎，点击翻译后才运行。'; });
+  $('translation-engine').addEventListener('change',() => { translator.setEngine($('translation-engine').value); $('translation-location').textContent = translator.engine === 'gemini' ? 'GOOGLE CLOUD API' : 'LOCAL ONLY'; $('translation-status').textContent = `已切换${engineLabel()}引擎，点击后才翻译。${engineNote()}`; });
   $('close-fulltext').addEventListener('click',() => { controller?.abort(); $('fulltext-dialog').close(); });
   $('fulltext-dialog').addEventListener('cancel',()=>controller?.abort());
   $('translate-fulltext').addEventListener('click',translateFulltext);

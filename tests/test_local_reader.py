@@ -88,3 +88,72 @@ def test_translate_rejects_truncated_output_and_keeps_prompts_local(monkeypatch)
         runtime.translate('Private English text')
     assert calls[1][0] == '/api/chat' and calls[1][1]['messages'][1]['content'] == 'Private English text'
     assert runtime.base == 'http://127.0.0.1:11435'
+
+
+def test_gemini_requires_explicit_upload_free_tier_and_key(monkeypatch):
+    monkeypatch.delenv('GEMINI_API_KEY', raising=False)
+    for allow, free, key in [(False, True, 'x'*30), (True, False, 'x'*30), (True, True, '')]:
+        runtime = local.GeminiRuntime(allow_upload=allow, free_tier_confirmed=free, api_key=key)
+        monkeypatch.setattr(local.sys.stdin, 'isatty', lambda: False)
+        runtime.start()
+        assert not runtime.status()['ready']
+        with pytest.raises(RuntimeError):
+            runtime.translate('Must never be sent')
+    with pytest.raises(ValueError):
+        local.GeminiRuntime(model='gemini-4-argon')
+
+
+def test_gemini_request_key_is_header_only_and_never_in_status(monkeypatch):
+    key = 'secret-for-test-not-real-key-12345'
+    runtime = local.GeminiRuntime(allow_upload=True, free_tier_confirmed=True, api_key=key, max_requests=1)
+    runtime.start()
+    import io
+    class Transport:
+        requests = []
+        def open(self, request, timeout):
+            self.requests.append(request)
+            return io.BytesIO(json.dumps({'candidates':[{'finishReason':'STOP','content':{'parts':[{'text':'译文'}]}}]}).encode())
+    transport = Transport(); monkeypatch.setattr(local, 'DIRECT', transport)
+    assert runtime.translate('Selected title only') == '译文'
+    request = transport.requests[0]
+    assert request.full_url == 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent'
+    assert key not in request.full_url and request.get_header('X-goog-api-key') == key
+    payload = json.loads(request.data)
+    assert payload['contents'][0]['parts'][0]['text'] == 'Selected title only'
+    assert not any(k in payload for k in ['tools','cachedContent','fileData'])
+    assert key not in json.dumps(runtime.status())
+    assert runtime.status()['local_only'] is False and runtime.status()['provider'] == 'gemini'
+    with pytest.raises(RuntimeError, match='上限'):
+        runtime.translate('Cannot exceed budget')
+    assert len(transport.requests) == 1
+    runtime.close(); assert runtime.api_key == ''
+
+
+def test_gemini_quota_pause_never_retries_or_leaks_error_body(monkeypatch):
+    import io
+    runtime = local.GeminiRuntime(allow_upload=True, free_tier_confirmed=True, api_key='x'*30)
+    runtime.start()
+    class Transport:
+        calls = 0
+        def open(self, request, timeout):
+            self.calls += 1
+            raise HTTPError(request.full_url, 429, 'secret error', {}, io.BytesIO(b'sensitive-key-or-text'))
+    transport = Transport();monkeypatch.setattr(local,'DIRECT',transport)
+    with pytest.raises(RuntimeError, match='暂停') as error:
+        runtime.translate('Private text')
+    assert 'sensitive' not in str(error.value) and not runtime.status()['ready']
+    with pytest.raises(RuntimeError):
+        runtime.translate('Another text')
+    assert transport.calls == 1
+
+
+def test_gemini_incomplete_translation_is_rejected(monkeypatch):
+    import io
+    runtime = local.GeminiRuntime(allow_upload=True, free_tier_confirmed=True, api_key='x'*30)
+    runtime.start()
+    class Transport:
+        def open(self, *args, **kwargs):
+            return io.BytesIO(json.dumps({'candidates':[{'finishReason':'MAX_TOKENS','content':{'parts':[{'text':'partial'}]}}]}).encode())
+    monkeypatch.setattr(local,'DIRECT',Transport())
+    with pytest.raises(RuntimeError, match='未完整'):
+        runtime.translate('Long text')
