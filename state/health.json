@@ -1,40 +1,18 @@
 {
-  "started_at": "2026-10-18T03:19:53.945712Z",
+  "started_at": "2026-10-18T13:28:49.481265Z",
   "runs": [
     {
-      "at": "2026-10-18T03:22:26.104848Z",
-      "slot": "2026-10-18T08:00+08:00",
-      "status": "ok",
-      "ai": "disabled",
-      "articles": 23,
-      "failed_sources": []
-    },
-    {
-      "at": "2026-10-18T04:52:32.908097Z",
-      "slot": "2026-10-18T12:00+08:00",
-      "status": "ok",
-      "ai": "local_only",
-      "articles": 229,
-      "failed_sources": []
-    },
-    {
-      "at": "2026-10-18T08:39:44.242037Z",
-      "slot": "2026-10-18T16:00+08:00",
-      "status": "ok",
-      "ai": "local_only",
-      "articles": 231,
-      "failed_sources": []
-    },
-    {
-      "at": "2026-10-18T13:15:48.972580Z",
+      "at": "2026-10-18T13:28:49.481265Z",
       "slot": "2026-10-18T20:00+08:00",
       "status": "ok",
-      "ai": "local_only",
-      "articles": 257,
+      "ai": "on_demand",
+      "articles": 428,
       "failed_sources": []
     }
   ],
+  "note": "更新频率变更为两小时，重新开始覆盖观察",
+  "window_hours": 2,
   "observation_complete": false,
-  "healthy": true,
-  "missing_slots": []
+  "missing_slots": [],
+  "healthy": true
 }

@@ -8,7 +8,9 @@
     "featured_per_source": 2
   },
   "translation": {
-    "mode": "local_only",
+    "mode": "gemini_on_demand",
+    "default_engine": "gemini",
     "default_enabled": false
-  }
+  },
+  "window_hours": 2
 }

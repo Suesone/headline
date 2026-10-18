@@ -107,5 +107,99 @@
     "allowed_link_domains": [
       "cnbc.com"
     ]
+  },
+  {
+    "enabled": true,
+    "mode": "links_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
+    "max_feed_age_hours": 96,
+    "license": "原文版权归来源所有；保留标题、署名与链接",
+    "id": "guardian-world",
+    "name": "The Guardian World",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/world/rss",
+    "homepage": "https://www.theguardian.com/world",
+    "terms_url": "https://www.theguardian.com/help/terms-of-service",
+    "license_url": "https://www.theguardian.com/help/terms-of-service",
+    "community_name": "Plenary RSS 目录",
+    "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
+    "allowed_link_domains": [
+      "theguardian.com"
+    ],
+    "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。"
+  },
+  {
+    "enabled": true,
+    "mode": "links_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
+    "max_feed_age_hours": 96,
+    "license": "原文版权归来源所有；保留标题、署名与链接",
+    "id": "washingtonpost-world",
+    "name": "The Washington Post",
+    "publisher": "The Washington Post",
+    "url": "https://feeds.washingtonpost.com/rss/world",
+    "homepage": "https://www.washingtonpost.com/world/",
+    "terms_url": "https://www.washingtonpost.com/rss-terms-of-service/",
+    "license_url": "https://www.washingtonpost.com/rss-terms-of-service/",
+    "community_name": "Plenary RSS 目录",
+    "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
+    "allowed_link_domains": [
+      "washingtonpost.com"
+    ],
+    "note": "优先社区目录收录的官方 World RSS；官方不可用时使用 Google News 标题聚合，备用覆盖全报并非仅 World。聚合链接经 Google News 跳转，不抓取付费正文。",
+    "fallbacks": [
+      {
+        "url": "https://news.google.com/rss/search?q=site%3Awashingtonpost.com+when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+        "relay_name": "Google News 聚合",
+        "relay_url": "https://news.google.com/",
+        "allowed_link_domains": [
+          "news.google.com"
+        ],
+        "entry_source_domains": [
+          "washingtonpost.com"
+        ],
+        "time_basis": "feed_publication"
+      }
+    ]
+  },
+  {
+    "enabled": true,
+    "mode": "links_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
+    "max_feed_age_hours": 96,
+    "license": "原文版权归来源所有；保留标题、署名与链接",
+    "id": "nhk-world",
+    "name": "NHK WORLD-JAPAN",
+    "publisher": "NHK",
+    "url": "https://rsshub.app/nhk/news/en?limit=30",
+    "homepage": "https://www3.nhk.or.jp/nhkworld/en/news/",
+    "terms_url": "https://www3.nhk.or.jp/nhkworld/en/terms/",
+    "license_url": "https://www3.nhk.or.jp/nhkworld/en/terms/",
+    "relay_name": "RSSHub",
+    "relay_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/nhk/news.tsx",
+    "allowed_link_domains": [
+      "nhk.or.jp",
+      "nhkworld.jp"
+    ],
+    "note": "优先 RSSHub 社区维护的英文路由；不可用时读取 Google News 中署名域名属于 NHK 的英文标题。备用链接经 Google News 跳转，不抓全文。",
+    "fallbacks": [
+      {
+        "url": "https://news.google.com/rss/search?q=NHK+WORLD+JAPAN+when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
+        "relay_name": "Google News 聚合",
+        "relay_url": "https://news.google.com/",
+        "allowed_link_domains": [
+          "news.google.com"
+        ],
+        "entry_source_domains": [
+          "nhk.or.jp",
+          "nhkworld.jp"
+        ],
+        "english_titles_only": true,
+        "time_basis": "feed_publication"
+      }
+    ]
   }
 ]

@@ -15,7 +15,7 @@ STATES = [{'id': s['id'], 'status': 'ok', 'last_success_at': c.iso(NOW)} for s i
 TERM = {'id': c.digest('united states'), 'label': 'United States', 'kind': 'entity'}
 
 
-def article(id='one', source='a', stamp='2026-10-18T05:00:00+08:00', title='United States announces new climate agreement with Japan'):
+def article(id='one', source='a', stamp='2026-10-18T07:00:00+08:00', title='United States announces new climate agreement with Japan'):
     return {'id': id, 'identities': [source + ':' + id], 'source_id': source,
             'publisher': source.upper(), 'title': title, 'url': 'https://example.org/' + id,
             'summary': 'Negotiations in Japan.', 'author': '', 'published_at': c.iso(c.dt(stamp)),
@@ -28,7 +28,9 @@ def dataset(articles=None, now=NOW, states=None, previous=None):
 
 @pytest.mark.parametrize(('stamp', 'expected'), [
     ('2026-10-18T00:00:00+08:00', '2026-10-18T00:00+08:00'),
-    ('2026-10-18T03:59:59+08:00', '2026-10-18T00:00+08:00'),
+    ('2026-10-18T01:59:59+08:00', '2026-10-18T00:00+08:00'),
+    ('2026-10-18T02:00:00+08:00', '2026-10-18T02:00+08:00'),
+    ('2026-10-18T03:59:59+08:00', '2026-10-18T02:00+08:00'),
     ('2026-10-18T04:00:00+08:00', '2026-10-18T04:00+08:00'),
     ('2026-10-17T20:00:00Z', '2026-10-18T04:00+08:00'),
 ])
@@ -39,7 +41,7 @@ def test_window_boundary(stamp, expected):
 def test_midnight_assigns_previous_day_and_excludes_open_window():
     now = c.dt('2026-10-18T00:05:00+08:00')
     d = dataset([article(stamp='2026-10-17T23:00:00+08:00'), article('open', stamp='2026-10-18T00:01:00+08:00')], now)
-    assert d['latest_window_id'] == '2026-10-17T20:00+08:00'
+    assert d['latest_window_id'] == '2026-10-17T22:00+08:00'
     assert d['days'][0]['topics'] == []
     assert d['days'][1]['topics'][0]['article_count'] == 1
     assert all('open' not in w['article_ids'] for w in d['windows'])
@@ -87,7 +89,7 @@ def test_atom_uses_published_before_updated():
     xml = b'''<feed xmlns="http://www.w3.org/2005/Atom"><title>Feed</title><entry><id>1</id><title>Story</title><link href="https://example.org/story"/><published>2026-10-17T23:00:00+08:00</published><updated>2026-10-18T05:00:00+08:00</updated></entry></feed>'''
     entries, skipped = c.parse_feed(xml, SOURCES[0], NOW)
     assert skipped == 0
-    assert entries[0]['window_id'] == '2026-10-17T20:00+08:00'
+    assert entries[0]['window_id'] == '2026-10-17T22:00+08:00'
 
 
 def test_repeat_guid_url_revision_near_titles_and_cross_source():
@@ -328,7 +330,7 @@ def test_current_collection_disables_nlp_cloud_and_published_translations(monkey
     assert all(a['topics'] == [] and 'title_zh' not in a for a in d['articles'])
     assert all(w['topics'] == [] for w in d['windows'])
     assert all(day['topics'] == [] for day in d['days'])
-    assert d['ai']['status'] == 'local_only'
+    assert d['ai']['status'] == 'on_demand'
     assert 'test-secret' not in (root / 'public/data/news.json').read_text()
 
 
@@ -339,3 +341,44 @@ def test_feed_rank_follows_feed_order_and_updates_on_repeat():
     old = deepcopy(items[0]);old['feed_rank'] = 10
     updated = c.merge_articles([old], items, NOW-timedelta(days=30))
     assert next(a for a in updated if a['id'] == old['id'])['feed_rank'] == 1
+
+
+def test_retained_history_is_rebucketed_without_duplicate_articles():
+    old = article(stamp='2026-10-18T03:30:00+08:00')
+    old['window_id'] = '2026-10-18T00:00+08:00'  # Previous four-hour cadence.
+    d = dataset([old])
+    window = next(w for w in d['windows'] if w['id'] == '2026-10-18T02:00+08:00')
+    assert window['article_ids'] == ['one']
+    assert sum('one' in w['article_ids'] for w in d['windows']) == 1
+    assert all(c.dt(w['end']) - c.dt(w['start']) == timedelta(hours=2) for w in d['windows'])
+
+
+def test_google_aggregation_rejects_other_publishers_and_preserves_attribution():
+    xml = b'''<rss version="2.0"><channel><title>Search</title>
+    <item><title>Japan holds talks - NHK</title><link>https://news.google.com/rss/articles/one</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate><source url="https://www3.nhk.or.jp">NHK</source></item>
+    <item><title>NHK documentary - Other</title><link>https://news.google.com/rss/articles/two</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate><source url="https://evil.nhk.or.jp.attacker.test">Other</source></item>
+    </channel></rss>'''
+    source = {**SOURCES[0], 'allowed_link_domains': ['news.google.com'],
+              'entry_source_domains': ['nhk.or.jp'], 'mode': 'links_only', 'time_basis': 'feed_publication'}
+    items, skipped = c.parse_feed(xml, source, NOW)
+    assert len(items) == 1 and skipped == 1
+    assert items[0]['title'] == 'Japan holds talks' and items[0]['summary'] == ''
+    c.apply_source_policy(items[0], SOURCES[0])
+    assert items[0]['time_basis'] == 'feed_publication'
+
+
+def test_failed_primary_uses_configured_backup_without_claiming_official_success(monkeypatch):
+    source = {**SOURCES[0], 'fallbacks': [{'url': 'https://backup.example/rss',
+               'relay_name': 'Google News 聚合', 'relay_url': 'https://news.google.com/'}]}
+    calls = []
+    def fetch(url):
+        calls.append(url)
+        if url == source['url']:
+            raise ValueError('primary unavailable')
+        return b'feed'
+    monkeypatch.setattr(c, 'request_bytes', fetch)
+    monkeypatch.setattr(c, 'parse_feed', lambda *a: ([article()], 0))
+    items, state = c.fetch_source(source, NOW)
+    assert calls == [source['url'], 'https://backup.example/rss']
+    assert state['status'] == 'ok' and state['using_fallback'] is True
+    assert state['relay_name'] == 'Google News 聚合' and items

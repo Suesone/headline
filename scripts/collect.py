@@ -1,4 +1,4 @@
-"""RSS → deterministic four-hour windows → optional cached AI → static JSON."""
+"""RSS → deterministic two-hour windows → optional cached AI → static JSON."""
 from __future__ import annotations
 
 import argparse
@@ -20,6 +20,7 @@ import feedparser
 
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('Asia/Shanghai')
+WINDOW_HOURS = 2
 STOP = {'news', 'world', 'today', 'latest', 'live', 'report', 'reports', 'says', 'said',
         'watch', 'video', 'people', 'year', 'years', 'day', 'days', 'week', 'month',
         'story', 'stories', 'new', 'first', 'last', 'global voices', 'wikinews',
@@ -39,7 +40,7 @@ def dt(value):
 
 def boundary(value):
     local = value.astimezone(TZ)
-    return local.replace(hour=local.hour // 4 * 4, minute=0, second=0, microsecond=0)
+    return local.replace(hour=local.hour // WINDOW_HOURS * WINDOW_HOURS, minute=0, second=0, microsecond=0)
 
 
 def window_id(value):
@@ -60,7 +61,7 @@ def apply_source_policy(article, source):
     article['analysis_allowed'] = source.get('topics_enabled', default)
     article['ai_allowed'] = source.get('ai_enabled', default)
     article['topics_title_only'] = source.get('topics_title_only', False)
-    article['time_basis'] = source.get('time_basis', 'publication')
+    article['time_basis'] = article.get('time_basis', source.get('time_basis', 'publication'))
     if source.get('mode') == 'links_only':
         article['summary'] = ''
     if not article['analysis_allowed']:
@@ -128,7 +129,19 @@ def parse_feed(content, source, now):
             published = datetime.fromtimestamp(calendar.timegm(stamp), timezone.utc)
             if published > now + timedelta(minutes=5):
                 raise ValueError('Future publication date')
+            # Aggregators can include unrelated publishers: verify their RSS source tag.
+            source_domains = source.get('entry_source_domains', [])
+            if source_domains:
+                origin = urlsplit(entry.get('source', {}).get('href', '')).hostname or ''
+                if not any(origin == d or origin.endswith('.' + d) for d in source_domains):
+                    raise ValueError('Unrelated aggregator publisher')
             title = plain(entry.get('title'), 350)
+            if source_domains:
+                credit = plain(entry.get('source', {}).get('title', ''), 100)
+                if credit and title.endswith(' - ' + credit):
+                    title = title[:-len(' - ' + credit)].strip()
+            if source.get('english_titles_only') and re.search(r'[\u3040-\u30ff\u3400-\u9fff]', title):
+                raise ValueError('Not an English headline')
             if not title:
                 raise ValueError('No title')
             if any(title.casefold().startswith(prefix.casefold()) for prefix in source.get('exclude_title_prefixes', [])):
@@ -160,22 +173,29 @@ def parse_feed(content, source, now):
 def fetch_source(source, now):
     if not source.get('enabled'):
         return [], {'id': source['id'], 'status': 'disabled', 'message': source.get('note', '')}
-    for attempt in range(3):
-        try:
-            articles, skipped = parse_feed(request_bytes(source['url']), source, now)
-            max_age = source.get('max_feed_age_hours')
-            if max_age and (not articles or max(dt(a['published_at']) for a in articles) < now - timedelta(hours=max_age)):
-                return [], {'id': source['id'], 'status': 'error', 'checked_at': iso(now),
-                            'message': f'订阅最新条目已超过 {max_age} 小时，可能暂停更新；保留先前记录'}
-            return articles, {'id': source['id'], 'status': 'ok', 'checked_at': iso(now),
-                              'last_success_at': iso(now), 'received': len(articles), 'skipped': skipped,
-                              'message': f'已读取 {len(articles)} 条；跳过 {skipped} 条无效记录'}
-        except Exception:
-            # Do not expose URLs, request headers or credentials in data/logs.
-            if attempt < 2:
-                time.sleep(2 ** attempt)
+    candidates = [source, *[{**source, **fallback} for fallback in source.get('fallbacks', [])]]
+    for index, candidate in enumerate(candidates):
+        attempts = 1 if index < len(candidates) - 1 else 3
+        for attempt in range(attempts):
+            try:
+                articles, skipped = parse_feed(request_bytes(candidate['url']), candidate, now)
+                max_age = source.get('max_feed_age_hours')
+                if not articles or (max_age and max(dt(a['published_at']) for a in articles) < now - timedelta(hours=max_age)):
+                    raise ValueError('Empty or stale feed')
+                state = {'id': source['id'], 'status': 'ok', 'checked_at': iso(now),
+                         'last_success_at': iso(now), 'received': len(articles), 'skipped': skipped,
+                         'message': f'已读取 {len(articles)} 条；跳过 {skipped} 条无效记录',
+                         'active_feed_url': candidate['url'], 'using_fallback': index > 0}
+                if index > 0:
+                    state.update(relay_name=candidate['relay_name'], relay_url=candidate['relay_url'])
+                    state['message'] += '；主源不可用，正在使用 Google News 备用标题聚合'
+                return articles, state
+            except Exception:
+                # Do not expose URLs, request headers or credentials in data/logs.
+                if attempt < attempts - 1:
+                    time.sleep(2 ** attempt)
     return [], {'id': source['id'], 'status': 'error', 'checked_at': iso(now),
-                'message': '读取失败，已重试三次；保留先前记录'}
+                'message': f"订阅读取失败、无有效内容或超过 {source.get('max_feed_age_hours', 96)} 小时未更新；重试后保留先前记录"}
 
 
 def merge_articles(previous, incoming, cutoff):
@@ -273,10 +293,13 @@ def rank_topics(articles, limit=None):
 
 def build_dataset(articles, sources, statuses, now, settings, previous=None):
     end = boundary(now)
-    latest_start = end - timedelta(hours=4)
+    latest_start = end - timedelta(hours=WINDOW_HOURS)
     cutoff = (now.astimezone(TZ).replace(hour=0, minute=0, second=0, microsecond=0)
               - timedelta(days=settings['retention_days'] - 1))
     articles = [a for a in articles if cutoff <= dt(a['published_at']) < now]
+    # Rebucket retained history when cadence changes; IDs and publication times stay stable.
+    for article in articles:
+        article['window_id'] = window_id(dt(article['published_at']))
     complete = [a for a in articles if dt(a['published_at']) < end]
     windows = []
     cursor = cutoff
@@ -287,9 +310,9 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
         weights = {a['id']: max((t['source_count'] for t in topics if a['id'] in t['article_ids']), default=0)
                    for a in subset}
         subset.sort(key=lambda a: (weights[a['id']], a['published_at']), reverse=True)
-        windows.append({'id': key, 'start': iso(cursor), 'end': iso(cursor + timedelta(hours=4)),
+        windows.append({'id': key, 'start': iso(cursor), 'end': iso(cursor + timedelta(hours=WINDOW_HOURS)),
                         'date': cursor.date().isoformat(), 'article_ids': [a['id'] for a in subset], 'topics': topics})
-        cursor += timedelta(hours=4)
+        cursor += timedelta(hours=WINDOW_HOURS)
     days = []
     for n in range(settings['retention_days']):
         date = (now.astimezone(TZ).date() - timedelta(days=n)).isoformat()
@@ -308,13 +331,13 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
         if state['status'] != 'ok':
             state['last_success_at'] = old_status.get(state['id'], {}).get('last_success_at')
         public_sources.append({**source, **state})
-    return {'schema_version': 1, 'generated_at': iso(now), 'timezone': 'Asia/Shanghai',
+    return {'schema_version': 1, 'generated_at': iso(now), 'timezone': 'Asia/Shanghai', 'window_hours': WINDOW_HOURS,
             'latest_window_id': window_id(latest_start), 'today': now.astimezone(TZ).date().isoformat(),
             'last_success_at': iso(now) if successes else (previous or {}).get('last_success_at'),
             'status': status, 'sources': public_sources, 'articles': articles, 'windows': windows,
             'days': days, 'features': {'topics': settings.get('topics_enabled', True), 'translation': 'on_demand'},
             'ranking': settings.get('ranking', {}),
-            'ai': {'status': 'local_only', 'message': '定时流程不调用 AI；阅读器可按需选择本地引擎或 Gemini 本机接口'}}
+            'ai': {'status': 'on_demand', 'message': '定时流程不调用 AI；网页默认选中 Gemini，点击后才翻译标题'}}
 
 
 def run(now, output, state_path):

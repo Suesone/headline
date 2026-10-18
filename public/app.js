@@ -8,10 +8,11 @@ function option(value, text) { const n = el('option',text); n.value = value; ret
 let data, busy = false, controller = null, rendering = 0;
 const limits = new Map(), selected = new Set();
 const translator = new HeadlineLocal.LocalTranslator();
+translator.setEngine('gemini');
 const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
 const engineNote = () => translator.engine === 'gemini' ? '原文发送 Google；本项目仅在本页保存译文，不上传 GitHub。Google 可能按其条款处理输入与输出。' : '译文只在此页面，未发送云端翻译服务。';
-function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',Reuters:'reuters'}[s.publisher] || 'all'); }
-function sourceIcon(s) { return el('span', s.publisher === 'Reuters' ? 'R' : s.id === 'all' ? '榜' : s.publisher, 'source-tile ' + sourceClass(s)); }
+function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',Reuters:'reuters','The Guardian':'guardian','The Washington Post':'wapo',NHK:'nhk'}[s.publisher] || 'all'); }
+function sourceIcon(s) { return el('span', s.id === 'all' ? '榜' : ({Reuters:'R','The Guardian':'G','The Washington Post':'WP'}[s.publisher] || s.publisher), 'source-tile ' + sourceClass(s)); }
 function sourceInfo(id) { return data.sources.find(s => s.id === id); }
 function rankSetting(key, fallback, max = 30) { const value = data.ranking?.[key]; return Number.isInteger(value) && value > 0 && value <= max ? value : fallback; }
 function pool() {
@@ -30,7 +31,7 @@ function shortcuts() {
   for (const s of sources) {
     const button = el('button',undefined,'source-shortcut' + (s.id === $('source-select').value ? ' active' : ''));
     button.type = 'button'; button.setAttribute('aria-pressed',String(s.id === $('source-select').value));
-    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name ? '社区 RSS' : '官方 RSS','shortcut-subtitle'));
+    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? 'Google News 备用' : s.relay_name ? '社区 RSS' : '官方 RSS','shortcut-subtitle'));
     button.addEventListener('click',() => { if (busy) return; $('source-select').value = s.id; render(); }); list.append(button);
   }
 }
@@ -51,14 +52,12 @@ function articleNode(article, rank, featured, board = null) {
   const title = textBlock(article.title,article,'title','h3','article-title');
   const heading = title.querySelector('h3'); heading.replaceChildren(link(article.title,article.url,'article-link'));
   body.append(title);
-  if (featured && article.summary) body.append(textBlock(article.summary,article,'summary','p','article-summary'));
-  if (featured && !article.summary) body.append(el('p','RSS 未提供摘要，点击标题阅读原文。','summary-missing'));
   const meta = el('div',undefined,'article-meta');
   const credit = source.publisher === 'BBC' ? 'BBC News' : source.publisher;
   meta.append(link(credit,source.homepage),el('span',(article.time_basis === 'feed_publication' ? '订阅 ' : '') + format(article.published_at)));
-  if (featured && article.summary) meta.append(el('span','RSS 摘要'));
   if (board && board.publisher_count > 1) meta.append(el('span',`${board.publisher_count} 家媒体 · 同标题`,'cross-source'));
   if (board) meta.append(el('span',`来源榜第 ${Math.min(...board.positions.map(p=>p.position))} 位`));
+  if (article.time_basis === 'feed_publication' && new URL(article.url).hostname === 'news.google.com') meta.append(el('span','经 Google News 跳转'));
   body.append(meta);
   const actions = el('div',undefined,'article-actions');
   const label = el('label',undefined,'selection-label'); const check = el('input'); check.type = 'checkbox'; check.checked = selected.has(article.id); check.dataset.selectArticle = article.id; check.setAttribute('aria-label','选择报道：' + article.title);
@@ -78,7 +77,7 @@ function render() {
   $('article-count').textContent = `${articles.length} 篇报道`;
   const window = data.windows.find(w => w.id === $('window-select').value);
   const featured = rankSetting('featured_per_source',2,5);
-  $('period-caption').textContent = window ? `${format(window.start)} — ${format(window.end)} · 北京时间` : $('window-select').value === 'recent' ? `最近 24 小时 · 已完成时段 · 前 ${featured} 条展开摘要` : `最近 30 天 · 已完成时段 · 前 ${featured} 条展开摘要`;
+  $('period-caption').textContent = window ? `${format(window.start)} — ${format(window.end)} · 北京时间` : $('window-select').value === 'recent' ? `最近 24 小时 · 已完成时段 · 前 ${featured} 条标题加大` : `最近 30 天 · 已完成时段 · 前 ${featured} 条标题加大`;
   const grid = $('news-list'); grid.replaceChildren();
   for (const s of data.sources.filter(s => s.enabled && ($('source-select').value === 'all' || s.id === $('source-select').value))) {
     const items = HeadlineRanking.rankSources(articles.filter(a => a.source_id === s.id),now);
@@ -92,7 +91,7 @@ function render() {
     card.append(rows);
     const footer = el('div',undefined,'source-card-footer');
     if (items.length > limit) { const more = el('button',`再显示 ${Math.min(10,items.length-limit)} 条 ↓`,'text-button'); more.type = 'button'; more.addEventListener('click',() => { if (busy) return; limits.set(s.id,limit + 10); render(); }); footer.append(more); }
-    else footer.append(el('span',s.relay_name ? `${s.relay_name} 社区 RSS` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
+    else footer.append(el('span',s.relay_name ? `${s.relay_name}${s.relay_name === 'Google News 聚合' ? ' · 备用' : ' 社区 RSS'}` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
     footer.append(link(s.publisher === 'BBC' ? 'BBC News ↗' : '来源网站 ↗',s.homepage)); card.append(footer); grid.append(card);
   }
 }
@@ -108,7 +107,7 @@ async function translateNodes(nodes) {
   const unique = [...new Set(nodes.map(n => n.dataset.translation))].filter(Boolean);
   if (!unique.length) { $('translation-status').textContent = '当前屏幕没有新闻文字。请先选择报道，或滚动到新闻处点击“翻译”。'; return; }
   const generation = rendering; controller = new AbortController(); setBusy(true);
-  $('translation-status').textContent = `正在准备${engineLabel()}引擎；首次使用浏览器引擎可能需要下载语言包…`;
+  $('translation-status').textContent = `正在连接${engineLabel()}翻译接口…`;
   try {
     translator.setEngine($('translation-engine').value); await translator.prepare();
     for (const [i,text] of unique.entries()) {
