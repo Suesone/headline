@@ -6,7 +6,7 @@ function safeUrl(value) { try { const u = new URL(value); return ['https:', 'htt
 function link(text, value, className) { const n = el('a', text, className); const url = safeUrl(value); if (url) { n.href = url; n.target = '_blank'; n.rel = 'noopener noreferrer'; } return n; }
 function option(value, text) { const n = el('option',text); n.value = value; return n; }
 let data, busy = false, controller = null, rendering = 0, translationsVisible = true;
-const limits = new Map(), selected = new Set();
+const limits = new Map(), selected = new Set(), hiddenArticleTranslations = new Set();
 const translator = new HeadlineLocal.LocalTranslator();
 translator.setEngine('gemini');
 const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
@@ -47,7 +47,7 @@ function textBlock(text, article, part, tag, className) {
   const n = el(tag,text,className); n.lang = 'en'; n.dataset.translation = text; n.dataset.article = article.id; n.dataset.part = part;
   const translated = el('p',undefined,'translated-text'); translated.lang = 'zh-CN'; translated.hidden = true;
   const cached = translator.getCached(text);
-  if (cached) { translated.textContent = cached; translated.hidden = !translationsVisible; }
+  if (cached) { translated.textContent = cached; translated.hidden = !translationsVisible || hiddenArticleTranslations.has(article.id); }
   const wrap = el('div',undefined,'translation-pair'); wrap.append(n,translated); return wrap;
 }
 function updateSelection() { $('translate-selected').textContent = `翻译所选报道（${selected.size}）`; }
@@ -70,8 +70,21 @@ function articleNode(article, rank, featured, board = null) {
   const actions = el('div',undefined,'article-actions');
   const label = el('label',undefined,'selection-label'); const check = el('input'); check.type = 'checkbox'; check.checked = selected.has(article.id); check.dataset.selectArticle = article.id; check.setAttribute('aria-label','选择报道：' + article.title);
   check.addEventListener('change',() => { if (check.checked) selected.add(article.id); else selected.delete(article.id); for (const other of document.querySelectorAll('input[data-select-article]')) if (other.dataset.selectArticle === article.id) other.checked = check.checked; updateSelection(); }); label.append(check,document.createTextNode('选择'));
-  const one = el('button','翻译','text-button'); one.type = 'button'; one.setAttribute('aria-label','翻译报道：' + article.title); one.addEventListener('click',() => translateNodes([...body.querySelectorAll('[data-translation]')]));
-  const full = el('button','全文','text-button'); full.type = 'button'; full.setAttribute('aria-label','全文翻译：' + article.title); full.addEventListener('click',() => openFulltext(article));
+  const one = el('button','翻译','text-button article-translate'); one.type = 'button'; one.dataset.toggleArticle = article.id;
+  one.setAttribute('aria-label','翻译报道：' + article.title);
+  const showing = !title.querySelector('.translated-text').hidden;
+  one.setAttribute('aria-pressed',String(showing)); if (showing) one.textContent = '隐藏译文';
+  one.addEventListener('click',() => {
+    if (busy) return;
+    if ([...body.querySelectorAll('.translated-text')].some(n => !n.hidden && n.textContent)) {
+      hiddenArticleTranslations.add(article.id); setTranslationVisibility(translationsVisible);
+      $('translation-status').textContent = '已隐藏这条报道的译文，缓存仍保留；再次点击“翻译”即可恢复。';
+    } else {
+      hiddenArticleTranslations.delete(article.id);
+      translateNodes([...body.querySelectorAll('[data-translation]')]);
+    }
+  });
+  const full = el('button','全文 →','text-button article-fulltext'); full.type = 'button'; full.setAttribute('aria-label','全文翻译：' + article.title); full.addEventListener('click',() => openFulltext(article));
   actions.append(label,one,full); body.append(actions); wrap.append(body); return wrap;
 }
 function render() {
@@ -105,14 +118,18 @@ function render() {
 }
 function setBusy(value) {
   busy = value;
-  for (const n of document.querySelectorAll('.article-actions button,.source-shortcut,.source-card-footer button,#translate-screen,#translate-selected,#translation-engine,#window-select,#source-select,#translate-fulltext,#clear-translations')) n.disabled = value;
+  for (const n of document.querySelectorAll('.article-actions button,.source-shortcut,.source-card-footer button,#translate-selected,#translation-engine,#window-select,#source-select,#translate-fulltext,#clear-translations')) n.disabled = value;
   $('cancel-translation').hidden = !value;
   $('cancel-fulltext').hidden = !value;
 }
-function visible(n) { const r = n.getBoundingClientRect(); return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth; }
 function setTranslationVisibility(show, announce = false) {
   translationsVisible = show;
-  for (const node of document.querySelectorAll('.translated-text')) node.hidden = !show || !node.textContent;
+  if (show && announce) hiddenArticleTranslations.clear();
+  for (const node of document.querySelectorAll('.translated-text')) node.hidden = !show || !node.textContent || hiddenArticleTranslations.has(node.previousElementSibling.dataset.article);
+  for (const button of document.querySelectorAll('[data-toggle-article]')) {
+    const showing = [...button.closest('article').querySelectorAll('.translated-text')].some(n => !n.hidden && n.textContent);
+    button.textContent = showing ? '隐藏译文' : '翻译'; button.setAttribute('aria-pressed',String(showing));
+  }
   $('fulltext-output').hidden = !show || !$('fulltext-output').textContent;
   const hasTranslations = translator.cache.size > 0 || Boolean($('fulltext-output').textContent);
   for (const id of ['toggle-translations','toggle-translations-dock']) {
@@ -125,6 +142,7 @@ async function translateNodes(nodes) {
   if (busy) return;
   const unique = [...new Set(nodes.map(n => n.dataset.translation))].filter(Boolean);
   if (!unique.length) { $('translation-status').textContent = '当前屏幕没有新闻文字。请先选择报道，或滚动到新闻处点击“翻译”。'; return; }
+  for (const node of nodes) hiddenArticleTranslations.delete(node.dataset.article);
   setTranslationVisibility(true);
   // Reopening a cached translation needs neither login/status checks nor inference.
   const missing = unique.filter(text => !translator.getCached(text));
@@ -138,7 +156,7 @@ async function translateNodes(nodes) {
       const result = await translator.translate(text,{signal:controller.signal});
       if (generation !== rendering) continue;
       // Update only already rendered text, including its duplicated board/source occurrence.
-      for (const node of document.querySelectorAll('[data-translation]')) if (node.dataset.translation === text) { const out = node.nextElementSibling; out.textContent = result; out.hidden = !translationsVisible; }
+      for (const node of document.querySelectorAll('[data-translation]')) if (node.dataset.translation === text) { const out = node.nextElementSibling; out.textContent = result; out.hidden = !translationsVisible || hiddenArticleTranslations.has(node.dataset.article); }
     }
     setTranslationVisibility(translationsVisible);
     $('translation-status').textContent = missing.length ? `已通过${engineLabel()}翻译 ${unique.length} 段。${engineNote()}` : `已显示 ${unique.length} 段缓存译文，没有调用 AI。`;
@@ -170,14 +188,13 @@ async function translateFulltext() {
 }
 function clearTranslations() {
   if (busy) return;
-  translator.clear(); for (const n of document.querySelectorAll('.translated-text')) { n.textContent = ''; n.hidden = true; }
+  translator.clear(); hiddenArticleTranslations.clear(); for (const n of document.querySelectorAll('.translated-text')) { n.textContent = ''; n.hidden = true; }
   $('fulltext-input').value = ''; $('fulltext-output').textContent = ''; $('fulltext-output').hidden = true; $('fulltext-file').value = ''; $('fulltext-status').textContent = ''; $('fulltext-size').textContent = '0 字符';
   setTranslationVisibility(true);
   $('translation-status').textContent = '已清除本页译文和缓存。下次翻译需要重新调用 AI。';
 }
 function initTranslation() {
   $('cloud-login').hidden = !HeadlineLocal.isCloudHost(location);
-  $('translate-screen').addEventListener('click',() => translateNodes([...document.querySelectorAll('[data-translation]')].filter(visible)));
   $('translate-selected').addEventListener('click',() => translateNodes([...document.querySelectorAll('[data-translation]')].filter(n=>selected.has(n.dataset.article))));
   $('cancel-translation').addEventListener('click',() => controller?.abort());
   $('cancel-fulltext').addEventListener('click',() => controller?.abort());

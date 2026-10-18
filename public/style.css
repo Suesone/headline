@@ -26,3 +26,10 @@ dialog { width:min(760px,calc(100% - 28px));max-height:90vh;overflow:auto;border
 @media(max-width:720px) { .featured .article-title { font-size:17px; } }
 
 .featured .translated-text { font-size:17px;font-weight:700;color:#111; }
+
+.article-actions { gap:10px;margin-top:12px; }
+.article-actions .text-button { font-size:13px;min-height:36px;padding:6px 12px;border:1px solid #dfe4ea;border-radius:7px;background:#fff;color:#536071; }
+.article-actions .article-translate[aria-pressed="true"] { color:#bf4056;border-color:#edbdc6;background:#fff8fa; }
+.article-actions .article-fulltext { margin-left:auto;white-space:nowrap; }
+.article-actions .text-button:hover { color:var(--accent);border-color:var(--accent); }
+@media(max-width:720px) { .article-actions .text-button { min-height:40px;font-size:14px; } }
