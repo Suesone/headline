@@ -6,7 +6,7 @@ function safeUrl(value) { try { const u = new URL(value); return ['https:', 'htt
 function link(text, value, className) { const n = el('a', text, className); const url = safeUrl(value); if (url) { n.href = url; n.target = '_blank'; n.rel = 'noopener noreferrer'; } return n; }
 function option(value, text) { const n = el('option',text); n.value = value; return n; }
 let data, busy = false, controller = null, rendering = 0, translationsVisible = true;
-const limits = new Map(), selected = new Set(), hiddenArticleTranslations = new Set();
+const expandedSources = new Set(), selected = new Set(), hiddenArticleTranslations = new Set();
 const translator = new HeadlineLocal.LocalTranslator();
 translator.setEngine('gemini');
 const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
@@ -107,11 +107,17 @@ function render() {
     header.append(icon,el('h3',s.name),el('span',`${items.length} 篇`,'source-card-count')); card.append(header);
     const rows = el('div',undefined,'source-card-list');
     if (!items.length) { rows.append(el('p','所选时段暂无报道。可切换“最近 30 天”查看历史。','empty-state')); }
-    const limit = limits.get(s.id) || rankSetting('per_source_limit',10);
+    const collapsedLimit = rankSetting('per_source_limit',10);
+    const expanded = expandedSources.has(s.id);
+    const limit = expanded ? items.length : collapsedLimit;
     items.slice(0,limit).forEach((a,i) => rows.append(articleNode(a,i + 1,i < featured)));
     card.append(rows);
     const footer = el('div',undefined,'source-card-footer');
-    if (items.length > limit) { const more = el('button',`再显示 ${Math.min(10,items.length-limit)} 条 ↓`,'text-button'); more.type = 'button'; more.addEventListener('click',() => { if (busy) return; limits.set(s.id,limit + 10); render(); }); footer.append(more); }
+    if (items.length > collapsedLimit) {
+      const more = el('button',expanded ? '收起' : '更多','text-button source-expand'); more.type = 'button';
+      more.setAttribute('aria-expanded',String(expanded)); more.setAttribute('aria-label',`${expanded ? '收起' : '更多'}：${s.name}`);
+      more.addEventListener('click',() => { if (busy) return; if (expanded) expandedSources.delete(s.id); else expandedSources.add(s.id); render(); }); footer.append(more);
+    }
     else footer.append(el('span',s.relay_name ? `${s.relay_name}${s.relay_name === 'Google News 聚合' ? ' · 备用' : ' 社区 RSS'}` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
     footer.append(link(s.publisher === 'BBC' ? 'BBC News ↗' : '来源网站 ↗',s.homepage)); card.append(footer); grid.append(card);
   }

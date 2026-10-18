@@ -19,7 +19,8 @@
     "note": "Feedseek 社区转发，约每两小时刷新；仅标题、订阅日期与原文链接，未提供可展示的原文首段。",
     "max_feed_age_hours": 36,
     "topics_enabled": false,
-    "ai_enabled": false
+    "ai_enabled": false,
+    "max_items": 20
   },
   {
     "id": "bbc-world",
@@ -41,7 +42,8 @@
       "bbc.com",
       "bbc.co.uk"
     ],
-    "max_feed_age_hours": 96
+    "max_feed_age_hours": 96,
+    "max_items": 20
   },
   {
     "id": "bbc-business",
@@ -63,7 +65,8 @@
       "bbc.com",
       "bbc.co.uk"
     ],
-    "max_feed_age_hours": 96
+    "max_feed_age_hours": 96,
+    "max_items": 20
   },
   {
     "id": "npr-news",
@@ -85,7 +88,8 @@
     "allowed_link_domains": [
       "npr.org"
     ],
-    "topics_title_only": true
+    "topics_title_only": true,
+    "max_items": 20
   },
   {
     "id": "cnbc-world",
@@ -106,7 +110,8 @@
     "ai_enabled": false,
     "allowed_link_domains": [
       "cnbc.com"
-    ]
+    ],
+    "max_items": 20
   },
   {
     "enabled": true,
@@ -127,7 +132,8 @@
     "allowed_link_domains": [
       "theguardian.com"
     ],
-    "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。"
+    "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
+    "max_items": 20
   },
   {
     "enabled": true,
@@ -162,7 +168,8 @@
         ],
         "time_basis": "feed_publication"
       }
-    ]
+    ],
+    "max_items": 20
   },
   {
     "enabled": true,
@@ -200,6 +207,7 @@
         "english_titles_only": true,
         "time_basis": "feed_publication"
       }
-    ]
+    ],
+    "max_items": 20
   }
 ]

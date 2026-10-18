@@ -21,6 +21,7 @@ import feedparser
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('Asia/Shanghai')
 WINDOW_HOURS = 2
+MAX_ITEMS_PER_SOURCE = 20
 STOP = {'news', 'world', 'today', 'latest', 'live', 'report', 'reports', 'says', 'said',
         'watch', 'video', 'people', 'year', 'years', 'day', 'days', 'week', 'month',
         'story', 'stories', 'new', 'first', 'last', 'global voices', 'wikinews',
@@ -121,6 +122,9 @@ def parse_feed(content, source, now):
     if not feed.entries and not feed.get('version'):
         raise ValueError('Response is not RSS/Atom')
     articles, skipped = [], 0
+    requested = source.get('max_items', MAX_ITEMS_PER_SOURCE)
+    limit = min(requested, MAX_ITEMS_PER_SOURCE) if type(requested) is int and requested > 0 else MAX_ITEMS_PER_SOURCE
+    seen_ids, seen_urls = set(), set()
     for position, entry in enumerate(feed.entries, 1):
         stamp = entry.get('published_parsed') or entry.get('updated_parsed')
         try:
@@ -164,7 +168,13 @@ def parse_feed(content, source, now):
             if not author_allowed(article, source):
                 skipped += 1
                 continue
+            if identity in seen_ids or url in seen_urls:
+                skipped += 1
+                continue
+            seen_ids.add(identity); seen_urls.add(url)
             articles.append(article)
+            if len(articles) >= limit:
+                break
         except (ValueError, TypeError, OverflowError):
             skipped += 1
     return articles, skipped
@@ -184,6 +194,7 @@ def fetch_source(source, now):
                     raise ValueError('Empty or stale feed')
                 state = {'id': source['id'], 'status': 'ok', 'checked_at': iso(now),
                          'last_success_at': iso(now), 'received': len(articles), 'skipped': skipped,
+                         'fetch_limit': MAX_ITEMS_PER_SOURCE,
                          'message': f'已读取 {len(articles)} 条；跳过 {skipped} 条无效记录',
                          'active_feed_url': candidate['url'], 'using_fallback': index > 0}
                 if index > 0:

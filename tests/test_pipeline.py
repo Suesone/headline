@@ -382,3 +382,19 @@ def test_failed_primary_uses_configured_backup_without_claiming_official_success
     assert calls == [source['url'], 'https://backup.example/rss']
     assert state['status'] == 'ok' and state['using_fallback'] is True
     assert state['relay_name'] == 'Google News 聚合' and items
+
+
+@pytest.mark.parametrize('configured,expected', [(None, 20), (100, 20), (7, 7)])
+def test_feed_limit_counts_valid_unique_articles_only(configured, expected):
+    source = {**SOURCES[0]}
+    if configured is not None:
+        source['max_items'] = configured
+    def item(n):
+        return f'<item><title>Headline {n}</title><guid>{n}</guid><link>https://example.org/story/{n}</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate></item>'
+    entries = '<item><title>No date</title></item>' + item(0) + item(0) + ''.join(item(n) for n in range(1, 30))
+    xml = ('<rss version="2.0"><channel><title>Test</title>' + entries + '</channel></rss>').encode()
+    items, skipped = c.parse_feed(xml, source, NOW)
+    assert len(items) == expected
+    assert skipped == 2
+    assert len({a['url'] for a in items}) == expected
+    assert items[-1]['title'] == f'Headline {expected - 1}'
