@@ -151,6 +151,7 @@ function clearTranslations() {
   $('translation-status').textContent = '已清除本页译文和全文输入。不会自动重新翻译。';
 }
 function initTranslation() {
+  $('cloud-login').hidden = !HeadlineLocal.isCloudHost(location);
   $('translate-screen').addEventListener('click',() => translateNodes([...document.querySelectorAll('[data-translation]')].filter(visible)));
   $('translate-selected').addEventListener('click',() => translateNodes([...document.querySelectorAll('[data-translation]')].filter(n=>selected.has(n.dataset.article))));
   $('cancel-translation').addEventListener('click',() => controller?.abort());

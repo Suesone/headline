@@ -52,3 +52,11 @@ test('Gemini needs an explicitly matching Google gateway; no direct browser key 
  mismatch.setEngine('ollama');await assert.rejects(()=>mismatch.prepare(),/不匹配/);
  const publicClient=new LocalTranslator({location:{hostname:'suesone.github.io'},fetch:()=>assert.fail('No public gateway')});publicClient.setEngine('gemini');await assert.rejects(()=>publicClient.prepare(),/仅在本地阅读器/);
 });
+test('custom domain Gemini uses authenticated same-origin endpoints without exposing keys',async()=>{
+ const requests=[];
+ const client=new LocalTranslator({location:{hostname:'infinitas.top',protocol:'https:'},fetch:async(url,options)=>{requests.push([url,options]);return {ok:true,json:async()=>url.endsWith('status')?{ready:true,provider:'gemini',cloud_provider:'Google',local_only:false,model:'gemini-2.5-flash-lite'}:{text:'译文'}};}});
+ client.setEngine('gemini');await client.prepare();await client.translate('Headline');
+ assert.deepEqual(requests.map(r=>r[0]),['/api/cloud/status','/api/cloud/translate']);
+ assert.equal(requests[1][1].credentials,'same-origin');assert.equal(requests[1][1].headers['X-Headline-Cloud'],'1');
+ assert.deepEqual(JSON.parse(requests[1][1].body),{text:'Headline'});
+});

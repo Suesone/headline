@@ -20,3 +20,5 @@ jobs:
       - run: node --check public/local-translation.js
       - run: node --check public/ranking.js
       - run: node --test tests/*.test.cjs
+      - run: npm ci --prefix cloudflare --ignore-scripts
+      - run: npm test --prefix cloudflare

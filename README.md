@@ -131,3 +131,9 @@ node --test tests/*.test.cjs
 不保存个人资料、不设置分析追踪。当前没有 Cloudflare AI 调用，也无需配置或更换其 Secrets；若此前创建过密钥，可自行在 GitHub Secrets 中删除，工作流已不读取它们。
 
 界面参考 [今日热榜](https://tophub.today/)的榜中榜、来源卡片与前列内容层级，采用本站独立文字标识。流程参考 NewsNow、RSSBox、TrendRadar 的开源经验，没有复制其实现。本站代码使用 MIT License；新闻内容和第三方模型保留原有权利及许可。
+
+### 自有域名与跨设备翻译（可选）
+
+`cloudflare/` 提供 `infinitas.top` 的安全网关。公开新闻转发 GitHub Pages；翻译需 Cloudflare Access 登录，Gemini Key 放 Worker Secret，译文仅留当前浏览器内存。默认每日 100 段，额度限制后暂停。配置缺失时拒绝调用；不会将 Key 放进前端。源码准备完成不代表域名已经上线，详见 [Cloudflare 部署说明](docs/cloudflare-deployment.md)。
+
+验证：`npm ci --prefix cloudflare --ignore-scripts` 后 `npm test --prefix cloudflare`。无需密钥，测试不会调用真实 Gemini。

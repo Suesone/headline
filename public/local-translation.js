@@ -2,6 +2,7 @@
 (function (root) {
   'use strict';
   const isLoopback = hostname => ['localhost', '127.0.0.1', '[::1]', '::1'].includes(hostname);
+  const isCloudHost = location => location?.hostname === 'infinitas.top' && location.protocol === 'https:';
   function splitText(text, size = 1800) {
     if (typeof text !== 'string' || text.length > 60000) throw new Error('每次最多翻译 60,000 个字符。');
     if (!Number.isInteger(size) || size < 100) throw new Error('Invalid chunk size');
@@ -35,9 +36,12 @@
         // Only reached from an explicit user translation click; language packs may download.
         this.browser = await this.environment.Translator.create(options);
       } else {
-        if (!isLoopback(this.environment.location.hostname)) throw new Error('Ollama / Gemini 接口仅在本地阅读器使用。请按使用说明启动本机接口，再打开它显示的本机地址。');
-        const response = await this.environment.fetch('/api/local/status', {cache: 'no-store', signal: AbortSignal.timeout(5000)});
-        if (!response.ok) throw new Error('本地阅读器未运行，或 Ollama 尚未准备好。');
+        this.cloud = this.engine === 'gemini' && isCloudHost(this.environment.location);
+        if (!this.cloud && !isLoopback(this.environment.location.hostname)) throw new Error('Ollama / Gemini 接口仅在本地阅读器使用。请按使用说明启动本机接口，再打开它显示的本机地址。');
+        let response;
+        try { response = await this.environment.fetch(this.cloud ? '/api/cloud/status' : '/api/local/status', {cache: 'no-store', redirect: 'error', credentials: 'same-origin', signal: AbortSignal.timeout(5000)}); }
+        catch { throw new Error(this.cloud ? '请点击“登录翻译”完成登录；若仍不可用，请检查云端接口配置。' : '本地阅读器未运行，请先启动本机接口。'); }
+        if (!response.ok) throw new Error(this.cloud ? '请点击“登录翻译”完成登录；若仍不可用，云端接口可能尚未配置。' : '本地阅读器未运行，或 Ollama 尚未准备好。');
         const status = await response.json();
         if (!status.ready) throw new Error(status.message || '翻译接口尚未就绪。');
         if (this.engine === 'gemini' ? status.provider !== 'gemini' || status.local_only !== false || status.cloud_provider !== 'Google' : status.local_only !== true) throw new Error('所选引擎与阅读器不匹配；不会自动切换或发送原文。');
@@ -60,9 +64,9 @@
             if (!this.browser) throw new Error('请先启用本地翻译');
             translated = await this.browser.translate(chunk);
           } else {
-            if (!isLoopback(this.environment.location.hostname) || !this.model) throw new Error('仅允许已验证的本地阅读器');
-            const response = await this.environment.fetch('/api/local/translate', {method: 'POST',
-              headers: {'Content-Type': 'application/json', 'X-Headline-Local': '1'},
+            if (!(this.cloud && engine === 'gemini' && isCloudHost(this.environment.location)) && !isLoopback(this.environment.location.hostname) || !this.model) throw new Error('仅允许已验证的本地阅读器');
+            const response = await this.environment.fetch(this.cloud ? '/api/cloud/translate' : '/api/local/translate', {method: 'POST', redirect: 'error', credentials: 'same-origin',
+              headers: {'Content-Type': 'application/json', [this.cloud ? 'X-Headline-Cloud' : 'X-Headline-Local']: '1'},
               body: JSON.stringify({text: chunk}), signal});
             if (!response.ok) { const error = await response.json().catch(() => ({})); throw new Error(error.message || '本地模型翻译失败，请查看本机运行状态。'); }
             translated = (await response.json()).text;
@@ -80,7 +84,7 @@
     }
     clear() { this.cache.clear(); }
   }
-  const api = {LocalTranslator, splitText, isLoopback};
+  const api = {LocalTranslator, splitText, isLoopback, isCloudHost};
   if (typeof module !== 'undefined') module.exports = api;
   root.HeadlineLocal = api;
 })(globalThis);
