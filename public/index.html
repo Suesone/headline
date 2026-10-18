@@ -3,48 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="英文新闻榜单：每四小时整理新闻，追踪实时与每日话题。">
+  <meta name="description" content="汇集主流英文新闻榜单，按需在本机翻译，追踪值得阅读的头条。">
   <meta name="color-scheme" content="light">
   <meta name="robots" content="noindex,nofollow">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <title>Headline · 国际新闻榜</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./style.css">
+  <script src="./ranking.js" defer></script>
+  <script src="./local-translation.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
 <body>
   <header class="masthead"><div class="header-inner">
     <a class="brand" href="./" aria-label="Headline 首页"><span class="brand-mark">H</span><span>Headline<span class="brand-caption">国际新闻榜</span></span></a>
-    <nav class="main-nav" aria-label="页面导航"><a class="nav-active" href="#briefing">新闻榜单</a><a href="#window-panel">实时热词</a><a href="#day-panel">今日热词</a><a href="#dictionary-panel">英语查词</a></nav>
+    <nav class="main-nav" aria-label="页面导航"><a class="nav-active" href="#board">榜中榜</a><a href="#briefing">来源榜单</a><a href="#local-tools">本地翻译</a><a href="#dictionary-panel">英语查词</a></nav>
     <span class="edition"><span class="edition-dot"></span> 每四小时更新</span>
   </div></header>
-  <div class="page">
-    <main>
-      <section class="intro"><div><h1>国际新闻榜</h1><p class="intro-copy">看英文头条，追踪正在发生的话题。</p></div><div class="schedule"><span class="small-label">北京时间 · 每日六次</span><p>00:00 · 04:00 · 08:00 · 12:00 · 16:00 · 20:00</p></div></section>
-      <section class="source-shortcuts" aria-label="快速选择新闻来源"><div class="shortcut-label">新闻来源</div><div id="source-shortcuts" class="shortcut-list"></div></section>
-      <div id="run-status" class="run-status" role="status" aria-live="polite">正在读取最新新闻…</div>
-      <section class="toolbar" aria-label="阅读筛选">
-        <div class="toolbar-fields"><label>时段<select id="window-select" aria-label="阅读时段" disabled><option>正在加载…</option></select></label><label>来源<select id="source-select" aria-label="新闻来源" disabled><option value="all">全部来源</option></select></label></div>
-        <label class="translation-toggle"><input id="translation-toggle" type="checkbox" role="switch"><span class="switch-track"></span><span>中英对照</span></label>
-      </section>
-      <div class="content-grid">
-        <section class="news-section" aria-labelledby="news-heading" id="briefing">
-          <div class="section-heading"><h2 id="news-heading">新闻榜单</h2><span id="article-count" class="count-label"></span></div>
-          <div id="active-topic" class="active-topic" hidden></div>
-          <p id="period-caption" class="period-caption"></p>
-          <div id="news-list" class="news-grid" aria-live="polite"><div class="empty-state">正在加载新闻榜单，请稍候。</div></div>
-          <p class="reading-note">榜单依据所选来源的报道统计，不代表全网热度。排名不等同于文章阅读量。</p>
-        </section>
-        <aside class="topics-section" aria-label="新闻热词">
-          <section class="topic-panel" id="window-panel"><div class="section-heading"><h2><span class="panel-symbol">热</span>实时热词</h2><span class="pill">4 小时</span></div><p id="realtime-caption" class="panel-description">人物、地点与事件，点击展开相关报道。</p><div id="window-topics"></div></section>
-          <section class="topic-panel daily-panel" id="day-panel"><div class="daily-heading"><h2><span class="panel-symbol daily-symbol">日</span>今日热词</h2><select id="day-select" aria-label="选择热词日期" disabled></select></div><p class="panel-description">汇总当天各时段话题，合并重复名称。</p><div id="day-topics"></div></section>
-          <section class="dictionary-panel" id="dictionary-panel"><div class="dictionary-heading"><span class="dictionary-icon" aria-hidden="true">Aa</span><div><h3>英语查词</h3><p>从新闻中积累一个新词。</p></div></div><form id="dictionary-form"><label class="sr-only" for="dictionary-word">英文单词</label><input id="dictionary-word" placeholder="例如 ceasefire" lang="en" maxlength="80" required><button type="submit">查词 ↗</button></form><p class="dictionary-credit">跳转 Cambridge / Merriam-Webster 官方词典</p><div id="dictionary-links" aria-live="polite"></div></section>
-        </aside>
-      </div>
-      <section class="source-section"><details id="source-details"><summary>新闻源与运行状态 <span>来源许可 · 更新时间 · AI 状态</span></summary><div id="sources-list"></div><p id="ai-status" class="ai-status"></p></details></section>
-    </main>
-    <footer><span class="footer-brand">Headline<span class="accent">.</span></span><p>英文新闻，保持好奇。<span>原文归各作者所有；AI 译文与语境说明供辅助阅读。</span></p><span class="footer-time">北京时间 UTC +08:00</span></footer>
-  </div>
-  <template id="article-template"><article class="article"><div class="article-index"></div><div class="article-body"><h3><a class="article-link" target="_blank" rel="noopener noreferrer" lang="en"></a></h3><p class="article-translation" hidden></p><div class="article-meta"><span class="article-time"></span><span class="article-topic-count"></span></div><details class="article-details"><summary>摘要与话题</summary><p class="article-summary" lang="en"></p><div class="article-bottom"><div class="article-tags"></div><a class="original-link" target="_blank" rel="noopener noreferrer">原文 ↗</a></div><p class="article-credit"></p></details></div></article></template>
-</body>
-</html>
+  <div class="page"><main>
+    <section class="intro"><div><div class="eyebrow">THE WORLD, IN HEADLINES</div><h1>国际新闻榜</h1><p class="intro-copy">先看榜中榜，再读你关心的头条。</p></div><div class="schedule"><span class="small-label">北京时间 · 每日六次</span><p>00:00 · 04:00 · 08:00 · 12:00 · 16:00 · 20:00</p></div></section>
+    <section class="source-shortcuts" aria-label="快速选择新闻来源"><div id="source-shortcuts" class="shortcut-list"></div></section>
+    <div id="run-status" class="run-status" role="status" aria-live="polite">正在读取英文新闻…</div>
+    <section class="toolbar" aria-label="阅读筛选"><div class="toolbar-fields"><label>时段<select id="window-select" aria-label="阅读时段" disabled><option>正在加载…</option></select></label><label>来源<select id="source-select" aria-label="新闻来源" disabled><option value="all">全部来源</option></select></label></div><a class="local-pill" href="#local-tools"><span class="local-dot"></span> 翻译留在本机</a></section>
+    <section id="board" class="board-section" aria-labelledby="board-heading"><div class="section-heading"><div class="heading-group"><span class="section-icon">榜</span><div><h2 id="board-heading">榜中榜</h2><p>汇集各源前列报道，先读值得关注的新闻。</p></div></div><span id="board-count" class="count-label"></span></div><div id="board-list" class="board-list" aria-live="polite"><p class="empty-state">正在整理榜单…</p></div><details class="ranking-note"><summary>榜单如何排序？</summary><p>从各源前 5 条候选中，按订阅顺序与报道新鲜度综合推荐；完全相同的标题合并。同一媒体的不同频道不重复加分。不使用热词或 AI 分析，不代表媒体官方热门榜、阅读量或全网热度。</p><p>前列内容展示 RSS 提供的简短摘要，并非抓取的原文首段；无摘要时仅展示标题。各源更新节奏不同。</p></details></section>
+    <section id="briefing" aria-labelledby="news-heading"><div class="section-heading"><div class="heading-group"><span class="section-icon subtle">源</span><div><h2 id="news-heading">来源榜单</h2><p id="period-caption"></p></div></div><span id="article-count" class="count-label"></span></div><div id="news-list" class="news-grid" aria-live="polite"></div></section>
+    <section id="local-tools" class="local-tools" aria-labelledby="local-heading"><div class="section-heading"><div class="heading-group"><span class="section-icon green">译</span><div><h2 id="local-heading">按需本地翻译</h2><p>默认关闭。只有你点击后才运行；原文与译文不会发往云端翻译服务。</p></div></div><span class="local-badge">LOCAL ONLY</span></div><div class="translation-controls"><label for="translation-engine">翻译引擎<select id="translation-engine"><option value="browser">浏览器内置 · 桌面 Chrome</option><option value="ollama">Ollama · 本地阅读器</option></select></label><button id="translate-selected" type="button">翻译所选报道（0）</button><button id="cancel-translation" type="button" hidden>停止翻译</button><button id="open-manual-fulltext" type="button">粘贴全文翻译</button><button id="clear-translations" type="button">清除译文</button></div><p id="translation-status" class="translation-status" role="status" aria-live="polite">尚未启用。可以点击报道旁的“翻译”，或翻译当前屏幕。译文仅临时保存在此页面，刷新即清除。</p><div class="local-footnote"><a href="./local-guide.html">首次使用与本地阅读器说明 ↗</a><span>只翻译当前展示的标题与摘要，重复文字复用本机缓存。</span></div></section>
+    <section class="bottom-grid"><section class="dictionary-panel" id="dictionary-panel"><h2>英语查词</h2><p>从新闻中积累一个新词。</p><form id="dictionary-form"><label class="sr-only" for="dictionary-word">英文单词</label><input id="dictionary-word" placeholder="例如 ceasefire" lang="en" maxlength="80" required><button type="submit">查词 ↗</button></form><p class="dictionary-credit">点击后跳转 Cambridge / Merriam-Webster 官方词典</p><div id="dictionary-links" aria-live="polite"></div></section><section class="archive-note"><span class="archive-label">暂时归档</span><h2>热词分析</h2><p>实时热词与今日热词已暂停，历史代码保留在仓库。当前榜单不再进行热词提取或云端 AI 处理。</p></section></section>
+    <section class="source-section"><details id="source-details"><summary>新闻源与运行状态 <span>社区目录 · 官方 RSS · 更新记录</span></summary><div id="sources-list"></div><p>AFP 候选 RSS 复测仍返回 403，已从当前配置删除。保留的 7 个订阅流复测可读取；发生临时失败时保留此前新闻并提示。</p></details></section>
+  </main><footer><span class="footer-brand">Headline<span class="accent">.</span></span><p>英文新闻，保持好奇。<span>原文归各作者所有；本地译文仅供个人辅助阅读。</span></p><span class="footer-time">北京时间 UTC +08:00</span></footer></div>
+  <div class="reading-dock"><span id="translation-toast" role="status" hidden></span><button id="translate-screen" class="primary" type="button">译 · 当前屏幕</button><a href="#local-tools">设置</a></div>
+  <dialog id="fulltext-dialog" aria-labelledby="fulltext-heading"><div class="dialog-header"><div><span class="eyebrow">PRIVATE READING</span><h2 id="fulltext-heading">本地全文翻译</h2></div><button id="close-fulltext" type="button" aria-label="关闭全文翻译">×</button></div><p id="fulltext-article" class="fulltext-article"></p><p>打开原报道，复制你能够正常阅读的正文并粘贴到下方，或导入 .txt。网站不会自动抓取全文，不绕过付费墙。输入和译文只保存在当前页面。</p><div class="fulltext-actions"><a id="fulltext-original" target="_blank" rel="noopener noreferrer">打开原报道 ↗</a><label class="file-button">导入 .txt<input id="fulltext-file" type="file" accept=".txt,text/plain"></label></div><label for="fulltext-input">英文正文（最多 60,000 字符）</label><textarea id="fulltext-input" lang="en" rows="9" maxlength="60000" autocomplete="off" placeholder="将感兴趣的报道正文粘贴到这里…"></textarea><div class="fulltext-actions"><button id="translate-fulltext" class="primary" type="button">在本机翻译全文</button><button id="cancel-fulltext" type="button" hidden>停止</button><span id="fulltext-size" class="count-label">0 字符</span></div><p id="fulltext-status" role="status" aria-live="polite"></p><div id="fulltext-output" class="fulltext-output" lang="zh-CN" hidden></div></dialog>
+</body></html>

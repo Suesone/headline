@@ -120,7 +120,7 @@ def parse_feed(content, source, now):
     if not feed.entries and not feed.get('version'):
         raise ValueError('Response is not RSS/Atom')
     articles, skipped = [], 0
-    for entry in feed.entries:
+    for position, entry in enumerate(feed.entries, 1):
         stamp = entry.get('published_parsed') or entry.get('updated_parsed')
         try:
             if not stamp:
@@ -146,6 +146,7 @@ def parse_feed(content, source, now):
                 'summary': plain(entry.get('summary')), 'author': plain(entry.get('author', ''), 160),
                 'published_at': iso(published), 'first_seen_at': iso(now), 'window_id': window_id(published),
                 'topics': [],
+                'feed_rank': position, 'rank_observed_at': iso(now),
             }, source)
             if not author_allowed(article, source):
                 skipped += 1
@@ -199,6 +200,9 @@ def merge_articles(previous, incoming, cutoff):
             changed = match['title'] != article['title'] or match['summary'] != article['summary']
             match['identities'] = sorted(set(match.get('identities', [])) | set(article['identities']))
             match.update({k: article[k] for k in ('title', 'summary', 'author', 'url')})
+            for key in ('feed_rank', 'rank_observed_at'):
+                if key in article:
+                    match[key] = article[key]
             if changed:
                 match['topics'] = []
                 match.pop('title_zh', None)
@@ -279,7 +283,7 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
     while cursor < end:
         key = window_id(cursor)
         subset = [a for a in complete if a['window_id'] == key]
-        topics = rank_topics(subset, settings['topics_per_window'])
+        topics = rank_topics(subset, settings['topics_per_window']) if settings.get('topics_enabled', True) else []
         weights = {a['id']: max((t['source_count'] for t in topics if a['id'] in t['article_ids']), default=0)
                    for a in subset}
         subset.sort(key=lambda a: (weights[a['id']], a['published_at']), reverse=True)
@@ -292,7 +296,7 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
         day_windows = [w for w in windows if w['date'] == date]
         selected = {t['id'] for w in day_windows for t in w['topics']}
         subset = [a for a in complete if a['window_id'][:10] == date]
-        days.append({'date': date, 'topics': [t for t in rank_topics(subset) if t['id'] in selected],
+        days.append({'date': date, 'topics': [t for t in rank_topics(subset) if t['id'] in selected] if settings.get('topics_enabled', True) else [],
                      'article_count': len(subset)})
     enabled = [s for s in statuses if s['status'] != 'disabled']
     successes = sum(s['status'] == 'ok' for s in enabled)
@@ -308,10 +312,12 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
             'latest_window_id': window_id(latest_start), 'today': now.astimezone(TZ).date().isoformat(),
             'last_success_at': iso(now) if successes else (previous or {}).get('last_success_at'),
             'status': status, 'sources': public_sources, 'articles': articles, 'windows': windows,
-            'days': days, 'ai': {'status': 'disabled', 'message': '尚未配置免费 AI，英文新闻和热词正常可用'}}
+            'days': days, 'features': {'topics': settings.get('topics_enabled', True), 'translation': 'local_only'},
+            'ranking': settings.get('ranking', {}),
+            'ai': {'status': 'local_only', 'message': '云端 AI 已移除；翻译仅在本机按需运行，不上传译文'}}
 
 
-def run(now, output, state_path, enable_ai=True):
+def run(now, output, state_path):
     sources = read_json(ROOT / 'config/sources.json')
     settings = read_json(ROOT / 'config/settings.json')
     previous = read_json(state_path, {})
@@ -328,7 +334,12 @@ def run(now, output, state_path, enable_ai=True):
         apply_source_policy(article, source_map[article['source_id']])
     aliases = read_json(ROOT / 'config/aliases.json')
     extraction_version = digest('topics-v5:' + json.dumps(aliases, sort_keys=True) + json.dumps([(s['id'], s.get('topics_title_only', False)) for s in sources]))
-    pending = [a for a in articles if a.get('analysis_allowed', True) and a.get('extraction_version') != extraction_version]
+    if not settings.get('topics_enabled', True):
+        for article in articles:
+            article['topics'] = []
+            for key in ('title_zh', 'extraction_version', 'extracted'):
+                article.pop(key, None)
+    pending = [a for a in articles if settings.get('topics_enabled', True) and a.get('analysis_allowed', True) and a.get('extraction_version') != extraction_version]
     if pending:
         extractor = TopicExtractor(aliases)
         for article in pending:
@@ -336,12 +347,8 @@ def run(now, output, state_path, enable_ai=True):
             article['extracted'] = True
             article['extraction_version'] = extraction_version
     data = build_dataset(articles, sources, [state for _, state in results], now, settings, previous)
-    # Persist base data before AI so an API failure cannot destroy a successful RSS run.
+    # No cloud enrichment: public snapshots contain English RSS content only.
     write_json(state_path, data)
-    if enable_ai:
-        from scripts.ai import enrich
-        enrich(data, settings['ai'], state_path.parent / 'ai-cache.json', now)
-        write_json(state_path, data)
     published = json.loads(json.dumps(data))
     for article in published['articles']:
         article.pop('identities', None)
@@ -357,6 +364,6 @@ if __name__ == '__main__':
     parser.add_argument('--now', help='ISO timestamp with timezone; for replay/testing')
     parser.add_argument('--output', type=Path, default=ROOT / 'public/data/news.json')
     parser.add_argument('--state', type=Path, default=ROOT / 'state/news.json')
-    parser.add_argument('--no-ai', action='store_true')
+    parser.add_argument('--no-ai', action='store_true', help='Legacy flag; cloud AI is always disabled')
     args = parser.parse_args()
-    run(dt(args.now) if args.now else datetime.now(timezone.utc), args.output, args.state, not args.no_ai)
+    run(dt(args.now) if args.now else datetime.now(timezone.utc), args.output, args.state)

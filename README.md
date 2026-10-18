@@ -1,114 +1,113 @@
-# Headline · 全球新闻手记
+# Headline · 国际新闻榜
 
-每四小时整理英文新闻，按话题连接报道，辅助英语阅读。原生 HTML/CSS/JavaScript + Python，无常驻服务器。目标是**零服务费**；免费服务限制变化时停止受影响功能，不自动付费。
+[打开网页](https://suesone.github.io/headline/) · [源码仓库](https://github.com/Suesone/headline)
 
-- 网页：https://suesone.github.io/headline/
-- 仓库：https://github.com/Suesone/headline
-- 北京时间每日 00、04、08、12、16、20 点触发；GitHub Actions 和 Pages 可能延迟。
-- 实时热词来自最近完成的四小时窗口；今日热词按北京时间自然日合并。可选择昨天或历史时段。
-- 首次抓取只覆盖订阅源当前提供的记录，无法追溯它没有提供的旧报道。
-- 页面默认显示最近完成的时段；该时段没有新报道时自动展示历史新闻。实时热词仍对应最近完成的四小时窗口。
+每四小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译只在本机按需执行，译文不写入项目文件、不上传 GitHub 或云端翻译服务。**
 
-## 当前来源与限制
+## 当前功能
 
-已移除测试阶段的 Global Voices、NASA、Wikinews。当前来源：
+- 北京时间 00、04、08、12、16、20 点由 GitHub Actions 更新，允许调度延迟；关闭电脑后英文新闻仍可更新。
+- 首页优先“榜中榜”：从各源前五条候选中，按 RSS 顺序与新鲜度推荐；完全相同标题合并，同一媒体多个频道不重复加分。不进行热词或语义分析，也没有虚构的阅读量。
+- 默认看最近 24 小时已完成时段；可以切换四小时时段、最近 30 天和单一来源。
+- 各源前两条使用大标题与 RSS 简短摘要，后列只展示标题和阅读操作。RSS 摘要并非原文首段；没有摘要时明确提示，不额外抓取正文。
+- 每源默认显示十条，按需再显示十条；未展示的内容不送入翻译。
+- 单条翻译、翻译当前屏幕、勾选报道后翻译；相同文字复用本页内存缓存。滚动后不会自动翻译。
+- 个别报道可进入“全文”阅读器，粘贴可正常访问的原文或导入 .txt，在本机按段翻译，支持停止后续段落。不会声称从 RSS 得到全文，不绕过付费墙。
+- 英语查词提供 Cambridge 与 Merriam-Webster 链接，点击后访问词典，不抓取释义。
 
-| 来源 | 阅读 | 热词 | AI |
-| --- | --- | --- | --- |
-| Reuters（Feedseek 社区转发） | 是 | 否 | 否 |
-| BBC World / Business（社区目录收录的官方 RSS） | 是 | 否 | 否 |
-| NPR News（社区目录收录的官方 RSS） | 是 | 标题实体与短语统计 | 否 |
-| CNBC International（社区目录收录的官方 RSS） | 是 | 否 | 否 |
-| VOA 英文 China / Asia、Korean Peninsula 原创频道 | 是 | 是 | 可选，尚需免费密钥 |
-| AFP 法新社 | 暂未启用 | 否 | 否 |
+**实时热词、今日热词与 Cloudflare AI 已归档**。当前工作流不安装 NLP 模型、不提取热词、不读取 Cloudflare 密钥、不调用云端 AI。旧实现保留在 `archive/` 和 Git 历史，未发布到网站。
 
-“社区维护”包括社区整理的官方订阅目录和社区转发两种，页面分别标注。官方源可用时直接读取官方地址，避免增加公共转发服务器故障。社区维护不改变新闻内容的使用条件。
+## 来源
 
-BBC 限制计算分析；NPR 的 Content Feeds 条款明确限制翻译，标题实体计数作为本站统计显示，不改变原文；CNBC 当前 Versant 条款限制翻译和内容再利用。它们没有被宣称为获得 AI 许可的来源。VOA 只收录已核验原创署名，不收录已知 Reuters/AP/AFP 转载，未知署名也跳过；多个 VOA 频道在热词统计中仍只算一个媒体。VOA 周末更新较少。
+当前保留七个订阅流：Reuters（Feedseek 社区转发）、BBC World、BBC Business、NPR News、CNBC International、VOA 英文 China / Asia 与 Korean Peninsula 原创频道。BBC、CNBC 优先采用 Plenary 社区目录收录的官方 RSS；NPR 参考 Semantic News 的 1001 频道并采用当前官方 HTTPS 地址。官方地址可用时不额外依赖公共转发服务器。
 
-AFP 公开 Fact Check RSS 候选实测 403，也不等同于综合新闻。官方 API 提供试用，未验证到可长期零费用运行的综合新闻订阅，暂时禁用。没有把 France 24 当作 AFP 直属新闻源。
+AFP 的 Fact Check 候选复测仍返回 403，且并非综合新闻流，已从当前配置删除。没有找到可核验、稳定、长期零费用的 AFP 英文综合新闻社区 RSS；没有将 France 24 当作 AFP。NASA、Global Voices、Wikinews 测试源此前已移除。
 
-详细依据、实测与边界见 [主流来源说明](docs/major-news-sources.md)。历史研究保留在 [接入研究](docs/news-sources.md) 和 [社区 RSS 说明](docs/community-rss.md)，当前采用情况以本节及 sources.json 为准。
+本次实测记录在 [docs/major-rss-probes.json](docs/major-rss-probes.json)，含检查时间、条目数与日期，不保存文章全文。配置可用的来源临时失败时保留旧新闻并提示；不因一次短暂故障立即删除来源。
 
-每条新闻保留署名（若订阅提供）、来源与原文链接。只使用 RSS 标题和短摘要，没有全文抓取、图片下载或付费墙绕过。
+社区整理或转发不改变内容权利。**本地翻译不等于获得所有媒体条款的豁免或公开传播译文的许可。** 本项目实现私人辅助阅读；原始内容保留来源与链接，不训练模型。
 
-## 本地运行
+## 本地翻译：面向入门者
 
-需要 Python 3.12（不要用 Python 3.14 安装这组 spaCy 依赖）。在项目目录打开终端：
+完整说明也在网页的 [本地翻译使用说明](https://suesone.github.io/headline/local-guide.html)。
+
+### 方式一：桌面 Chrome
+
+使用支持 Translator API 的桌面 Chrome 打开公开网页，点击报道的“翻译”或右下角“译 · 当前屏幕”。首次可能下载本地语言包，推理在设备上完成。
+
+不支持的浏览器、设备或语言对会提示，**不会转用云端**。当前官方说明不支持移动设备；这与浏览器菜单里可能使用云服务的“翻译此页”不同。[Chrome 官方文档](https://developer.chrome.com/docs/ai/translator-api)
+
+### 方式二：本地阅读器 + Ollama
+
+1. 从 [Ollama 官网](https://ollama.com/download)安装 Ollama。
+2. 下载本机模型（一次联网下载模型文件，默认约 2.5 GB）：
 
 ```sh
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
-python -m scripts.collect
-python -m pytest -q
-python -m http.server 8765 --directory public
+ollama pull qwen3:4b
 ```
 
-打开 http://localhost:8765/ 。不要直接双击 index.html，浏览器会限制本地 JSON 读取。
+3. 在终端进入本项目文件夹并启动阅读器：
 
-## 界面
+```sh
+cd /你的路径/Headline
+python3 -m scripts.local_reader
+```
 
-参考今日热榜的浅灰背景、白色来源卡片、紧凑列表和彩色序号，保留独立的 Headline 标识。来源图标为本站文字标识，未复制第三方网站素材。每条新闻可展开「摘要与话题」查看作者、许可和原文；顶部来源按钮与下拉筛选联动。未启用的来源会展开状态说明，不伪装成可用榜单。
+本机项目当前位于桌面的 Headline 文件夹。阅读器只使用 Python 标准库，无需安装 NLP 或网页框架。打开终端显示的 **http://127.0.0.1:8765/**，选择“Ollama · 本地阅读器”，再点击翻译。
 
-## 日常操作
+阅读器启动独立的 Ollama 实例，通过 `OLLAMA_NO_CLOUD=1` 关闭云功能，仅监听 `127.0.0.1:11435`。拒绝 cloud 模型、远程模型、非同源请求以及 HTTP 代理转发；不复用可能开启云功能的已有服务。浏览器只访问同源本机接口，公开网页不会直接访问你的模型。[Ollama 本地模式说明](https://docs.ollama.com/faq)
 
-### 手动更新
+阅读器会下载最新公开英文新闻 JSON；失败时使用项目已有快照。下载新闻、模型文件和语言包不包含待翻译的私人文字。原文与译文只在浏览器内存和本机模型请求中处理，不记录文本日志、写入文件或上传服务器。刷新或关闭页面后，译文缓存不再保留。
 
-打开 GitHub 仓库 → **Actions** → **Update news and deploy** → **Run workflow** → 选择 `main` → 运行。绿色勾表示流程结束；点击运行可以查看摘要、失败步骤和两天观察状态。
+较小模型可用以下方式（效果需要核对）：
 
-自动任务运行在 GitHub，关闭电脑也能执行。公开仓库长期无活动可能暂停定时任务；若页面显示更新延迟，请检查 Actions 是否启用并手动运行一次。正文和数据文件存在不代表实时源始终可用。
+```sh
+ollama pull qwen3:1.7b
+python3 -m scripts.local_reader --model qwen3:1.7b
+```
 
-### 修改新闻源
+端口占用时：
 
-编辑 `config/sources.json`。新增一项，设置唯一 `id`、名称、媒体主体 `publisher`、RSS `url`、来源主页、许可链接、条款链接和说明；分别检查阅读、统计与 AI 使用条件，再设置 `enabled`、`topics_enabled`、`ai_enabled`。不要提交需登录的订阅链接或带私人令牌的 URL。
+```sh
+python3 -m scripts.local_reader --port 8766 --ollama-port 11436
+```
 
-`mode: links_only` 用于只展示标题与原文链接的来源，自动排除摘要、热词和 AI；`relay_name`、`relay_url` 标记社区维护者；`allowed_link_domains` 限制链接域名；`max_feed_age_hours` 可检测陈旧订阅。
+按 Ctrl+C 关闭阅读器，同时关闭它启动的模型实例。较长全文最多 60,000 字符，每段约 1,800 字符；速度取决于电脑，分段可能影响上下文。停止功能阻止后续段落，当前已提交到本机模型的段落可能需要结束才停止。翻译可能有误，应对照原文。
 
-`mode: read_only` 保留 RSS 阅读内容，默认关闭热词与 AI；`topics_enabled` 和 `ai_enabled` 可以独立设置。`community_name` / `community_url` 记录订阅目录，`relay_name` / `relay_url` 专指转发。VOA 的 `allowed_authors` 是保守的原创署名白名单；新增记者需先核查，`exclude_credit_patterns` 过滤第三方稿件信用标记。
+## 新闻采集与维护
 
-`publisher` 应使用真实媒体主体：同一媒体多个频道只算一个独立来源。可用 `exclude_title_prefixes` 忽略固定前缀。
+需要 Python 3.12+：
 
-编辑 `config/aliases.json` 可以合并话题别名，例如 US、U.S. → United States。不确定的同名人物不要直接合并。热词由模型与统计工具提取，可能误判；点击查看原报道再判断。
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m scripts.collect
+python -m pytest -q
+node --test tests/*.test.cjs
+```
 
-### 可选 AI：默认未启用实际调用
+日常英文采集只需要 feedparser；pytest 用于验证。旧 NLP 测试在没有 spaCy/YAKE/模型时跳过，恢复热词需另行安装 `archive/requirements-hotwords.txt` 的依赖。仅预览网页可运行 `python3 -m scripts.local_reader`；没有 Ollama 仍能阅读英文或使用支持的浏览器本地翻译。
 
-没有密钥时，英文新闻、热词和词典入口照常使用；不会显示伪造的中文译文。
+- **手动更新**：仓库 → Actions → Update news and deploy → Run workflow。绿色勾表示流程结束，页面显示实际更新时间。
+- **修改来源**：编辑 `config/sources.json` 的 RSS、名称、`publisher`、来源主页、条款与社区目录链接，再手动运行。不要提交需要私人令牌的 URL。
+- **同媒体计数**：`publisher` 是媒体主体，BBC / VOA 多频道仍属于同一家媒体。
+- **VOA 过滤**：`allowed_authors` 仅收录核验原创署名，未知署名跳过；`exclude_credit_patterns` 过滤 RSS 提供的已知 Reuters/AP/AFP 标记。不能只凭域名判断原创。
+- **订阅陈旧**：Reuters 超过 36 小时、其他源超过 96 小时没有有效新条目时提示错误并保留旧数据。NPR 仅最近十条，四小时抓取不能保证完整收录。
+- **自动更新暂停**：公开仓库长期无活动可能暂停定时任务，检查 Actions 并手动运行一次。
+- **部署自己的副本**：Fork → Settings → Pages → GitHub Actions → 启用并手动运行。使用免费 github.io 地址，不买域名；修改本地阅读器 NEWS_URL 指向自己的英文数据地址。
 
-1. 注册/登录 Cloudflare，确认账户使用 **Workers Free**；不要启用付费或试用 Workers 订阅，也不要充值 AI Gateway。
-2. 创建限定到该账户的 API Token，授权 **Workers AI: Read** 和读取账户订阅所需的 **Account Billing: Read**。实际权限以 Cloudflare 控制台为准。如果订阅查询被拒绝，程序会停止 AI，不绕过检查。
-3. 在 GitHub 仓库 **Settings → Secrets and variables → Actions → New repository secret** 添加 `CF_ACCOUNT_ID` 和 `CF_API_TOKEN`。
-4. 在 `config/settings.json` 中，将 `ai.free_plan_confirmed` 改为 `true`。默认模型是 `@cf/qwen/qwen3-30b-a3b-fp8`，`ai.enabled` 可以随时关闭。
-5. 手动运行更新。查看页面底部 AI 状态；额度不足、账户检查失败或模型失效时暂停新增 AI。
+每条新闻使用发布日期归档，迟到报道补入原窗口；零点前四小时属于昨天。GUID、规范化链接及同源相似标题去重，记录最近 30 天。Git 历史仍可能保留旧版本。
 
-每次最多翻译 40 个当前时段标题，并解释前 10 个话题。页面的中英开关只显示已有缓存，不发起 API 调用。AI 只接收配置允许的原创新闻标题、短摘要和话题，不接收个人信息。
+## 文件
 
-更换密钥：在 Secrets 中更新 `CF_API_TOKEN`，然后手动运行；不要把密钥写进源码、网页或公开 Issues。免费额度以账户为单位，其他项目也会消耗额度。程序在调用前核查 Workers 订阅并拒绝付费/试用计划；免费账户被升级或政策变化后，应先关闭 `ai.enabled`。AI 文字仍可能有误，引用链接不能自动证明每一句话正确。
+- `public/`：发布的网页、排序与本地翻译客户端；`data/news.json` 只包含新闻快照。
+- `scripts/collect.py`：RSS 获取、清洗、去重、归档。没有云端翻译入口。
+- `scripts/local_reader.py`：只监听本机的阅读器与云功能关闭的 Ollama 适配器。
+- `state/news.json`：滚动英文历史；`state/health.json`：免费定时流程的两天运行观察。
+- `archive/`：旧热词页面和云端 AI 代码，仅保留、不发布、不执行。
+- `tests/`：日期边界、去重、来源失败、排序、翻译分段/缓存/取消与本机隔离验证。
 
-[Cloudflare Workers AI 免费额度](https://developers.cloudflare.com/workers-ai/platform/pricing/)
+不保存个人资料、不设置分析追踪。当前没有 Cloudflare AI 调用，也无需配置或更换其 Secrets；若此前创建过密钥，可自行在 GitHub Secrets 中删除，工作流已不读取它们。
 
-### 发布自己的副本
-
-Fork 本仓库 → Settings → Pages → Source 选择 **GitHub Actions** → Actions 启用工作流并手动运行。GitHub Free 的 Pages 来源仓库需公开。使用系统提供的 `github.io` 地址，无需购买域名。
-
-此网页、源码、新闻数据和翻译缓存都是公开的；不收集个人资料，不设置分析追踪。中英对照偏好只保存在你的浏览器。词典查询需要点击链接后跳转官方词典。
-
-## 数据与维护
-
-- `public/`：实际发布目录；`public/data/news.json` 是浏览器唯一数据接口。
-- `state/news.json`：去重身份与滚动历史，`state/ai-cache.json`：按内容缓存，`state/health.json`：两天运行观察。
-- `scripts/collect.py`：抓取、清洗、去重、归档、统计；`scripts/ai.py`：免费账户检查、翻译和语境说明。
-- `tests/`：时间边界、去重、迟到报道、来源故障、AI 降级与缓存测试。
-
-统计时间使用发布时间，不以抓取时间替代。零点收集的前四小时属于昨天；尚未结束的时段下次再展示。没有日期、危险链接和明显未来日期的条目跳过，并显示跳过数量。重复报道不重复计数，跨媒体报道保留；不同标题的同一事件不保证自动精确合并。
-
-数据保留最近 30 个北京时间自然日；Git 的历史提交仍可能保留过去版本。AI 内容缓存保留 30 天。单源最多重试三次；部分失败仍发布成功来源，全部失败保留先前新闻并标记失败。所有来源禁用后旧条目会移除。
-
-前两天的观察由同一个免费定时工作流记录，不另外启动收费代理任务；需要实际经过两天才能完成，见 `state/health.json`。源码改动应先通过 `python -m pytest -q` 和 `node --check public/app.js`。
-
-## 社区参考与许可
-
-界面和流程借鉴 [NewsNow](https://github.com/newsnext/newsnow)、[RSSBox](https://github.com/versun/RSSBox)、[TrendRadar](https://github.com/sansan0/TrendRadar) 的公开设计与经验，没有复制其实现。依赖 feedparser、spaCy、YAKE；各自保留原许可。
-
-本站代码使用 MIT License。新闻、摘要、许可声明及第三方模型不受本站代码许可重新授权。
+界面参考 [今日热榜](https://tophub.today/)的榜中榜、来源卡片与前列内容层级，采用本站独立文字标识。流程参考 NewsNow、RSSBox、TrendRadar 的开源经验，没有复制其实现。本站代码使用 MIT License；新闻内容和第三方模型保留原有权利及许可。

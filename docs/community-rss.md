@@ -1,3 +1,5 @@
+> 历史研究记录：当前版本已归档热词与云端 AI，AFP 候选已删除。最新行为和本地翻译见 [README](../README.md)。
+
 # 社区维护 RSS 的采用情况
 
 核查日期：2026-10-18。当前已启用 **Reuters · 社区 RSS**，使用 [Feedseek](https://github.com/trvny/feedseek) 生成的 Atom 订阅。

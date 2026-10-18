@@ -27,17 +27,15 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install -r requirements.txt
-          python -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
       - name: Test data pipeline
-        run: python -m pytest -q
-      - name: Fetch news and enrich with free AI
-        env:
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          python -m pytest -q
+          node --test tests/*.test.cjs
+      - name: Fetch English news only
         run: python -m scripts.collect
       - name: Record two-day observation
         run: python -m scripts.report
-      - name: Save bounded history and cached translations
+      - name: Save English news history
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'

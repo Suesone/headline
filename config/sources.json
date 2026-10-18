@@ -16,8 +16,10 @@
     "license": "原文归 Reuters；社区转发不改变内容权利",
     "license_url": "https://www.reuters.com/info-pages/terms-of-use/",
     "terms_url": "https://github.com/trvny/feedseek",
-    "note": "由 Feedseek 社区维护，约每两小时刷新；展示标题、订阅日期和原文链接，不抓取正文，不参与本站 AI 或热词统计。日期来自订阅，未逐篇核实原站时间。",
-    "max_feed_age_hours": 36
+    "note": "Feedseek 社区转发，约每两小时刷新；仅标题、订阅日期与原文链接，未提供可展示的原文首段。",
+    "max_feed_age_hours": 36,
+    "topics_enabled": false,
+    "ai_enabled": false
   },
   {
     "id": "bbc-world",
@@ -29,7 +31,7 @@
     "license": "保留所有权利",
     "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
     "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
-    "note": "社区目录收录的 BBC 官方 RSS；保留 BBC News 署名和原文链接。仅供阅读，不参与计算分析与 AI。",
+    "note": "社区目录收录的 BBC 官方 World RSS；保留 BBC News 署名与链接。",
     "mode": "read_only",
     "topics_enabled": false,
     "ai_enabled": false,
@@ -51,7 +53,7 @@
     "license": "保留所有权利",
     "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
     "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
-    "note": "社区目录收录的 BBC 官方 RSS；保留 BBC News 署名和原文链接。仅供阅读，不参与计算分析与 AI。",
+    "note": "社区目录收录的 BBC 官方 Business RSS；保留 BBC News 署名与链接。",
     "mode": "read_only",
     "topics_enabled": false,
     "ai_enabled": false,
@@ -76,9 +78,9 @@
     "max_feed_age_hours": 96,
     "community_name": "Semantic News RSS 目录",
     "community_url": "https://github.com/semantic-news/rss-feeds/blob/master/en-general.md",
-    "note": "社区目录收录 NPR 1001 新闻频道；采用当前官方 HTTPS RSS。本站统计标题中的人物、地点和机构出现次数；原始标题与摘要保留。订阅条款限制翻译，故不向 AI 发送内容。",
+    "note": "社区目录收录 NPR 1001 新闻频道；直接读取官方 HTTPS RSS，通常仅保留最近 10 条，可能遗漏抓取间隔内被挤出的报道。",
     "mode": "read_only",
-    "topics_enabled": true,
+    "topics_enabled": false,
     "ai_enabled": false,
     "allowed_link_domains": [
       "npr.org"
@@ -98,7 +100,7 @@
     "max_feed_age_hours": 96,
     "community_name": "Plenary RSS 目录",
     "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
-    "note": "社区目录收录的 CNBC 官方国际新闻 RSS；仅供阅读。当前条款限制内容再利用与翻译，未开启热词与 AI。",
+    "note": "社区目录收录的 CNBC 官方国际新闻 RSS；标题与简短摘要链接回原文。",
     "mode": "read_only",
     "topics_enabled": false,
     "ai_enabled": false,
@@ -117,9 +119,9 @@
     "license_url": "https://www.voanews.com/p/5338.html",
     "enabled": true,
     "max_feed_age_hours": 96,
-    "note": "VOA 当前官方目录中的英文报道频道，参与热词与可选 AI。只收录已核验的原创署名，过滤 Reuters / AP / AFP 转载；周末更新可能较少。",
-    "topics_enabled": true,
-    "ai_enabled": true,
+    "note": "VOA 当前官方目录中的英文原创频道；未知署名及已知通讯社转载被过滤，周末更新可能较少。",
+    "topics_enabled": false,
+    "ai_enabled": false,
     "allowed_link_domains": [
       "voanews.com"
     ],
@@ -150,9 +152,9 @@
     "license_url": "https://www.voanews.com/p/5338.html",
     "enabled": true,
     "max_feed_age_hours": 96,
-    "note": "VOA 当前官方目录中的英文报道频道，参与热词与可选 AI。只收录已核验的原创署名，过滤 Reuters / AP / AFP 转载；周末更新可能较少。",
-    "topics_enabled": true,
-    "ai_enabled": true,
+    "note": "VOA 当前官方目录中的英文原创频道；未知署名及已知通讯社转载被过滤，周末更新可能较少。",
+    "topics_enabled": false,
+    "ai_enabled": false,
     "allowed_link_domains": [
       "voanews.com"
     ],
@@ -171,20 +173,5 @@
       "AFP",
       "AP News"
     ]
-  },
-  {
-    "id": "afp",
-    "name": "AFP · 法新社",
-    "publisher": "AFP",
-    "url": "https://factcheck.afp.com/rss.xml",
-    "homepage": "https://www.afp.com/",
-    "enabled": false,
-    "mode": "read_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
-    "license": "保留所有权利",
-    "license_url": "https://www.afp.com/en/our-offer/afp-stories",
-    "terms_url": "https://www.afp.com/en/our-offer/afp-stories",
-    "note": "尚未找到可验证、稳定且免费的英文综合新闻社区 RSS；Fact Check 候选返回 403，且不等同于综合新闻。官方 API 提供试用，未纳入零费用方案。"
   }
 ]

@@ -1,11 +1,14 @@
 {
   "retention_days": 30,
+  "topics_enabled": false,
   "topics_per_window": 15,
-  "ai": {
-    "enabled": true,
-    "free_plan_confirmed": false,
-    "model": "@cf/qwen/qwen3-30b-a3b-fp8",
-    "max_titles_per_run": 40,
-    "max_topics_per_run": 10
+  "ranking": {
+    "board_limit": 12,
+    "per_source_limit": 10,
+    "featured_per_source": 2
+  },
+  "translation": {
+    "mode": "local_only",
+    "default_enabled": false
   }
 }

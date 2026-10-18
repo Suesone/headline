@@ -5,7 +5,7 @@ import json
 import pytest
 
 from scripts import collect as c
-from scripts import ai
+from archive import cloud_ai as ai
 
 NOW = c.dt('2026-10-18T08:07:00+08:00')
 SETTINGS = {'retention_days': 30, 'topics_per_window': 15}
@@ -128,6 +128,11 @@ def test_retry_and_disabled_sources(monkeypatch):
 
 
 def test_extractor_merges_aliases_and_ignores_dates():
+    pytest.importorskip('spacy')
+    pytest.importorskip('yake')
+    import spacy
+    if not spacy.util.is_package('en_core_web_sm'):
+        pytest.skip('Archived NLP model is not installed')
     extractor = c.TopicExtractor(c.read_json(c.ROOT / 'config/aliases.json'))
     a = article(title='Donald Trump meets United Nations officials in Japan')
     a['summary'] = 'Trump discussed sanctions with the UN on Monday.'
@@ -305,3 +310,32 @@ def test_revised_rss_content_invalidates_extraction_version():
     merged = c.merge_articles([old], [updated], NOW - timedelta(days=30))
     assert len(merged) == 1 and merged[0]['id'] == old['id']
     assert 'extraction_version' not in merged[0] and merged[0]['topics'] == []
+
+
+def test_current_collection_disables_nlp_cloud_and_published_translations(monkeypatch, tmp_path):
+    root = tmp_path
+    (root / 'config').mkdir()
+    c.write_json(root / 'config/sources.json', SOURCES)
+    c.write_json(root / 'config/settings.json', {**SETTINGS, 'topics_enabled': False})
+    c.write_json(root / 'config/aliases.json', {})
+    old = article('old'); old['title_zh'] = '旧云端译文'
+    c.write_json(root / 'state/news.json', {'articles': [old]})
+    monkeypatch.setattr(c, 'ROOT', root)
+    monkeypatch.setattr(c, 'TopicExtractor', lambda *a: pytest.fail('Archived NLP must not run'))
+    monkeypatch.setattr(c, 'fetch_source', lambda source, now: ([article(source['id'], source['id'])], {'id': source['id'], 'status': 'ok'}))
+    monkeypatch.setenv('CF_API_TOKEN', 'test-secret-never-used')
+    d = c.run(NOW, root / 'public/data/news.json', root / 'state/news.json')
+    assert all(a['topics'] == [] and 'title_zh' not in a for a in d['articles'])
+    assert all(w['topics'] == [] for w in d['windows'])
+    assert all(day['topics'] == [] for day in d['days'])
+    assert d['ai']['status'] == 'local_only'
+    assert 'test-secret' not in (root / 'public/data/news.json').read_text()
+
+
+def test_feed_rank_follows_feed_order_and_updates_on_repeat():
+    body = b'<rss version="2.0"><channel><title>Feed</title><item><title>First</title><guid>1</guid><link>https://example.org/one</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate></item><item><title>Second</title><guid>2</guid><link>https://example.org/two</link><pubDate>Sat, 17 Oct 2026 23:00:00 GMT</pubDate></item></channel></rss>'
+    items, _ = c.parse_feed(body, SOURCES[0], NOW)
+    assert [a['feed_rank'] for a in items] == [1, 2]
+    old = deepcopy(items[0]);old['feed_rank'] = 10
+    updated = c.merge_articles([old], items, NOW-timedelta(days=30))
+    assert next(a for a in updated if a['id'] == old['id'])['feed_rank'] == 1
