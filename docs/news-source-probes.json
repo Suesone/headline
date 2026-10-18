@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-10-18T04:01:38.190759+00:00",
+  "environment": "Local development network; cloud results may differ",
+  "results": [
+    {
+      "name": "BBC World official RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "kind": "rss",
+      "http_status": 200,
+      "content_type": "text/xml; charset=utf-8",
+      "final_url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "valid_feed": true,
+      "entries": 28,
+      "dated_entries": 28,
+      "missing_publication_date": 0,
+      "publisher_names": []
+    },
+    {
+      "name": "BBC Business official RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "kind": "rss",
+      "http_status": 200,
+      "content_type": "text/xml; charset=utf-8",
+      "final_url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "valid_feed": true,
+      "entries": 49,
+      "dated_entries": 49,
+      "missing_publication_date": 0,
+      "publisher_names": []
+    },
+    {
+      "name": "Reuters website listing",
+      "url": "https://www.reuters.com/pf/api/v3/content/fetch/articles-by-section-alias-or-id-v1?query=%7B%22offset%22%3A+0%2C+%22size%22%3A+5%2C+%22section_id%22%3A+%22%2Fworld%2F%22%2C+%22website%22%3A+%22reuters%22%7D",
+      "kind": "json",
+      "http_status": 401,
+      "error": "HTTP request rejected; no bypass attempted"
+    },
+    {
+      "name": "Reuters via RSSHub public instance",
+      "url": "https://rsshub.app/reuters/world?limit=5&fulltext=false",
+      "kind": "rss",
+      "http_status": 403,
+      "error": "HTTP request rejected; no bypass attempted"
+    },
+    {
+      "name": "AP official legacy index RSS",
+      "url": "https://apnews.com/index.rss",
+      "kind": "rss",
+      "http_status": 403,
+      "error": "HTTP request rejected; no bypass attempted"
+    },
+    {
+      "name": "AP mobile via RSSHub public instance",
+      "url": "https://rsshub.app/apnews/mobile?limit=5&fulltext=false",
+      "kind": "rss",
+      "http_status": 403,
+      "error": "HTTP request rejected; no bypass attempted"
+    },
+    {
+      "name": "Guardian World official RSS",
+      "url": "https://www.theguardian.com/world/rss",
+      "kind": "rss",
+      "http_status": 200,
+      "content_type": "text/xml; charset=UTF-8",
+      "final_url": "https://www.theguardian.com/world/rss",
+      "valid_feed": true,
+      "entries": 45,
+      "dated_entries": 45,
+      "missing_publication_date": 0,
+      "publisher_names": []
+    },
+    {
+      "name": "AP World public page",
+      "url": "https://apnews.com/hub/world-news",
+      "kind": "html",
+      "http_status": 403,
+      "error": "HTTP request rejected; no bypass attempted"
+    },
+    {
+      "name": "AP topics via RSSHub public instance",
+      "url": "https://rsshub.app/apnews/topics/world-news?limit=5&fulltext=false",
+      "kind": "rss",
+      "http_status": 403,
+      "error": "HTTP request rejected; no bypass attempted"
+    },
+    {
+      "name": "Reuters via Google News RSS search",
+      "url": "https://news.google.com/rss/search?q=site%3Areuters.com+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen",
+      "kind": "rss",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "final_url": "https://news.google.com/rss/search?q=site%3Areuters.com+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen",
+      "valid_feed": true,
+      "entries": 100,
+      "dated_entries": 100,
+      "missing_publication_date": 0,
+      "publisher_names": [
+        "Reuters"
+      ]
+    },
+    {
+      "name": "AP via Google News RSS search",
+      "url": "https://news.google.com/rss/search?q=site%3Aapnews.com+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen",
+      "kind": "rss",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "final_url": "https://news.google.com/rss/search?q=site%3Aapnews.com+when%3A1d&hl=en-US&gl=US&ceid=US%3Aen",
+      "valid_feed": true,
+      "entries": 100,
+      "dated_entries": 100,
+      "missing_publication_date": 0,
+      "publisher_names": [
+        "AP News"
+      ]
+    }
+  ],
+  "note": "Diagnostics only. HTTP success is not a content licence or uptime guarantee."
+}
