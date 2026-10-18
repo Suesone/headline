@@ -7,10 +7,10 @@
   "preview_urls": false,
   "observability": {"enabled": false},
   // Enable the API route only AFTER configuring Google login and Cloudflare DNS proxy.
-  // "routes": [{"pattern": "headline.infinitas.top/api/cloud/*", "zone_name": "infinitas.top"}],
+  "routes": [{"pattern": "headline.infinitas.top/api/cloud/*", "zone_name": "infinitas.top"}],
   "vars": {
     "PUBLIC_HOST": "headline.infinitas.top",
-    "GOOGLE_CLIENT_ID": "",
+    "GOOGLE_CLIENT_ID": "1014462720833-b7079ftdpfcu38ptaaj9htlmqq1roe7r.apps.googleusercontent.com",
     "FREE_TIER_CONFIRMED": "false",
     "DAILY_REQUEST_LIMIT": "100"
   },
