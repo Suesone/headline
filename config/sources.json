@@ -1,0 +1,77 @@
+[
+  {
+    "id": "global-voices",
+    "name": "Global Voices",
+    "publisher": "Global Voices",
+    "url": "https://globalvoices.org/feed/",
+    "homepage": "https://globalvoices.org/",
+    "enabled": true,
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "terms_url": "https://globalvoices.org/about/",
+    "note": "国际公民媒体；保留作者、来源、原文和许可，AI 译文单独标记。"
+  },
+  {
+    "id": "nasa",
+    "name": "NASA",
+    "publisher": "NASA",
+    "url": "https://www.nasa.gov/feed/",
+    "homepage": "https://www.nasa.gov/",
+    "enabled": true,
+    "license": "NASA 使用指引（保留第三方权利）",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "terms_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "note": "美国航天局官方科学资讯；仅使用标题和短摘要，署名来源，不暗示 NASA 背书。",
+    "exclude_title_prefixes": [
+      "APOD:"
+    ]
+  },
+  {
+    "id": "wikinews",
+    "name": "Wikinews",
+    "publisher": "Wikinews",
+    "url": "https://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom",
+    "homepage": "https://en.wikinews.org/",
+    "enabled": false,
+    "license": "CC BY 4.0 (2024-12-16 起)",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "terms_url": "https://en.wikinews.org/wiki/Wikinews:Copyright",
+    "note": "订阅地址实测返回 404，暂时禁用；修复后再启用。"
+  },
+  {
+    "id": "bbc-world",
+    "name": "BBC World",
+    "publisher": "BBC",
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "homepage": "https://www.bbc.com/news/world",
+    "enabled": false,
+    "license": "保留所有权利",
+    "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+    "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+    "note": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。获得适用许可后再启用。"
+  },
+  {
+    "id": "bbc-business",
+    "name": "BBC Business",
+    "publisher": "BBC",
+    "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+    "homepage": "https://www.bbc.com/news/business",
+    "enabled": false,
+    "license": "保留所有权利",
+    "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+    "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+    "note": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。"
+  },
+  {
+    "id": "guardian-world",
+    "name": "The Guardian World",
+    "publisher": "The Guardian",
+    "url": "https://www.theguardian.com/world/rss",
+    "homepage": "https://www.theguardian.com/world",
+    "enabled": false,
+    "license": "保留所有权利",
+    "license_url": "https://www.theguardian.com/help/terms-of-service",
+    "terms_url": "https://www.theguardian.com/help/terms-of-service",
+    "note": "条款第 3 节限制自动聚合、分析及 AI 使用，默认禁用。"
+  }
+]

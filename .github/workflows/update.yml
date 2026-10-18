@@ -1,0 +1,57 @@
+name: Update news and deploy
+on:
+  schedule:
+    # UTC 00,04,08,12,16,20 corresponds to Beijing 08,12,16,20,00,04.
+    - cron: '0 0,4,8,12,16,20 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore: ['README.md', 'docs/**']
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: headline-update-and-pages
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+      - name: Test data pipeline
+        run: python -m pytest -q
+      - name: Fetch news and enrich with free AI
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python -m scripts.collect
+      - name: Record two-day observation
+        run: python -m scripts.report
+      - name: Save bounded history and cached translations
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add state public/data
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update news snapshots [skip ci]'
+            git push
+          fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - uses: actions/deploy-pages@v4
+        id: deployment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}

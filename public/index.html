@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="每四小时一份英文新闻，读懂全球正在讨论什么。">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
+  <title>Headline · 全球新闻手记</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="./" aria-label="Headline 首页"><span class="brand-mark">h.</span><span>Headline<span class="brand-caption">全球新闻手记</span></span></a>
+      <span class="masthead-note">READ THE WORLD, ONE HEADLINE AT A TIME.</span>
+      <span class="edition">个人阅读版 <span class="edition-dot"></span></span>
+    </header>
+    <main>
+      <section class="intro">
+        <div><p class="eyebrow"><span class="line"></span> A MOMENT IN THE WORLD</p><h1>世界在发生什么<span class="accent">。</span></h1><p class="intro-copy">从英文头条出发，找到新闻之间的联系。</p></div>
+        <div class="schedule"><span class="small-label">北京时间 · 每日六次更新</span><p>00:00 <i>·</i> 04:00 <i>·</i> 08:00<br>12:00 <i>·</i> 16:00 <i>·</i> 20:00</p></div>
+      </section>
+      <div id="run-status" class="run-status" role="status" aria-live="polite">正在读取新闻手记…</div>
+      <section class="toolbar" aria-label="阅读筛选">
+        <div class="toolbar-fields"><label>阅读时段<select id="window-select" aria-label="阅读时段" disabled><option>正在加载…</option></select></label><label>新闻来源<select id="source-select" aria-label="新闻来源" disabled><option value="all">全部来源</option></select></label></div>
+        <label class="translation-toggle"><input id="translation-toggle" type="checkbox" role="switch"><span class="switch-track"></span><span>中英对照</span></label>
+      </section>
+      <div class="content-grid">
+        <section class="news-section" aria-labelledby="news-heading">
+          <div class="section-heading"><div><p class="eyebrow">THE BRIEFING</p><h2 id="news-heading">这一刻的新闻</h2></div><span id="article-count" class="count-label"></span></div>
+          <div id="active-topic" class="active-topic" hidden></div>
+          <p id="period-caption" class="period-caption"></p>
+          <div id="news-list" aria-live="polite"><div class="empty-state">连接世界中，请稍候。</div></div>
+          <p class="reading-note">热点依据本站所选来源的报道统计，代表样本内的关注度，不代表全网热度。</p>
+        </section>
+        <aside class="topics-section" aria-label="新闻热词">
+          <section class="topic-panel"><div class="section-heading"><div><p class="eyebrow">IN FOCUS</p><h2>实时热词</h2></div><span class="pill">4 HOURS</span></div><p class="panel-description">人物、地点与事件。点击一个话题，展开新闻线索。</p><div id="window-topics"></div></section>
+          <section class="topic-panel daily-panel"><div class="daily-heading"><h2>今日热词</h2><select id="day-select" aria-label="选择热词日期" disabled></select></div><p class="panel-description">汇总当天各时段入选话题，合并重复名称。</p><div id="day-topics"></div></section>
+          <section class="dictionary-panel"><span class="dictionary-icon" aria-hidden="true">Aa</span><div><h3>把新闻读懂一点</h3><p>遇到不熟悉的英文？查一查它的本意。</p></div><form id="dictionary-form"><label class="sr-only" for="dictionary-word">英文单词</label><input id="dictionary-word" placeholder="例如 ceasefire" lang="en" maxlength="80" required><button type="submit">查词 ↗</button></form><p class="dictionary-credit">Cambridge / Merriam-Webster · 跳转官方词典</p><div id="dictionary-links" aria-live="polite"></div></section>
+        </aside>
+      </div>
+      <section class="source-section"><details id="source-details"><summary>新闻源与运行状态 <span>查看来源、许可和更新时间</span></summary><div id="sources-list"></div><p id="ai-status" class="ai-status"></p></details></section>
+    </main>
+    <footer><span class="footer-brand">Headline<span class="accent">.</span></span><p>保持好奇，保留判断。<br><span>英文原文归各作者所有；AI 译文与语境说明供辅助阅读。</span></p><span class="footer-time">UTC +08:00<br>每四小时，看看世界。</span></footer>
+  </div>
+  <template id="article-template"><article class="article"><div class="article-index"></div><div class="article-body"><div class="article-meta"><span class="source-name"></span><span class="article-time"></span></div><h3><a class="article-link" target="_blank" rel="noopener noreferrer" lang="en"></a></h3><p class="article-translation" hidden></p><p class="article-summary" lang="en"></p><div class="article-bottom"><div class="article-tags"></div><a class="original-link" target="_blank" rel="noopener noreferrer">阅读原文 ↗</a></div><p class="article-credit"></p></div></article></template>
+</body>
+</html>

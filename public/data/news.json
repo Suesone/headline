@@ -1,0 +1,5329 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-18T03:20:21.658352Z",
+  "timezone": "Asia/Shanghai",
+  "latest_window_id": "2026-10-18T04:00+08:00",
+  "today": "2026-10-18",
+  "last_success_at": "2026-10-18T03:20:21.658352Z",
+  "status": "ok",
+  "sources": [
+    {
+      "id": "global-voices",
+      "name": "Global Voices",
+      "publisher": "Global Voices",
+      "url": "https://globalvoices.org/feed/",
+      "homepage": "https://globalvoices.org/",
+      "enabled": true,
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "terms_url": "https://globalvoices.org/about/",
+      "note": "国际公民媒体；保留作者、来源、原文和许可，AI 译文单独标记。",
+      "status": "ok",
+      "checked_at": "2026-10-18T03:20:21.658352Z",
+      "last_success_at": "2026-10-18T03:20:21.658352Z",
+      "received": 15,
+      "skipped": 0,
+      "message": "已读取 15 条；跳过 0 条无效记录"
+    },
+    {
+      "id": "nasa",
+      "name": "NASA",
+      "publisher": "NASA",
+      "url": "https://www.nasa.gov/feed/",
+      "homepage": "https://www.nasa.gov/",
+      "enabled": true,
+      "license": "NASA 使用指引（保留第三方权利）",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "terms_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "note": "美国航天局官方科学资讯；仅使用标题和短摘要，署名来源，不暗示 NASA 背书。",
+      "exclude_title_prefixes": [
+        "APOD:"
+      ],
+      "status": "ok",
+      "checked_at": "2026-10-18T03:20:21.658352Z",
+      "last_success_at": "2026-10-18T03:20:21.658352Z",
+      "received": 8,
+      "skipped": 2,
+      "message": "已读取 8 条；跳过 2 条无效记录"
+    },
+    {
+      "id": "wikinews",
+      "name": "Wikinews",
+      "publisher": "Wikinews",
+      "url": "https://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom",
+      "homepage": "https://en.wikinews.org/",
+      "enabled": false,
+      "license": "CC BY 4.0 (2024-12-16 起)",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "terms_url": "https://en.wikinews.org/wiki/Wikinews:Copyright",
+      "note": "订阅地址实测返回 404，暂时禁用；修复后再启用。",
+      "status": "disabled",
+      "message": "订阅地址实测返回 404，暂时禁用；修复后再启用。",
+      "last_success_at": null
+    },
+    {
+      "id": "bbc-world",
+      "name": "BBC World",
+      "publisher": "BBC",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "homepage": "https://www.bbc.com/news/world",
+      "enabled": false,
+      "license": "保留所有权利",
+      "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+      "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+      "note": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。获得适用许可后再启用。",
+      "status": "disabled",
+      "message": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。获得适用许可后再启用。",
+      "last_success_at": null
+    },
+    {
+      "id": "bbc-business",
+      "name": "BBC Business",
+      "publisher": "BBC",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "homepage": "https://www.bbc.com/news/business",
+      "enabled": false,
+      "license": "保留所有权利",
+      "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+      "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
+      "note": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。",
+      "status": "disabled",
+      "message": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。",
+      "last_success_at": null
+    },
+    {
+      "id": "guardian-world",
+      "name": "The Guardian World",
+      "publisher": "The Guardian",
+      "url": "https://www.theguardian.com/world/rss",
+      "homepage": "https://www.theguardian.com/world",
+      "enabled": false,
+      "license": "保留所有权利",
+      "license_url": "https://www.theguardian.com/help/terms-of-service",
+      "terms_url": "https://www.theguardian.com/help/terms-of-service",
+      "note": "条款第 3 节限制自动聚合、分析及 AI 使用，默认禁用。",
+      "status": "disabled",
+      "message": "条款第 3 节限制自动聚合、分析及 AI 使用，默认禁用。",
+      "last_success_at": null
+    }
+  ],
+  "articles": [
+    {
+      "id": "f4e33bf364f8bb271ecd22b9",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "At the UN, plans for a global coalition to attack LGBTQ+ and reproductive rights",
+      "url": "https://globalvoices.org/2026/10/17/at-the-un-plans-for-a-global-coalition-to-attack-lgbtq-and-reproductive-rights/",
+      "summary": "Far-right activists from the U.S. and Latin America are trying to leverage Trump’s anti-LGBTQ+ government to form a “pro-life, pro-family” counter to the U.N. LGBTI Core Group.",
+      "author": "Uncloseted MEdia",
+      "published_at": "2026-10-17T08:07:27Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-17T16:00+08:00",
+      "topics": [
+        {
+          "id": "5c2df00edab240ccb6f616dd",
+          "label": "United Nations",
+          "kind": "entity"
+        },
+        {
+          "id": "981e5b396726008318fcca73",
+          "label": "United States",
+          "kind": "entity"
+        },
+        {
+          "id": "2c2edeadaa488dd23b2aba7e",
+          "label": "Latin America",
+          "kind": "entity"
+        },
+        {
+          "id": "08682370eb8a9cc8387cc8c3",
+          "label": "Donald Trump",
+          "kind": "entity"
+        },
+        {
+          "id": "9a55ef3f4717bed758ff4296",
+          "label": "U.N. LGBTI Core Group",
+          "kind": "entity"
+        },
+        {
+          "id": "f11f3e27d91c376ca7a704f0",
+          "label": "reproductive rights Far-right",
+          "kind": "phrase"
+        },
+        {
+          "id": "712b689bd664422b5385f227",
+          "label": "Far-right activists",
+          "kind": "phrase"
+        },
+        {
+          "id": "9b49f4f9f50717e651e6a578",
+          "label": "global coalition",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "eceee082141a79e64959abc6",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "NASA Names Stephen Cash Marshall Space Flight Center Director",
+      "url": "https://www.nasa.gov/news-release/nasa-names-stephen-cash-marshall-space-flight-center-director/",
+      "summary": "NASA Administrator Jared Isaacman has named Stephen Cash director of the agency’s Marshall Space Flight Center in Huntsville, Alabama, effective Monday, Oct. 19. Cash, a veteran NASA engineer and aerospace executive, returns to lead the center where he began his career more than four decades ago. “Marshall contributions to NASA’s missions are historic and it’s […]",
+      "author": "Gerelle Q. Dodson",
+      "published_at": "2026-10-16T20:14:39Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-17T04:00+08:00",
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "4e966d6c5bb719e5c57e3ebe",
+          "label": "Stephen Cash Marshall",
+          "kind": "entity"
+        },
+        {
+          "id": "0a99d7cfb090054501aba5fc",
+          "label": "Jared Isaacman",
+          "kind": "entity"
+        },
+        {
+          "id": "2bff955748725b9afad50ae2",
+          "label": "Stephen Cash",
+          "kind": "entity"
+        },
+        {
+          "id": "321c931a5cebe508e5ba70a9",
+          "label": "Marshall Space Flight Center",
+          "kind": "entity"
+        },
+        {
+          "id": "da02fccf47a63bd0f3ea1191",
+          "label": "Huntsville",
+          "kind": "entity"
+        },
+        {
+          "id": "0a14a1797925f8b61d010574",
+          "label": "Alabama",
+          "kind": "entity"
+        },
+        {
+          "id": "98d9d59a907519c80fc08e9b",
+          "label": "Marshall",
+          "kind": "entity"
+        },
+        {
+          "id": "abbb443fee70cb93193cd9e8",
+          "label": "Flight Center Director",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "6ab9fd69f0dd2799f0589a3c",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "Artemis II Heat Shield After Splashdown",
+      "url": "https://www.nasa.gov/image-article/artemis-ii-heat-shield-after-splashdown/",
+      "summary": "Shortly after NASA’s Artemis II mission splashed down on April 10, 2026, U.S. Navy divers captured underwater imagery of the Orion spacecraft’s heat shield. In the months after, the agency measured whether the thermal protection system effectively safeguarded the crew and Orion systems as the spacecraft reentered Earth’s atmosphere. This rigorous analysis confirmed that the […]",
+      "author": "HQ Web Team",
+      "published_at": "2026-10-16T16:28:01Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-17T00:00+08:00",
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "6e9f5e46bc287d2622cf9ba5",
+          "label": "U.S. Navy",
+          "kind": "entity"
+        },
+        {
+          "id": "7b74b418a352d67108173c20",
+          "label": "Earth",
+          "kind": "entity"
+        },
+        {
+          "id": "695520e08192aa910f59301e",
+          "label": "Heat Shield",
+          "kind": "phrase"
+        },
+        {
+          "id": "ac1880018f743715816543a2",
+          "label": "Navy divers",
+          "kind": "phrase"
+        },
+        {
+          "id": "2a052f03ebf64c15e31afa14",
+          "label": "Artemis II mission",
+          "kind": "phrase"
+        },
+        {
+          "id": "f9a7ff467ca3b0b6ea7c9b0f",
+          "label": "Artemis II Heat",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "162b5cc99c941289236e975f",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "I Am Artemis: Allison Mjoen",
+      "url": "https://www.nasa.gov/missions/station/i-am-artemis-allison-mjoen/",
+      "summary": "As the supercooled propellant flowed into the core stage, and NASA’s SLS (Space Launch System) rocket roared to life, Allison Mjoen and her family watched with awe and pride. Mjoen, NASA’s operations manager for the agency’s Exploration Ground Systems Program, helped shape the systems and ground operations that will one day send humans back to […]",
+      "author": "Jason Costa",
+      "published_at": "2026-10-16T14:24:29Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T20:00+08:00",
+      "topics": [
+        {
+          "id": "8c6f36377806d1517589d8bc",
+          "label": "Allison Mjoen",
+          "kind": "entity"
+        },
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "8a68c8ee8d764c8b9ec60684",
+          "label": "Mjoen",
+          "kind": "entity"
+        },
+        {
+          "id": "90b6444eb6fe2a62437e367a",
+          "label": "Exploration Ground Systems Program",
+          "kind": "entity"
+        },
+        {
+          "id": "4c2348bea568bf66307a4bc0",
+          "label": "Space Launch System",
+          "kind": "phrase"
+        },
+        {
+          "id": "5115790f9377355147b20fbe",
+          "label": "core stage",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "3ae2f675a8dcbfe74a139051",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "How an extremist network articulated a hoax linking Brazil’s President Lula to child abuse on X",
+      "url": "https://globalvoices.org/2026/10/16/how-an-extremist-network-articulated-a-hoax-linking-brazils-president-lula-to-child-abuse-on-x/",
+      "summary": "Distortion in the meaning of a speech by Lula about prostate cancer exams went viral within hours and fed conspiracy theories amid a tight presidential race in Brazil.",
+      "author": "Fernanda Canofre",
+      "published_at": "2026-10-16T13:10:39Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T20:00+08:00",
+      "topics": [
+        {
+          "id": "5c8f52ca28966103ff0aad98",
+          "label": "Brazil",
+          "kind": "entity"
+        },
+        {
+          "id": "5f77c2500f56fe1a4abe06bf",
+          "label": "Lula",
+          "kind": "entity"
+        },
+        {
+          "id": "20e796c128096d229ba89bf4",
+          "label": "fed",
+          "kind": "entity"
+        },
+        {
+          "id": "873ca1bdcc7e7d1076555a30",
+          "label": "prostate cancer exams",
+          "kind": "phrase"
+        },
+        {
+          "id": "d09eeaf7bfd63c820192afa5",
+          "label": "tight presidential race",
+          "kind": "phrase"
+        },
+        {
+          "id": "ff647412a1dd63a642c67692",
+          "label": "extremist network",
+          "kind": "phrase"
+        },
+        {
+          "id": "d3a2645a02bcbe5d0ecbb567",
+          "label": "child abuse",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "378b9bf06bbdf04e67dbef70",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "NASA’s Hubble Spies Spiral’s Edge",
+      "url": "https://science.nasa.gov/missions/hubble/nasas-hubble-spies-spirals-edge/",
+      "summary": "This NASA Hubble Space Telescope image features the edge-on, intermediate spiral galaxy NGC 1827, located roughly 37 million light-years away in the constellation Columba, the Dove.",
+      "author": "",
+      "published_at": "2026-10-16T12:42:08Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T20:00+08:00",
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "c5f218a4132255944a9dd2a1",
+          "label": "Hubble Space Telescope",
+          "kind": "phrase"
+        },
+        {
+          "id": "34ddadb731e0e58844b456bc",
+          "label": "Space Telescope image",
+          "kind": "phrase"
+        },
+        {
+          "id": "fa93cb389a4b5b998da420de",
+          "label": "Hubble Spies Spiral",
+          "kind": "phrase"
+        },
+        {
+          "id": "0f7ab79f97cb2beeaa2995d1",
+          "label": "intermediate spiral galaxy",
+          "kind": "phrase"
+        },
+        {
+          "id": "5f13272d07beeffb419cabe5",
+          "label": "constellation Columba",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "7844c786a05d4c1a035bd596",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Hong Kong police launch AI-powered national security platform for school pupils",
+      "url": "https://globalvoices.org/2026/10/16/hong-kong-police-launch-ai-powered-national-security-platform-for-school-pupils/",
+      "summary": "The tech allows students to generate personalized stories on China’s “holistic approach to national security” – a framework advocated by President Xi Jinping covering areas from politics and economy to ecology and technology.",
+      "author": "Hong Kong Free Press",
+      "published_at": "2026-10-16T05:03:29Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T12:00+08:00",
+      "topics": [
+        {
+          "id": "21bd3229a131a2cc251bf2dd",
+          "label": "Hong Kong",
+          "kind": "entity"
+        },
+        {
+          "id": "32e83e92d45d71f69dcf9d21",
+          "label": "AI",
+          "kind": "entity"
+        },
+        {
+          "id": "50c0152c2952082aeaf42788",
+          "label": "China",
+          "kind": "entity"
+        },
+        {
+          "id": "9a76d92bf6d134f1575b6ec2",
+          "label": "Xi Jinping",
+          "kind": "entity"
+        },
+        {
+          "id": "7319ff632a8f6682a7b5ca2e",
+          "label": "national security platform",
+          "kind": "phrase"
+        },
+        {
+          "id": "b133a9000fd9e46b82840f9a",
+          "label": "Kong police",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "afeda75bd8f1fc1088f1f53f",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "Isaias Dims the Gulf Coast",
+      "url": "https://science.nasa.gov/earth/earth-observatory/isaias-dims-the-gulf-coast/",
+      "summary": "High-definition images of nighttime lights show where the hurricane knocked out power along the Florida Panhandle and how quickly the lights came back.",
+      "author": "",
+      "published_at": "2026-10-16T04:00:00Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T12:00+08:00",
+      "topics": [
+        {
+          "id": "89c5c07696fbcaa9105d3613",
+          "label": "Isaias Dims",
+          "kind": "entity"
+        },
+        {
+          "id": "c400ddc0002f9ee6b63d3b19",
+          "label": "Gulf Coast",
+          "kind": "entity"
+        },
+        {
+          "id": "7209e06fd782a2811abd41f4",
+          "label": "Coast High-definition images",
+          "kind": "phrase"
+        },
+        {
+          "id": "9b6e46c3c335326772443d67",
+          "label": "nighttime lights show",
+          "kind": "phrase"
+        },
+        {
+          "id": "77accc3b7092c728e68ee086",
+          "label": "Florida Panhandle",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "17c103abfb300de2f505dcd7",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "NASA to Help Unlock Mysteries of Mars’ Moons in Upcoming Mission",
+      "url": "https://science.nasa.gov/directorates/smd/planetary-science-division/nasa-to-help-unlock-mysteries-of-mars-moons-in-upcoming-mission/",
+      "summary": "NASA is playing an important role in JAXA’s (Japan Aerospace Exploration Agency) MMX (Martian Moons eXploration) mission, to advance our understanding of Mars’ moons and build on the agency’s long history of exploring the Red Planet. The mission aims to characterize and determine the origin of Mars’ moons Phobos and Deimos and deliver a sample […]",
+      "author": "",
+      "published_at": "2026-10-15T19:58:08Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T00:00+08:00",
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "300e538f886e8abe2d69c1ae",
+          "label": "JAXA",
+          "kind": "entity"
+        },
+        {
+          "id": "6d6e1703177f375a7cb55819",
+          "label": "Japan Aerospace Exploration Agency",
+          "kind": "entity"
+        },
+        {
+          "id": "d158be41db87d7055fa9548f",
+          "label": "Mars",
+          "kind": "entity"
+        },
+        {
+          "id": "81d37b25e7fc5eb8e1d22ef5",
+          "label": "Red Planet",
+          "kind": "entity"
+        },
+        {
+          "id": "b45a713ad020463b19db252f",
+          "label": "Phobos",
+          "kind": "entity"
+        },
+        {
+          "id": "44bb41f280055f5a73c6441b",
+          "label": "Deimos",
+          "kind": "entity"
+        },
+        {
+          "id": "c23a48a3f572615cbdbdadfe",
+          "label": "Martian Moons eXploration",
+          "kind": "phrase"
+        },
+        {
+          "id": "51f5172c8235a486cc539447",
+          "label": "Unlock Mysteries",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "f3f121be51432f76efeeb347",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Peru’s Indigenous people in Cutivireni and Oviri take the front line against Amazon wildfires",
+      "url": "https://globalvoices.org/2026/10/15/perus-indigenous-people-in-cutivireni-and-oviri-take-the-front-line-against-amazon-wildfires/",
+      "summary": "As El Niño worsens dry conditions, Peru’s indigenous people in Cutivireni and Oviri are taking action to protect their Amazon territory from wildfires.",
+      "author": "Cool Earth",
+      "published_at": "2026-10-15T18:30:01Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T00:00+08:00",
+      "topics": [
+        {
+          "id": "fdc224c5d688634467113c9c",
+          "label": "Peru",
+          "kind": "entity"
+        },
+        {
+          "id": "79e57c5288a0a710ebe4772c",
+          "label": "Cutivireni",
+          "kind": "entity"
+        },
+        {
+          "id": "c485e1ce90023290628fd88a",
+          "label": "Oviri",
+          "kind": "entity"
+        },
+        {
+          "id": "cbc62794911ff31b2864ecd3",
+          "label": "Amazon",
+          "kind": "entity"
+        },
+        {
+          "id": "67203e4769aeef2f308f4d6e",
+          "label": "El Niño",
+          "kind": "entity"
+        },
+        {
+          "id": "44c853095f70d700176e7c86",
+          "label": "dry conditions",
+          "kind": "phrase"
+        },
+        {
+          "id": "2eae4b31e5395ad253322b5e",
+          "label": "front line",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "415456389e84bbde6d6a68d2",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "NASA Satellites Observe Historic 2026 El Niño",
+      "url": "https://science.nasa.gov/earth/nasa-satellites-observe-historic-2026-el-nino/",
+      "summary": "A phenomenon rarer than a solar eclipse and more powerful than any single storm system is unfolding this fall, and NASA is tracking it closely. El Niño is a natural climate pattern that emerges roughly every two to seven years marked by warmer-than-normal water temperatures in parts of the equatorial Pacific. NASA scientists are keeping […]",
+      "author": "",
+      "published_at": "2026-10-15T17:59:22Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T00:00+08:00",
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "67203e4769aeef2f308f4d6e",
+          "label": "El Niño",
+          "kind": "entity"
+        },
+        {
+          "id": "7b989fe5889d6645056f3124",
+          "label": "Pacific",
+          "kind": "entity"
+        },
+        {
+          "id": "48b9ea8e62faa9b9e4796f36",
+          "label": "single storm system",
+          "kind": "phrase"
+        },
+        {
+          "id": "451b621b02c639504adbc7ec",
+          "label": "solar eclipse",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "9b1931b94a11a4e2ca093da8",
+      "source_id": "nasa",
+      "publisher": "NASA",
+      "title": "Power Up: Roll Out Solar Arrays Boost Space Station Power Supply",
+      "url": "https://www.nasa.gov/missions/station/iss-research/power-up-roll-out-solar-arrays-boost-space-station-power-supply/",
+      "summary": "From the International Space Station’s unique position 250 miles above Earth, the Sun is a vital source of energy. Solar power supports the station’s life support systems, daily activities, and hundreds of research investigations that improve life on Earth and prepare humans for deep space exploration. Over the past five years, NASA augmented the station’s […]",
+      "author": "Penelope Lauren Garcia-Galan",
+      "published_at": "2026-10-15T17:30:00Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-16T00:00+08:00",
+      "topics": [
+        {
+          "id": "1c4ea650684556fba37692ad",
+          "label": "International Space Station",
+          "kind": "entity"
+        },
+        {
+          "id": "7b74b418a352d67108173c20",
+          "label": "Earth",
+          "kind": "entity"
+        },
+        {
+          "id": "27756f050e14a1cb1c1ee867",
+          "label": "Sun",
+          "kind": "entity"
+        },
+        {
+          "id": "2bfbc118abcafe8c53ee6a46",
+          "label": "Solar",
+          "kind": "entity"
+        },
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity"
+        },
+        {
+          "id": "e0ff647264b22627f3341bb0",
+          "label": "Station Power Supply",
+          "kind": "phrase"
+        },
+        {
+          "id": "629ceee49bf50c0b772ccf48",
+          "label": "Space Station Power",
+          "kind": "phrase"
+        },
+        {
+          "id": "9910d0d1c99818df798302f8",
+          "label": "unique position",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "a55dd26de6b4df95cb09c7cf",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "How authoritarian states are building an international market for digital surveillance",
+      "url": "https://globalvoices.org/2026/10/15/how-authoritarian-states-are-building-an-international-market-for-digital-surveillance/",
+      "summary": "Digital authoritarianism is not developing in isolation, but through the international exchange of technologies, standards, and practices.",
+      "author": "Daria Dergacheva",
+      "published_at": "2026-10-15T04:00:07Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-15T12:00+08:00",
+      "topics": [
+        {
+          "id": "c228dcf978f1caf3f136eddf",
+          "label": "authoritarian states",
+          "kind": "phrase"
+        },
+        {
+          "id": "ed7ba5efd6a96cb2f7efb6f5",
+          "label": "international market",
+          "kind": "phrase"
+        },
+        {
+          "id": "1f8206700627b1041f1a563d",
+          "label": "international exchange",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "6943d5d57f3140c875f27808",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Norway’s Telenor telecom faces lawsuit for giving user data to Myanmar junta",
+      "url": "https://globalvoices.org/2026/10/14/norways-telenor-telecom-faces-lawsuit-for-giving-user-data-to-myanmars-junta/",
+      "summary": "\"We hope this will finally lead to accountability for the harms Telenor has caused Myanmar people through its conduct and its dangerous divestment.\"",
+      "author": "Mong Palatino",
+      "published_at": "2026-10-14T18:22:53Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-15T00:00+08:00",
+      "topics": [
+        {
+          "id": "1d43cfed6bbe6dd9919678de",
+          "label": "Norway",
+          "kind": "entity"
+        },
+        {
+          "id": "fd4953e76f4337dcf52c20b7",
+          "label": "Myanmar",
+          "kind": "entity"
+        },
+        {
+          "id": "180e0598e834b5e2c8205a3d",
+          "label": "dangerous divestment",
+          "kind": "phrase"
+        },
+        {
+          "id": "7d06acbbdaa0e1a03706ec2f",
+          "label": "Telenor telecom",
+          "kind": "phrase"
+        },
+        {
+          "id": "52408ce928fcece4a50261fc",
+          "label": "user data",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "1897bd24c7bedbd259e65d19",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "In Kyrgyzstan, persons with disabilities are collecting proof of physical barriers to hold the government accountable",
+      "url": "https://globalvoices.org/2026/10/14/in-kyrgyzstan-persons-with-disabilities-are-collecting-proof-of-physical-barriers-to-hold-the-government-accountable/",
+      "summary": "Lived experience can reveal things that a conventional audit may miss.",
+      "author": "Nurbek Bekmurzaev",
+      "published_at": "2026-10-14T04:00:02Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-14T12:00+08:00",
+      "topics": [
+        {
+          "id": "92150179d1b63ac8803c6c30",
+          "label": "Kyrgyzstan",
+          "kind": "entity"
+        },
+        {
+          "id": "c7b3e9a39005bb1f28c14498",
+          "label": "Lived experience",
+          "kind": "phrase"
+        },
+        {
+          "id": "c7478da3330918ad01005844",
+          "label": "physical barriers",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "b9d574832716476b943379fc",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "After flood disasters, Nepal needs clear numbers on aid and a reconstruction plan",
+      "url": "https://globalvoices.org/2026/10/13/after-flood-disasters-nepal-needs-clear-numbers-on-aid-and-a-reconstruction-plan/",
+      "summary": "Nepal’s flood-hit communities face a long road to recovery as damaged infrastructure, lost livelihoods, and questions over aid transparency complicate efforts to rebuild homes, restore services, and livelihoods.",
+      "author": "Susmita Aryal",
+      "published_at": "2026-10-13T18:21:20Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-14T00:00+08:00",
+      "topics": [
+        {
+          "id": "a23e9cdda7a3e0db6beb14e7",
+          "label": "Nepal",
+          "kind": "entity"
+        },
+        {
+          "id": "12bb8a33890e0a4f27c5802f",
+          "label": "transparency complicate efforts",
+          "kind": "phrase"
+        },
+        {
+          "id": "1797b7457fa97cb14efad09b",
+          "label": "aid transparency complicate",
+          "kind": "phrase"
+        },
+        {
+          "id": "6148fb53646638a7e1f5998d",
+          "label": "flood disasters",
+          "kind": "phrase"
+        },
+        {
+          "id": "a639ff59377eec568e7d4bb3",
+          "label": "clear numbers",
+          "kind": "phrase"
+        },
+        {
+          "id": "d2a0341c80faf06565d4bb00",
+          "label": "reconstruction plan",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "397736d78b90b03efcdf1195",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Poetry book promotes Chabacano, Asia’s only Spanish-based creole language",
+      "url": "https://globalvoices.org/2026/10/13/poetry-book-promotes-chabacano-asias-only-spanish-based-creole-language/",
+      "summary": "\"The project highlights not only the continued vitality of Chavacano as a language, but also the efforts of its speakers to create new literature and preserve the language through writing.”",
+      "author": "Mong Palatino",
+      "published_at": "2026-10-13T07:48:55Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-13T12:00+08:00",
+      "topics": [
+        {
+          "id": "4d8082f959266562799a169b",
+          "label": "Chabacano",
+          "kind": "entity"
+        },
+        {
+          "id": "ee139bd0fd941847bf43d49b",
+          "label": "Asia",
+          "kind": "entity"
+        },
+        {
+          "id": "a056eb28a08eb430ceff2532",
+          "label": "Chavacano",
+          "kind": "entity"
+        },
+        {
+          "id": "213b8631a24070339bce00f6",
+          "label": "Poetry book",
+          "kind": "phrase"
+        },
+        {
+          "id": "c2181e865e0ffbd84b3c439d",
+          "label": "creole language",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "76e91e0519bd630bda11f254",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "What African elections can learn from the Borana Gadaa system",
+      "url": "https://globalvoices.org/2026/10/12/what-african-elections-can-learn-from-the-borana-gadaa-system/",
+      "summary": "Discover how the Borana Gadaa system can inspire African elections through peaceful power transitions, accountable leadership, inclusive governance, and traditional democratic practices that strengthen public trust and participation.",
+      "author": "Peace News",
+      "published_at": "2026-10-12T20:34:34Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-13T04:00+08:00",
+      "topics": [
+        {
+          "id": "6f0831d7a692ac8d96600827",
+          "label": "African",
+          "kind": "entity"
+        },
+        {
+          "id": "5ca13217b470e7dd4e9d7654",
+          "label": "Borana Gadaa",
+          "kind": "entity"
+        },
+        {
+          "id": "708f4983374d9f2caa55d0ad",
+          "label": "peaceful power transitions",
+          "kind": "phrase"
+        },
+        {
+          "id": "4492edfeaee5e2dfc45181cd",
+          "label": "traditional democratic practices",
+          "kind": "phrase"
+        },
+        {
+          "id": "a8051583858ae79c3bc43324",
+          "label": "Gadaa system",
+          "kind": "phrase"
+        },
+        {
+          "id": "ffecd4d81a29fa98c01ab684",
+          "label": "accountable leadership",
+          "kind": "phrase"
+        },
+        {
+          "id": "dfc5fecb83f04c5648c6733a",
+          "label": "inclusive governance",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "b984172d44b771b3db88faa0",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Bangladesh-Malaysia recruitment reforms revive old questions over the cost of migration",
+      "url": "https://globalvoices.org/2026/10/12/bangladesh-malaysia-recruitment-reforms-revive-old-questions-over-the-cost-of-migration/",
+      "summary": "Bangladesh and Malaysia have made several government-level agreements for labour migration over the years, but problems such as syndication, excessive recruitment costs and human rights abuses remain unresolved.",
+      "author": "Maksuda Akter",
+      "published_at": "2026-10-12T06:39:35Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-12T12:00+08:00",
+      "topics": [
+        {
+          "id": "8e07df26128d8a78474dc525",
+          "label": "Bangladesh",
+          "kind": "entity"
+        },
+        {
+          "id": "6a9a10210588981dd8faa6be",
+          "label": "Malaysia",
+          "kind": "entity"
+        },
+        {
+          "id": "fd13a9f3f76ac08f968047e7",
+          "label": "excessive recruitment costs",
+          "kind": "phrase"
+        },
+        {
+          "id": "b20a60fbda7fea9768186266",
+          "label": "government-level agreements",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "972c38354d7da322cc1db140",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "When free speech has a price: Youth voices in Mozambique",
+      "url": "https://globalvoices.org/2026/10/11/when-free-speech-has-a-price-youth-voices-in-mozambique/",
+      "summary": "For Mozambican youth, freedom of expression exists in law, but speaking out can come with a cost. Music became a powerful space for criticism and resistance.",
+      "author": "Liam Anderson",
+      "published_at": "2026-10-11T18:00:47Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-12T00:00+08:00",
+      "topics": [
+        {
+          "id": "2e8a238d84ee730c4be91d85",
+          "label": "Mozambique",
+          "kind": "entity"
+        },
+        {
+          "id": "fa68059852596fdc9ff8f10d",
+          "label": "Mozambican",
+          "kind": "entity"
+        },
+        {
+          "id": "e3ef3551b01f67000ffcf3dc",
+          "label": "Youth voices",
+          "kind": "phrase"
+        },
+        {
+          "id": "bfef02ee45007ba2c10728a2",
+          "label": "free speech",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "644c27b2e94d4cd5f26b2fbf",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "How Ecuador is fighting to keep industrial trans fats off the food shelf",
+      "url": "https://globalvoices.org/2026/10/10/how-ecuador-is-fighting-to-keep-industrial-trans-fats-off-the-food-shelf/",
+      "summary": "As health advocates push for tighter controls, Ecuador confronts the gap between regulating trans fats and enforcing those rules.",
+      "author": "Carlos E. Flores",
+      "published_at": "2026-10-10T04:00:43Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-10T12:00+08:00",
+      "topics": [
+        {
+          "id": "f4cb75e90ad07f8c1d385988",
+          "label": "Ecuador",
+          "kind": "entity"
+        },
+        {
+          "id": "1c7f9536bb2f98f89a606b6d",
+          "label": "industrial trans fats",
+          "kind": "phrase"
+        },
+        {
+          "id": "63263a7ddba0372479b3fcce",
+          "label": "tighter controls",
+          "kind": "phrase"
+        },
+        {
+          "id": "9a91873bb240f533c48e183e",
+          "label": "food shelf",
+          "kind": "phrase"
+        },
+        {
+          "id": "5e2db4f63a87b63ce1f66144",
+          "label": "health advocates",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "ef638520212cb7a15a4ac441",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Trump’s ‘Agreements on Reciprocal Trade’ (ARTs) threaten equitable access to the internet in Global South",
+      "url": "https://globalvoices.org/2026/10/09/trumps-agreements-on-reciprocal-trade-arts-threaten-equitable-access-to-the-internet-in-global-south/",
+      "summary": "The controversial reciprocal trade agreements (ARTs) gives the U.S. a great deal of power, which could adversely affect digital connectivity, increase digital divides, and reduce economic growth in signatory countries.",
+      "author": "EngageMedia",
+      "published_at": "2026-10-09T19:22:38Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-10T00:00+08:00",
+      "topics": [
+        {
+          "id": "1a00a617e3e3887262821128",
+          "label": "Trump’s ‘Agreements on Reciprocal Trade’",
+          "kind": "entity"
+        },
+        {
+          "id": "a4538197bb508d9d1c7cb18a",
+          "label": "Global South",
+          "kind": "entity"
+        },
+        {
+          "id": "981e5b396726008318fcca73",
+          "label": "United States",
+          "kind": "entity"
+        },
+        {
+          "id": "58a27ce0c28137e76bbe091e",
+          "label": "reciprocal trade agreements",
+          "kind": "phrase"
+        },
+        {
+          "id": "3f4d653fe53ebf633911f491",
+          "label": "controversial reciprocal trade",
+          "kind": "phrase"
+        },
+        {
+          "id": "94b73aa7b128256baeef6760",
+          "label": "signatory countries",
+          "kind": "phrase"
+        }
+      ]
+    },
+    {
+      "id": "f65cdc66f5d69dc565d39a10",
+      "source_id": "global-voices",
+      "publisher": "Global Voices",
+      "title": "Subsea cables and oil pipelines: The infrastructure linking AI, empire, and occupation",
+      "url": "https://globalvoices.org/2026/10/09/subsea-cables-and-oil-pipelines-the-infrastructure-linking-ai-empire-and-occupation/",
+      "summary": "The growing importance of subsea cables in military and economic policy offers an entrypoint into understanding the corrosive, yet dependent, relationship between AI and oil infrastructure",
+      "author": "Guest Contributor",
+      "published_at": "2026-10-09T06:15:45Z",
+      "first_seen_at": "2026-10-18T03:18:06.527802Z",
+      "window_id": "2026-10-09T12:00+08:00",
+      "topics": [
+        {
+          "id": "32e83e92d45d71f69dcf9d21",
+          "label": "AI",
+          "kind": "entity"
+        },
+        {
+          "id": "bb42d59bd48e59543dff1b19",
+          "label": "Subsea cables",
+          "kind": "phrase"
+        },
+        {
+          "id": "0f6a0d9791bbe0a5509b86a1",
+          "label": "oil pipelines",
+          "kind": "phrase"
+        },
+        {
+          "id": "c2910dedbf00ffe7b37bd6eb",
+          "label": "economic policy",
+          "kind": "phrase"
+        },
+        {
+          "id": "5a15c540d1d45498eceeed3d",
+          "label": "oil infrastructure",
+          "kind": "phrase"
+        }
+      ]
+    }
+  ],
+  "windows": [
+    {
+      "id": "2026-09-19T00:00+08:00",
+      "start": "2026-09-18T16:00:00Z",
+      "end": "2026-09-18T20:00:00Z",
+      "date": "2026-09-19",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-19T04:00+08:00",
+      "start": "2026-09-18T20:00:00Z",
+      "end": "2026-09-19T00:00:00Z",
+      "date": "2026-09-19",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-19T08:00+08:00",
+      "start": "2026-09-19T00:00:00Z",
+      "end": "2026-09-19T04:00:00Z",
+      "date": "2026-09-19",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-19T12:00+08:00",
+      "start": "2026-09-19T04:00:00Z",
+      "end": "2026-09-19T08:00:00Z",
+      "date": "2026-09-19",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-19T16:00+08:00",
+      "start": "2026-09-19T08:00:00Z",
+      "end": "2026-09-19T12:00:00Z",
+      "date": "2026-09-19",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-19T20:00+08:00",
+      "start": "2026-09-19T12:00:00Z",
+      "end": "2026-09-19T16:00:00Z",
+      "date": "2026-09-19",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-20T00:00+08:00",
+      "start": "2026-09-19T16:00:00Z",
+      "end": "2026-09-19T20:00:00Z",
+      "date": "2026-09-20",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-20T04:00+08:00",
+      "start": "2026-09-19T20:00:00Z",
+      "end": "2026-09-20T00:00:00Z",
+      "date": "2026-09-20",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-20T08:00+08:00",
+      "start": "2026-09-20T00:00:00Z",
+      "end": "2026-09-20T04:00:00Z",
+      "date": "2026-09-20",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-20T12:00+08:00",
+      "start": "2026-09-20T04:00:00Z",
+      "end": "2026-09-20T08:00:00Z",
+      "date": "2026-09-20",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-20T16:00+08:00",
+      "start": "2026-09-20T08:00:00Z",
+      "end": "2026-09-20T12:00:00Z",
+      "date": "2026-09-20",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-20T20:00+08:00",
+      "start": "2026-09-20T12:00:00Z",
+      "end": "2026-09-20T16:00:00Z",
+      "date": "2026-09-20",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-21T00:00+08:00",
+      "start": "2026-09-20T16:00:00Z",
+      "end": "2026-09-20T20:00:00Z",
+      "date": "2026-09-21",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-21T04:00+08:00",
+      "start": "2026-09-20T20:00:00Z",
+      "end": "2026-09-21T00:00:00Z",
+      "date": "2026-09-21",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-21T08:00+08:00",
+      "start": "2026-09-21T00:00:00Z",
+      "end": "2026-09-21T04:00:00Z",
+      "date": "2026-09-21",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-21T12:00+08:00",
+      "start": "2026-09-21T04:00:00Z",
+      "end": "2026-09-21T08:00:00Z",
+      "date": "2026-09-21",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-21T16:00+08:00",
+      "start": "2026-09-21T08:00:00Z",
+      "end": "2026-09-21T12:00:00Z",
+      "date": "2026-09-21",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-21T20:00+08:00",
+      "start": "2026-09-21T12:00:00Z",
+      "end": "2026-09-21T16:00:00Z",
+      "date": "2026-09-21",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-22T00:00+08:00",
+      "start": "2026-09-21T16:00:00Z",
+      "end": "2026-09-21T20:00:00Z",
+      "date": "2026-09-22",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-22T04:00+08:00",
+      "start": "2026-09-21T20:00:00Z",
+      "end": "2026-09-22T00:00:00Z",
+      "date": "2026-09-22",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-22T08:00+08:00",
+      "start": "2026-09-22T00:00:00Z",
+      "end": "2026-09-22T04:00:00Z",
+      "date": "2026-09-22",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-22T12:00+08:00",
+      "start": "2026-09-22T04:00:00Z",
+      "end": "2026-09-22T08:00:00Z",
+      "date": "2026-09-22",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-22T16:00+08:00",
+      "start": "2026-09-22T08:00:00Z",
+      "end": "2026-09-22T12:00:00Z",
+      "date": "2026-09-22",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-22T20:00+08:00",
+      "start": "2026-09-22T12:00:00Z",
+      "end": "2026-09-22T16:00:00Z",
+      "date": "2026-09-22",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-23T00:00+08:00",
+      "start": "2026-09-22T16:00:00Z",
+      "end": "2026-09-22T20:00:00Z",
+      "date": "2026-09-23",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-23T04:00+08:00",
+      "start": "2026-09-22T20:00:00Z",
+      "end": "2026-09-23T00:00:00Z",
+      "date": "2026-09-23",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-23T08:00+08:00",
+      "start": "2026-09-23T00:00:00Z",
+      "end": "2026-09-23T04:00:00Z",
+      "date": "2026-09-23",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-23T12:00+08:00",
+      "start": "2026-09-23T04:00:00Z",
+      "end": "2026-09-23T08:00:00Z",
+      "date": "2026-09-23",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-23T16:00+08:00",
+      "start": "2026-09-23T08:00:00Z",
+      "end": "2026-09-23T12:00:00Z",
+      "date": "2026-09-23",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-23T20:00+08:00",
+      "start": "2026-09-23T12:00:00Z",
+      "end": "2026-09-23T16:00:00Z",
+      "date": "2026-09-23",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-24T00:00+08:00",
+      "start": "2026-09-23T16:00:00Z",
+      "end": "2026-09-23T20:00:00Z",
+      "date": "2026-09-24",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-24T04:00+08:00",
+      "start": "2026-09-23T20:00:00Z",
+      "end": "2026-09-24T00:00:00Z",
+      "date": "2026-09-24",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-24T08:00+08:00",
+      "start": "2026-09-24T00:00:00Z",
+      "end": "2026-09-24T04:00:00Z",
+      "date": "2026-09-24",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-24T12:00+08:00",
+      "start": "2026-09-24T04:00:00Z",
+      "end": "2026-09-24T08:00:00Z",
+      "date": "2026-09-24",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-24T16:00+08:00",
+      "start": "2026-09-24T08:00:00Z",
+      "end": "2026-09-24T12:00:00Z",
+      "date": "2026-09-24",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-24T20:00+08:00",
+      "start": "2026-09-24T12:00:00Z",
+      "end": "2026-09-24T16:00:00Z",
+      "date": "2026-09-24",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-25T00:00+08:00",
+      "start": "2026-09-24T16:00:00Z",
+      "end": "2026-09-24T20:00:00Z",
+      "date": "2026-09-25",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-25T04:00+08:00",
+      "start": "2026-09-24T20:00:00Z",
+      "end": "2026-09-25T00:00:00Z",
+      "date": "2026-09-25",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-25T08:00+08:00",
+      "start": "2026-09-25T00:00:00Z",
+      "end": "2026-09-25T04:00:00Z",
+      "date": "2026-09-25",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-25T12:00+08:00",
+      "start": "2026-09-25T04:00:00Z",
+      "end": "2026-09-25T08:00:00Z",
+      "date": "2026-09-25",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-25T16:00+08:00",
+      "start": "2026-09-25T08:00:00Z",
+      "end": "2026-09-25T12:00:00Z",
+      "date": "2026-09-25",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-25T20:00+08:00",
+      "start": "2026-09-25T12:00:00Z",
+      "end": "2026-09-25T16:00:00Z",
+      "date": "2026-09-25",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-26T00:00+08:00",
+      "start": "2026-09-25T16:00:00Z",
+      "end": "2026-09-25T20:00:00Z",
+      "date": "2026-09-26",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-26T04:00+08:00",
+      "start": "2026-09-25T20:00:00Z",
+      "end": "2026-09-26T00:00:00Z",
+      "date": "2026-09-26",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-26T08:00+08:00",
+      "start": "2026-09-26T00:00:00Z",
+      "end": "2026-09-26T04:00:00Z",
+      "date": "2026-09-26",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-26T12:00+08:00",
+      "start": "2026-09-26T04:00:00Z",
+      "end": "2026-09-26T08:00:00Z",
+      "date": "2026-09-26",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-26T16:00+08:00",
+      "start": "2026-09-26T08:00:00Z",
+      "end": "2026-09-26T12:00:00Z",
+      "date": "2026-09-26",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-26T20:00+08:00",
+      "start": "2026-09-26T12:00:00Z",
+      "end": "2026-09-26T16:00:00Z",
+      "date": "2026-09-26",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-27T00:00+08:00",
+      "start": "2026-09-26T16:00:00Z",
+      "end": "2026-09-26T20:00:00Z",
+      "date": "2026-09-27",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-27T04:00+08:00",
+      "start": "2026-09-26T20:00:00Z",
+      "end": "2026-09-27T00:00:00Z",
+      "date": "2026-09-27",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-27T08:00+08:00",
+      "start": "2026-09-27T00:00:00Z",
+      "end": "2026-09-27T04:00:00Z",
+      "date": "2026-09-27",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-27T12:00+08:00",
+      "start": "2026-09-27T04:00:00Z",
+      "end": "2026-09-27T08:00:00Z",
+      "date": "2026-09-27",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-27T16:00+08:00",
+      "start": "2026-09-27T08:00:00Z",
+      "end": "2026-09-27T12:00:00Z",
+      "date": "2026-09-27",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-27T20:00+08:00",
+      "start": "2026-09-27T12:00:00Z",
+      "end": "2026-09-27T16:00:00Z",
+      "date": "2026-09-27",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-28T00:00+08:00",
+      "start": "2026-09-27T16:00:00Z",
+      "end": "2026-09-27T20:00:00Z",
+      "date": "2026-09-28",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-28T04:00+08:00",
+      "start": "2026-09-27T20:00:00Z",
+      "end": "2026-09-28T00:00:00Z",
+      "date": "2026-09-28",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-28T08:00+08:00",
+      "start": "2026-09-28T00:00:00Z",
+      "end": "2026-09-28T04:00:00Z",
+      "date": "2026-09-28",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-28T12:00+08:00",
+      "start": "2026-09-28T04:00:00Z",
+      "end": "2026-09-28T08:00:00Z",
+      "date": "2026-09-28",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-28T16:00+08:00",
+      "start": "2026-09-28T08:00:00Z",
+      "end": "2026-09-28T12:00:00Z",
+      "date": "2026-09-28",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-28T20:00+08:00",
+      "start": "2026-09-28T12:00:00Z",
+      "end": "2026-09-28T16:00:00Z",
+      "date": "2026-09-28",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-29T00:00+08:00",
+      "start": "2026-09-28T16:00:00Z",
+      "end": "2026-09-28T20:00:00Z",
+      "date": "2026-09-29",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-29T04:00+08:00",
+      "start": "2026-09-28T20:00:00Z",
+      "end": "2026-09-29T00:00:00Z",
+      "date": "2026-09-29",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-29T08:00+08:00",
+      "start": "2026-09-29T00:00:00Z",
+      "end": "2026-09-29T04:00:00Z",
+      "date": "2026-09-29",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-29T12:00+08:00",
+      "start": "2026-09-29T04:00:00Z",
+      "end": "2026-09-29T08:00:00Z",
+      "date": "2026-09-29",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-29T16:00+08:00",
+      "start": "2026-09-29T08:00:00Z",
+      "end": "2026-09-29T12:00:00Z",
+      "date": "2026-09-29",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-29T20:00+08:00",
+      "start": "2026-09-29T12:00:00Z",
+      "end": "2026-09-29T16:00:00Z",
+      "date": "2026-09-29",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-30T00:00+08:00",
+      "start": "2026-09-29T16:00:00Z",
+      "end": "2026-09-29T20:00:00Z",
+      "date": "2026-09-30",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-30T04:00+08:00",
+      "start": "2026-09-29T20:00:00Z",
+      "end": "2026-09-30T00:00:00Z",
+      "date": "2026-09-30",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-30T08:00+08:00",
+      "start": "2026-09-30T00:00:00Z",
+      "end": "2026-09-30T04:00:00Z",
+      "date": "2026-09-30",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-30T12:00+08:00",
+      "start": "2026-09-30T04:00:00Z",
+      "end": "2026-09-30T08:00:00Z",
+      "date": "2026-09-30",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-30T16:00+08:00",
+      "start": "2026-09-30T08:00:00Z",
+      "end": "2026-09-30T12:00:00Z",
+      "date": "2026-09-30",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-09-30T20:00+08:00",
+      "start": "2026-09-30T12:00:00Z",
+      "end": "2026-09-30T16:00:00Z",
+      "date": "2026-09-30",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-01T00:00+08:00",
+      "start": "2026-09-30T16:00:00Z",
+      "end": "2026-09-30T20:00:00Z",
+      "date": "2026-10-01",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-01T04:00+08:00",
+      "start": "2026-09-30T20:00:00Z",
+      "end": "2026-10-01T00:00:00Z",
+      "date": "2026-10-01",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-01T08:00+08:00",
+      "start": "2026-10-01T00:00:00Z",
+      "end": "2026-10-01T04:00:00Z",
+      "date": "2026-10-01",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-01T12:00+08:00",
+      "start": "2026-10-01T04:00:00Z",
+      "end": "2026-10-01T08:00:00Z",
+      "date": "2026-10-01",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-01T16:00+08:00",
+      "start": "2026-10-01T08:00:00Z",
+      "end": "2026-10-01T12:00:00Z",
+      "date": "2026-10-01",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-01T20:00+08:00",
+      "start": "2026-10-01T12:00:00Z",
+      "end": "2026-10-01T16:00:00Z",
+      "date": "2026-10-01",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-02T00:00+08:00",
+      "start": "2026-10-01T16:00:00Z",
+      "end": "2026-10-01T20:00:00Z",
+      "date": "2026-10-02",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-02T04:00+08:00",
+      "start": "2026-10-01T20:00:00Z",
+      "end": "2026-10-02T00:00:00Z",
+      "date": "2026-10-02",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-02T08:00+08:00",
+      "start": "2026-10-02T00:00:00Z",
+      "end": "2026-10-02T04:00:00Z",
+      "date": "2026-10-02",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-02T12:00+08:00",
+      "start": "2026-10-02T04:00:00Z",
+      "end": "2026-10-02T08:00:00Z",
+      "date": "2026-10-02",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-02T16:00+08:00",
+      "start": "2026-10-02T08:00:00Z",
+      "end": "2026-10-02T12:00:00Z",
+      "date": "2026-10-02",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-02T20:00+08:00",
+      "start": "2026-10-02T12:00:00Z",
+      "end": "2026-10-02T16:00:00Z",
+      "date": "2026-10-02",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-03T00:00+08:00",
+      "start": "2026-10-02T16:00:00Z",
+      "end": "2026-10-02T20:00:00Z",
+      "date": "2026-10-03",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-03T04:00+08:00",
+      "start": "2026-10-02T20:00:00Z",
+      "end": "2026-10-03T00:00:00Z",
+      "date": "2026-10-03",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-03T08:00+08:00",
+      "start": "2026-10-03T00:00:00Z",
+      "end": "2026-10-03T04:00:00Z",
+      "date": "2026-10-03",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-03T12:00+08:00",
+      "start": "2026-10-03T04:00:00Z",
+      "end": "2026-10-03T08:00:00Z",
+      "date": "2026-10-03",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-03T16:00+08:00",
+      "start": "2026-10-03T08:00:00Z",
+      "end": "2026-10-03T12:00:00Z",
+      "date": "2026-10-03",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-03T20:00+08:00",
+      "start": "2026-10-03T12:00:00Z",
+      "end": "2026-10-03T16:00:00Z",
+      "date": "2026-10-03",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-04T00:00+08:00",
+      "start": "2026-10-03T16:00:00Z",
+      "end": "2026-10-03T20:00:00Z",
+      "date": "2026-10-04",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-04T04:00+08:00",
+      "start": "2026-10-03T20:00:00Z",
+      "end": "2026-10-04T00:00:00Z",
+      "date": "2026-10-04",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-04T08:00+08:00",
+      "start": "2026-10-04T00:00:00Z",
+      "end": "2026-10-04T04:00:00Z",
+      "date": "2026-10-04",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-04T12:00+08:00",
+      "start": "2026-10-04T04:00:00Z",
+      "end": "2026-10-04T08:00:00Z",
+      "date": "2026-10-04",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-04T16:00+08:00",
+      "start": "2026-10-04T08:00:00Z",
+      "end": "2026-10-04T12:00:00Z",
+      "date": "2026-10-04",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-04T20:00+08:00",
+      "start": "2026-10-04T12:00:00Z",
+      "end": "2026-10-04T16:00:00Z",
+      "date": "2026-10-04",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-05T00:00+08:00",
+      "start": "2026-10-04T16:00:00Z",
+      "end": "2026-10-04T20:00:00Z",
+      "date": "2026-10-05",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-05T04:00+08:00",
+      "start": "2026-10-04T20:00:00Z",
+      "end": "2026-10-05T00:00:00Z",
+      "date": "2026-10-05",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-05T08:00+08:00",
+      "start": "2026-10-05T00:00:00Z",
+      "end": "2026-10-05T04:00:00Z",
+      "date": "2026-10-05",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-05T12:00+08:00",
+      "start": "2026-10-05T04:00:00Z",
+      "end": "2026-10-05T08:00:00Z",
+      "date": "2026-10-05",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-05T16:00+08:00",
+      "start": "2026-10-05T08:00:00Z",
+      "end": "2026-10-05T12:00:00Z",
+      "date": "2026-10-05",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-05T20:00+08:00",
+      "start": "2026-10-05T12:00:00Z",
+      "end": "2026-10-05T16:00:00Z",
+      "date": "2026-10-05",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-06T00:00+08:00",
+      "start": "2026-10-05T16:00:00Z",
+      "end": "2026-10-05T20:00:00Z",
+      "date": "2026-10-06",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-06T04:00+08:00",
+      "start": "2026-10-05T20:00:00Z",
+      "end": "2026-10-06T00:00:00Z",
+      "date": "2026-10-06",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-06T08:00+08:00",
+      "start": "2026-10-06T00:00:00Z",
+      "end": "2026-10-06T04:00:00Z",
+      "date": "2026-10-06",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-06T12:00+08:00",
+      "start": "2026-10-06T04:00:00Z",
+      "end": "2026-10-06T08:00:00Z",
+      "date": "2026-10-06",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-06T16:00+08:00",
+      "start": "2026-10-06T08:00:00Z",
+      "end": "2026-10-06T12:00:00Z",
+      "date": "2026-10-06",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-06T20:00+08:00",
+      "start": "2026-10-06T12:00:00Z",
+      "end": "2026-10-06T16:00:00Z",
+      "date": "2026-10-06",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-07T00:00+08:00",
+      "start": "2026-10-06T16:00:00Z",
+      "end": "2026-10-06T20:00:00Z",
+      "date": "2026-10-07",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-07T04:00+08:00",
+      "start": "2026-10-06T20:00:00Z",
+      "end": "2026-10-07T00:00:00Z",
+      "date": "2026-10-07",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-07T08:00+08:00",
+      "start": "2026-10-07T00:00:00Z",
+      "end": "2026-10-07T04:00:00Z",
+      "date": "2026-10-07",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-07T12:00+08:00",
+      "start": "2026-10-07T04:00:00Z",
+      "end": "2026-10-07T08:00:00Z",
+      "date": "2026-10-07",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-07T16:00+08:00",
+      "start": "2026-10-07T08:00:00Z",
+      "end": "2026-10-07T12:00:00Z",
+      "date": "2026-10-07",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-07T20:00+08:00",
+      "start": "2026-10-07T12:00:00Z",
+      "end": "2026-10-07T16:00:00Z",
+      "date": "2026-10-07",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-08T00:00+08:00",
+      "start": "2026-10-07T16:00:00Z",
+      "end": "2026-10-07T20:00:00Z",
+      "date": "2026-10-08",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-08T04:00+08:00",
+      "start": "2026-10-07T20:00:00Z",
+      "end": "2026-10-08T00:00:00Z",
+      "date": "2026-10-08",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-08T08:00+08:00",
+      "start": "2026-10-08T00:00:00Z",
+      "end": "2026-10-08T04:00:00Z",
+      "date": "2026-10-08",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-08T12:00+08:00",
+      "start": "2026-10-08T04:00:00Z",
+      "end": "2026-10-08T08:00:00Z",
+      "date": "2026-10-08",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-08T16:00+08:00",
+      "start": "2026-10-08T08:00:00Z",
+      "end": "2026-10-08T12:00:00Z",
+      "date": "2026-10-08",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-08T20:00+08:00",
+      "start": "2026-10-08T12:00:00Z",
+      "end": "2026-10-08T16:00:00Z",
+      "date": "2026-10-08",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-09T00:00+08:00",
+      "start": "2026-10-08T16:00:00Z",
+      "end": "2026-10-08T20:00:00Z",
+      "date": "2026-10-09",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-09T04:00+08:00",
+      "start": "2026-10-08T20:00:00Z",
+      "end": "2026-10-09T00:00:00Z",
+      "date": "2026-10-09",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-09T08:00+08:00",
+      "start": "2026-10-09T00:00:00Z",
+      "end": "2026-10-09T04:00:00Z",
+      "date": "2026-10-09",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-09T12:00+08:00",
+      "start": "2026-10-09T04:00:00Z",
+      "end": "2026-10-09T08:00:00Z",
+      "date": "2026-10-09",
+      "article_ids": [
+        "f65cdc66f5d69dc565d39a10"
+      ],
+      "topics": [
+        {
+          "id": "32e83e92d45d71f69dcf9d21",
+          "label": "AI",
+          "kind": "entity",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c2910dedbf00ffe7b37bd6eb",
+          "label": "economic policy",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5a15c540d1d45498eceeed3d",
+          "label": "oil infrastructure",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "0f6a0d9791bbe0a5509b86a1",
+          "label": "oil pipelines",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "bb42d59bd48e59543dff1b19",
+          "label": "Subsea cables",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-09T16:00+08:00",
+      "start": "2026-10-09T08:00:00Z",
+      "end": "2026-10-09T12:00:00Z",
+      "date": "2026-10-09",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-09T20:00+08:00",
+      "start": "2026-10-09T12:00:00Z",
+      "end": "2026-10-09T16:00:00Z",
+      "date": "2026-10-09",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-10T00:00+08:00",
+      "start": "2026-10-09T16:00:00Z",
+      "end": "2026-10-09T20:00:00Z",
+      "date": "2026-10-10",
+      "article_ids": [
+        "ef638520212cb7a15a4ac441"
+      ],
+      "topics": [
+        {
+          "id": "a4538197bb508d9d1c7cb18a",
+          "label": "Global South",
+          "kind": "entity",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1a00a617e3e3887262821128",
+          "label": "Trump’s ‘Agreements on Reciprocal Trade’",
+          "kind": "entity",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "981e5b396726008318fcca73",
+          "label": "United States",
+          "kind": "entity",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "3f4d653fe53ebf633911f491",
+          "label": "controversial reciprocal trade",
+          "kind": "phrase",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "58a27ce0c28137e76bbe091e",
+          "label": "reciprocal trade agreements",
+          "kind": "phrase",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "94b73aa7b128256baeef6760",
+          "label": "signatory countries",
+          "kind": "phrase",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-10T04:00+08:00",
+      "start": "2026-10-09T20:00:00Z",
+      "end": "2026-10-10T00:00:00Z",
+      "date": "2026-10-10",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-10T08:00+08:00",
+      "start": "2026-10-10T00:00:00Z",
+      "end": "2026-10-10T04:00:00Z",
+      "date": "2026-10-10",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-10T12:00+08:00",
+      "start": "2026-10-10T04:00:00Z",
+      "end": "2026-10-10T08:00:00Z",
+      "date": "2026-10-10",
+      "article_ids": [
+        "644c27b2e94d4cd5f26b2fbf"
+      ],
+      "topics": [
+        {
+          "id": "f4cb75e90ad07f8c1d385988",
+          "label": "Ecuador",
+          "kind": "entity",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9a91873bb240f533c48e183e",
+          "label": "food shelf",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5e2db4f63a87b63ce1f66144",
+          "label": "health advocates",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1c7f9536bb2f98f89a606b6d",
+          "label": "industrial trans fats",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "63263a7ddba0372479b3fcce",
+          "label": "tighter controls",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-10T16:00+08:00",
+      "start": "2026-10-10T08:00:00Z",
+      "end": "2026-10-10T12:00:00Z",
+      "date": "2026-10-10",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-10T20:00+08:00",
+      "start": "2026-10-10T12:00:00Z",
+      "end": "2026-10-10T16:00:00Z",
+      "date": "2026-10-10",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-11T00:00+08:00",
+      "start": "2026-10-10T16:00:00Z",
+      "end": "2026-10-10T20:00:00Z",
+      "date": "2026-10-11",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-11T04:00+08:00",
+      "start": "2026-10-10T20:00:00Z",
+      "end": "2026-10-11T00:00:00Z",
+      "date": "2026-10-11",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-11T08:00+08:00",
+      "start": "2026-10-11T00:00:00Z",
+      "end": "2026-10-11T04:00:00Z",
+      "date": "2026-10-11",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-11T12:00+08:00",
+      "start": "2026-10-11T04:00:00Z",
+      "end": "2026-10-11T08:00:00Z",
+      "date": "2026-10-11",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-11T16:00+08:00",
+      "start": "2026-10-11T08:00:00Z",
+      "end": "2026-10-11T12:00:00Z",
+      "date": "2026-10-11",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-11T20:00+08:00",
+      "start": "2026-10-11T12:00:00Z",
+      "end": "2026-10-11T16:00:00Z",
+      "date": "2026-10-11",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-12T00:00+08:00",
+      "start": "2026-10-11T16:00:00Z",
+      "end": "2026-10-11T20:00:00Z",
+      "date": "2026-10-12",
+      "article_ids": [
+        "972c38354d7da322cc1db140"
+      ],
+      "topics": [
+        {
+          "id": "fa68059852596fdc9ff8f10d",
+          "label": "Mozambican",
+          "kind": "entity",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2e8a238d84ee730c4be91d85",
+          "label": "Mozambique",
+          "kind": "entity",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "bfef02ee45007ba2c10728a2",
+          "label": "free speech",
+          "kind": "phrase",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "e3ef3551b01f67000ffcf3dc",
+          "label": "Youth voices",
+          "kind": "phrase",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-12T04:00+08:00",
+      "start": "2026-10-11T20:00:00Z",
+      "end": "2026-10-12T00:00:00Z",
+      "date": "2026-10-12",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-12T08:00+08:00",
+      "start": "2026-10-12T00:00:00Z",
+      "end": "2026-10-12T04:00:00Z",
+      "date": "2026-10-12",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-12T12:00+08:00",
+      "start": "2026-10-12T04:00:00Z",
+      "end": "2026-10-12T08:00:00Z",
+      "date": "2026-10-12",
+      "article_ids": [
+        "b984172d44b771b3db88faa0"
+      ],
+      "topics": [
+        {
+          "id": "8e07df26128d8a78474dc525",
+          "label": "Bangladesh",
+          "kind": "entity",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6a9a10210588981dd8faa6be",
+          "label": "Malaysia",
+          "kind": "entity",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fd13a9f3f76ac08f968047e7",
+          "label": "excessive recruitment costs",
+          "kind": "phrase",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "b20a60fbda7fea9768186266",
+          "label": "government-level agreements",
+          "kind": "phrase",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-12T16:00+08:00",
+      "start": "2026-10-12T08:00:00Z",
+      "end": "2026-10-12T12:00:00Z",
+      "date": "2026-10-12",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-12T20:00+08:00",
+      "start": "2026-10-12T12:00:00Z",
+      "end": "2026-10-12T16:00:00Z",
+      "date": "2026-10-12",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-13T00:00+08:00",
+      "start": "2026-10-12T16:00:00Z",
+      "end": "2026-10-12T20:00:00Z",
+      "date": "2026-10-13",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-13T04:00+08:00",
+      "start": "2026-10-12T20:00:00Z",
+      "end": "2026-10-13T00:00:00Z",
+      "date": "2026-10-13",
+      "article_ids": [
+        "76e91e0519bd630bda11f254"
+      ],
+      "topics": [
+        {
+          "id": "6f0831d7a692ac8d96600827",
+          "label": "African",
+          "kind": "entity",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5ca13217b470e7dd4e9d7654",
+          "label": "Borana Gadaa",
+          "kind": "entity",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ffecd4d81a29fa98c01ab684",
+          "label": "accountable leadership",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a8051583858ae79c3bc43324",
+          "label": "Gadaa system",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "dfc5fecb83f04c5648c6733a",
+          "label": "inclusive governance",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "708f4983374d9f2caa55d0ad",
+          "label": "peaceful power transitions",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4492edfeaee5e2dfc45181cd",
+          "label": "traditional democratic practices",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-13T08:00+08:00",
+      "start": "2026-10-13T00:00:00Z",
+      "end": "2026-10-13T04:00:00Z",
+      "date": "2026-10-13",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-13T12:00+08:00",
+      "start": "2026-10-13T04:00:00Z",
+      "end": "2026-10-13T08:00:00Z",
+      "date": "2026-10-13",
+      "article_ids": [
+        "397736d78b90b03efcdf1195"
+      ],
+      "topics": [
+        {
+          "id": "ee139bd0fd941847bf43d49b",
+          "label": "Asia",
+          "kind": "entity",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4d8082f959266562799a169b",
+          "label": "Chabacano",
+          "kind": "entity",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a056eb28a08eb430ceff2532",
+          "label": "Chavacano",
+          "kind": "entity",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c2181e865e0ffbd84b3c439d",
+          "label": "creole language",
+          "kind": "phrase",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "213b8631a24070339bce00f6",
+          "label": "Poetry book",
+          "kind": "phrase",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-13T16:00+08:00",
+      "start": "2026-10-13T08:00:00Z",
+      "end": "2026-10-13T12:00:00Z",
+      "date": "2026-10-13",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-13T20:00+08:00",
+      "start": "2026-10-13T12:00:00Z",
+      "end": "2026-10-13T16:00:00Z",
+      "date": "2026-10-13",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-14T00:00+08:00",
+      "start": "2026-10-13T16:00:00Z",
+      "end": "2026-10-13T20:00:00Z",
+      "date": "2026-10-14",
+      "article_ids": [
+        "b9d574832716476b943379fc"
+      ],
+      "topics": [
+        {
+          "id": "a23e9cdda7a3e0db6beb14e7",
+          "label": "Nepal",
+          "kind": "entity",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1797b7457fa97cb14efad09b",
+          "label": "aid transparency complicate",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a639ff59377eec568e7d4bb3",
+          "label": "clear numbers",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6148fb53646638a7e1f5998d",
+          "label": "flood disasters",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "d2a0341c80faf06565d4bb00",
+          "label": "reconstruction plan",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "12bb8a33890e0a4f27c5802f",
+          "label": "transparency complicate efforts",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14T04:00+08:00",
+      "start": "2026-10-13T20:00:00Z",
+      "end": "2026-10-14T00:00:00Z",
+      "date": "2026-10-14",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-14T08:00+08:00",
+      "start": "2026-10-14T00:00:00Z",
+      "end": "2026-10-14T04:00:00Z",
+      "date": "2026-10-14",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-14T12:00+08:00",
+      "start": "2026-10-14T04:00:00Z",
+      "end": "2026-10-14T08:00:00Z",
+      "date": "2026-10-14",
+      "article_ids": [
+        "1897bd24c7bedbd259e65d19"
+      ],
+      "topics": [
+        {
+          "id": "92150179d1b63ac8803c6c30",
+          "label": "Kyrgyzstan",
+          "kind": "entity",
+          "article_ids": [
+            "1897bd24c7bedbd259e65d19"
+          ],
+          "first_seen_at": "2026-10-14T04:00:02Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c7b3e9a39005bb1f28c14498",
+          "label": "Lived experience",
+          "kind": "phrase",
+          "article_ids": [
+            "1897bd24c7bedbd259e65d19"
+          ],
+          "first_seen_at": "2026-10-14T04:00:02Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c7478da3330918ad01005844",
+          "label": "physical barriers",
+          "kind": "phrase",
+          "article_ids": [
+            "1897bd24c7bedbd259e65d19"
+          ],
+          "first_seen_at": "2026-10-14T04:00:02Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-14T16:00+08:00",
+      "start": "2026-10-14T08:00:00Z",
+      "end": "2026-10-14T12:00:00Z",
+      "date": "2026-10-14",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-14T20:00+08:00",
+      "start": "2026-10-14T12:00:00Z",
+      "end": "2026-10-14T16:00:00Z",
+      "date": "2026-10-14",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-15T00:00+08:00",
+      "start": "2026-10-14T16:00:00Z",
+      "end": "2026-10-14T20:00:00Z",
+      "date": "2026-10-15",
+      "article_ids": [
+        "6943d5d57f3140c875f27808"
+      ],
+      "topics": [
+        {
+          "id": "fd4953e76f4337dcf52c20b7",
+          "label": "Myanmar",
+          "kind": "entity",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1d43cfed6bbe6dd9919678de",
+          "label": "Norway",
+          "kind": "entity",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "180e0598e834b5e2c8205a3d",
+          "label": "dangerous divestment",
+          "kind": "phrase",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7d06acbbdaa0e1a03706ec2f",
+          "label": "Telenor telecom",
+          "kind": "phrase",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "52408ce928fcece4a50261fc",
+          "label": "user data",
+          "kind": "phrase",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15T04:00+08:00",
+      "start": "2026-10-14T20:00:00Z",
+      "end": "2026-10-15T00:00:00Z",
+      "date": "2026-10-15",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-15T08:00+08:00",
+      "start": "2026-10-15T00:00:00Z",
+      "end": "2026-10-15T04:00:00Z",
+      "date": "2026-10-15",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-15T12:00+08:00",
+      "start": "2026-10-15T04:00:00Z",
+      "end": "2026-10-15T08:00:00Z",
+      "date": "2026-10-15",
+      "article_ids": [
+        "a55dd26de6b4df95cb09c7cf"
+      ],
+      "topics": [
+        {
+          "id": "c228dcf978f1caf3f136eddf",
+          "label": "authoritarian states",
+          "kind": "phrase",
+          "article_ids": [
+            "a55dd26de6b4df95cb09c7cf"
+          ],
+          "first_seen_at": "2026-10-15T04:00:07Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1f8206700627b1041f1a563d",
+          "label": "international exchange",
+          "kind": "phrase",
+          "article_ids": [
+            "a55dd26de6b4df95cb09c7cf"
+          ],
+          "first_seen_at": "2026-10-15T04:00:07Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ed7ba5efd6a96cb2f7efb6f5",
+          "label": "international market",
+          "kind": "phrase",
+          "article_ids": [
+            "a55dd26de6b4df95cb09c7cf"
+          ],
+          "first_seen_at": "2026-10-15T04:00:07Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-15T16:00+08:00",
+      "start": "2026-10-15T08:00:00Z",
+      "end": "2026-10-15T12:00:00Z",
+      "date": "2026-10-15",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-15T20:00+08:00",
+      "start": "2026-10-15T12:00:00Z",
+      "end": "2026-10-15T16:00:00Z",
+      "date": "2026-10-15",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-16T00:00+08:00",
+      "start": "2026-10-15T16:00:00Z",
+      "end": "2026-10-15T20:00:00Z",
+      "date": "2026-10-16",
+      "article_ids": [
+        "f3f121be51432f76efeeb347",
+        "415456389e84bbde6d6a68d2",
+        "17c103abfb300de2f505dcd7",
+        "9b1931b94a11a4e2ca093da8"
+      ],
+      "topics": [
+        {
+          "id": "67203e4769aeef2f308f4d6e",
+          "label": "El Niño",
+          "kind": "entity",
+          "article_ids": [
+            "415456389e84bbde6d6a68d2",
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T17:59:22Z",
+          "source_count": 2,
+          "article_count": 2
+        },
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7",
+            "415456389e84bbde6d6a68d2",
+            "9b1931b94a11a4e2ca093da8"
+          ],
+          "first_seen_at": "2026-10-15T17:30:00Z",
+          "source_count": 1,
+          "article_count": 3
+        },
+        {
+          "id": "cbc62794911ff31b2864ecd3",
+          "label": "Amazon",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "79e57c5288a0a710ebe4772c",
+          "label": "Cutivireni",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "44bb41f280055f5a73c6441b",
+          "label": "Deimos",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7b74b418a352d67108173c20",
+          "label": "Earth",
+          "kind": "entity",
+          "article_ids": [
+            "9b1931b94a11a4e2ca093da8"
+          ],
+          "first_seen_at": "2026-10-15T17:30:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1c4ea650684556fba37692ad",
+          "label": "International Space Station",
+          "kind": "entity",
+          "article_ids": [
+            "9b1931b94a11a4e2ca093da8"
+          ],
+          "first_seen_at": "2026-10-15T17:30:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6d6e1703177f375a7cb55819",
+          "label": "Japan Aerospace Exploration Agency",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "300e538f886e8abe2d69c1ae",
+          "label": "JAXA",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "d158be41db87d7055fa9548f",
+          "label": "Mars",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c485e1ce90023290628fd88a",
+          "label": "Oviri",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7b989fe5889d6645056f3124",
+          "label": "Pacific",
+          "kind": "entity",
+          "article_ids": [
+            "415456389e84bbde6d6a68d2"
+          ],
+          "first_seen_at": "2026-10-15T17:59:22Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fdc224c5d688634467113c9c",
+          "label": "Peru",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "b45a713ad020463b19db252f",
+          "label": "Phobos",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "81d37b25e7fc5eb8e1d22ef5",
+          "label": "Red Planet",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16T04:00+08:00",
+      "start": "2026-10-15T20:00:00Z",
+      "end": "2026-10-16T00:00:00Z",
+      "date": "2026-10-16",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-16T08:00+08:00",
+      "start": "2026-10-16T00:00:00Z",
+      "end": "2026-10-16T04:00:00Z",
+      "date": "2026-10-16",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-16T12:00+08:00",
+      "start": "2026-10-16T04:00:00Z",
+      "end": "2026-10-16T08:00:00Z",
+      "date": "2026-10-16",
+      "article_ids": [
+        "7844c786a05d4c1a035bd596",
+        "afeda75bd8f1fc1088f1f53f"
+      ],
+      "topics": [
+        {
+          "id": "32e83e92d45d71f69dcf9d21",
+          "label": "AI",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "50c0152c2952082aeaf42788",
+          "label": "China",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c400ddc0002f9ee6b63d3b19",
+          "label": "Gulf Coast",
+          "kind": "entity",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "21bd3229a131a2cc251bf2dd",
+          "label": "Hong Kong",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "89c5c07696fbcaa9105d3613",
+          "label": "Isaias Dims",
+          "kind": "entity",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9a76d92bf6d134f1575b6ec2",
+          "label": "Xi Jinping",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7209e06fd782a2811abd41f4",
+          "label": "Coast High-definition images",
+          "kind": "phrase",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "77accc3b7092c728e68ee086",
+          "label": "Florida Panhandle",
+          "kind": "phrase",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "b133a9000fd9e46b82840f9a",
+          "label": "Kong police",
+          "kind": "phrase",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7319ff632a8f6682a7b5ca2e",
+          "label": "national security platform",
+          "kind": "phrase",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9b6e46c3c335326772443d67",
+          "label": "nighttime lights show",
+          "kind": "phrase",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-16T16:00+08:00",
+      "start": "2026-10-16T08:00:00Z",
+      "end": "2026-10-16T12:00:00Z",
+      "date": "2026-10-16",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-16T20:00+08:00",
+      "start": "2026-10-16T12:00:00Z",
+      "end": "2026-10-16T16:00:00Z",
+      "date": "2026-10-16",
+      "article_ids": [
+        "162b5cc99c941289236e975f",
+        "3ae2f675a8dcbfe74a139051",
+        "378b9bf06bbdf04e67dbef70"
+      ],
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f",
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 2
+        },
+        {
+          "id": "8c6f36377806d1517589d8bc",
+          "label": "Allison Mjoen",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5c8f52ca28966103ff0aad98",
+          "label": "Brazil",
+          "kind": "entity",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "90b6444eb6fe2a62437e367a",
+          "label": "Exploration Ground Systems Program",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "20e796c128096d229ba89bf4",
+          "label": "fed",
+          "kind": "entity",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5f77c2500f56fe1a4abe06bf",
+          "label": "Lula",
+          "kind": "entity",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "8a68c8ee8d764c8b9ec60684",
+          "label": "Mjoen",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "d3a2645a02bcbe5d0ecbb567",
+          "label": "child abuse",
+          "kind": "phrase",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5f13272d07beeffb419cabe5",
+          "label": "constellation Columba",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5115790f9377355147b20fbe",
+          "label": "core stage",
+          "kind": "phrase",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ff647412a1dd63a642c67692",
+          "label": "extremist network",
+          "kind": "phrase",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c5f218a4132255944a9dd2a1",
+          "label": "Hubble Space Telescope",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fa93cb389a4b5b998da420de",
+          "label": "Hubble Spies Spiral",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "0f7ab79f97cb2beeaa2995d1",
+          "label": "intermediate spiral galaxy",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "873ca1bdcc7e7d1076555a30",
+          "label": "prostate cancer exams",
+          "kind": "phrase",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17T00:00+08:00",
+      "start": "2026-10-16T16:00:00Z",
+      "end": "2026-10-16T20:00:00Z",
+      "date": "2026-10-17",
+      "article_ids": [
+        "6ab9fd69f0dd2799f0589a3c"
+      ],
+      "topics": [
+        {
+          "id": "7b74b418a352d67108173c20",
+          "label": "Earth",
+          "kind": "entity",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6e9f5e46bc287d2622cf9ba5",
+          "label": "U.S. Navy",
+          "kind": "entity",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "f9a7ff467ca3b0b6ea7c9b0f",
+          "label": "Artemis II Heat",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2a052f03ebf64c15e31afa14",
+          "label": "Artemis II mission",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "695520e08192aa910f59301e",
+          "label": "Heat Shield",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ac1880018f743715816543a2",
+          "label": "Navy divers",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17T04:00+08:00",
+      "start": "2026-10-16T20:00:00Z",
+      "end": "2026-10-17T00:00:00Z",
+      "date": "2026-10-17",
+      "article_ids": [
+        "eceee082141a79e64959abc6"
+      ],
+      "topics": [
+        {
+          "id": "0a14a1797925f8b61d010574",
+          "label": "Alabama",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "da02fccf47a63bd0f3ea1191",
+          "label": "Huntsville",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "0a99d7cfb090054501aba5fc",
+          "label": "Jared Isaacman",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "98d9d59a907519c80fc08e9b",
+          "label": "Marshall",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "321c931a5cebe508e5ba70a9",
+          "label": "Marshall Space Flight Center",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2bff955748725b9afad50ae2",
+          "label": "Stephen Cash",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4e966d6c5bb719e5c57e3ebe",
+          "label": "Stephen Cash Marshall",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "abbb443fee70cb93193cd9e8",
+          "label": "Flight Center Director",
+          "kind": "phrase",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17T08:00+08:00",
+      "start": "2026-10-17T00:00:00Z",
+      "end": "2026-10-17T04:00:00Z",
+      "date": "2026-10-17",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-17T12:00+08:00",
+      "start": "2026-10-17T04:00:00Z",
+      "end": "2026-10-17T08:00:00Z",
+      "date": "2026-10-17",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-17T16:00+08:00",
+      "start": "2026-10-17T08:00:00Z",
+      "end": "2026-10-17T12:00:00Z",
+      "date": "2026-10-17",
+      "article_ids": [
+        "f4e33bf364f8bb271ecd22b9"
+      ],
+      "topics": [
+        {
+          "id": "08682370eb8a9cc8387cc8c3",
+          "label": "Donald Trump",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2c2edeadaa488dd23b2aba7e",
+          "label": "Latin America",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9a55ef3f4717bed758ff4296",
+          "label": "U.N. LGBTI Core Group",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5c2df00edab240ccb6f616dd",
+          "label": "United Nations",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "981e5b396726008318fcca73",
+          "label": "United States",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "712b689bd664422b5385f227",
+          "label": "Far-right activists",
+          "kind": "phrase",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9b49f4f9f50717e651e6a578",
+          "label": "global coalition",
+          "kind": "phrase",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "f11f3e27d91c376ca7a704f0",
+          "label": "reproductive rights Far-right",
+          "kind": "phrase",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ]
+    },
+    {
+      "id": "2026-10-17T20:00+08:00",
+      "start": "2026-10-17T12:00:00Z",
+      "end": "2026-10-17T16:00:00Z",
+      "date": "2026-10-17",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-18T00:00+08:00",
+      "start": "2026-10-17T16:00:00Z",
+      "end": "2026-10-17T20:00:00Z",
+      "date": "2026-10-18",
+      "article_ids": [],
+      "topics": []
+    },
+    {
+      "id": "2026-10-18T04:00+08:00",
+      "start": "2026-10-17T20:00:00Z",
+      "end": "2026-10-18T00:00:00Z",
+      "date": "2026-10-18",
+      "article_ids": [],
+      "topics": []
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-10-18",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-17",
+      "topics": [
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c",
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 2
+        },
+        {
+          "id": "0a14a1797925f8b61d010574",
+          "label": "Alabama",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "08682370eb8a9cc8387cc8c3",
+          "label": "Donald Trump",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7b74b418a352d67108173c20",
+          "label": "Earth",
+          "kind": "entity",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "da02fccf47a63bd0f3ea1191",
+          "label": "Huntsville",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "0a99d7cfb090054501aba5fc",
+          "label": "Jared Isaacman",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2c2edeadaa488dd23b2aba7e",
+          "label": "Latin America",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "98d9d59a907519c80fc08e9b",
+          "label": "Marshall",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "321c931a5cebe508e5ba70a9",
+          "label": "Marshall Space Flight Center",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2bff955748725b9afad50ae2",
+          "label": "Stephen Cash",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4e966d6c5bb719e5c57e3ebe",
+          "label": "Stephen Cash Marshall",
+          "kind": "entity",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9a55ef3f4717bed758ff4296",
+          "label": "U.N. LGBTI Core Group",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6e9f5e46bc287d2622cf9ba5",
+          "label": "U.S. Navy",
+          "kind": "entity",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5c2df00edab240ccb6f616dd",
+          "label": "United Nations",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "981e5b396726008318fcca73",
+          "label": "United States",
+          "kind": "entity",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "f9a7ff467ca3b0b6ea7c9b0f",
+          "label": "Artemis II Heat",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2a052f03ebf64c15e31afa14",
+          "label": "Artemis II mission",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "712b689bd664422b5385f227",
+          "label": "Far-right activists",
+          "kind": "phrase",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "abbb443fee70cb93193cd9e8",
+          "label": "Flight Center Director",
+          "kind": "phrase",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9b49f4f9f50717e651e6a578",
+          "label": "global coalition",
+          "kind": "phrase",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "695520e08192aa910f59301e",
+          "label": "Heat Shield",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ac1880018f743715816543a2",
+          "label": "Navy divers",
+          "kind": "phrase",
+          "article_ids": [
+            "6ab9fd69f0dd2799f0589a3c"
+          ],
+          "first_seen_at": "2026-10-16T16:28:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "f11f3e27d91c376ca7a704f0",
+          "label": "reproductive rights Far-right",
+          "kind": "phrase",
+          "article_ids": [
+            "f4e33bf364f8bb271ecd22b9"
+          ],
+          "first_seen_at": "2026-10-17T08:07:27Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 3
+    },
+    {
+      "date": "2026-10-16",
+      "topics": [
+        {
+          "id": "67203e4769aeef2f308f4d6e",
+          "label": "El Niño",
+          "kind": "entity",
+          "article_ids": [
+            "415456389e84bbde6d6a68d2",
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T17:59:22Z",
+          "source_count": 2,
+          "article_count": 2
+        },
+        {
+          "id": "724f92f8cb38408715702812",
+          "label": "NASA",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f",
+            "17c103abfb300de2f505dcd7",
+            "378b9bf06bbdf04e67dbef70",
+            "415456389e84bbde6d6a68d2",
+            "9b1931b94a11a4e2ca093da8"
+          ],
+          "first_seen_at": "2026-10-15T17:30:00Z",
+          "source_count": 1,
+          "article_count": 5
+        },
+        {
+          "id": "32e83e92d45d71f69dcf9d21",
+          "label": "AI",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "8c6f36377806d1517589d8bc",
+          "label": "Allison Mjoen",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "cbc62794911ff31b2864ecd3",
+          "label": "Amazon",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5c8f52ca28966103ff0aad98",
+          "label": "Brazil",
+          "kind": "entity",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "50c0152c2952082aeaf42788",
+          "label": "China",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "79e57c5288a0a710ebe4772c",
+          "label": "Cutivireni",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "44bb41f280055f5a73c6441b",
+          "label": "Deimos",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7b74b418a352d67108173c20",
+          "label": "Earth",
+          "kind": "entity",
+          "article_ids": [
+            "9b1931b94a11a4e2ca093da8"
+          ],
+          "first_seen_at": "2026-10-15T17:30:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "90b6444eb6fe2a62437e367a",
+          "label": "Exploration Ground Systems Program",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "20e796c128096d229ba89bf4",
+          "label": "fed",
+          "kind": "entity",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c400ddc0002f9ee6b63d3b19",
+          "label": "Gulf Coast",
+          "kind": "entity",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "21bd3229a131a2cc251bf2dd",
+          "label": "Hong Kong",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1c4ea650684556fba37692ad",
+          "label": "International Space Station",
+          "kind": "entity",
+          "article_ids": [
+            "9b1931b94a11a4e2ca093da8"
+          ],
+          "first_seen_at": "2026-10-15T17:30:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "89c5c07696fbcaa9105d3613",
+          "label": "Isaias Dims",
+          "kind": "entity",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6d6e1703177f375a7cb55819",
+          "label": "Japan Aerospace Exploration Agency",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "300e538f886e8abe2d69c1ae",
+          "label": "JAXA",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5f77c2500f56fe1a4abe06bf",
+          "label": "Lula",
+          "kind": "entity",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "d158be41db87d7055fa9548f",
+          "label": "Mars",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "8a68c8ee8d764c8b9ec60684",
+          "label": "Mjoen",
+          "kind": "entity",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c485e1ce90023290628fd88a",
+          "label": "Oviri",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7b989fe5889d6645056f3124",
+          "label": "Pacific",
+          "kind": "entity",
+          "article_ids": [
+            "415456389e84bbde6d6a68d2"
+          ],
+          "first_seen_at": "2026-10-15T17:59:22Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fdc224c5d688634467113c9c",
+          "label": "Peru",
+          "kind": "entity",
+          "article_ids": [
+            "f3f121be51432f76efeeb347"
+          ],
+          "first_seen_at": "2026-10-15T18:30:01Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "b45a713ad020463b19db252f",
+          "label": "Phobos",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "81d37b25e7fc5eb8e1d22ef5",
+          "label": "Red Planet",
+          "kind": "entity",
+          "article_ids": [
+            "17c103abfb300de2f505dcd7"
+          ],
+          "first_seen_at": "2026-10-15T19:58:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9a76d92bf6d134f1575b6ec2",
+          "label": "Xi Jinping",
+          "kind": "entity",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "d3a2645a02bcbe5d0ecbb567",
+          "label": "child abuse",
+          "kind": "phrase",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7209e06fd782a2811abd41f4",
+          "label": "Coast High-definition images",
+          "kind": "phrase",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5f13272d07beeffb419cabe5",
+          "label": "constellation Columba",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5115790f9377355147b20fbe",
+          "label": "core stage",
+          "kind": "phrase",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ff647412a1dd63a642c67692",
+          "label": "extremist network",
+          "kind": "phrase",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "77accc3b7092c728e68ee086",
+          "label": "Florida Panhandle",
+          "kind": "phrase",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c5f218a4132255944a9dd2a1",
+          "label": "Hubble Space Telescope",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fa93cb389a4b5b998da420de",
+          "label": "Hubble Spies Spiral",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "0f7ab79f97cb2beeaa2995d1",
+          "label": "intermediate spiral galaxy",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "b133a9000fd9e46b82840f9a",
+          "label": "Kong police",
+          "kind": "phrase",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7319ff632a8f6682a7b5ca2e",
+          "label": "national security platform",
+          "kind": "phrase",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9b6e46c3c335326772443d67",
+          "label": "nighttime lights show",
+          "kind": "phrase",
+          "article_ids": [
+            "afeda75bd8f1fc1088f1f53f"
+          ],
+          "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "873ca1bdcc7e7d1076555a30",
+          "label": "prostate cancer exams",
+          "kind": "phrase",
+          "article_ids": [
+            "3ae2f675a8dcbfe74a139051"
+          ],
+          "first_seen_at": "2026-10-16T13:10:39Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 9
+    },
+    {
+      "date": "2026-10-15",
+      "topics": [
+        {
+          "id": "fd4953e76f4337dcf52c20b7",
+          "label": "Myanmar",
+          "kind": "entity",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1d43cfed6bbe6dd9919678de",
+          "label": "Norway",
+          "kind": "entity",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c228dcf978f1caf3f136eddf",
+          "label": "authoritarian states",
+          "kind": "phrase",
+          "article_ids": [
+            "a55dd26de6b4df95cb09c7cf"
+          ],
+          "first_seen_at": "2026-10-15T04:00:07Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "180e0598e834b5e2c8205a3d",
+          "label": "dangerous divestment",
+          "kind": "phrase",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1f8206700627b1041f1a563d",
+          "label": "international exchange",
+          "kind": "phrase",
+          "article_ids": [
+            "a55dd26de6b4df95cb09c7cf"
+          ],
+          "first_seen_at": "2026-10-15T04:00:07Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ed7ba5efd6a96cb2f7efb6f5",
+          "label": "international market",
+          "kind": "phrase",
+          "article_ids": [
+            "a55dd26de6b4df95cb09c7cf"
+          ],
+          "first_seen_at": "2026-10-15T04:00:07Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "7d06acbbdaa0e1a03706ec2f",
+          "label": "Telenor telecom",
+          "kind": "phrase",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "52408ce928fcece4a50261fc",
+          "label": "user data",
+          "kind": "phrase",
+          "article_ids": [
+            "6943d5d57f3140c875f27808"
+          ],
+          "first_seen_at": "2026-10-14T18:22:53Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 2
+    },
+    {
+      "date": "2026-10-14",
+      "topics": [
+        {
+          "id": "92150179d1b63ac8803c6c30",
+          "label": "Kyrgyzstan",
+          "kind": "entity",
+          "article_ids": [
+            "1897bd24c7bedbd259e65d19"
+          ],
+          "first_seen_at": "2026-10-14T04:00:02Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a23e9cdda7a3e0db6beb14e7",
+          "label": "Nepal",
+          "kind": "entity",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1797b7457fa97cb14efad09b",
+          "label": "aid transparency complicate",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a639ff59377eec568e7d4bb3",
+          "label": "clear numbers",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6148fb53646638a7e1f5998d",
+          "label": "flood disasters",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c7b3e9a39005bb1f28c14498",
+          "label": "Lived experience",
+          "kind": "phrase",
+          "article_ids": [
+            "1897bd24c7bedbd259e65d19"
+          ],
+          "first_seen_at": "2026-10-14T04:00:02Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c7478da3330918ad01005844",
+          "label": "physical barriers",
+          "kind": "phrase",
+          "article_ids": [
+            "1897bd24c7bedbd259e65d19"
+          ],
+          "first_seen_at": "2026-10-14T04:00:02Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "d2a0341c80faf06565d4bb00",
+          "label": "reconstruction plan",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "12bb8a33890e0a4f27c5802f",
+          "label": "transparency complicate efforts",
+          "kind": "phrase",
+          "article_ids": [
+            "b9d574832716476b943379fc"
+          ],
+          "first_seen_at": "2026-10-13T18:21:20Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 2
+    },
+    {
+      "date": "2026-10-13",
+      "topics": [
+        {
+          "id": "6f0831d7a692ac8d96600827",
+          "label": "African",
+          "kind": "entity",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ee139bd0fd941847bf43d49b",
+          "label": "Asia",
+          "kind": "entity",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5ca13217b470e7dd4e9d7654",
+          "label": "Borana Gadaa",
+          "kind": "entity",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4d8082f959266562799a169b",
+          "label": "Chabacano",
+          "kind": "entity",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a056eb28a08eb430ceff2532",
+          "label": "Chavacano",
+          "kind": "entity",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "ffecd4d81a29fa98c01ab684",
+          "label": "accountable leadership",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c2181e865e0ffbd84b3c439d",
+          "label": "creole language",
+          "kind": "phrase",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a8051583858ae79c3bc43324",
+          "label": "Gadaa system",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "dfc5fecb83f04c5648c6733a",
+          "label": "inclusive governance",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "708f4983374d9f2caa55d0ad",
+          "label": "peaceful power transitions",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "213b8631a24070339bce00f6",
+          "label": "Poetry book",
+          "kind": "phrase",
+          "article_ids": [
+            "397736d78b90b03efcdf1195"
+          ],
+          "first_seen_at": "2026-10-13T07:48:55Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4492edfeaee5e2dfc45181cd",
+          "label": "traditional democratic practices",
+          "kind": "phrase",
+          "article_ids": [
+            "76e91e0519bd630bda11f254"
+          ],
+          "first_seen_at": "2026-10-12T20:34:34Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 2
+    },
+    {
+      "date": "2026-10-12",
+      "topics": [
+        {
+          "id": "8e07df26128d8a78474dc525",
+          "label": "Bangladesh",
+          "kind": "entity",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "6a9a10210588981dd8faa6be",
+          "label": "Malaysia",
+          "kind": "entity",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fa68059852596fdc9ff8f10d",
+          "label": "Mozambican",
+          "kind": "entity",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "2e8a238d84ee730c4be91d85",
+          "label": "Mozambique",
+          "kind": "entity",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "fd13a9f3f76ac08f968047e7",
+          "label": "excessive recruitment costs",
+          "kind": "phrase",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "bfef02ee45007ba2c10728a2",
+          "label": "free speech",
+          "kind": "phrase",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "b20a60fbda7fea9768186266",
+          "label": "government-level agreements",
+          "kind": "phrase",
+          "article_ids": [
+            "b984172d44b771b3db88faa0"
+          ],
+          "first_seen_at": "2026-10-12T06:39:35Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "e3ef3551b01f67000ffcf3dc",
+          "label": "Youth voices",
+          "kind": "phrase",
+          "article_ids": [
+            "972c38354d7da322cc1db140"
+          ],
+          "first_seen_at": "2026-10-11T18:00:47Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 2
+    },
+    {
+      "date": "2026-10-11",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-10",
+      "topics": [
+        {
+          "id": "f4cb75e90ad07f8c1d385988",
+          "label": "Ecuador",
+          "kind": "entity",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "a4538197bb508d9d1c7cb18a",
+          "label": "Global South",
+          "kind": "entity",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1a00a617e3e3887262821128",
+          "label": "Trump’s ‘Agreements on Reciprocal Trade’",
+          "kind": "entity",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "981e5b396726008318fcca73",
+          "label": "United States",
+          "kind": "entity",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "3f4d653fe53ebf633911f491",
+          "label": "controversial reciprocal trade",
+          "kind": "phrase",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "9a91873bb240f533c48e183e",
+          "label": "food shelf",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5e2db4f63a87b63ce1f66144",
+          "label": "health advocates",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "1c7f9536bb2f98f89a606b6d",
+          "label": "industrial trans fats",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "58a27ce0c28137e76bbe091e",
+          "label": "reciprocal trade agreements",
+          "kind": "phrase",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "94b73aa7b128256baeef6760",
+          "label": "signatory countries",
+          "kind": "phrase",
+          "article_ids": [
+            "ef638520212cb7a15a4ac441"
+          ],
+          "first_seen_at": "2026-10-09T19:22:38Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "63263a7ddba0372479b3fcce",
+          "label": "tighter controls",
+          "kind": "phrase",
+          "article_ids": [
+            "644c27b2e94d4cd5f26b2fbf"
+          ],
+          "first_seen_at": "2026-10-10T04:00:43Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 2
+    },
+    {
+      "date": "2026-10-09",
+      "topics": [
+        {
+          "id": "32e83e92d45d71f69dcf9d21",
+          "label": "AI",
+          "kind": "entity",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "c2910dedbf00ffe7b37bd6eb",
+          "label": "economic policy",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "5a15c540d1d45498eceeed3d",
+          "label": "oil infrastructure",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "0f6a0d9791bbe0a5509b86a1",
+          "label": "oil pipelines",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "bb42d59bd48e59543dff1b19",
+          "label": "Subsea cables",
+          "kind": "phrase",
+          "article_ids": [
+            "f65cdc66f5d69dc565d39a10"
+          ],
+          "first_seen_at": "2026-10-09T06:15:45Z",
+          "source_count": 1,
+          "article_count": 1
+        }
+      ],
+      "article_count": 1
+    },
+    {
+      "date": "2026-10-08",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-07",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-06",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-05",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-04",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-03",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-02",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-10-01",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-30",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-29",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-28",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-27",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-26",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-25",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-24",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-23",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-22",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-21",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-20",
+      "topics": [],
+      "article_count": 0
+    },
+    {
+      "date": "2026-09-19",
+      "topics": [],
+      "article_count": 0
+    }
+  ],
+  "ai": {
+    "status": "disabled",
+    "message": "尚未配置免费 AI；英文新闻、热词及词典链接正常可用"
+  }
+}
