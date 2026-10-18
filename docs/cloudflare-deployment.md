@@ -12,6 +12,13 @@
 
 部署是否真正完成，以实际登录和翻译验证结果为准。只有资源创建不代表可以翻译。未配置时服务器拒绝调用 Gemini。
 
+## 当前部署记录（2026-10-18）
+
+- 自定义域名 HTTPS 校验通过；API 路由已发布，未登录 status 返回 401。
+- 三个 Worker Secret 名称均已核实存在；未读取密钥值。账号主人已确认 Gemini 项目为未关联付费计费的 Free Tier，`FREE_TIER_CONFIRMED=true`。
+- Google 客户端的同站回调 URI 已保存；网页采用整页登录，避免依赖弹窗。
+- 自动化验证共 58 项通过，GitHub Pages 发布成功。内置测试浏览器未完成 Google 按钮跳转，真实账号登录后取得译文仍需在 Safari / Chrome 验证，不能将配置完成视为真实翻译验收通过。
+
 ## Google 登录设置
 
 1. Google Cloud Console → 选择 Headline News → Google Auth Platform。设置应用名称 Headline News，支持邮箱与联系邮箱为账号主人；选择 External，测试阶段仅添加你的邮箱。只使用登录所需的 openid、email、profile，不申请 Gmail、Drive 或其他权限。

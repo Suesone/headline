@@ -2,7 +2,7 @@
 
 [打开网页](https://headline.infinitas.top/) · [源码仓库](https://github.com/Suesone/headline)
 
-每四小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译按需执行，密钥由本机管理，译文不写入项目文件、不上传 GitHub。Chrome / Ollama 为本地推理；可选 Gemini 经本机接口发送原文到 Google。**
+每四小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译按需执行，译文仅留当前页面内存，不写入项目文件或 GitHub。Chrome / Ollama 为本地推理；跨设备 Gemini 通过 Google 登录保护的 Cloudflare 接口发送原文到 Google，密钥保存在 Worker Secret；另保留本机 Gemini 阅读器。**
 
 ## 当前功能
 
@@ -49,7 +49,7 @@ python3 -m scripts.local_reader --provider gemini --allow-google-upload --free-t
 
 **零费用的前提是你的项目实际处于未关联计费的免费档。程序不能仅凭 API Key 核实账单状态；会话上限也不能为付费项目保证零费用。** 请在 AI Studio 核实 Billing Tier；免费政策、模型或地区不可用时暂停使用。[价格](https://ai.google.dev/gemini-api/docs/pricing) · [计费状态说明](https://ai.google.dev/gemini-api/docs/billing)
 
-关闭阅读器后清空进程密钥，刷新页面清除译文缓存。公开网页不直接调用 Gemini；本机接口也不会接收浏览器传来的密钥、任意模型名或远程 API 地址。没有后台批量翻译、文件上传、Google Search grounding 或持久化云缓存。本轮只用模拟响应测试接口，没有真实密钥或真实 API 调用。
+关闭阅读器后清空进程密钥，刷新页面清除译文缓存。公开网页不直接调用 Gemini；本机接口也不会接收浏览器传来的密钥、任意模型名或远程 API 地址。没有后台批量翻译、文件上传、Google Search grounding 或持久化云缓存。自动化测试使用模拟响应，不需要真实密钥。
 
 ### 方式一：桌面 Chrome
 
@@ -133,6 +133,6 @@ node --test tests/*.test.cjs
 
 ### 自有域名与跨设备翻译（可选）
 
-`cloudflare/` 提供 `headline.infinitas.top` 的安全网关。公开新闻由 GitHub Pages 提供；翻译需获准的 Google 账号登录，Gemini Key 放 Worker Secret，译文仅留当前浏览器内存。默认每日 100 段，额度限制后暂停。配置缺失时拒绝调用；不会将 Key 放进前端。域名已启用 HTTPS；翻译接口需完成 Google 登录和 Gemini Secret 配置后才开放，详见 [Cloudflare 部署说明](docs/cloudflare-deployment.md)。
+`cloudflare/` 提供 `headline.infinitas.top` 的安全网关。公开新闻由 GitHub Pages 提供；翻译需获准的 Google 账号登录，Gemini Key 放 Worker Secret，译文仅留当前浏览器内存。默认每日 100 段，额度限制后暂停。配置缺失时拒绝调用；不会将 Key 放进前端。域名已启用 HTTPS，Gemini Secret 已保存，免费档已由账号主人确认；Google 整页登录回调已配置。使用步骤及维护方法详见 [Cloudflare 部署说明](docs/cloudflare-deployment.md)。
 
 验证：`npm ci --prefix cloudflare --ignore-scripts` 后 `npm test --prefix cloudflare`。无需密钥，测试不会调用真实 Gemini。
