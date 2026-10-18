@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T18:37:35.749161Z",
+  "generated_at": "2026-10-18T19:43:35.134450Z",
   "trigger": {
     "event": "schedule",
-    "schedule": "17 */2 * * *",
+    "schedule": "0 */2 * * *",
     "slot": "2026-10-19T02:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/39154976191"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/39160046408"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
   "latest_window_id": "2026-10-19T00:00+08:00",
   "today": "2026-10-19",
-  "last_success_at": "2026-10-18T18:37:35.749161Z",
+  "last_success_at": "2026-10-18T19:43:35.134450Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "ai_enabled": false,
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -69,8 +69,8 @@
       "max_feed_age_hours": 96,
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -101,8 +101,8 @@
       "max_feed_age_hours": 96,
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -133,8 +133,8 @@
       "topics_title_only": true,
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 20,
@@ -164,8 +164,8 @@
       ],
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -195,8 +195,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -240,8 +240,8 @@
       ],
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -290,8 +290,8 @@
       ],
       "max_items": 20,
       "status": "ok",
-      "checked_at": "2026-10-18T18:37:35.749161Z",
-      "last_success_at": "2026-10-18T18:37:35.749161Z",
+      "checked_at": "2026-10-18T19:43:35.134450Z",
+      "last_success_at": "2026-10-18T19:43:35.134450Z",
       "received": 20,
       "skipped": 0,
       "fetch_limit": 20,
@@ -301,6 +301,116 @@
     }
   ],
   "articles": [
+    {
+      "id": "244f3e838077e12a314b10a6",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/18/nx-s1-6007382/ukraine-us-starshield-starlink-what-to-know-trump"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Ukraine and the U.S. are at odds over Starshield. Here's what to know",
+      "url": "https://www.npr.org/2026/10/18/nx-s1-6007382/ukraine-us-starshield-starlink-what-to-know-trump",
+      "summary": "Ukrainian President Volodymyr Zelenskyy has said he believes the U.S. government is behind his military's loss of normal access to the key satellite communications service used by the Ukrainian military.",
+      "author": "Kristin Wright",
+      "published_at": "2026-10-18T18:38:49Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-19T02:00+08:00",
+      "topics": [],
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": true,
+      "time_basis": "publication"
+    },
+    {
+      "id": "7a0823e9374f2dd9c88583e1",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/86ea558d9d0239e7"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "Trump endorses Netanyahu in close Israeli election",
+      "url": "https://www.reuters.com/world/middle-east/trump-endorses-netanyahu-israeli-election-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T17:41:20Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-19T00:00+08:00",
+      "topics": [],
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
+    },
+    {
+      "id": "f7dac9665e5eb45ada13d9ee",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/bcbfb7ff1990ba24"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "Milan police clash with protesters on second day of unrest",
+      "url": "https://www.reuters.com/world/milan-police-clash-with-protesters-second-day-unrest-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T17:33:33Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-19T00:00+08:00",
+      "topics": [],
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
+    },
+    {
+      "id": "a221ad10dae764adcf2b3552",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/1f30258c2c5b7904"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "Captain of flydubai plane describes blocking axe blows as co-pilot attacked",
+      "url": "https://www.reuters.com/business/aerospace-defense/captain-flydubai-plane-describes-blocking-axe-blows-co-pilot-attacked-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T17:21:59Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-19T00:00+08:00",
+      "topics": [],
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
+    },
+    {
+      "id": "befdcd06ee0fc3fb12467654",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/d1a8f0e30d96f2c9"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "US officials visit Palestinian village after settler attacks on diplomats",
+      "url": "https://www.reuters.com/world/middle-east/us-officials-visit-palestinian-village-after-settler-attacks-diplomats-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T17:14:53Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-19T00:00+08:00",
+      "topics": [],
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
+    },
     {
       "id": "13640fc6bdeb38ef08809194",
       "identities": [
@@ -316,8 +426,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-19T00:00+08:00",
       "topics": [],
-      "feed_rank": 14,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 15,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -338,12 +448,34 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-19T00:00+08:00",
       "topics": [],
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": true,
       "time_basis": "publication"
+    },
+    {
+      "id": "df18933fbf80a00147e7cdde",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/4a93b0c25aa9001b"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "Zelenskiy says he spoke to US envoys Witkoff, Kushner",
+      "url": "https://www.reuters.com/business/media-telecom/zelenskiy-says-he-spoke-us-envoys-witkoff-kushner-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T15:23:35Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-18T22:00+08:00",
+      "topics": [],
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
     },
     {
       "id": "022d08bd9c8313c235f5a750",
@@ -360,8 +492,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -382,8 +514,8 @@
       "first_seen_at": "2026-10-18T14:54:23.282415Z",
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -405,7 +537,7 @@
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -426,8 +558,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -448,8 +580,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -470,8 +602,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -492,8 +624,8 @@
       "first_seen_at": "2026-10-18T14:51:46.823656Z",
       "window_id": "2026-10-18T22:00+08:00",
       "topics": [],
-      "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 11,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -514,8 +646,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -536,8 +668,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 11,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -558,12 +690,34 @@
       "first_seen_at": "2026-10-18T14:51:46.823656Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication"
+    },
+    {
+      "id": "280e84b063ac21fcd217d3a3",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/d69287b0a77b28d5"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "Oil lifts Saudi bourse; Egypt tumbles on regional tensions",
+      "url": "https://www.reuters.com/world/middle-east/oil-lifts-saudi-bourse-egypt-tumbles-regional-tensions-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T13:51:43Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-18T20:00+08:00",
+      "topics": [],
+      "feed_rank": 12,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
     },
     {
       "id": "a87011cb70ccab649d8418bb",
@@ -580,8 +734,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 13,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -603,7 +757,7 @@
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -624,8 +778,8 @@
       "first_seen_at": "2026-10-18T14:51:46.823656Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -668,8 +822,30 @@
       "first_seen_at": "2026-10-18T13:39:51.205431Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
+      "analysis_allowed": false,
+      "ai_allowed": false,
+      "topics_title_only": false,
+      "time_basis": "feed_publication"
+    },
+    {
+      "id": "4215094f598e338a6e4b7d3b",
+      "identities": [
+        "reuters-community:tag:trvny.github.io,2024:feedseek/reuters/822e827abd021069"
+      ],
+      "source_id": "reuters-community",
+      "publisher": "Reuters",
+      "title": "Ukraine 'regrets' possible diversion of its drones over Lithuania, foreign ministry says",
+      "url": "https://www.reuters.com/world/ukraine-regrets-possible-diversion-its-drones-over-lithuania-foreign-ministry-2026-10-18/",
+      "summary": "",
+      "author": "Reuters",
+      "published_at": "2026-10-18T13:27:36Z",
+      "first_seen_at": "2026-10-18T19:43:35.134450Z",
+      "window_id": "2026-10-18T20:00+08:00",
+      "topics": [],
+      "feed_rank": 14,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -734,8 +910,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -756,8 +932,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 15,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -778,8 +954,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1020,8 +1196,8 @@
       "first_seen_at": "2026-10-18T13:06:07.776179Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": true,
@@ -1042,8 +1218,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 16,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1064,8 +1240,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 17,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1130,8 +1306,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 18,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1175,7 +1351,7 @@
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1196,8 +1372,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 19,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1218,8 +1394,8 @@
       "first_seen_at": "2026-10-18T18:37:35.749161Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": true,
@@ -1306,8 +1482,8 @@
       "first_seen_at": "2026-10-18T13:06:07.776179Z",
       "window_id": "2026-10-18T20:00+08:00",
       "topics": [],
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": true,
@@ -1329,7 +1505,7 @@
       "window_id": "2026-10-18T18:00+08:00",
       "topics": [],
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1350,8 +1526,8 @@
       "first_seen_at": "2026-10-18T16:59:20.999130Z",
       "window_id": "2026-10-18T18:00+08:00",
       "topics": [],
-      "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 20,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1659,7 +1835,7 @@
       "window_id": "2026-10-18T18:00+08:00",
       "topics": [],
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1703,7 +1879,7 @@
       "window_id": "2026-10-18T18:00+08:00",
       "topics": [],
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1746,8 +1922,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T18:00+08:00",
       "topics": [],
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1790,8 +1966,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T16:00+08:00",
       "topics": [],
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1835,7 +2011,7 @@
       "window_id": "2026-10-18T16:00+08:00",
       "topics": [],
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1856,8 +2032,8 @@
       "first_seen_at": "2026-10-18T13:06:07.776179Z",
       "window_id": "2026-10-18T16:00+08:00",
       "topics": [],
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": true,
@@ -1900,8 +2076,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T16:00+08:00",
       "topics": [],
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1923,7 +2099,7 @@
       "window_id": "2026-10-18T16:00+08:00",
       "topics": [],
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1945,7 +2121,7 @@
       "window_id": "2026-10-18T16:00+08:00",
       "topics": [],
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -1966,8 +2142,8 @@
       "first_seen_at": "2026-10-18T08:04:59.537377Z",
       "window_id": "2026-10-18T14:00+08:00",
       "topics": [],
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": true,
@@ -1989,7 +2165,7 @@
       "window_id": "2026-10-18T14:00+08:00",
       "topics": [],
       "feed_rank": 16,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2055,7 +2231,7 @@
       "window_id": "2026-10-18T14:00+08:00",
       "topics": [],
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2099,7 +2275,7 @@
       "window_id": "2026-10-18T14:00+08:00",
       "topics": [],
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2164,8 +2340,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T12:00+08:00",
       "topics": [],
-      "feed_rank": 17,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 18,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2253,7 +2429,7 @@
       "window_id": "2026-10-18T12:00+08:00",
       "topics": [],
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2451,7 +2627,7 @@
       "window_id": "2026-10-18T12:00+08:00",
       "topics": [],
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2495,7 +2671,7 @@
       "window_id": "2026-10-18T10:00+08:00",
       "topics": [],
       "feed_rank": 17,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2605,7 +2781,7 @@
       "window_id": "2026-10-18T10:00+08:00",
       "topics": [],
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2653,7 +2829,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "712fab9d11b5b9d3728976d9",
@@ -2671,7 +2847,7 @@
       "window_id": "2026-10-18T08:00+08:00",
       "topics": [],
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2693,7 +2869,7 @@
       "window_id": "2026-10-18T08:00+08:00",
       "topics": [],
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2759,7 +2935,7 @@
       "window_id": "2026-10-18T06:00+08:00",
       "topics": [],
       "feed_rank": 18,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2785,7 +2961,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "949404c684a3ea6f19f5c975",
@@ -2825,7 +3001,7 @@
       "window_id": "2026-10-18T06:00+08:00",
       "topics": [],
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -2960,8 +3136,8 @@
       "ai_allowed": false,
       "topics_title_only": true,
       "time_basis": "publication",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "284b33fb8cfdca9a1d7af878",
@@ -3006,7 +3182,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 16,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "7f7a711a0961e4ec1452905b",
@@ -3024,7 +3200,7 @@
       "window_id": "2026-10-18T04:00+08:00",
       "topics": [],
       "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3111,8 +3287,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T04:00+08:00",
       "topics": [],
-      "feed_rank": 87,
-      "rank_observed_at": "2026-10-18T13:46:43.676272Z",
+      "feed_rank": 11,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3138,7 +3314,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "ac17a36212d7d59cab115797",
@@ -3271,7 +3447,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "8ea356a1f7bd3ccf71634feb",
@@ -3289,7 +3465,7 @@
       "window_id": "2026-10-18T02:00+08:00",
       "topics": [],
       "feed_rank": 19,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3311,7 +3487,7 @@
       "window_id": "2026-10-18T02:00+08:00",
       "topics": [],
       "feed_rank": 20,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3332,8 +3508,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T02:00+08:00",
       "topics": [],
-      "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 12,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3618,8 +3794,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T00:00+08:00",
       "topics": [],
-      "feed_rank": 18,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 19,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3706,8 +3882,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T00:00+08:00",
       "topics": [],
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3755,7 +3931,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "b4697b2614c7c06422dbfb96",
@@ -3798,8 +3974,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 16,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 15,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "4859eaf5419deef683e1e3e3",
@@ -3948,8 +4124,8 @@
       "first_seen_at": "2026-10-18T18:37:35.749161Z",
       "window_id": "2026-10-18T00:00+08:00",
       "topics": [],
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -3970,8 +4146,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T00:00+08:00",
       "topics": [],
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4014,8 +4190,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-18T00:00+08:00",
       "topics": [],
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4028,7 +4204,7 @@
       ],
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "French police arrest 1,800 after violent clashes and looting mar protests",
+      "title": "France's Macron vows to hold accountable those who 'sought to bring down the Republic'",
       "url": "https://www.npr.org/2026/10/17/nx-s1-6006773/student-protests-france",
       "summary": "Police arrested at least 1,800 people across France after violent groups clashed with officers and looted shops during nationwide demonstrations that drew hundreds of thousands of people.",
       "author": "The Associated Press",
@@ -4040,8 +4216,8 @@
       "ai_allowed": false,
       "topics_title_only": true,
       "time_basis": "publication",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "3082078376f3550370d28825",
@@ -4169,7 +4345,7 @@
       "window_id": "2026-10-17T22:00+08:00",
       "topics": [],
       "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4194,8 +4370,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 14,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 13,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "0e95d8cf287475b85dbd8a00",
@@ -4216,8 +4392,8 @@
       "ai_allowed": false,
       "topics_title_only": true,
       "time_basis": "publication",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "98ada016a61e29e790070c0f",
@@ -4481,7 +4657,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "4137110d1c7e7cc8db44e5e2",
@@ -4586,8 +4762,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T20:00+08:00",
       "topics": [],
-      "feed_rank": 18,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 19,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4609,7 +4785,7 @@
       "window_id": "2026-10-17T20:00+08:00",
       "topics": [],
       "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4653,7 +4829,7 @@
       "window_id": "2026-10-17T20:00+08:00",
       "topics": [],
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4718,8 +4894,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T20:00+08:00",
       "topics": [],
-      "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T16:59:20.999130Z",
+      "feed_rank": 15,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -4745,7 +4921,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "5adaf54be77637e2ca468cea",
@@ -4987,7 +5163,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "cdbaf08e8c32d4ea47e3b575",
@@ -5097,7 +5273,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "339227af53c9824e8ea50cee",
@@ -5141,7 +5317,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 15,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "c14f277ebebbf7ed54d6a118",
@@ -5357,7 +5533,7 @@
       "window_id": "2026-10-17T14:00+08:00",
       "topics": [],
       "feed_rank": 16,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -5576,8 +5752,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T12:00+08:00",
       "topics": [],
-      "feed_rank": 15,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 17,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -5602,8 +5778,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "5a4b3728a8f12aff8d3650a2",
@@ -5642,8 +5818,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T12:00+08:00",
       "topics": [],
-      "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 14,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -5775,7 +5951,7 @@
       "window_id": "2026-10-17T12:00+08:00",
       "topics": [],
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -5866,8 +6042,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 17,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 16,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "16a7038db2dce98469cfa945",
@@ -5928,8 +6104,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T12:00+08:00",
       "topics": [],
-      "feed_rank": 15,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 16,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -5972,8 +6148,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T10:00+08:00",
       "topics": [],
-      "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 13,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -5995,7 +6171,7 @@
       "window_id": "2026-10-17T10:00+08:00",
       "topics": [],
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6043,7 +6219,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "0fcdd1a1eaa634b14265f12e",
@@ -6083,7 +6259,7 @@
       "window_id": "2026-10-17T10:00+08:00",
       "topics": [],
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6131,7 +6307,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 14,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "1c35c6e2cc53c55b330333e9",
@@ -6215,7 +6391,7 @@
       "window_id": "2026-10-17T10:00+08:00",
       "topics": [],
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6259,7 +6435,7 @@
       "window_id": "2026-10-17T08:00+08:00",
       "topics": [],
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6390,8 +6566,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T08:00+08:00",
       "topics": [],
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6439,7 +6615,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 17,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "1443c174987e14004cda374c",
@@ -6571,7 +6747,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 19,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "e3d3325a52b0092485b02f5a",
@@ -6610,8 +6786,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T08:00+08:00",
       "topics": [],
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6632,8 +6808,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T08:00+08:00",
       "topics": [],
-      "feed_rank": 16,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 17,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6655,7 +6831,7 @@
       "window_id": "2026-10-17T08:00+08:00",
       "topics": [],
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -6813,7 +6989,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 20,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "eaef98235319a400ce40c294",
@@ -6830,8 +7006,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T06:00+08:00",
       "topics": [],
-      "feed_rank": 19,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 20,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -7050,8 +7226,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T04:00+08:00",
       "topics": [],
-      "feed_rank": 19,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 20,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -7120,8 +7296,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 15,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 14,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "c9a87e6bc56aab10156b1dea",
@@ -7358,8 +7534,8 @@
       "first_seen_at": "2026-10-18T13:28:49.481265Z",
       "window_id": "2026-10-17T04:00+08:00",
       "topics": [],
-      "feed_rank": 17,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 18,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -7513,7 +7689,7 @@
       "window_id": "2026-10-17T02:00+08:00",
       "topics": [],
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -7737,7 +7913,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 18,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "a00c6ec82c6e22c830b3263a",
@@ -7755,7 +7931,7 @@
       "window_id": "2026-10-17T02:00+08:00",
       "topics": [],
       "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -7997,7 +8173,7 @@
       "window_id": "2026-10-17T00:00+08:00",
       "topics": [],
       "feed_rank": 14,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -8261,7 +8437,7 @@
       "window_id": "2026-10-17T00:00+08:00",
       "topics": [],
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -8286,8 +8462,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 18,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 17,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "1e0503d1296624a202a591ff",
@@ -8792,8 +8968,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "abd86beac2e1713d6f326d4f",
@@ -8926,7 +9102,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "cb3852ab0c3ca290c3327c96",
@@ -8991,8 +9167,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 20,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 19,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "2da6fb984ab8eb1037770e27",
@@ -9014,7 +9190,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 20,
-      "rank_observed_at": "2026-10-18T14:51:46.823656Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "c6b01268f9e00f3a902013ba",
@@ -9059,7 +9235,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "8a9b7398dd54997bf6370d2e",
@@ -9099,7 +9275,7 @@
       "window_id": "2026-10-16T18:00+08:00",
       "topics": [],
       "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9124,8 +9300,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 19,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 18,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "7a1d23c0c4103146e04de3c0",
@@ -9165,7 +9341,7 @@
       "window_id": "2026-10-16T14:00+08:00",
       "topics": [],
       "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9191,7 +9367,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "d6fa0f56621167cdfe4e4185",
@@ -9212,8 +9388,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "86aaee04ca6ea2d8a1bac08c",
@@ -9280,7 +9456,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 11,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "4303e1f4c2082b916e825c41",
@@ -9368,7 +9544,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "2c43859abd6f1f71451634e1",
@@ -9391,7 +9567,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "df533a1c0e24fbc88a98d8e8",
@@ -9412,8 +9588,8 @@
       "ai_allowed": false,
       "topics_title_only": false,
       "time_basis": "publication",
-      "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "feed_rank": 12,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "e95faa80c4f5468909deae38",
@@ -9480,7 +9656,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 13,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "604fbfa23f47ec5900db3d94",
@@ -9503,7 +9679,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 12,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "507d7710593dd3cddf2d571b",
@@ -9521,7 +9697,7 @@
       "window_id": "2026-10-15T22:00+08:00",
       "topics": [],
       "feed_rank": 14,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9547,7 +9723,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 16,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "b6685e2bf48f8223088b93ca",
@@ -9569,7 +9745,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 15,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "14cc4754ab2fb51340182dec",
@@ -9586,8 +9762,8 @@
       "first_seen_at": "2026-10-18T13:06:07.776179Z",
       "window_id": "2026-10-15T18:00+08:00",
       "topics": [],
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9631,7 +9807,7 @@
       "window_id": "2026-10-15T16:00+08:00",
       "topics": [],
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9675,7 +9851,7 @@
       "window_id": "2026-10-15T12:00+08:00",
       "topics": [],
       "feed_rank": 15,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9701,7 +9877,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 14,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "e2e32908e9477d7de85e8067",
@@ -9745,7 +9921,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 17,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "416ab9dc451089fc6b70b92b",
@@ -9763,7 +9939,7 @@
       "window_id": "2026-10-15T02:00+08:00",
       "topics": [],
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -9789,7 +9965,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 18,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "563539c6c86c09d7086703b3",
@@ -9833,7 +10009,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 19,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "87457e245d69cd2d24c1a46e",
@@ -9855,7 +10031,7 @@
       "topics_title_only": false,
       "time_basis": "publication",
       "feed_rank": 20,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z"
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z"
     },
     {
       "id": "c480fee3385092e3b28fbef7",
@@ -9917,7 +10093,7 @@
       "window_id": "2026-10-14T20:00+08:00",
       "topics": [],
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-18T18:37:35.749161Z",
+      "rank_observed_at": "2026-10-18T19:43:35.134450Z",
       "analysis_allowed": false,
       "ai_allowed": false,
       "topics_title_only": false,
@@ -13687,11 +13863,13 @@
         "70b1c0e7a9bd7c5e1cff22d7",
         "3767d7afe80ef5b5b45e6856",
         "dac03d00d6f81552d3c15f88",
+        "280e84b063ac21fcd217d3a3",
         "a87011cb70ccab649d8418bb",
         "ed793ef4f40e6ffdd2efa641",
         "a58d7350f573e1d4689caca6",
         "82e1d9463b60ee0f0893b09f",
         "0e5f890906ff43674e23e99b",
+        "4215094f598e338a6e4b7d3b",
         "4b2732edb6ecd61fe9b373fd",
         "cac06f9596cdc5aa066caf51",
         "56a463a987d6c82284864915",
@@ -13730,6 +13908,7 @@
       "end": "2026-10-18T16:00:00Z",
       "date": "2026-10-18",
       "article_ids": [
+        "df18933fbf80a00147e7cdde",
         "022d08bd9c8313c235f5a750",
         "3680516e23a8c0104be204b2",
         "0f0b0aaad3cf94323498100b",
@@ -13746,6 +13925,10 @@
       "end": "2026-10-18T18:00:00Z",
       "date": "2026-10-19",
       "article_ids": [
+        "7a0823e9374f2dd9c88583e1",
+        "f7dac9665e5eb45ada13d9ee",
+        "a221ad10dae764adcf2b3552",
+        "befdcd06ee0fc3fb12467654",
         "13640fc6bdeb38ef08809194",
         "0ee9ce915aace2cc4d481200"
       ],
@@ -13756,12 +13939,12 @@
     {
       "date": "2026-10-19",
       "topics": [],
-      "article_count": 2
+      "article_count": 6
     },
     {
       "date": "2026-10-18",
       "topics": [],
-      "article_count": 167
+      "article_count": 170
     },
     {
       "date": "2026-10-17",
