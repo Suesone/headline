@@ -48,3 +48,13 @@
 - https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/authorization-cookie/validating-json/
 - https://developers.cloudflare.com/workers/runtime-apis/bindings/rate-limit/
 - https://ai.google.dev/gemini-api/docs/pricing
+
+## Gemini 密钥接入速查（2026-10-18）
+
+1. 在 https://aistudio.google.com/api-keys 创建 Gemini Key，确认所属项目 Free Tier、没有关联计费账户。使用 AI Studio 新建的受限 Gemini API Key；不要使用 unrestricted 的旧标准 Key。默认模型 gemini-2.5-flash-lite 当前仍有免费 Standard 档。
+2. **域名版尚未启用**：当前没有已部署的 headline-private-gateway，不能仅填一个 Key 就开始使用。先按上面的步骤完成 Worker、D1 与 Access 配置。获准邮箱在 Cloudflare Secret ALLOWED_EMAIL 中设置；不要提交到公开仓库。
+3. Worker 部署后，Cloudflare → Workers & Pages → headline-private-gateway → Settings → Variables and Secrets → Add，类型选 Secret，名称 GEMINI_API_KEY，值粘贴你自己的 Key，保存/部署。不要选普通 Text，也不要在网页前端填写。CLI 等价操作：在 cloudflare 目录执行 `npx wrangler@4 secret put GEMINI_API_KEY`，在交互提示中输入值。
+4. 确认 HTTPS、Access 登录验证、每日计数和限流都就绪后才启用 API 路由与 FREE_TIER_CONFIRMED。先退出登录验证不能翻译，再用获准邮箱登录，选择 Gemini 翻译一条标题。浏览器请求中不应包含 Key。
+5. 如果只想现在先试用：在项目目录运行 `python3 -m scripts.local_reader --provider gemini --allow-google-upload --free-tier-confirmed`，按终端提示输入 Key（不回显），访问 http://127.0.0.1:8765/，选择 Gemini。本机接口无需等域名证书或 Cloudflare 配置；它不提供手机跨设备访问。
+
+不要把真实 Key 发到聊天、写入仓库文件，或放入浏览器存储。此项目云端版使用 Worker Secret，不需要 GitHub 保存 Gemini Key。原文与译文经过 Google，免费档数据使用政策仍适用。

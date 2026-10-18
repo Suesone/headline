@@ -19,7 +19,7 @@
 
 ## 来源
 
-当前保留七个订阅流：Reuters（Feedseek 社区转发）、BBC World、BBC Business、NPR News、CNBC International、VOA 英文 China / Asia 与 Korean Peninsula 原创频道。BBC、CNBC 优先采用 Plenary 社区目录收录的官方 RSS；NPR 参考 Semantic News 的 1001 频道并采用当前官方 HTTPS 地址。官方地址可用时不额外依赖公共转发服务器。
+当前保留五个订阅流：Reuters（Feedseek 社区转发）、BBC World、BBC Business、NPR News、CNBC International。VOA 两个频道因缺少实际可展示内容已移除。BBC、CNBC 优先采用 Plenary 社区目录收录的官方 RSS；NPR 参考 Semantic News 的 1001 频道并采用当前官方 HTTPS 地址。官方地址可用时不额外依赖公共转发服务器。
 
 AFP 的 Fact Check 候选复测仍返回 403，且并非综合新闻流，已从当前配置删除。没有找到可核验、稳定、长期零费用的 AFP 英文综合新闻社区 RSS；没有将 France 24 当作 AFP。NASA、Global Voices、Wikinews 测试源此前已移除。
 
@@ -111,8 +111,7 @@ node --test tests/*.test.cjs
 
 - **手动更新**：仓库 → Actions → Update news and deploy → Run workflow。绿色勾表示流程结束，页面显示实际更新时间。
 - **修改来源**：编辑 `config/sources.json` 的 RSS、名称、`publisher`、来源主页、条款与社区目录链接，再手动运行。不要提交需要私人令牌的 URL。
-- **同媒体计数**：`publisher` 是媒体主体，BBC / VOA 多频道仍属于同一家媒体。
-- **VOA 过滤**：`allowed_authors` 仅收录核验原创署名，未知署名跳过；`exclude_credit_patterns` 过滤 RSS 提供的已知 Reuters/AP/AFP 标记。不能只凭域名判断原创。
+- **同媒体计数**：`publisher` 是媒体主体，BBC 多频道仍属于同一家媒体。
 - **订阅陈旧**：Reuters 超过 36 小时、其他源超过 96 小时没有有效新条目时提示错误并保留旧数据。NPR 仅最近十条，四小时抓取不能保证完整收录。
 - **自动更新暂停**：公开仓库长期无活动可能暂停定时任务，检查 Actions 并手动运行一次。
 - **部署自己的副本**：Fork → Settings → Pages → GitHub Actions → 启用并手动运行。使用免费 github.io 地址，不买域名；修改本地阅读器 NEWS_URL 指向自己的英文数据地址。

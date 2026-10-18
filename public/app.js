@@ -10,7 +10,7 @@ const limits = new Map(), selected = new Set();
 const translator = new HeadlineLocal.LocalTranslator();
 const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
 const engineNote = () => translator.engine === 'gemini' ? '原文发送 Google；本项目仅在本页保存译文，不上传 GitHub。Google 可能按其条款处理输入与输出。' : '译文只在此页面，未发送云端翻译服务。';
-function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',VOA:'voa',Reuters:'reuters'}[s.publisher] || 'all'); }
+function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',Reuters:'reuters'}[s.publisher] || 'all'); }
 function sourceIcon(s) { return el('span', s.publisher === 'Reuters' ? 'R' : s.id === 'all' ? '榜' : s.publisher, 'source-tile ' + sourceClass(s)); }
 function sourceInfo(id) { return data.sources.find(s => s.id === id); }
 function rankSetting(key, fallback, max = 30) { const value = data.ranking?.[key]; return Number.isInteger(value) && value > 0 && value <= max ? value : fallback; }
