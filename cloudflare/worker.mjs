@@ -1,25 +1,24 @@
-import { createRemoteJWKSet, jwtVerify } from 'jose';
+import {authReady,verifyGoogleCredential,issueSession,verifySession,sessionCookie,clearCookie} from './auth.mjs';
 
 const MODEL = 'gemini-2.5-flash-lite';
-const SOURCE = 'https://suesone.github.io/headline/';
-const jwks = new Map();
 const json = (status, body) => new Response(JSON.stringify(body), {status, headers: {
   'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store',
   'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer'
 }});
 function configuration(env) {
-  return env.PUBLIC_HOST === 'headline.infinitas.top' && /^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.ACCESS_ISSUER || '') &&
-    Boolean(env.ACCESS_AUD && env.ALLOWED_EMAIL && env.GEMINI_API_KEY && env.BUDGET && env.RATE_LIMITER) && env.FREE_TIER_CONFIRMED === 'true';
+  return authReady(env) && Boolean(env.GEMINI_API_KEY && env.BUDGET && env.RATE_LIMITER) && env.FREE_TIER_CONFIRMED === 'true';
 }
-export async function verifyAccess(request, env) {
-  const token = request.headers.get('Cf-Access-Jwt-Assertion');
-  if (!token || token.length > 16384) throw new Error('Unauthorized');
-  if (!jwks.has(env.ACCESS_ISSUER)) jwks.set(env.ACCESS_ISSUER, createRemoteJWKSet(new URL(env.ACCESS_ISSUER + '/cdn-cgi/access/certs')));
-  const {payload} = await jwtVerify(token, jwks.get(env.ACCESS_ISSUER), {
-    issuer: env.ACCESS_ISSUER, audience: env.ACCESS_AUD, algorithms: ['RS256'], requiredClaims: ['exp','iat','sub','email']
-  });
-  if (typeof payload.email !== 'string' || payload.email.toLowerCase() !== env.ALLOWED_EMAIL.toLowerCase()) throw new Error('Unauthorized');
-  return payload;
+function trustedPost(request,url) {
+  return request.method === 'POST' && request.headers.get('Origin') === url.origin && request.headers.get('X-Headline-Cloud') === '1' &&
+    request.headers.get('Content-Type')?.split(';')[0] === 'application/json';
+}
+async function limitedJson(request,maxBytes) {
+  if (Number(request.headers.get('Content-Length')) > maxBytes) throw new Error('Too large');
+  const reader=request.body?.getReader(); if(!reader) throw new Error('Missing body');
+  let size=0;const chunks=[];
+  while(true){const part=await reader.read();if(part.done)break;size+=part.value.length;if(size>maxBytes){await reader.cancel();throw new Error('Too large');}chunks.push(part.value);}
+  const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
+  return JSON.parse(new TextDecoder().decode(bytes));
 }
 export async function reserveBudget(env, now = new Date()) {
   const day = new Date(now.getTime() + 8 * 3600000).toISOString().slice(0,10);
@@ -33,39 +32,40 @@ export async function reserveBudget(env, now = new Date()) {
 async function pause(env,day) {
   await env.BUDGET.prepare('UPDATE daily_budget SET paused = 1 WHERE day = ?').bind(day).run();
 }
-export function createHandler({authenticate = verifyAccess, fetcher = fetch} = {}) {
+export function createHandler({authenticate = verifySession, verifyGoogle = verifyGoogleCredential, fetcher = fetch} = {}) {
   return async function handle(request, env) {
     const url = new URL(request.url);
     if (url.hostname !== env.PUBLIC_HOST || url.protocol !== 'https:') return json(403,{message:'仅允许已配置的 HTTPS 域名'});
-    if (!url.pathname.startsWith('/api/')) {
-      if (!['GET','HEAD'].includes(request.method)) return json(405,{message:'不支持此请求'});
-      // Public news only. Never forward cookies, authentication, or arbitrary destinations to GitHub.
-      if (!/^\/(?:|index\.html|local-guide\.html|style\.css|favicon\.svg|ranking\.js|local-translation\.js|app\.js|data\/news\.json)$/.test(url.pathname)) return json(404,{message:'页面不存在'});
-      const upstream = await fetcher(SOURCE + url.pathname.slice(1), {method:request.method, redirect:'manual', headers:{'Accept':'*/*'}});
-      if (upstream.status >= 300 && upstream.status < 400) return json(502,{message:'新闻站点暂时不可用'});
-      const headers = new Headers(upstream.headers);
-      headers.delete('Set-Cookie'); headers.set('Cache-Control', 'no-store');
-      headers.set('X-Content-Type-Options','nosniff'); headers.set('Referrer-Policy','same-origin');
-      return new Response(upstream.body,{status:upstream.status,headers});
-    }
+    // This Worker only handles the API route; public pages stay on GitHub Pages.
     if (!url.pathname.startsWith('/api/cloud/')) return json(404,{message:'接口不存在'});
-    if (!configuration(env)) return json(503,{message:'云端翻译尚未安全配置，已禁止调用'});
+    if (!authReady(env)) return json(503,{message:'Google 登录尚未配置，已禁止调用'});
+    if (url.pathname === '/api/cloud/config' && request.method === 'GET') return json(200,{client_id:env.GOOGLE_CLIENT_ID});
+    if (url.pathname === '/api/cloud/login' && request.method === 'GET') return Response.redirect(url.origin + '/login.html',303);
+    if (url.pathname === '/api/cloud/session') {
+      if (!trustedPost(request,url)) return json(403,{message:'请求来源校验失败'});
+      try {
+        const rate=await env.LOGIN_RATE_LIMITER.limit({key:request.headers.get('Cf-Connecting-IP') || 'unknown'});
+        if(!rate.success) return json(429,{message:'登录过于频繁，请稍后重试'});
+        const body=await limitedJson(request,16000);
+        if(Object.keys(body).length!==1 || typeof body.credential!=='string') return json(400,{message:'登录请求无效'});
+        const identity=await verifyGoogle(body.credential,env);
+        const response=json(200,{ok:true});response.headers.set('Set-Cookie',sessionCookie(await issueSession(identity,env)));return response;
+      } catch {return json(401,{message:'Google 登录验证失败或此账号未获准'});}
+    }
+    if (url.pathname === '/api/cloud/logout') {
+      if(!trustedPost(request,url)) return json(403,{message:'请求来源校验失败'});
+      const response=json(200,{ok:true});response.headers.set('Set-Cookie',clearCookie());return response;
+    }
     let identity;
     try { identity = await authenticate(request,env); } catch { return json(401,{message:'请先登录后使用翻译'}); }
-    if (url.pathname === '/api/cloud/login' && request.method === 'GET') return Response.redirect(url.origin + '/#local-tools',303);
-    if (url.pathname === '/api/cloud/status' && request.method === 'GET') return json(200,{ready:true,provider:'gemini',local_only:false,cloud_provider:'Google',model:MODEL});
+    if (url.pathname === '/api/cloud/status' && request.method === 'GET') return json(200,{ready:configuration(env),provider:'gemini',local_only:false,cloud_provider:'Google',model:MODEL,
+      message:configuration(env)?'已登录，可以按需翻译':'已登录；Gemini 免费项目或密钥尚未配置，不会调用'});
     if (url.pathname !== '/api/cloud/translate') return json(404,{message:'接口不存在'});
-    if (request.method !== 'POST') return json(405,{message:'仅支持 POST'});
-    if (request.headers.get('Origin') !== url.origin || request.headers.get('X-Headline-Cloud') !== '1' ||
-        request.headers.get('Content-Type')?.split(';')[0] !== 'application/json') return json(403,{message:'请求来源校验失败'});
-    if (Number(request.headers.get('Content-Length')) > 16000) return json(413,{message:'文字过长'});
+    if (!trustedPost(request,url)) return json(403,{message:'请求来源校验失败'});
+    if(!configuration(env)) return json(503,{message:'Gemini 免费项目或密钥尚未安全配置，已禁止调用'});
     let text;
     try {
-      const reader = request.body?.getReader(); if (!reader) throw new Error();
-      let size=0; const chunks=[];
-      while (true) { const part=await reader.read(); if(part.done) break; size+=part.value.length; if(size>16000) { await reader.cancel(); return json(413,{message:'文字过长'}); } chunks.push(part.value); }
-      const bytes=new Uint8Array(size); let offset=0; for(const chunk of chunks) {bytes.set(chunk,offset);offset+=chunk.length;}
-      const body=JSON.parse(new TextDecoder().decode(bytes));
+      const body=await limitedJson(request,16000);
       if(Object.keys(body).length!==1 || typeof body.text!=='string' || !body.text.trim() || body.text.length>2000) throw new Error();
       text=body.text;
     } catch {return json(400,{message:'每次仅允许 1–2,000 字符的文字'});}

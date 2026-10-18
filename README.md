@@ -133,6 +133,6 @@ node --test tests/*.test.cjs
 
 ### 自有域名与跨设备翻译（可选）
 
-`cloudflare/` 提供 `headline.infinitas.top` 的安全网关。公开新闻由 GitHub Pages 提供；翻译需 Cloudflare Access 登录，Gemini Key 放 Worker Secret，译文仅留当前浏览器内存。默认每日 100 段，额度限制后暂停。配置缺失时拒绝调用；不会将 Key 放进前端。源码准备完成不代表域名已经上线，详见 [Cloudflare 部署说明](docs/cloudflare-deployment.md)。
+`cloudflare/` 提供 `headline.infinitas.top` 的安全网关。公开新闻由 GitHub Pages 提供；翻译需获准的 Google 账号登录，Gemini Key 放 Worker Secret，译文仅留当前浏览器内存。默认每日 100 段，额度限制后暂停。配置缺失时拒绝调用；不会将 Key 放进前端。域名已启用 HTTPS；翻译接口需完成 Google 登录和 Gemini Secret 配置后才开放，详见 [Cloudflare 部署说明](docs/cloudflare-deployment.md)。
 
 验证：`npm ci --prefix cloudflare --ignore-scripts` 后 `npm test --prefix cloudflare`。无需密钥，测试不会调用真实 Gemini。

@@ -3,34 +3,49 @@ import assert from 'node:assert/strict';
 import {DatabaseSync} from 'node:sqlite';
 import {readFileSync} from 'node:fs';
 import {generateKeyPair,exportJWK,SignJWT} from '../cloudflare/node_modules/jose/dist/webapi/index.js';
-import {createHandler,verifyAccess} from '../cloudflare/worker.mjs';
+import {createHandler} from '../cloudflare/worker.mjs';
+import {verifyGoogleCredential,issueSession,verifySession,sessionCookie,COOKIE} from '../cloudflare/auth.mjs';
 function environment(){
  const db=new DatabaseSync(':memory:');db.exec(readFileSync(new URL('../cloudflare/schema.sql',import.meta.url),'utf8'));
- return {PUBLIC_HOST:'headline.infinitas.top',ACCESS_ISSUER:'https://headline-test.cloudflareaccess.com',ACCESS_AUD:'test-audience',ALLOWED_EMAIL:'owner@example.com',GEMINI_API_KEY:'fake-key-not-real',FREE_TIER_CONFIRMED:'true',DAILY_REQUEST_LIMIT:'2',RATE_LIMITER:{limit:async()=>({success:true})},BUDGET:{prepare(sql){return {bind(...args){return {async run(){return {meta:{changes:Number(db.prepare(sql).run(...args).changes)}};}};}};}}};
+ return {PUBLIC_HOST:'headline.infinitas.top',GOOGLE_CLIENT_ID:'123-test.apps.googleusercontent.com',SESSION_SECRET:'test-random-secret-with-more-than-thirty-two-characters',LOGIN_RATE_LIMITER:{limit:async()=>({success:true})},ALLOWED_EMAIL:'owner@example.com',GEMINI_API_KEY:'fake-key-not-real',FREE_TIER_CONFIRMED:'true',DAILY_REQUEST_LIMIT:'2',RATE_LIMITER:{limit:async()=>({success:true})},BUDGET:{prepare(sql){return {bind(...args){return {async run(){return {meta:{changes:Number(db.prepare(sql).run(...args).changes)}};}};}};}}};
 }
 const request=(text='Headline',options={})=>new Request('https://headline.infinitas.top/api/cloud/translate',{method:'POST',headers:{Origin:'https://headline.infinitas.top','Content-Type':'application/json','X-Headline-Cloud':'1',...options.headers},body:JSON.stringify({text}),...options});
 const authenticate=async()=>({sub:'owner'});
-test('Access JWT cryptographically validates signature, issuer, audience, expiration and allowed email',async()=>{
+test('Google ID token validates signature, issuer, audience, expiration and verified owner email',async()=>{
  const env=environment(); const {privateKey,publicKey}=await generateKeyPair('RS256');const key=await exportJWK(publicKey);key.kid='headline-key';
  const original=globalThis.fetch;globalThis.fetch=async()=>Response.json({keys:[key]});
- const sign=async(overrides={})=>new SignJWT({email:env.ALLOWED_EMAIL,...overrides}).setProtectedHeader({alg:'RS256',kid:key.kid}).setIssuedAt().setIssuer(overrides.iss||env.ACCESS_ISSUER).setAudience(overrides.aud||env.ACCESS_AUD).setSubject('owner').setExpirationTime(overrides.exp||'5m').sign(privateKey);
- const verify=token=>verifyAccess(new Request('https://headline.infinitas.top/api/cloud/status',{headers:{'Cf-Access-Jwt-Assertion':token}}),env);
+ const sign=async(overrides={})=>new SignJWT({email:env.ALLOWED_EMAIL,email_verified:true,...overrides}).setProtectedHeader({alg:'RS256',kid:key.kid}).setIssuedAt().setIssuer(overrides.iss||'https://accounts.google.com').setAudience(overrides.aud||env.GOOGLE_CLIENT_ID).setSubject('owner').setExpirationTime(overrides.exp||'5m').sign(privateKey);
+ const verify=token=>verifyGoogleCredential(token,env);
  try {
   assert.equal((await verify(await sign())).email,env.ALLOWED_EMAIL);
-  for(const overrides of [{email:'other@example.com'},{aud:'wrong'},{iss:'https://evil.example'},{exp:1}]) await assert.rejects(()=>sign(overrides).then(verify));
+  for(const overrides of [{email:'other@example.com'},{email_verified:false},{aud:'wrong'},{azp:'wrong'},{iss:'https://evil.example'},{exp:1}]) await assert.rejects(()=>sign(overrides).then(verify));
   const valid=await sign();await assert.rejects(()=>verify(valid.slice(0,-20)+'AAAAAAAAAAAAAAAAAAAA'));
  } finally {globalThis.fetch=original;}
 });
+test('signed session is HttpOnly, Secure, API-only and rejects forged or expired tokens',async()=>{
+ const env=environment();const token=await issueSession({sub:'owner',email:env.ALLOWED_EMAIL},env);const cookie=sessionCookie(token);
+ assert.match(cookie,/Path=\/api\/cloud; HttpOnly; Secure; SameSite=Strict; Max-Age=3600/);
+ const verify=value=>verifySession(new Request('https://headline.infinitas.top/api/cloud/status',{headers:{Cookie:COOKIE+'='+value}}),env);
+ assert.equal((await verify(token)).sub,'owner');await assert.rejects(()=>verify(token+'x'));
+ const expired=await new SignJWT({email:env.ALLOWED_EMAIL}).setProtectedHeader({alg:'HS256'}).setSubject('owner').setIssuer('https://'+env.PUBLIC_HOST).setAudience('headline-translation').setIssuedAt().setExpirationTime(1).sign(new TextEncoder().encode(env.SESSION_SECRET));
+ await assert.rejects(()=>verify(expired));await assert.rejects(()=>verifySession(new Request('https://headline.infinitas.top/api/cloud/status'),env));
+});
+test('Google login creates a private cookie, logout clears it, and public config never exposes secrets',async()=>{
+ const env=environment();let verified=0;const handler=createHandler({verifyGoogle:async()=>{verified++;return {sub:'owner',email:env.ALLOWED_EMAIL};},fetcher:()=>assert.fail('No Gemini during login')});
+ const post=(path,body,origin='https://headline.infinitas.top')=>new Request('https://headline.infinitas.top/api/cloud/'+path,{method:'POST',headers:{Origin:origin,'Content-Type':'application/json','X-Headline-Cloud':'1'},body:JSON.stringify(body)});
+ assert.equal((await handler(post('session',{credential:'token'},'https://evil.example'),env)).status,403);assert.equal(verified,0);
+ const login=await handler(post('session',{credential:'token'}),env);assert.equal(login.status,200);assert.match(login.headers.get('Set-Cookie'),/HttpOnly/);assert.equal(verified,1);
+ const logout=await handler(post('logout',{}),env);assert.match(logout.headers.get('Set-Cookie'),/Max-Age=0/);
+ const config=await handler(new Request('https://headline.infinitas.top/api/cloud/config'),env);assert.deepEqual(await config.json(),{client_id:env.GOOGLE_CLIENT_ID});
+});
 test('missing configuration and unauthenticated requests never invoke Google',async()=>{
  const env=environment();let calls=0;const handler=createHandler({fetcher:async()=>{calls++;throw Error();}});
- assert.equal((await handler(request(),{...env,GEMINI_API_KEY:''})).status,503);
+ assert.equal((await handler(request(),{...env,SESSION_SECRET:''})).status,503);
  assert.equal((await handler(request(),env)).status,401);assert.equal(calls,0);
 });
-test('public assets never forward credentials and unknown paths cannot proxy arbitrary URLs',async()=>{
- const calls=[];const handler=createHandler({fetcher:async(...args)=>{calls.push(args);return new Response('public');}});const env=environment();
- assert.equal((await handler(new Request('https://headline.infinitas.top/',{headers:{Cookie:'secret','Cf-Access-Jwt-Assertion':'private'}}),env)).status,200);
- assert.equal(calls[0][0],'https://suesone.github.io/headline/');assert.deepEqual(calls[0][1].headers,{Accept:'*/*'});
- assert.equal((await handler(new Request('https://headline.infinitas.top/private'),env)).status,404);assert.equal(calls.length,1);
+test('Worker never proxies public pages or unknown routes',async()=>{
+ const handler=createHandler({fetcher:()=>assert.fail('No public proxy')});const env=environment();
+ for(const path of ['/','/private','/api/other']) assert.equal((await handler(new Request('https://headline.infinitas.top'+path),env)).status,404);
 });
 test('origin checks, payload limit, rate limiter and atomic daily budget guard the Gemini secret',async()=>{
  const env=environment();let calls=0;

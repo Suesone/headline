@@ -1,60 +1,74 @@
-# headline.infinitas.top：公开新闻，私有翻译
+# headline.infinitas.top：跨设备私有翻译
 
-状态：子域名网页使用 GitHub Pages；Cloudflare 翻译网关源码已准备，仍须配置 Access、D1 与 Secrets 后才能启用。未配置时不允许翻译调用。域名可访问不代表云端翻译已启用。
+当前方案：GitHub Pages 提供公开新闻；Cloudflare Worker 仅处理 `/api/cloud/*`；Google 登录限制唯一获准邮箱。Cloudflare Access 免费版要求绑卡并授权超额费用，因此不启用 Access，不开通 Zero Trust，不关联支付方式。
 
-## 结构与数据
+## 已准备的资源
 
-`https://headline.infinitas.top/` → CNAME `suesone.github.io` → GitHub Pages 上的公开英文新闻。GitHub Pages 自定义域名及 `public/CNAME` 均设置为 `headline.infinitas.top`。初期 DNS only 以便 GitHub 签发证书，后续启用 Cloudflare API 路由时切换为代理，并保持 Full (strict) TLS。
+- Worker：`headline-private-gateway`，Workers Free；workers.dev 与预览 URL 关闭，正文日志关闭。
+- D1：`headline-budget`，仅存日期、调用次数与暂停状态。
+- `SESSION_SECRET`：系统随机生成的会话签名密钥，存 Worker Secret，不提交仓库。
+- `ALLOWED_EMAIL`：唯一获准邮箱，存 Worker Secret，不公开。
+- Google 项目：Headline News，不启用计费。Google 登录 Client ID 为公开标识，配置为 Worker var `GOOGLE_CLIENT_ID`；本方案不需要 OAuth client secret。
 
-`/api/cloud/*` → Cloudflare Access 登录保护 → Worker 验证 JWT 签名、issuer、audience、有效期与唯一获准邮箱 → Gemini。
+部署是否真正完成，以实际登录和翻译验证结果为准。只有资源创建不代表可以翻译。未配置时服务器拒绝调用 Gemini。
 
-浏览器不保存或收到 Gemini Key。`GEMINI_API_KEY` 与 `ALLOWED_EMAIL` 放 Worker Secrets。Secret 不是绝对不可获取：有权修改 Worker 的 Cloudflare 管理员可以让代码读取 Secret，因此保护管理账号、启用 MFA、减少管理员与 Token 权限。不要在聊天、命令参数、代码或仓库写入真实密钥。
+## Google 登录设置
 
-译文和输入只在浏览器内存与处理请求期间存在；本应用不持久保存、不记录请求正文、不上传 GitHub。Cloudflare 和 Google 会处理这些内容，平台自身数据政策仍适用。D1 仅存日期、调用数量、暂停标志，不存用户、文本或密钥。当前不做译文跨设备同步。
+1. Google Cloud Console → 选择 Headline News → Google Auth Platform。设置应用名称 Headline News，支持邮箱与联系邮箱为账号主人；选择 External，测试阶段仅添加你的邮箱。只使用登录所需的 openid、email、profile，不申请 Gmail、Drive 或其他权限。
+2. 创建 Web application 类型的 OAuth 客户端，名称 Headline Web；Authorized JavaScript origins 仅填 `https://headline.infinitas.top`。采用 Google Identity Services 按钮和 JS callback，不需要填写 redirect URI。
+3. 复制公开 Client ID（以 `.apps.googleusercontent.com` 结尾）到 `cloudflare/wrangler.jsonc` 的 `GOOGLE_CLIENT_ID`。不要复制或存储客户端 secret。
+4. 如需主页及隐私链接，使用 `https://headline.infinitas.top/` 与 `https://headline.infinitas.top/privacy.html`，Authorized domain 填 `infinitas.top`。
 
-## 一次性配置（仅 Free 计划）
+Google 登录只验证身份，不向 Google Identity 发送新闻。Worker 校验 Google RSA 签名、issuer、audience、有效期、email_verified 与唯一允许邮箱；随后签发一小时会话 Cookie。Cookie 设置 HttpOnly、Secure、SameSite=Strict，Path=/api/cloud，普通新闻请求不携带它到 GitHub。会话和 Google ID token 不放 localStorage。
 
-1. Cloudflare 选择区域 `infinitas.top`，只检查和修改 `headline` 子域名。子域名及其他子域名保留。本版仅允许 `headline.infinitas.top`。
-2. Zero Trust → Access → Applications → 添加 Self-hosted 应用，域名 `headline.infinitas.top`，路径 `/api/cloud/*`。Allow 策略仅 Include 你指定的邮箱，不选 Everyone，不添加 Bypass。登录方式可用邮箱一次性验证码。仅在确认免费计划后继续；如果出现购买或计费要求，停止。记录 team domain（`https://你的团队.cloudflareaccess.com`）和应用 AUD。
-3. 在终端进入 `cloudflare` 目录。安装依赖 `npm ci --ignore-scripts`。通过官方 Wrangler 登录 `npx wrangler@4 login`，在浏览器核对授权范围，由账号主人完成授权。
-4. 创建免费 D1：`npx wrangler@4 d1 create headline-budget`。将返回的 database_id 填入 `wrangler.jsonc` 的 `d1_databases`，binding 为 `BUDGET`，database_name 为 `headline-budget`。不要把 API Token 填入配置。
-5. `npx wrangler@4 d1 execute headline-budget --remote --file schema.sql` 建表。配置 vars 的 ACCESS_ISSUER、ACCESS_AUD。确认 Gemini 项目 Free Tier 且未关联计费后才将 FREE_TIER_CONFIRMED 改为字符串 `true`；程序无法凭 Key 验证 Google 账单状态。
-6. 用 `npx wrangler@4 secret put GEMINI_API_KEY` 在私有交互提示输入 Gemini Key。用 `npx wrangler@4 secret put ALLOWED_EMAIL` 输入唯一获准邮箱。不把值放命令行参数中。
-7. 确认 Access 已覆盖 `/api/cloud/*` 后，确认 GitHub Pages 的 HTTPS 证书正常，将 headline CNAME 切换为 Cloudflare 代理，并保持 Full (strict) TLS；启用配置中的 routes：`[{"pattern":"headline.infinitas.top/api/cloud/*","zone_name":"infinitas.top"}]`，再 `npm run deploy`。仅 API 路径交给 Worker，新闻页面仍由 GitHub Pages 提供。不要将同一子域名再设为 Worker Custom Domain，也不要修改其他解析记录。
-8. 保持 workers_dev=false、preview_urls=false、observability.enabled=false；不要开启正文或完整 headers 日志。部署后检查没有其他可绕过登录的路由。JWT 验证本身也会拒绝未获准调用。
+## Gemini 密钥与零费用边界
 
-## 必须完成的上线验证
+1. 在 https://aistudio.google.com/api-keys 创建密钥，确认项目为 Free Tier 且未关联计费账户。模型为 `gemini-2.5-flash-lite`，只有官方仍提供免费档时使用。
+2. Cloudflare → Workers & Pages → headline-private-gateway → Settings → Variables and Secrets → Add：类型 **Secret**，名称 `GEMINI_API_KEY`，值由你直接输入 Cloudflare，不发聊天、不填网页前端。
+3. CLI 等价操作：进入 cloudflare 目录运行 `npx wrangler@4 secret put GEMINI_API_KEY`，在私有提示中输入。不要把真实 Key 写在命令参数、代码或环境示例文件。
+4. 核实 Gemini 项目免费且未关联计费后才把 `FREE_TIER_CONFIRMED` 设为字符串 `true` 并部署。程序不能凭 Key 独立核实 Google 账单状态。
 
-- 未登录：新闻可读；`/api/cloud/login` 出现 Access 登录；status/translate 不向 Google 发起请求。
-- 错误邮箱：Access 拒绝；Worker 也校验唯一邮箱。
-- 正确邮箱：点击登录后回到网页，选 Gemini，手动翻译一条标题。Key 不出现在浏览器网络请求、HTML、GitHub 和错误消息中；译文响应 Cache-Control:no-store。
-- 手机和电脑分别登录，均可使用；不用保持个人电脑开机。
-- 触发上限、429 或 D1 故障：停止调用；不重试、不换模型、不升级账户。
-- API 使用固定 Gemini 地址与模型，不接受浏览器传入 Key、模型、工具或 URL，单次最多 2,000 字符。长文在浏览器按段发送，限额按段计。
+默认北京时间每天最多 100 段、单次最多 2,000 字符。D1 在调用前原子预留额度，多个设备共用。失败请求也计数；Google 返回 429 时当天暂停，不重试、不换付费模型、不升级账户。每分钟翻译 10 次、登录 5 次的边缘限流是辅助保护，不是全球严格计数。长文按段翻译，每段单独计数。
 
-默认北京时间每日最多 100 段，服务端 D1 原子计数；每分钟 10 段的边缘速率限制是辅助保护，并非全球严格计数。模型 gemini-2.5-flash-lite 只有在官方免费档仍适用时使用。计数包含失败请求；上游 429 暂停到北京时间次日。D1/Workers/Gemini 免费政策改变时停用接口，不启用付费。
+## 域名路由与部署
 
-## 更新与回退
+`headline.infinitas.top` CNAME 指向 `suesone.github.io`，GitHub Pages 自定义域名与强制 HTTPS 已配置。只将此记录切换为 Cloudflare 代理，保留根域名和其他子域名，TLS 使用 Full (strict)，不关闭源站证书校验。
 
-新闻继续由 GitHub Actions 每四小时更新，Worker 仅转发公开页面，无需为每次新闻更新重新部署 Worker。网页资源增加版本号以避免旧浏览器缓存。
+启用 Worker route：`headline.infinitas.top/api/cloud/*`，zone_name 为 `infinitas.top`。不设置整个域名的 Worker Custom Domain。公开新闻仍由 GitHub Pages 提供。
 
-代码修改后：`npm ci --prefix cloudflare --ignore-scripts`、`npm test --prefix cloudflare`，从 cloudflare 目录 `npm run deploy`。本仓库没有 Cloudflare 自动部署 Token。
+命令：
 
-紧急停用翻译：把 FREE_TIER_CONFIRMED 改为 `false`，部署；必要时在 Google 撤销密钥。轮换密钥用 `secret put`，不写回源码。域名解绑前确认替代页面或原 DNS 记录，再删除对应 Worker Custom Domain，保留其他业务记录。
+```sh
+cd cloudflare
+npm ci --ignore-scripts
+npm test
+npx wrangler@4 d1 execute headline-budget --remote --file schema.sql
+npm run deploy
+```
 
-官方参考：
+部署工具授权使用官方 Wrangler OAuth，权限仅限账户读取、Workers、路由、D1 和 zone 读取。凭据以加密文件保存，解密密钥留 macOS Keychain。不需要提供 Cloudflare Global API Key。
+
+## 上线验证
+
+- 未登录 GET status / POST translate 返回 401；伪造或过期 Cookie 拒绝；这些请求不调用 Gemini。
+- config 只返回公开 Client ID，不返回邮箱、Gemini Key 或会话密钥。
+- 登录页 `/login.html` 用获准 Google 账号登录，回到新闻页选择 Gemini，手动翻译一条标题。
+- 其他 Google 邮箱被 Worker 拒绝，不能仅凭 Google 登录成功使用翻译。
+- 手机和电脑分别登录后均可使用，不需保持个人电脑开机。译文不跨设备同步，刷新页面清除。
+- 限流、D1 故障、Google 429 均停止调用；请求与译文 no-store，密钥不出现在浏览器网络、HTML、GitHub 或错误消息里。
+
+## 数据与维护
+
+输入与译文经过 Cloudflare 和 Google，但本项目不持久保存或记录正文。Google 免费档输入输出的处理遵循其条款。Cloudflare 管理员可以修改代码读取 Secret，因此管理账号与部署权限仍需妥善保护。
+
+退出：登录页点击“退出本站翻译登录”，清除本设备 Cookie。紧急撤销所有会话可轮换 SESSION_SECRET；轮换后旧 Cookie 签名失效。暂停翻译：把 FREE_TIER_CONFIRMED 设为 false 并部署。Gemini Key 轮换通过 Worker Secret 完成，永不写入源码。
+
+GitHub Actions 仍每四小时更新新闻。页面脚本更新时增加资源版本，Worker 修改后重新部署。免费政策变化时暂停受影响服务，不接受超额付费条款。
+
+参考：
+- https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+- https://developers.google.com/identity/gsi/web/guides/verify-google-id-token
 - https://developers.cloudflare.com/workers/configuration/secrets/
-- https://developers.cloudflare.com/workers/configuration/routing/custom-domains/
-- https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/authorization-cookie/validating-json/
-- https://developers.cloudflare.com/workers/runtime-apis/bindings/rate-limit/
+- https://developers.cloudflare.com/workers/configuration/routing/routes/
+- https://developers.cloudflare.com/d1/platform/pricing/
 - https://ai.google.dev/gemini-api/docs/pricing
-
-## Gemini 密钥接入速查（2026-10-18）
-
-1. 在 https://aistudio.google.com/api-keys 创建 Gemini Key，确认所属项目 Free Tier、没有关联计费账户。使用 AI Studio 新建的受限 Gemini API Key；不要使用 unrestricted 的旧标准 Key。默认模型 gemini-2.5-flash-lite 当前仍有免费 Standard 档。
-2. **域名版尚未启用**：当前没有已部署的 headline-private-gateway，不能仅填一个 Key 就开始使用。先按上面的步骤完成 Worker、D1 与 Access 配置。获准邮箱在 Cloudflare Secret ALLOWED_EMAIL 中设置；不要提交到公开仓库。
-3. Worker 部署后，Cloudflare → Workers & Pages → headline-private-gateway → Settings → Variables and Secrets → Add，类型选 Secret，名称 GEMINI_API_KEY，值粘贴你自己的 Key，保存/部署。不要选普通 Text，也不要在网页前端填写。CLI 等价操作：在 cloudflare 目录执行 `npx wrangler@4 secret put GEMINI_API_KEY`，在交互提示中输入值。
-4. 确认 HTTPS、Access 登录验证、每日计数和限流都就绪后才启用 API 路由与 FREE_TIER_CONFIRMED。先退出登录验证不能翻译，再用获准邮箱登录，选择 Gemini 翻译一条标题。浏览器请求中不应包含 Key。
-5. 如果只想现在先试用：在项目目录运行 `python3 -m scripts.local_reader --provider gemini --allow-google-upload --free-tier-confirmed`，按终端提示输入 Key（不回显），访问 http://127.0.0.1:8765/，选择 Gemini。本机接口无需等域名证书或 Cloudflare 配置；它不提供手机跨设备访问。
-
-不要把真实 Key 发到聊天、写入仓库文件，或放入浏览器存储。此项目云端版使用 Worker Secret，不需要 GitHub 保存 Gemini Key。原文与译文经过 Google，免费档数据使用政策仍适用。
