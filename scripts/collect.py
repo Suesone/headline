@@ -9,6 +9,7 @@ from difflib import SequenceMatcher
 import hashlib
 import html
 import json
+import os
 from pathlib import Path
 import re
 import time
@@ -302,6 +303,20 @@ def rank_topics(articles, limit=None):
     return ranked[:limit] if limit is not None else ranked
 
 
+def run_metadata(now):
+    event = os.getenv('HEADLINE_TRIGGER_EVENT', 'local')
+    if event not in {'schedule', 'workflow_dispatch', 'push'}:
+        event = 'local'
+    schedule = os.getenv('HEADLINE_TRIGGER_SCHEDULE', '') if event == 'schedule' else ''
+    if schedule not in {'0 */2 * * *', '17 */2 * * *', '37 */2 * * *'}:
+        schedule = ''
+    metadata = {'event': event, 'schedule': schedule, 'slot': window_id(now)}
+    repository, run_id = os.getenv('GITHUB_REPOSITORY', ''), os.getenv('GITHUB_RUN_ID', '')
+    if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository) and run_id.isdigit():
+        metadata['run_url'] = f'https://github.com/{repository}/actions/runs/{run_id}'
+    return metadata
+
+
 def build_dataset(articles, sources, statuses, now, settings, previous=None):
     end = boundary(now)
     latest_start = end - timedelta(hours=WINDOW_HOURS)
@@ -342,7 +357,7 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
         if state['status'] != 'ok':
             state['last_success_at'] = old_status.get(state['id'], {}).get('last_success_at')
         public_sources.append({**source, **state})
-    return {'schema_version': 1, 'generated_at': iso(now), 'timezone': 'Asia/Shanghai', 'window_hours': WINDOW_HOURS,
+    return {'schema_version': 1, 'generated_at': iso(now), 'trigger': run_metadata(now), 'timezone': 'Asia/Shanghai', 'window_hours': WINDOW_HOURS,
             'latest_window_id': window_id(latest_start), 'today': now.astimezone(TZ).date().isoformat(),
             'last_success_at': iso(now) if successes else (previous or {}).get('last_success_at'),
             'status': status, 'sources': public_sources, 'articles': articles, 'windows': windows,

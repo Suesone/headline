@@ -226,8 +226,16 @@ function initTranslation() {
 function renderStatus() {
   const enabled = data.sources.filter(s=>s.enabled);
   const ok = enabled.filter(s=>s.status==='ok').length;
-  const outdated = Date.now() - Date.parse(data.generated_at) > 6 * 3600000;
-  $('run-status').textContent = `${ok}/${enabled.length} 个订阅流读取成功 · 实际更新时间 ${format(data.generated_at)}${outdated ? ' · 更新可能延迟' : ''}${data.status==='error' ? ' · 本次失败，保留旧新闻' : data.status==='partial' ? ' · 部分来源读取失败，保留旧记录' : ''}`;
+  const slotStart = Math.floor(Date.now() / (2 * 3600000)) * 2 * 3600000;
+  const missedSlot = Date.parse(data.generated_at) < slotStart && Date.now() - slotStart > 45 * 60000;
+  const outdated = missedSlot || Date.now() - Date.parse(data.generated_at) > 3 * 3600000;
+  $('run-status').textContent = `${ok}/${enabled.length} 个订阅流读取成功 · 实际更新时间 ${format(data.generated_at)}${outdated ? ' · 本时段尚未更新，调度可能延迟' : ''}${data.status==='error' ? ' · 本次失败，保留旧新闻' : data.status==='partial' ? ' · 部分来源读取失败，保留旧记录' : ''}`;
+  const trigger = data.trigger || {};
+  const triggerLabel = trigger.event === 'schedule' ? (trigger.schedule === '0 */2 * * *' ? '整点定时' : '定时补抓') : ({workflow_dispatch:'手动更新',push:'代码发布',local:'本机更新'}[trigger.event]);
+  if (triggerLabel) $('run-status').append(document.createTextNode(' · 触发：' + triggerLabel));
+  if (trigger.run_url && /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/actions\/runs\/\d+$/.test(trigger.run_url)) {
+    $('run-status').append(document.createTextNode(' · '),link('查看运行 ↗',trigger.run_url));
+  }
   $('run-status').classList.toggle('warning',outdated || data.status !== 'ok');
   const states = {ok:'读取正常',error:'读取失败',disabled:'未启用'};
   for (const s of enabled) {

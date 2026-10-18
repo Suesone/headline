@@ -3,6 +3,9 @@ on:
   schedule:
     # Even UTC hours also map to even Beijing hours: 00:00, 02:00, …, 22:00.
     - cron: '0 */2 * * *'
+    # Recovery checks avoid the top-of-hour load; skip if this slot is published.
+    - cron: '17 */2 * * *'
+    - cron: '37 */2 * * *'
   workflow_dispatch:
   push:
     branches: [main]
@@ -15,7 +18,29 @@ concurrency:
   group: headline-update-and-pages
   cancel-in-progress: false
 jobs:
+  schedule-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    outputs:
+      should_update: ${{ steps.guard.outputs.should_update }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Check published slot before recovery
+        id: guard
+        env:
+          TRIGGER_EVENT: ${{ github.event_name }}
+          TRIGGER_SCHEDULE: ${{ github.event.schedule }}
+        run: python3 -m scripts.schedule_guard
   update:
+    needs: schedule-check
+    if: needs.schedule-check.outputs.should_update == 'true'
+    env:
+      HEADLINE_TRIGGER_EVENT: ${{ github.event_name }}
+      HEADLINE_TRIGGER_SCHEDULE: ${{ github.event.schedule }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

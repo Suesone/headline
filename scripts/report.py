@@ -19,7 +19,7 @@ for run in health['runs']:
         run['slot'] = window_id(dt(run['at']))
         runs[run['slot']] = run
 runs[slot] = {'at': data['generated_at'], 'slot': slot, 'status': data['status'], 'ai': data['ai']['status'],
-              'articles': len(data['articles']), 'failed_sources': [s['id'] for s in data['sources'] if s['status'] == 'error']}
+              'trigger': data.get('trigger', {}), 'articles': len(data['articles']), 'failed_sources': [s['id'] for s in data['sources'] if s['status'] == 'error']}
 health['runs'] = sorted(runs.values(), key=lambda r: r['at'])
 health['observation_complete'] = now - dt(health['started_at']) >= timedelta(days=2)
 expected = set()
@@ -32,7 +32,7 @@ health['healthy'] = not health['missing_slots'] and all(r['status'] == 'ok' for 
 write_json(path, health)
 summary = Path(os.environ.get('GITHUB_STEP_SUMMARY', '/tmp/headline-summary.md'))
 summary.write_text('# Headline 更新记录\n\n'
-                   f"- 抓取状态：{data['status']}\n- 新闻数：{len(data['articles'])}\n"
+                   f"- 触发方式：{data.get('trigger', {}).get('event', 'unknown')} / {data.get('trigger', {}).get('schedule', '')}\n- 抓取状态：{data['status']}\n- 新闻数：{len(data['articles'])}\n"
                    f"- AI：{data['ai']['status']}\n- 最近两天覆盖：{len(health['runs'])} 个两小时时段\n"
                    f"- 缺失时段：{len(health['missing_slots'])}\n"
                    f"- 两天观察：{'已结束' if health['observation_complete'] else '进行中'}\n"
