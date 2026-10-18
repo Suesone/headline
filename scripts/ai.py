@@ -92,6 +92,8 @@ def enrich(data, settings, cache_path, now):
     def apply_cache():
         for article in data['articles']:
             article.pop('title_zh', None)
+            if not article.get('analysis_allowed', True):
+                continue
             entry = cache.get(title_key(article))
             if entry:
                 article['title_zh'] = entry['text']
@@ -115,7 +117,7 @@ def enrich(data, settings, cache_path, now):
         return
     try:
         verify_free_account(account, token)
-        selected = [available[aid] for aid in (latest or {}).get('article_ids', []) if aid in available]
+        selected = [available[aid] for aid in (latest or {}).get('article_ids', []) if aid in available and available[aid].get('analysis_allowed', True)]
         pending = [a for a in selected if title_key(a) not in cache][:settings['max_titles_per_run']]
         if pending:
             result = generate(account, token, model, 'translation', [{'id': a['id'], 'title': a['title']} for a in pending])

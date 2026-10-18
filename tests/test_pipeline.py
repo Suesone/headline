@@ -213,3 +213,38 @@ def test_invalid_feed_and_naive_timestamp_rejected():
         c.parse_feed(b'<html>not a feed</html>', SOURCES[0], NOW)
     with pytest.raises(ValueError):
         c.dt('2026-10-18T08:00:00')
+
+
+def test_community_links_only_strips_content_and_checks_publisher_domain():
+    source = {'id': 'reuters-community', 'name': 'Reuters', 'mode': 'links_only',
+              'time_basis': 'feed_publication', 'allowed_link_domains': ['reuters.com']}
+    xml = b'''<rss version="2.0"><channel><title>Community</title><item><title>Japan talks</title><link>https://www.reuters.com/world/example/</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate><description>Do not republish this body</description></item><item><title>Wrong publisher</title><link>https://reuters.com.attacker.example/story</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate></item></channel></rss>'''
+    entries, skipped = c.parse_feed(xml, source, NOW)
+    assert len(entries) == 1 and skipped == 1
+    assert entries[0]['summary'] == '' and not entries[0]['analysis_allowed']
+    assert entries[0]['time_basis'] == 'feed_publication'
+    old = article(); old['title_zh'] = '旧译文'
+    c.apply_source_policy(old, source)
+    assert old['topics'] == [] and 'title_zh' not in old
+
+
+def test_links_only_never_receive_ai_or_cached_translation(monkeypatch, tmp_path):
+    ai_env(monkeypatch)
+    monkeypatch.setattr(ai, 'verify_free_account', lambda *args: None)
+    monkeypatch.setattr(ai, 'generate', lambda *args: pytest.fail('Link-only articles must not call AI'))
+    item = article(); c.apply_source_policy(item, {'mode': 'links_only'})
+    data = dataset([item])
+    path = tmp_path / 'cache.json'
+    key = c.digest(ai_settings()['model'] + ':title:' + item['title'])
+    c.write_json(path, {key: {'text': 'A cached translation', 'created_at': c.iso(NOW)}})
+    ai.enrich(data, ai_settings(), path, NOW)
+    assert 'title_zh' not in data['articles'][0]
+    assert all(not w['topics'] for w in data['windows'])
+
+
+def test_stale_community_feed_is_not_reported_as_healthy(monkeypatch):
+    xml = b'''<rss version="2.0"><channel><title>Community</title><item><title>Old story</title><link>https://example.org/story</link><pubDate>Wed, 14 Oct 2026 00:00:00 GMT</pubDate></item></channel></rss>'''
+    monkeypatch.setattr(c, 'request_bytes', lambda *args: xml)
+    entries, status = c.fetch_source({**SOURCES[0], 'max_feed_age_hours': 36}, NOW)
+    assert entries == [] and status['status'] == 'error'
+    assert '36' in status['message']

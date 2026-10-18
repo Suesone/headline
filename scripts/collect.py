@@ -55,6 +55,16 @@ def plain(value, limit=600):
     return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', value))).strip()[:limit]
 
 
+def apply_source_policy(article, source):
+    article['analysis_allowed'] = source.get('mode') != 'links_only'
+    article['time_basis'] = source.get('time_basis', 'publication')
+    if not article['analysis_allowed']:
+        article['summary'] = ''
+        article['topics'] = []
+        article.pop('title_zh', None)
+    return article
+
+
 def canonical_url(value):
     parts = urlsplit(value.strip())
     if parts.scheme not in {'https', 'http'} or not parts.hostname or parts.username or parts.password:
@@ -109,14 +119,18 @@ def parse_feed(content, source, now):
                 skipped += 1
                 continue
             url = canonical_url(entry.get('link', ''))
+            allowed = source.get('allowed_link_domains', [])
+            host = urlsplit(url).hostname
+            if allowed and not any(host == domain or host.endswith('.' + domain) for domain in allowed):
+                raise ValueError('Article URL outside configured publisher')
             identity = source['id'] + ':' + str(entry.get('id') or url)
-            articles.append({
+            articles.append(apply_source_policy({
                 'id': digest(identity), 'identities': [identity], 'source_id': source['id'],
                 'publisher': source.get('publisher', source['name']), 'title': title, 'url': url,
                 'summary': plain(entry.get('summary')), 'author': plain(entry.get('author', ''), 160),
                 'published_at': iso(published), 'first_seen_at': iso(now), 'window_id': window_id(published),
                 'topics': [],
-            })
+            }, source))
         except (ValueError, TypeError, OverflowError):
             skipped += 1
     return articles, skipped
@@ -128,6 +142,10 @@ def fetch_source(source, now):
     for attempt in range(3):
         try:
             articles, skipped = parse_feed(request_bytes(source['url']), source, now)
+            max_age = source.get('max_feed_age_hours')
+            if max_age and (not articles or max(dt(a['published_at']) for a in articles) < now - timedelta(hours=max_age)):
+                return [], {'id': source['id'], 'status': 'error', 'checked_at': iso(now),
+                            'message': f'订阅最新条目已超过 {max_age} 小时，可能暂停更新；保留先前记录'}
             return articles, {'id': source['id'], 'status': 'ok', 'checked_at': iso(now),
                               'last_success_at': iso(now), 'received': len(articles), 'skipped': skipped,
                               'message': f'已读取 {len(articles)} 条；跳过 {skipped} 条无效记录'}
@@ -283,9 +301,12 @@ def run(now, output, state_path, enable_ai=True):
     allowed = {s['id'] for s in sources if s.get('enabled')}
     old = [a for a in previous.get('articles', []) if a['source_id'] in allowed]
     articles = merge_articles(old, incoming, cutoff)
+    source_map = {s['id']: s for s in sources}
+    for article in articles:
+        apply_source_policy(article, source_map[article['source_id']])
     aliases = read_json(ROOT / 'config/aliases.json')
     extraction_version = digest('topics-v4:' + json.dumps(aliases, sort_keys=True))
-    pending = [a for a in articles if a.get('extraction_version') != extraction_version]
+    pending = [a for a in articles if a.get('analysis_allowed', True) and a.get('extraction_version') != extraction_version]
     if pending:
         extractor = TopicExtractor(aliases)
         for article in pending:

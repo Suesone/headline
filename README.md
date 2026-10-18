@@ -13,7 +13,7 @@
 
 首批候选 BBC World、BBC Business、Guardian World **都能读取 RSS**，但本项目自动分析/AI 的使用条件尚未满足，默认禁用。BBC 允许有条件的个人 RSS 展示，可与分析功能分开评估。详细接口、RSSHub 与 Google News 实测见 [大新闻源接入研究](docs/news-sources.md)。
 
-已启用 **Global Voices**（国际公民媒体，CC BY 3.0）和 **NASA**（官方科学资讯，遵循 NASA 使用指引）。它们不是 Reuters/AP 的替代通讯社，发布频率较低，部分四小时时段为空是正常情况。Wikinews 候选订阅实测 404，默认禁用。后续可在拿到合适许可后加入更多主流来源。
+已启用 **Reuters · 社区 RSS**（[Feedseek](https://github.com/trvny/feedseek) 维护，100 条标题链接实测；不参与 AI 或热词统计，详见 [社区 RSS 采用说明](docs/community-rss.md)）、**Global Voices**（国际公民媒体，CC BY 3.0）和 **NASA**（官方科学资讯，遵循 NASA 使用指引）。Global Voices 和 NASA 不是 AP 的替代通讯社，发布频率较低，部分四小时时段为空是正常情况。Wikinews 候选订阅实测 404，默认禁用。后续可在拿到合适许可后加入更多主流来源。
 
 每条新闻保留作者（若订阅提供）、来源、原文链接与许可；只用 RSS 标题和短摘要。没有全文抓取、图片下载或付费墙绕过。
 
@@ -55,6 +55,8 @@ python -m http.server 8765 --directory public
 ### 修改新闻源
 
 编辑 `config/sources.json`。新增一项，设置唯一 `id`、名称、媒体主体 `publisher`、RSS `url`、来源主页、许可链接、条款链接和说明；确认允许公开显示、分析、翻译后，再把 `enabled` 设为 `true`。不要提交需登录的订阅链接或带私人令牌的 URL。
+
+`mode: links_only` 用于只展示标题与原文链接的来源，自动排除摘要、热词和 AI；`relay_name`、`relay_url` 标记社区维护者；`allowed_link_domains` 限制链接域名；`max_feed_age_hours` 可检测陈旧订阅。
 
 `publisher` 应使用真实媒体主体：同一媒体多个频道只算一个独立来源。可用 `exclude_title_prefixes` 忽略固定前缀；NASA 默认过滤 APOD 页面索引噪声。
 

@@ -5,12 +5,13 @@ function sourceTileClass(source) {
   if (source.id === 'all') return 'tile-all';
   if (source.id === 'global-voices') return 'tile-global-voices';
   if (source.id === 'nasa') return 'tile-nasa';
+  if (source.id === 'reuters-community') return 'tile-reuters';
   if (source.id.startsWith('bbc')) return 'tile-bbc';
   if (source.id.startsWith('guardian')) return 'tile-guardian';
   return 'tile-generic';
 }
 function sourceInitials(source) {
-  return ({all: '榜', 'global-voices': 'GV', nasa: 'NASA', wikinews: 'W'})[source.id] || (source.publisher === 'BBC' ? 'BBC' : source.name.slice(0, 2).toUpperCase());
+  return ({all: '榜', 'global-voices': 'GV', nasa: 'NASA', 'reuters-community': 'R', wikinews: 'W'})[source.id] || (source.publisher === 'BBC' ? 'BBC' : source.name.slice(0, 2).toUpperCase());
 }
 function renderShortcuts() {
   const list = $('source-shortcuts'); list.replaceChildren();
@@ -22,7 +23,7 @@ function renderShortcuts() {
     button.type = 'button';
     button.setAttribute('aria-pressed', String(source.id === $('source-select').value));
     button.setAttribute('aria-label', source.enabled ? source.name : source.name + ' 未启用，查看原因');
-    button.append(el('span', sourceInitials(source), 'source-tile ' + sourceTileClass(source)), el('span', source.id === 'all' ? source.name : source.publisher), el('span', source.enabled ? (source.id === 'all' ? '新闻总览' : '英文资讯') : '未启用 · 查看原因', 'shortcut-subtitle'));
+    button.append(el('span', sourceInitials(source), 'source-tile ' + sourceTileClass(source)), el('span', source.id === 'all' ? source.name : source.publisher), el('span', source.enabled ? (source.id === 'all' ? '新闻总览' : source.relay_name ? '社区 RSS' : '英文资讯') : '未启用 · 查看原因', 'shortcut-subtitle'));
     if (!source.enabled) button.title = source.note;
     button.addEventListener('click', () => {
       if (!source.enabled) { $('source-details').open = true; $('source-details').scrollIntoView({behavior:'smooth', block:'start'}); return; }
@@ -87,7 +88,7 @@ function renderNews() {
   const list = $('news-list'); list.replaceChildren();
   $('article-count').textContent = `${articles.length} 篇报道`;
   $('news-heading').textContent = current ? '时段新闻榜' : '最近新闻榜';
-  $('period-caption').textContent = activeTopic?.daily ? `当日话题 · ${$('day-select').value} · 北京时间` : current ? `${format(current.start)} — ${format(current.end)} · 北京时间 · 按发布时间归档` : '最近 30 天已完成时段 · 最新时段无新增时自动展示历史记录';
+  $('period-caption').textContent = activeTopic?.daily ? `当日话题 · ${$('day-select').value} · 北京时间` : current ? `${format(current.start)} — ${format(current.end)} · 北京时间 · 按来源提供的日期归档` : '最近 30 天已完成时段 · 最新时段无新增时自动展示历史记录';
   const topicBanner = $('active-topic'); topicBanner.replaceChildren(); topicBanner.hidden = !activeTopic;
   if (activeTopic) { topicBanner.append(el('span', `正在阅读：${activeTopic.label}`)); const clear = el('button', '清除筛选 ×'); clear.type = 'button'; clear.addEventListener('click', () => { activeTopic = null; renderNews(); renderTopics(); }); topicBanner.append(clear); }
   if (!articles.length) {
@@ -111,14 +112,15 @@ function renderNews() {
       const q = s => node.querySelector(s);
       const sourceInfo = data.sources.find(s => s.id === article.source_id);
       q('.article-index').textContent = String(index + 1);
-      q('.article-time').textContent = format(article.published_at);
-      q('.article-topic-count').textContent = `${article.topics.length} 个关联话题`;
+      q('.article-time').textContent = (article.time_basis === 'feed_publication' ? '订阅日期 ' : '') + format(article.published_at);
+      q('.article-topic-count').textContent = article.analysis_allowed === false ? '社区 RSS · 原文链接' : `${article.topics.length} 个关联话题`;
+      if (article.analysis_allowed === false) q('.article-details summary').textContent = '来源与链接';
       q('.article-link').textContent = article.title;
       const url = safeUrl(article.url);
       if (url) { q('.article-link').href = url; q('.original-link').href = url; }
       q('.article-summary').textContent = article.summary;
       if (!article.summary) q('.article-summary').hidden = true;
-      if (bilingual) { q('.article-translation').hidden = false; q('.article-translation').textContent = article.title_zh ? article.title_zh + ' · AI 译文' : '本条暂未生成译文'; }
+      if (bilingual && article.analysis_allowed !== false) { q('.article-translation').hidden = false; q('.article-translation').textContent = article.title_zh ? article.title_zh + ' · AI 译文' : '本条暂未生成译文'; }
       for (const topic of article.topics.slice(0, 3)) {
         const button = el('button', topic.label, 'article-tag'); button.type = 'button';
         button.addEventListener('click', () => {
@@ -132,7 +134,7 @@ function renderNews() {
       cardList.append(node);
     });
     const footer = el('div', undefined, 'source-card-footer');
-    footer.append(el('span', '按报道关联话题与时间排列'), link('来源网站 ↗', group.source.homepage));
+    footer.append(el('span', group.source.relay_name ? `${group.source.relay_name} 社区 RSS · 按订阅日期排列` : '按报道关联话题与时间排列'), link('来源网站 ↗', group.source.homepage));
     card.append(footer); list.append(card);
   }
 }
@@ -145,7 +147,7 @@ function renderSources() {
     row.append(el('p', source.message || source.note));
     if (source.status === 'ok' && source.note) row.append(el('p', source.note));
     if (source.last_success_at) row.append(el('p', `上次成功：${format(source.last_success_at)}`));
-    row.append(link('来源网站 ↗', source.homepage), link('使用条件 ↗', source.terms_url)); list.append(row);
+    row.append(link('来源网站 ↗', source.homepage), link(source.relay_name ? '社区项目 ↗' : '使用条件 ↗', source.terms_url)); list.append(row);
   }
   $('ai-status').textContent = `AI 状态：${data.ai.message}`;
 }

@@ -43,6 +43,7 @@ h1 { font-size: 23px; font-weight: 650; margin: 0 0 5px; letter-spacing: .2px; }
 .source-shortcut.active .source-tile { outline: 2px solid var(--accent); outline-offset: 3px; }
 .source-shortcut.active { color: var(--accent); }
 .shortcut-subtitle { font-size: 10px; color: #969da7; }
+.tile-reuters { background: #ed8c3b; }
 .tile-all { background: #f38a67; } .tile-global-voices { background: #52b894; } .tile-nasa { background: #4f81d9; } .tile-bbc { background: #373b44; } .tile-guardian { background: #4475ad; } .tile-generic { background: #9a86cf; }
 .run-status { color: #657899; background: #edf2fc; font-size: 11px; padding: 10px 14px; border-radius: 5px; line-height: 1.7; }
 .run-status::before { content: ''; display: inline-block; width: 5px; height: 5px; margin-right: 8px; border-radius: 50%; background: #7499d9; vertical-align: 2px; }

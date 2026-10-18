@@ -1,5 +1,25 @@
 [
   {
+    "id": "reuters-community",
+    "name": "Reuters · 社区 RSS",
+    "publisher": "Reuters",
+    "url": "https://raw.githubusercontent.com/trvny/feedseek/main/feeds/feed_reuters.xml",
+    "homepage": "https://www.reuters.com/",
+    "enabled": true,
+    "mode": "links_only",
+    "time_basis": "feed_publication",
+    "allowed_link_domains": [
+      "reuters.com"
+    ],
+    "relay_name": "Feedseek",
+    "relay_url": "https://github.com/trvny/feedseek",
+    "license": "原文归 Reuters；社区转发不改变内容权利",
+    "license_url": "https://www.reuters.com/info-pages/terms-of-use/",
+    "terms_url": "https://github.com/trvny/feedseek",
+    "note": "由 Feedseek 社区维护，约每两小时刷新；展示标题、订阅日期和原文链接，不抓取正文，不参与本站 AI 或热词统计。日期来自订阅，未逐篇核实原站时间。",
+    "max_feed_age_hours": 36
+  },
+  {
     "id": "global-voices",
     "name": "Global Voices",
     "publisher": "Global Voices",
