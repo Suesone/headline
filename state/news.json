@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-18T03:21:15.160875Z",
+  "generated_at": "2026-10-18T03:22:26.104848Z",
   "timezone": "Asia/Shanghai",
   "latest_window_id": "2026-10-18T04:00+08:00",
   "today": "2026-10-18",
-  "last_success_at": "2026-10-18T03:21:15.160875Z",
+  "last_success_at": "2026-10-18T03:22:26.104848Z",
   "status": "ok",
   "sources": [
     {
@@ -19,8 +19,8 @@
       "terms_url": "https://globalvoices.org/about/",
       "note": "国际公民媒体；保留作者、来源、原文和许可，AI 译文单独标记。",
       "status": "ok",
-      "checked_at": "2026-10-18T03:21:15.160875Z",
-      "last_success_at": "2026-10-18T03:21:15.160875Z",
+      "checked_at": "2026-10-18T03:22:26.104848Z",
+      "last_success_at": "2026-10-18T03:22:26.104848Z",
       "received": 15,
       "skipped": 0,
       "message": "已读取 15 条；跳过 0 条无效记录"
@@ -40,8 +40,8 @@
         "APOD:"
       ],
       "status": "ok",
-      "checked_at": "2026-10-18T03:21:15.160875Z",
-      "last_success_at": "2026-10-18T03:21:15.160875Z",
+      "checked_at": "2026-10-18T03:22:26.104848Z",
+      "last_success_at": "2026-10-18T03:22:26.104848Z",
       "received": 8,
       "skipped": 2,
       "message": "已读取 8 条；跳过 2 条无效记录"
@@ -149,23 +149,13 @@
           "kind": "entity"
         },
         {
-          "id": "f11f3e27d91c376ca7a704f0",
-          "label": "reproductive rights Far-right",
-          "kind": "phrase"
-        },
-        {
-          "id": "712b689bd664422b5385f227",
-          "label": "Far-right activists",
-          "kind": "phrase"
-        },
-        {
           "id": "9b49f4f9f50717e651e6a578",
           "label": "global coalition",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "eceee082141a79e64959abc6",
@@ -226,10 +216,15 @@
           "id": "abbb443fee70cb93193cd9e8",
           "label": "Flight Center Director",
           "kind": "phrase"
+        },
+        {
+          "id": "b138026a0bb6c2d862856311",
+          "label": "Cash director",
+          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "6ab9fd69f0dd2799f0589a3c",
@@ -267,8 +262,8 @@
           "kind": "phrase"
         },
         {
-          "id": "ac1880018f743715816543a2",
-          "label": "Navy divers",
+          "id": "f9a7ff467ca3b0b6ea7c9b0f",
+          "label": "Artemis II Heat",
           "kind": "phrase"
         },
         {
@@ -277,13 +272,13 @@
           "kind": "phrase"
         },
         {
-          "id": "f9a7ff467ca3b0b6ea7c9b0f",
-          "label": "Artemis II Heat",
+          "id": "ac1880018f743715816543a2",
+          "label": "Navy divers",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "162b5cc99c941289236e975f",
@@ -324,15 +319,10 @@
           "id": "4c2348bea568bf66307a4bc0",
           "label": "Space Launch System",
           "kind": "phrase"
-        },
-        {
-          "id": "5115790f9377355147b20fbe",
-          "label": "core stage",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "3ae2f675a8dcbfe74a139051",
@@ -365,16 +355,6 @@
           "kind": "entity"
         },
         {
-          "id": "873ca1bdcc7e7d1076555a30",
-          "label": "prostate cancer exams",
-          "kind": "phrase"
-        },
-        {
-          "id": "d09eeaf7bfd63c820192afa5",
-          "label": "tight presidential race",
-          "kind": "phrase"
-        },
-        {
           "id": "ff647412a1dd63a642c67692",
           "label": "extremist network",
           "kind": "phrase"
@@ -386,7 +366,7 @@
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "378b9bf06bbdf04e67dbef70",
@@ -409,6 +389,11 @@
           "kind": "entity"
         },
         {
+          "id": "fa93cb389a4b5b998da420de",
+          "label": "Hubble Spies Spiral",
+          "kind": "phrase"
+        },
+        {
           "id": "c5f218a4132255944a9dd2a1",
           "label": "Hubble Space Telescope",
           "kind": "phrase"
@@ -419,23 +404,13 @@
           "kind": "phrase"
         },
         {
-          "id": "fa93cb389a4b5b998da420de",
-          "label": "Hubble Spies Spiral",
-          "kind": "phrase"
-        },
-        {
           "id": "0f7ab79f97cb2beeaa2995d1",
           "label": "intermediate spiral galaxy",
-          "kind": "phrase"
-        },
-        {
-          "id": "5f13272d07beeffb419cabe5",
-          "label": "constellation Columba",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "7844c786a05d4c1a035bd596",
@@ -481,10 +456,15 @@
           "id": "b133a9000fd9e46b82840f9a",
           "label": "Kong police",
           "kind": "phrase"
+        },
+        {
+          "id": "65a90dc0b5cab6016c353f00",
+          "label": "school pupils",
+          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "afeda75bd8f1fc1088f1f53f",
@@ -512,23 +492,18 @@
           "kind": "entity"
         },
         {
-          "id": "7209e06fd782a2811abd41f4",
-          "label": "Coast High-definition images",
+          "id": "77accc3b7092c728e68ee086",
+          "label": "Florida Panhandle",
           "kind": "phrase"
         },
         {
           "id": "9b6e46c3c335326772443d67",
           "label": "nighttime lights show",
           "kind": "phrase"
-        },
-        {
-          "id": "77accc3b7092c728e68ee086",
-          "label": "Florida Panhandle",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "17c103abfb300de2f505dcd7",
@@ -586,13 +561,13 @@
           "kind": "phrase"
         },
         {
-          "id": "51f5172c8235a486cc539447",
-          "label": "Unlock Mysteries",
+          "id": "6d4ffb1f707cd2e24564a0af",
+          "label": "Upcoming Mission",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "f3f121be51432f76efeeb347",
@@ -635,18 +610,13 @@
           "kind": "entity"
         },
         {
-          "id": "44c853095f70d700176e7c86",
-          "label": "dry conditions",
-          "kind": "phrase"
-        },
-        {
           "id": "2eae4b31e5395ad253322b5e",
           "label": "front line",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "415456389e84bbde6d6a68d2",
@@ -677,20 +647,10 @@
           "id": "7b989fe5889d6645056f3124",
           "label": "Pacific",
           "kind": "entity"
-        },
-        {
-          "id": "48b9ea8e62faa9b9e4796f36",
-          "label": "single storm system",
-          "kind": "phrase"
-        },
-        {
-          "id": "451b621b02c639504adbc7ec",
-          "label": "solar eclipse",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "9b1931b94a11a4e2ca093da8",
@@ -731,25 +691,10 @@
           "id": "724f92f8cb38408715702812",
           "label": "NASA",
           "kind": "entity"
-        },
-        {
-          "id": "e0ff647264b22627f3341bb0",
-          "label": "Station Power Supply",
-          "kind": "phrase"
-        },
-        {
-          "id": "629ceee49bf50c0b772ccf48",
-          "label": "Space Station Power",
-          "kind": "phrase"
-        },
-        {
-          "id": "9910d0d1c99818df798302f8",
-          "label": "unique position",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "a55dd26de6b4df95cb09c7cf",
@@ -770,20 +715,10 @@
           "id": "c228dcf978f1caf3f136eddf",
           "label": "authoritarian states",
           "kind": "phrase"
-        },
-        {
-          "id": "ed7ba5efd6a96cb2f7efb6f5",
-          "label": "international market",
-          "kind": "phrase"
-        },
-        {
-          "id": "1f8206700627b1041f1a563d",
-          "label": "international exchange",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "6943d5d57f3140c875f27808",
@@ -811,23 +746,18 @@
           "kind": "entity"
         },
         {
-          "id": "180e0598e834b5e2c8205a3d",
-          "label": "dangerous divestment",
+          "id": "52408ce928fcece4a50261fc",
+          "label": "user data",
           "kind": "phrase"
         },
         {
           "id": "7d06acbbdaa0e1a03706ec2f",
           "label": "Telenor telecom",
           "kind": "phrase"
-        },
-        {
-          "id": "52408ce928fcece4a50261fc",
-          "label": "user data",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "1897bd24c7bedbd259e65d19",
@@ -848,20 +778,10 @@
           "id": "92150179d1b63ac8803c6c30",
           "label": "Kyrgyzstan",
           "kind": "entity"
-        },
-        {
-          "id": "c7b3e9a39005bb1f28c14498",
-          "label": "Lived experience",
-          "kind": "phrase"
-        },
-        {
-          "id": "c7478da3330918ad01005844",
-          "label": "physical barriers",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "b9d574832716476b943379fc",
@@ -884,18 +804,13 @@
           "kind": "entity"
         },
         {
-          "id": "12bb8a33890e0a4f27c5802f",
-          "label": "transparency complicate efforts",
-          "kind": "phrase"
-        },
-        {
-          "id": "1797b7457fa97cb14efad09b",
-          "label": "aid transparency complicate",
-          "kind": "phrase"
-        },
-        {
           "id": "6148fb53646638a7e1f5998d",
           "label": "flood disasters",
+          "kind": "phrase"
+        },
+        {
+          "id": "d2a0341c80faf06565d4bb00",
+          "label": "reconstruction plan",
           "kind": "phrase"
         },
         {
@@ -904,13 +819,13 @@
           "kind": "phrase"
         },
         {
-          "id": "d2a0341c80faf06565d4bb00",
-          "label": "reconstruction plan",
+          "id": "1797b7457fa97cb14efad09b",
+          "label": "aid transparency complicate",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "397736d78b90b03efcdf1195",
@@ -954,7 +869,7 @@
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "76e91e0519bd630bda11f254",
@@ -982,33 +897,13 @@
           "kind": "entity"
         },
         {
-          "id": "708f4983374d9f2caa55d0ad",
-          "label": "peaceful power transitions",
-          "kind": "phrase"
-        },
-        {
-          "id": "4492edfeaee5e2dfc45181cd",
-          "label": "traditional democratic practices",
-          "kind": "phrase"
-        },
-        {
           "id": "a8051583858ae79c3bc43324",
           "label": "Gadaa system",
-          "kind": "phrase"
-        },
-        {
-          "id": "ffecd4d81a29fa98c01ab684",
-          "label": "accountable leadership",
-          "kind": "phrase"
-        },
-        {
-          "id": "dfc5fecb83f04c5648c6733a",
-          "label": "inclusive governance",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "b984172d44b771b3db88faa0",
@@ -1034,20 +929,10 @@
           "id": "6a9a10210588981dd8faa6be",
           "label": "Malaysia",
           "kind": "entity"
-        },
-        {
-          "id": "fd13a9f3f76ac08f968047e7",
-          "label": "excessive recruitment costs",
-          "kind": "phrase"
-        },
-        {
-          "id": "b20a60fbda7fea9768186266",
-          "label": "government-level agreements",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "972c38354d7da322cc1db140",
@@ -1075,18 +960,18 @@
           "kind": "entity"
         },
         {
-          "id": "e3ef3551b01f67000ffcf3dc",
-          "label": "Youth voices",
+          "id": "bfef02ee45007ba2c10728a2",
+          "label": "free speech",
           "kind": "phrase"
         },
         {
-          "id": "bfef02ee45007ba2c10728a2",
-          "label": "free speech",
+          "id": "e3ef3551b01f67000ffcf3dc",
+          "label": "Youth voices",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "644c27b2e94d4cd5f26b2fbf",
@@ -1109,28 +994,18 @@
           "kind": "entity"
         },
         {
-          "id": "1c7f9536bb2f98f89a606b6d",
-          "label": "industrial trans fats",
-          "kind": "phrase"
-        },
-        {
-          "id": "63263a7ddba0372479b3fcce",
-          "label": "tighter controls",
-          "kind": "phrase"
-        },
-        {
           "id": "9a91873bb240f533c48e183e",
           "label": "food shelf",
           "kind": "phrase"
         },
         {
-          "id": "5e2db4f63a87b63ce1f66144",
-          "label": "health advocates",
+          "id": "1c7f9536bb2f98f89a606b6d",
+          "label": "industrial trans fats",
           "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "ef638520212cb7a15a4ac441",
@@ -1163,6 +1038,11 @@
           "kind": "entity"
         },
         {
+          "id": "68015b9eb15dd9740d12df42",
+          "label": "equitable access",
+          "kind": "phrase"
+        },
+        {
           "id": "58a27ce0c28137e76bbe091e",
           "label": "reciprocal trade agreements",
           "kind": "phrase"
@@ -1171,15 +1051,10 @@
           "id": "3f4d653fe53ebf633911f491",
           "label": "controversial reciprocal trade",
           "kind": "phrase"
-        },
-        {
-          "id": "94b73aa7b128256baeef6760",
-          "label": "signatory countries",
-          "kind": "phrase"
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     },
     {
       "id": "f65cdc66f5d69dc565d39a10",
@@ -1202,18 +1077,13 @@
           "kind": "entity"
         },
         {
-          "id": "bb42d59bd48e59543dff1b19",
-          "label": "Subsea cables",
-          "kind": "phrase"
-        },
-        {
           "id": "0f6a0d9791bbe0a5509b86a1",
           "label": "oil pipelines",
           "kind": "phrase"
         },
         {
-          "id": "c2910dedbf00ffe7b37bd6eb",
-          "label": "economic policy",
+          "id": "bb42d59bd48e59543dff1b19",
+          "label": "Subsea cables",
           "kind": "phrase"
         },
         {
@@ -1223,7 +1093,7 @@
         }
       ],
       "extracted": true,
-      "extraction_version": "00a09a9237054fdaf5f28883"
+      "extraction_version": "058e314fff94521a11f86f9d"
     }
   ],
   "windows": [
@@ -2232,17 +2102,6 @@
           "article_count": 1
         },
         {
-          "id": "c2910dedbf00ffe7b37bd6eb",
-          "label": "economic policy",
-          "kind": "phrase",
-          "article_ids": [
-            "f65cdc66f5d69dc565d39a10"
-          ],
-          "first_seen_at": "2026-10-09T06:15:45Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "5a15c540d1d45498eceeed3d",
           "label": "oil infrastructure",
           "kind": "phrase",
@@ -2347,8 +2206,8 @@
           "article_count": 1
         },
         {
-          "id": "58a27ce0c28137e76bbe091e",
-          "label": "reciprocal trade agreements",
+          "id": "68015b9eb15dd9740d12df42",
+          "label": "equitable access",
           "kind": "phrase",
           "article_ids": [
             "ef638520212cb7a15a4ac441"
@@ -2358,8 +2217,8 @@
           "article_count": 1
         },
         {
-          "id": "94b73aa7b128256baeef6760",
-          "label": "signatory countries",
+          "id": "58a27ce0c28137e76bbe091e",
+          "label": "reciprocal trade agreements",
           "kind": "phrase",
           "article_ids": [
             "ef638520212cb7a15a4ac441"
@@ -2418,30 +2277,8 @@
           "article_count": 1
         },
         {
-          "id": "5e2db4f63a87b63ce1f66144",
-          "label": "health advocates",
-          "kind": "phrase",
-          "article_ids": [
-            "644c27b2e94d4cd5f26b2fbf"
-          ],
-          "first_seen_at": "2026-10-10T04:00:43Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "1c7f9536bb2f98f89a606b6d",
           "label": "industrial trans fats",
-          "kind": "phrase",
-          "article_ids": [
-            "644c27b2e94d4cd5f26b2fbf"
-          ],
-          "first_seen_at": "2026-10-10T04:00:43Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "63263a7ddba0372479b3fcce",
-          "label": "tighter controls",
           "kind": "phrase",
           "article_ids": [
             "644c27b2e94d4cd5f26b2fbf"
@@ -2617,28 +2454,6 @@
           "first_seen_at": "2026-10-12T06:39:35Z",
           "source_count": 1,
           "article_count": 1
-        },
-        {
-          "id": "fd13a9f3f76ac08f968047e7",
-          "label": "excessive recruitment costs",
-          "kind": "phrase",
-          "article_ids": [
-            "b984172d44b771b3db88faa0"
-          ],
-          "first_seen_at": "2026-10-12T06:39:35Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "b20a60fbda7fea9768186266",
-          "label": "government-level agreements",
-          "kind": "phrase",
-          "article_ids": [
-            "b984172d44b771b3db88faa0"
-          ],
-          "first_seen_at": "2026-10-12T06:39:35Z",
-          "source_count": 1,
-          "article_count": 1
         }
       ]
     },
@@ -2698,52 +2513,8 @@
           "article_count": 1
         },
         {
-          "id": "ffecd4d81a29fa98c01ab684",
-          "label": "accountable leadership",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "a8051583858ae79c3bc43324",
           "label": "Gadaa system",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "dfc5fecb83f04c5648c6733a",
-          "label": "inclusive governance",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "708f4983374d9f2caa55d0ad",
-          "label": "peaceful power transitions",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "4492edfeaee5e2dfc45181cd",
-          "label": "traditional democratic practices",
           "kind": "phrase",
           "article_ids": [
             "76e91e0519bd630bda11f254"
@@ -2907,17 +2678,6 @@
           "first_seen_at": "2026-10-13T18:21:20Z",
           "source_count": 1,
           "article_count": 1
-        },
-        {
-          "id": "12bb8a33890e0a4f27c5802f",
-          "label": "transparency complicate efforts",
-          "kind": "phrase",
-          "article_ids": [
-            "b9d574832716476b943379fc"
-          ],
-          "first_seen_at": "2026-10-13T18:21:20Z",
-          "source_count": 1,
-          "article_count": 1
         }
       ]
     },
@@ -2950,28 +2710,6 @@
           "id": "92150179d1b63ac8803c6c30",
           "label": "Kyrgyzstan",
           "kind": "entity",
-          "article_ids": [
-            "1897bd24c7bedbd259e65d19"
-          ],
-          "first_seen_at": "2026-10-14T04:00:02Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "c7b3e9a39005bb1f28c14498",
-          "label": "Lived experience",
-          "kind": "phrase",
-          "article_ids": [
-            "1897bd24c7bedbd259e65d19"
-          ],
-          "first_seen_at": "2026-10-14T04:00:02Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "c7478da3330918ad01005844",
-          "label": "physical barriers",
-          "kind": "phrase",
           "article_ids": [
             "1897bd24c7bedbd259e65d19"
           ],
@@ -3021,17 +2759,6 @@
           "id": "1d43cfed6bbe6dd9919678de",
           "label": "Norway",
           "kind": "entity",
-          "article_ids": [
-            "6943d5d57f3140c875f27808"
-          ],
-          "first_seen_at": "2026-10-14T18:22:53Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "180e0598e834b5e2c8205a3d",
-          "label": "dangerous divestment",
-          "kind": "phrase",
           "article_ids": [
             "6943d5d57f3140c875f27808"
           ],
@@ -3091,28 +2818,6 @@
         {
           "id": "c228dcf978f1caf3f136eddf",
           "label": "authoritarian states",
-          "kind": "phrase",
-          "article_ids": [
-            "a55dd26de6b4df95cb09c7cf"
-          ],
-          "first_seen_at": "2026-10-15T04:00:07Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "1f8206700627b1041f1a563d",
-          "label": "international exchange",
-          "kind": "phrase",
-          "article_ids": [
-            "a55dd26de6b4df95cb09c7cf"
-          ],
-          "first_seen_at": "2026-10-15T04:00:07Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "ed7ba5efd6a96cb2f7efb6f5",
-          "label": "international market",
           "kind": "phrase",
           "article_ids": [
             "a55dd26de6b4df95cb09c7cf"
@@ -3414,17 +3119,6 @@
           "article_count": 1
         },
         {
-          "id": "7209e06fd782a2811abd41f4",
-          "label": "Coast High-definition images",
-          "kind": "phrase",
-          "article_ids": [
-            "afeda75bd8f1fc1088f1f53f"
-          ],
-          "first_seen_at": "2026-10-16T04:00:00Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "77accc3b7092c728e68ee086",
           "label": "Florida Panhandle",
           "kind": "phrase",
@@ -3465,6 +3159,17 @@
             "afeda75bd8f1fc1088f1f53f"
           ],
           "first_seen_at": "2026-10-16T04:00:00Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "65a90dc0b5cab6016c353f00",
+          "label": "school pupils",
+          "kind": "phrase",
+          "article_ids": [
+            "7844c786a05d4c1a035bd596"
+          ],
+          "first_seen_at": "2026-10-16T05:03:29Z",
           "source_count": 1,
           "article_count": 1
         }
@@ -3579,28 +3284,6 @@
           "article_count": 1
         },
         {
-          "id": "5f13272d07beeffb419cabe5",
-          "label": "constellation Columba",
-          "kind": "phrase",
-          "article_ids": [
-            "378b9bf06bbdf04e67dbef70"
-          ],
-          "first_seen_at": "2026-10-16T12:42:08Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "5115790f9377355147b20fbe",
-          "label": "core stage",
-          "kind": "phrase",
-          "article_ids": [
-            "162b5cc99c941289236e975f"
-          ],
-          "first_seen_at": "2026-10-16T14:24:29Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "ff647412a1dd63a642c67692",
           "label": "extremist network",
           "kind": "phrase",
@@ -3645,13 +3328,24 @@
           "article_count": 1
         },
         {
-          "id": "873ca1bdcc7e7d1076555a30",
-          "label": "prostate cancer exams",
+          "id": "4c2348bea568bf66307a4bc0",
+          "label": "Space Launch System",
           "kind": "phrase",
           "article_ids": [
-            "3ae2f675a8dcbfe74a139051"
+            "162b5cc99c941289236e975f"
           ],
-          "first_seen_at": "2026-10-16T13:10:39Z",
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "34ddadb731e0e58844b456bc",
+          "label": "Space Telescope image",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
           "source_count": 1,
           "article_count": 1
         }
@@ -3843,6 +3537,17 @@
           "article_count": 1
         },
         {
+          "id": "b138026a0bb6c2d862856311",
+          "label": "Cash director",
+          "kind": "phrase",
+          "article_ids": [
+            "eceee082141a79e64959abc6"
+          ],
+          "first_seen_at": "2026-10-16T20:14:39Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
           "id": "abbb443fee70cb93193cd9e8",
           "label": "Flight Center Director",
           "kind": "phrase",
@@ -3936,30 +3641,8 @@
           "article_count": 1
         },
         {
-          "id": "712b689bd664422b5385f227",
-          "label": "Far-right activists",
-          "kind": "phrase",
-          "article_ids": [
-            "f4e33bf364f8bb271ecd22b9"
-          ],
-          "first_seen_at": "2026-10-17T08:07:27Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "9b49f4f9f50717e651e6a578",
           "label": "global coalition",
-          "kind": "phrase",
-          "article_ids": [
-            "f4e33bf364f8bb271ecd22b9"
-          ],
-          "first_seen_at": "2026-10-17T08:07:27Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "f11f3e27d91c376ca7a704f0",
-          "label": "reproductive rights Far-right",
           "kind": "phrase",
           "article_ids": [
             "f4e33bf364f8bb271ecd22b9"
@@ -4193,13 +3876,13 @@
           "article_count": 1
         },
         {
-          "id": "712b689bd664422b5385f227",
-          "label": "Far-right activists",
+          "id": "b138026a0bb6c2d862856311",
+          "label": "Cash director",
           "kind": "phrase",
           "article_ids": [
-            "f4e33bf364f8bb271ecd22b9"
+            "eceee082141a79e64959abc6"
           ],
-          "first_seen_at": "2026-10-17T08:07:27Z",
+          "first_seen_at": "2026-10-16T20:14:39Z",
           "source_count": 1,
           "article_count": 1
         },
@@ -4244,17 +3927,6 @@
             "6ab9fd69f0dd2799f0589a3c"
           ],
           "first_seen_at": "2026-10-16T16:28:01Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "f11f3e27d91c376ca7a704f0",
-          "label": "reproductive rights Far-right",
-          "kind": "phrase",
-          "article_ids": [
-            "f4e33bf364f8bb271ecd22b9"
-          ],
-          "first_seen_at": "2026-10-17T08:07:27Z",
           "source_count": 1,
           "article_count": 1
         }
@@ -4578,39 +4250,6 @@
           "article_count": 1
         },
         {
-          "id": "7209e06fd782a2811abd41f4",
-          "label": "Coast High-definition images",
-          "kind": "phrase",
-          "article_ids": [
-            "afeda75bd8f1fc1088f1f53f"
-          ],
-          "first_seen_at": "2026-10-16T04:00:00Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "5f13272d07beeffb419cabe5",
-          "label": "constellation Columba",
-          "kind": "phrase",
-          "article_ids": [
-            "378b9bf06bbdf04e67dbef70"
-          ],
-          "first_seen_at": "2026-10-16T12:42:08Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "5115790f9377355147b20fbe",
-          "label": "core stage",
-          "kind": "phrase",
-          "article_ids": [
-            "162b5cc99c941289236e975f"
-          ],
-          "first_seen_at": "2026-10-16T14:24:29Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "ff647412a1dd63a642c67692",
           "label": "extremist network",
           "kind": "phrase",
@@ -4699,13 +4338,35 @@
           "article_count": 1
         },
         {
-          "id": "873ca1bdcc7e7d1076555a30",
-          "label": "prostate cancer exams",
+          "id": "65a90dc0b5cab6016c353f00",
+          "label": "school pupils",
           "kind": "phrase",
           "article_ids": [
-            "3ae2f675a8dcbfe74a139051"
+            "7844c786a05d4c1a035bd596"
           ],
-          "first_seen_at": "2026-10-16T13:10:39Z",
+          "first_seen_at": "2026-10-16T05:03:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "4c2348bea568bf66307a4bc0",
+          "label": "Space Launch System",
+          "kind": "phrase",
+          "article_ids": [
+            "162b5cc99c941289236e975f"
+          ],
+          "first_seen_at": "2026-10-16T14:24:29Z",
+          "source_count": 1,
+          "article_count": 1
+        },
+        {
+          "id": "34ddadb731e0e58844b456bc",
+          "label": "Space Telescope image",
+          "kind": "phrase",
+          "article_ids": [
+            "378b9bf06bbdf04e67dbef70"
+          ],
+          "first_seen_at": "2026-10-16T12:42:08Z",
           "source_count": 1,
           "article_count": 1
         }
@@ -4740,39 +4401,6 @@
         {
           "id": "c228dcf978f1caf3f136eddf",
           "label": "authoritarian states",
-          "kind": "phrase",
-          "article_ids": [
-            "a55dd26de6b4df95cb09c7cf"
-          ],
-          "first_seen_at": "2026-10-15T04:00:07Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "180e0598e834b5e2c8205a3d",
-          "label": "dangerous divestment",
-          "kind": "phrase",
-          "article_ids": [
-            "6943d5d57f3140c875f27808"
-          ],
-          "first_seen_at": "2026-10-14T18:22:53Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "1f8206700627b1041f1a563d",
-          "label": "international exchange",
-          "kind": "phrase",
-          "article_ids": [
-            "a55dd26de6b4df95cb09c7cf"
-          ],
-          "first_seen_at": "2026-10-15T04:00:07Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "ed7ba5efd6a96cb2f7efb6f5",
-          "label": "international market",
           "kind": "phrase",
           "article_ids": [
             "a55dd26de6b4df95cb09c7cf"
@@ -4865,41 +4493,8 @@
           "article_count": 1
         },
         {
-          "id": "c7b3e9a39005bb1f28c14498",
-          "label": "Lived experience",
-          "kind": "phrase",
-          "article_ids": [
-            "1897bd24c7bedbd259e65d19"
-          ],
-          "first_seen_at": "2026-10-14T04:00:02Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "c7478da3330918ad01005844",
-          "label": "physical barriers",
-          "kind": "phrase",
-          "article_ids": [
-            "1897bd24c7bedbd259e65d19"
-          ],
-          "first_seen_at": "2026-10-14T04:00:02Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "d2a0341c80faf06565d4bb00",
           "label": "reconstruction plan",
-          "kind": "phrase",
-          "article_ids": [
-            "b9d574832716476b943379fc"
-          ],
-          "first_seen_at": "2026-10-13T18:21:20Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "12bb8a33890e0a4f27c5802f",
-          "label": "transparency complicate efforts",
           "kind": "phrase",
           "article_ids": [
             "b9d574832716476b943379fc"
@@ -4970,17 +4565,6 @@
           "article_count": 1
         },
         {
-          "id": "ffecd4d81a29fa98c01ab684",
-          "label": "accountable leadership",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "c2181e865e0ffbd84b3c439d",
           "label": "creole language",
           "kind": "phrase",
@@ -5003,28 +4587,6 @@
           "article_count": 1
         },
         {
-          "id": "dfc5fecb83f04c5648c6733a",
-          "label": "inclusive governance",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "708f4983374d9f2caa55d0ad",
-          "label": "peaceful power transitions",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "213b8631a24070339bce00f6",
           "label": "Poetry book",
           "kind": "phrase",
@@ -5032,17 +4594,6 @@
             "397736d78b90b03efcdf1195"
           ],
           "first_seen_at": "2026-10-13T07:48:55Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "4492edfeaee5e2dfc45181cd",
-          "label": "traditional democratic practices",
-          "kind": "phrase",
-          "article_ids": [
-            "76e91e0519bd630bda11f254"
-          ],
-          "first_seen_at": "2026-10-12T20:34:34Z",
           "source_count": 1,
           "article_count": 1
         }
@@ -5097,17 +4648,6 @@
           "article_count": 1
         },
         {
-          "id": "fd13a9f3f76ac08f968047e7",
-          "label": "excessive recruitment costs",
-          "kind": "phrase",
-          "article_ids": [
-            "b984172d44b771b3db88faa0"
-          ],
-          "first_seen_at": "2026-10-12T06:39:35Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
           "id": "bfef02ee45007ba2c10728a2",
           "label": "free speech",
           "kind": "phrase",
@@ -5115,17 +4655,6 @@
             "972c38354d7da322cc1db140"
           ],
           "first_seen_at": "2026-10-11T18:00:47Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "b20a60fbda7fea9768186266",
-          "label": "government-level agreements",
-          "kind": "phrase",
-          "article_ids": [
-            "b984172d44b771b3db88faa0"
-          ],
-          "first_seen_at": "2026-10-12T06:39:35Z",
           "source_count": 1,
           "article_count": 1
         },
@@ -5207,19 +4736,19 @@
           "article_count": 1
         },
         {
-          "id": "9a91873bb240f533c48e183e",
-          "label": "food shelf",
+          "id": "68015b9eb15dd9740d12df42",
+          "label": "equitable access",
           "kind": "phrase",
           "article_ids": [
-            "644c27b2e94d4cd5f26b2fbf"
+            "ef638520212cb7a15a4ac441"
           ],
-          "first_seen_at": "2026-10-10T04:00:43Z",
+          "first_seen_at": "2026-10-09T19:22:38Z",
           "source_count": 1,
           "article_count": 1
         },
         {
-          "id": "5e2db4f63a87b63ce1f66144",
-          "label": "health advocates",
+          "id": "9a91873bb240f533c48e183e",
+          "label": "food shelf",
           "kind": "phrase",
           "article_ids": [
             "644c27b2e94d4cd5f26b2fbf"
@@ -5249,28 +4778,6 @@
           "first_seen_at": "2026-10-09T19:22:38Z",
           "source_count": 1,
           "article_count": 1
-        },
-        {
-          "id": "94b73aa7b128256baeef6760",
-          "label": "signatory countries",
-          "kind": "phrase",
-          "article_ids": [
-            "ef638520212cb7a15a4ac441"
-          ],
-          "first_seen_at": "2026-10-09T19:22:38Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "63263a7ddba0372479b3fcce",
-          "label": "tighter controls",
-          "kind": "phrase",
-          "article_ids": [
-            "644c27b2e94d4cd5f26b2fbf"
-          ],
-          "first_seen_at": "2026-10-10T04:00:43Z",
-          "source_count": 1,
-          "article_count": 1
         }
       ],
       "article_count": 2
@@ -5282,17 +4789,6 @@
           "id": "32e83e92d45d71f69dcf9d21",
           "label": "AI",
           "kind": "entity",
-          "article_ids": [
-            "f65cdc66f5d69dc565d39a10"
-          ],
-          "first_seen_at": "2026-10-09T06:15:45Z",
-          "source_count": 1,
-          "article_count": 1
-        },
-        {
-          "id": "c2910dedbf00ffe7b37bd6eb",
-          "label": "economic policy",
-          "kind": "phrase",
           "article_ids": [
             "f65cdc66f5d69dc565d39a10"
           ],
