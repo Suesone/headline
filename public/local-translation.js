@@ -2,7 +2,7 @@
 (function (root) {
   'use strict';
   const isLoopback = hostname => ['localhost', '127.0.0.1', '[::1]', '::1'].includes(hostname);
-  const isCloudHost = location => location?.hostname === 'infinitas.top' && location.protocol === 'https:';
+  const isCloudHost = location => location?.hostname === 'headline.infinitas.top' && location.protocol === 'https:';
   function splitText(text, size = 1800) {
     if (typeof text !== 'string' || text.length > 60000) throw new Error('每次最多翻译 60,000 个字符。');
     if (!Number.isInteger(size) || size < 100) throw new Error('Invalid chunk size');

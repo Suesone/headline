@@ -6,15 +6,15 @@ import {generateKeyPair,exportJWK,SignJWT} from '../cloudflare/node_modules/jose
 import {createHandler,verifyAccess} from '../cloudflare/worker.mjs';
 function environment(){
  const db=new DatabaseSync(':memory:');db.exec(readFileSync(new URL('../cloudflare/schema.sql',import.meta.url),'utf8'));
- return {PUBLIC_HOST:'infinitas.top',ACCESS_ISSUER:'https://headline-test.cloudflareaccess.com',ACCESS_AUD:'test-audience',ALLOWED_EMAIL:'owner@example.com',GEMINI_API_KEY:'fake-key-not-real',FREE_TIER_CONFIRMED:'true',DAILY_REQUEST_LIMIT:'2',RATE_LIMITER:{limit:async()=>({success:true})},BUDGET:{prepare(sql){return {bind(...args){return {async run(){return {meta:{changes:Number(db.prepare(sql).run(...args).changes)}};}};}};}}};
+ return {PUBLIC_HOST:'headline.infinitas.top',ACCESS_ISSUER:'https://headline-test.cloudflareaccess.com',ACCESS_AUD:'test-audience',ALLOWED_EMAIL:'owner@example.com',GEMINI_API_KEY:'fake-key-not-real',FREE_TIER_CONFIRMED:'true',DAILY_REQUEST_LIMIT:'2',RATE_LIMITER:{limit:async()=>({success:true})},BUDGET:{prepare(sql){return {bind(...args){return {async run(){return {meta:{changes:Number(db.prepare(sql).run(...args).changes)}};}};}};}}};
 }
-const request=(text='Headline',options={})=>new Request('https://infinitas.top/api/cloud/translate',{method:'POST',headers:{Origin:'https://infinitas.top','Content-Type':'application/json','X-Headline-Cloud':'1',...options.headers},body:JSON.stringify({text}),...options});
+const request=(text='Headline',options={})=>new Request('https://headline.infinitas.top/api/cloud/translate',{method:'POST',headers:{Origin:'https://headline.infinitas.top','Content-Type':'application/json','X-Headline-Cloud':'1',...options.headers},body:JSON.stringify({text}),...options});
 const authenticate=async()=>({sub:'owner'});
 test('Access JWT cryptographically validates signature, issuer, audience, expiration and allowed email',async()=>{
  const env=environment(); const {privateKey,publicKey}=await generateKeyPair('RS256');const key=await exportJWK(publicKey);key.kid='headline-key';
  const original=globalThis.fetch;globalThis.fetch=async()=>Response.json({keys:[key]});
  const sign=async(overrides={})=>new SignJWT({email:env.ALLOWED_EMAIL,...overrides}).setProtectedHeader({alg:'RS256',kid:key.kid}).setIssuedAt().setIssuer(overrides.iss||env.ACCESS_ISSUER).setAudience(overrides.aud||env.ACCESS_AUD).setSubject('owner').setExpirationTime(overrides.exp||'5m').sign(privateKey);
- const verify=token=>verifyAccess(new Request('https://infinitas.top/api/cloud/status',{headers:{'Cf-Access-Jwt-Assertion':token}}),env);
+ const verify=token=>verifyAccess(new Request('https://headline.infinitas.top/api/cloud/status',{headers:{'Cf-Access-Jwt-Assertion':token}}),env);
  try {
   assert.equal((await verify(await sign())).email,env.ALLOWED_EMAIL);
   for(const overrides of [{email:'other@example.com'},{aud:'wrong'},{iss:'https://evil.example'},{exp:1}]) await assert.rejects(()=>sign(overrides).then(verify));
@@ -28,9 +28,9 @@ test('missing configuration and unauthenticated requests never invoke Google',as
 });
 test('public assets never forward credentials and unknown paths cannot proxy arbitrary URLs',async()=>{
  const calls=[];const handler=createHandler({fetcher:async(...args)=>{calls.push(args);return new Response('public');}});const env=environment();
- assert.equal((await handler(new Request('https://infinitas.top/',{headers:{Cookie:'secret','Cf-Access-Jwt-Assertion':'private'}}),env)).status,200);
+ assert.equal((await handler(new Request('https://headline.infinitas.top/',{headers:{Cookie:'secret','Cf-Access-Jwt-Assertion':'private'}}),env)).status,200);
  assert.equal(calls[0][0],'https://suesone.github.io/headline/');assert.deepEqual(calls[0][1].headers,{Accept:'*/*'});
- assert.equal((await handler(new Request('https://infinitas.top/private'),env)).status,404);assert.equal(calls.length,1);
+ assert.equal((await handler(new Request('https://headline.infinitas.top/private'),env)).status,404);assert.equal(calls.length,1);
 });
 test('origin checks, payload limit, rate limiter and atomic daily budget guard the Gemini secret',async()=>{
  const env=environment();let calls=0;

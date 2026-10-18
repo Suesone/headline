@@ -1,10 +1,10 @@
-# infinitas.top：公开新闻，私有翻译
+# headline.infinitas.top：公开新闻，私有翻译
 
-状态：源码已准备；必须完成 Cloudflare 登录、核查现有 DNS、配置 Access、D1 与 Secrets 后才能上线。未配置时 API 拒绝所有翻译调用。不要将此文当作已经部署的证明。
+状态：子域名网页使用 GitHub Pages；Cloudflare 翻译网关源码已准备，仍须配置 Access、D1 与 Secrets 后才能启用。未配置时不允许翻译调用。域名可访问不代表云端翻译已启用。
 
 ## 结构与数据
 
-`https://infinitas.top/` → Cloudflare Worker → GitHub Pages 上的公开英文新闻。
+`https://headline.infinitas.top/` → CNAME `suesone.github.io` → GitHub Pages 上的公开英文新闻。GitHub Pages 自定义域名及 `public/CNAME` 均设置为 `headline.infinitas.top`。初期 DNS only 以便 GitHub 签发证书，后续启用 Cloudflare API 路由时切换为代理，并保持 Full (strict) TLS。
 
 `/api/cloud/*` → Cloudflare Access 登录保护 → Worker 验证 JWT 签名、issuer、audience、有效期与唯一获准邮箱 → Gemini。
 
@@ -14,13 +14,13 @@
 
 ## 一次性配置（仅 Free 计划）
 
-1. Cloudflare 选择 `infinitas.top`，核查根域名当前 A/AAAA/CNAME、Worker route。若已有网站，先确认替换用途或改用专门子域名；不要删除 MX/TXT 邮件或验证记录。本版只允许根域名，改子域名还须同步修改前端允许域名与 Worker 配置。
-2. Zero Trust → Access → Applications → 添加 Self-hosted 应用，域名 `infinitas.top`，路径 `/api/cloud/*`。Allow 策略仅 Include 你指定的邮箱，不选 Everyone，不添加 Bypass。登录方式可用邮箱一次性验证码。仅在确认免费计划后继续；如果出现购买或计费要求，停止。记录 team domain（`https://你的团队.cloudflareaccess.com`）和应用 AUD。
+1. Cloudflare 选择区域 `infinitas.top`，只检查和修改 `headline` 子域名。子域名及其他子域名保留。本版仅允许 `headline.infinitas.top`。
+2. Zero Trust → Access → Applications → 添加 Self-hosted 应用，域名 `headline.infinitas.top`，路径 `/api/cloud/*`。Allow 策略仅 Include 你指定的邮箱，不选 Everyone，不添加 Bypass。登录方式可用邮箱一次性验证码。仅在确认免费计划后继续；如果出现购买或计费要求，停止。记录 team domain（`https://你的团队.cloudflareaccess.com`）和应用 AUD。
 3. 在终端进入 `cloudflare` 目录。安装依赖 `npm ci --ignore-scripts`。通过官方 Wrangler 登录 `npx wrangler@4 login`，在浏览器核对授权范围，由账号主人完成授权。
 4. 创建免费 D1：`npx wrangler@4 d1 create headline-budget`。将返回的 database_id 填入 `wrangler.jsonc` 的 `d1_databases`，binding 为 `BUDGET`，database_name 为 `headline-budget`。不要把 API Token 填入配置。
 5. `npx wrangler@4 d1 execute headline-budget --remote --file schema.sql` 建表。配置 vars 的 ACCESS_ISSUER、ACCESS_AUD。确认 Gemini 项目 Free Tier 且未关联计费后才将 FREE_TIER_CONFIRMED 改为字符串 `true`；程序无法凭 Key 验证 Google 账单状态。
 6. 用 `npx wrangler@4 secret put GEMINI_API_KEY` 在私有交互提示输入 Gemini Key。用 `npx wrangler@4 secret put ALLOWED_EMAIL` 输入唯一获准邮箱。不把值放命令行参数中。
-7. 确认 Access 已覆盖 `/api/cloud/*` 后，启用配置中的 routes：`[{"pattern":"infinitas.top","custom_domain":true}]`，再 `npm run deploy`。如果已有冲突 DNS，先核查并由域名主人确认替换对应网站记录。Custom Domain 由 Cloudflare 管理 DNS 与 TLS，不需要另给 GitHub Pages 设置相同根域名。
+7. 确认 Access 已覆盖 `/api/cloud/*` 后，确认 GitHub Pages 的 HTTPS 证书正常，将 headline CNAME 切换为 Cloudflare 代理，并保持 Full (strict) TLS；启用配置中的 routes：`[{"pattern":"headline.infinitas.top/api/cloud/*","zone_name":"infinitas.top"}]`，再 `npm run deploy`。仅 API 路径交给 Worker，新闻页面仍由 GitHub Pages 提供。不要将同一子域名再设为 Worker Custom Domain，也不要修改其他解析记录。
 8. 保持 workers_dev=false、preview_urls=false、observability.enabled=false；不要开启正文或完整 headers 日志。部署后检查没有其他可绕过登录的路由。JWT 验证本身也会拒绝未获准调用。
 
 ## 必须完成的上线验证

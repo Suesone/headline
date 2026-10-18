@@ -8,7 +8,7 @@ const json = (status, body) => new Response(JSON.stringify(body), {status, heade
   'X-Content-Type-Options': 'nosniff', 'Referrer-Policy': 'no-referrer'
 }});
 function configuration(env) {
-  return env.PUBLIC_HOST === 'infinitas.top' && /^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.ACCESS_ISSUER || '') &&
+  return env.PUBLIC_HOST === 'headline.infinitas.top' && /^https:\/\/[a-z0-9-]+\.cloudflareaccess\.com$/.test(env.ACCESS_ISSUER || '') &&
     Boolean(env.ACCESS_AUD && env.ALLOWED_EMAIL && env.GEMINI_API_KEY && env.BUDGET && env.RATE_LIMITER) && env.FREE_TIER_CONFIRMED === 'true';
 }
 export async function verifyAccess(request, env) {
