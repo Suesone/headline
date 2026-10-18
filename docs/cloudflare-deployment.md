@@ -15,7 +15,7 @@
 ## Google 登录设置
 
 1. Google Cloud Console → 选择 Headline News → Google Auth Platform。设置应用名称 Headline News，支持邮箱与联系邮箱为账号主人；选择 External，测试阶段仅添加你的邮箱。只使用登录所需的 openid、email、profile，不申请 Gmail、Drive 或其他权限。
-2. 创建 Web application 类型的 OAuth 客户端，名称 Headline Web；Authorized JavaScript origins 仅填 `https://headline.infinitas.top`。采用 Google Identity Services 按钮和 JS callback，不需要填写 redirect URI。
+2. 创建 Web application 类型的 OAuth 客户端，名称 Headline Web；Authorized JavaScript origins 仅填 `https://headline.infinitas.top`。采用 Google Identity Services 整页跳转登录；Authorized redirect URIs 填 `https://headline.infinitas.top/api/cloud/google/callback`。回调校验 Google 双提交 CSRF token 后签发会话，不依赖弹窗。
 3. 复制公开 Client ID（以 `.apps.googleusercontent.com` 结尾）到 `cloudflare/wrangler.jsonc` 的 `GOOGLE_CLIENT_ID`。不要复制或存储客户端 secret。
 4. 如需主页及隐私链接，使用 `https://headline.infinitas.top/` 与 `https://headline.infinitas.top/privacy.html`，Authorized domain 填 `infinitas.top`。
 

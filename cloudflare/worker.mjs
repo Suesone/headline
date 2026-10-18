@@ -12,14 +12,15 @@ function trustedPost(request,url) {
   return request.method === 'POST' && request.headers.get('Origin') === url.origin && request.headers.get('X-Headline-Cloud') === '1' &&
     request.headers.get('Content-Type')?.split(';')[0] === 'application/json';
 }
-async function limitedJson(request,maxBytes) {
+async function limitedText(request,maxBytes) {
   if (Number(request.headers.get('Content-Length')) > maxBytes) throw new Error('Too large');
   const reader=request.body?.getReader(); if(!reader) throw new Error('Missing body');
   let size=0;const chunks=[];
   while(true){const part=await reader.read();if(part.done)break;size+=part.value.length;if(size>maxBytes){await reader.cancel();throw new Error('Too large');}chunks.push(part.value);}
   const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}
-  return JSON.parse(new TextDecoder().decode(bytes));
+  return new TextDecoder().decode(bytes);
 }
+async function limitedJson(request,maxBytes) {return JSON.parse(await limitedText(request,maxBytes));}
 export async function reserveBudget(env, now = new Date()) {
   const day = new Date(now.getTime() + 8 * 3600000).toISOString().slice(0,10);
   // D1 atomically reserves quota BEFORE Gemini is called. Concurrent devices share this counter.
@@ -41,6 +42,21 @@ export function createHandler({authenticate = verifySession, verifyGoogle = veri
     if (!authReady(env)) return json(503,{message:'Google 登录尚未配置，已禁止调用'});
     if (url.pathname === '/api/cloud/config' && request.method === 'GET') return json(200,{client_id:env.GOOGLE_CLIENT_ID});
     if (url.pathname === '/api/cloud/login' && request.method === 'GET') return Response.redirect(url.origin + '/login.html',303);
+    if (url.pathname === '/api/cloud/google/callback') {
+      // GIS redirect mode uses double-submit CSRF tokens instead of the JSON API header.
+      if(request.method!=='POST' || request.headers.get('Content-Type')?.split(';')[0]!=='application/x-www-form-urlencoded' ||
+        ![url.origin,'https://accounts.google.com'].includes(request.headers.get('Origin'))) return json(403,{message:'登录回调来源无效'});
+      try {
+        const rate=await env.LOGIN_RATE_LIMITER.limit({key:request.headers.get('Cf-Connecting-IP') || 'unknown'});
+        if(!rate.success) return json(429,{message:'登录过于频繁，请稍后重试'});
+        const form=new URLSearchParams(await limitedText(request,16000));
+        const cookies=(request.headers.get('Cookie')||'').split(';').map(item=>item.trim()).filter(item=>item.startsWith('g_csrf_token='));
+        const csrf=form.get('g_csrf_token');
+        if(!csrf || form.getAll('g_csrf_token').length!==1 || form.getAll('credential').length!==1 || cookies.length!==1 || cookies[0].slice('g_csrf_token='.length)!==csrf) return json(403,{message:'登录校验已过期，请返回登录页重试'});
+        const identity=await verifyGoogle(form.get('credential'),env);
+        return new Response(null,{status:303,headers:{Location:url.origin+'/#local-tools','Cache-Control':'no-store','Set-Cookie':sessionCookie(await issueSession(identity,env))}});
+      } catch {return json(401,{message:'Google 登录验证失败或此账号未获准'});}
+    }
     if (url.pathname === '/api/cloud/session') {
       if (!trustedPost(request,url)) return json(403,{message:'请求来源校验失败'});
       try {

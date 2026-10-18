@@ -43,6 +43,15 @@ test('missing configuration and unauthenticated requests never invoke Google',as
  assert.equal((await handler(request(),{...env,SESSION_SECRET:''})).status,503);
  assert.equal((await handler(request(),env)).status,401);assert.equal(calls,0);
 });
+test('redirect login requires matching CSRF cookie, allowed origin and valid Google identity',async()=>{
+ const env=environment();let verified=0;
+ const handler=createHandler({verifyGoogle:async()=>{verified++;return {sub:'owner',email:env.ALLOWED_EMAIL};},fetcher:()=>assert.fail('No Gemini during login')});
+ const callback=(body='credential=token&g_csrf_token=random',cookie='g_csrf_token=random',origin='https://accounts.google.com')=>new Request('https://headline.infinitas.top/api/cloud/google/callback',{method:'POST',headers:{Origin:origin,Cookie:cookie,'Content-Type':'application/x-www-form-urlencoded'},body});
+ for(const req of [callback(undefined,''),callback(undefined,'g_csrf_token=wrong'),callback(undefined,undefined,'https://evil.example'),callback('credential=token&g_csrf_token=random&g_csrf_token=random')]) assert.equal((await handler(req,env)).status,403);
+ assert.equal(verified,0);
+ const response=await handler(callback(),env);assert.equal(response.status,303);assert.equal(response.headers.get('Location'),'https://headline.infinitas.top/#local-tools');assert.match(response.headers.get('Set-Cookie'),/HttpOnly; Secure; SameSite=Strict/);assert.equal(verified,1);
+ const invalid=createHandler({verifyGoogle:async()=>{throw Error('invalid identity');}});assert.equal((await invalid(callback(),env)).status,401);
+});
 test('Worker never proxies public pages or unknown routes',async()=>{
  const handler=createHandler({fetcher:()=>assert.fail('No public proxy')});const env=environment();
  for(const path of ['/','/private','/api/other']) assert.equal((await handler(new Request('https://headline.infinitas.top'+path),env)).status,404);
