@@ -7,6 +7,16 @@ on:
     - cron: '17 */2 * * *'
     - cron: '37 */2 * * *'
   workflow_dispatch:
+    inputs:
+      trigger_source:
+        description: '触发来源；手动运行保留 manual'
+        type: choice
+        options: [manual, cloudflare-watchdog]
+        default: manual
+      requested_slot:
+        description: 'Cloudflare 请求的时段；手动运行留空'
+        type: string
+        required: false
   push:
     branches: [main]
     paths-ignore: ['README.md', 'docs/**']
@@ -34,6 +44,7 @@ jobs:
         env:
           TRIGGER_EVENT: ${{ github.event_name }}
           TRIGGER_SCHEDULE: ${{ github.event.schedule }}
+          TRIGGER_SOURCE: ${{ inputs.trigger_source }}
         run: python3 -m scripts.schedule_guard
   update:
     needs: schedule-check
@@ -41,6 +52,8 @@ jobs:
     env:
       HEADLINE_TRIGGER_EVENT: ${{ github.event_name }}
       HEADLINE_TRIGGER_SCHEDULE: ${{ github.event.schedule }}
+      HEADLINE_TRIGGER_SOURCE: ${{ inputs.trigger_source }}
+      HEADLINE_REQUESTED_SLOT: ${{ inputs.requested_slot }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

@@ -9,10 +9,10 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <title>Headline · 国际新闻榜</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=schedule-recovery-1">
-  <script src="./ranking.js?v=schedule-recovery-1" defer></script>
-  <script src="./local-translation.js?v=schedule-recovery-1" defer></script>
-  <script src="./app.js?v=schedule-recovery-1" defer></script>
+  <link rel="stylesheet" href="./style.css?v=independent-watchdog-1">
+  <script src="./ranking.js?v=independent-watchdog-1" defer></script>
+  <script src="./local-translation.js?v=independent-watchdog-1" defer></script>
+  <script src="./app.js?v=independent-watchdog-1" defer></script>
 </head>
 <body>
   <header class="masthead"><div class="header-inner">
@@ -24,6 +24,7 @@
     <section class="intro"><div><div class="eyebrow">THE WORLD, IN HEADLINES</div><h1>国际新闻榜</h1><p class="intro-copy">先看榜中榜，再读你关心的头条。</p></div><div class="schedule"><span class="small-label">北京时间 · 每日十二次</span><p>00:00 起，每隔 2 小时更新</p></div></section>
     <section class="source-shortcuts" aria-label="快速选择新闻来源"><div id="source-shortcuts" class="shortcut-list"></div></section>
     <div id="run-status" class="run-status" role="status" aria-live="polite">正在读取英文新闻…</div>
+    <p id="watchdog-status" class="watchdog-status" role="status"></p>
     <section class="toolbar" aria-label="阅读筛选"><div class="toolbar-fields"><label>时段<select id="window-select" aria-label="阅读时段" disabled><option>正在加载…</option></select></label><label>来源<select id="source-select" aria-label="新闻来源" disabled><option value="all">全部来源</option></select></label></div><a class="local-pill" href="#local-tools"><span class="local-dot"></span> 译文由本机管理</a></section>
     <section id="board" class="board-section" aria-labelledby="board-heading"><div class="section-heading"><div class="heading-group"><span class="section-icon">榜</span><div><h2 id="board-heading">榜中榜</h2><p>汇集各源前列报道，先读值得关注的新闻。</p></div></div><span id="board-count" class="count-label"></span></div><div id="board-list" class="board-list" aria-live="polite"><p class="empty-state">正在整理榜单…</p></div><details class="ranking-note"><summary>榜单如何排序？</summary><p>从各源前 5 条候选中，按订阅顺序与报道新鲜度综合推荐；完全相同的标题合并。同一媒体的不同频道不重复加分。不使用热词或 AI 分析，不代表媒体官方热门榜、阅读量或全网热度。</p><p>榜中榜最多 10 条，全部使用大号黑体；各来源前 3 条使用大号黑体。各源更新节奏不同。</p></details></section>
     <section id="briefing" aria-labelledby="news-heading"><div class="section-heading"><div class="heading-group"><span class="section-icon subtle">源</span><div><h2 id="news-heading">来源榜单</h2><p id="period-caption"></p></div></div><span id="article-count" class="count-label"></span></div><div id="news-list" class="news-grid" aria-live="polite"></div></section>

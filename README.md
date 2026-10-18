@@ -95,3 +95,7 @@ node --test tests/*.test.cjs
 整点主 cron 保持 `0 */2 * * *`；备用为 `17 */2 * * *`、`37 */2 * * *`。备用任务仅检查生产站点；本两小时时段已有成功发布则跳过采集与部署，检查失败时允许补抓，避免把服务器无法读取误判为无需更新。与整点任务共用串行锁，避免并发发布。所有时刻均对应北京时间的偶数小时。
 
 GitHub 不保证 cron 准点或必达；三个检查仍由同一平台调度，不能构成独立可用性保证。当前时段过去 45 分钟仍无更新时，网页会明确提示调度可能延迟。`[skip ci]` 只跳过 push/PR，不影响 schedule。[GitHub 官方调度说明](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+
+### 独立于 GitHub cron 的兜底
+
+Cloudflare `headline-schedule-watchdog` 每个偶数小时 02、12、32、52 分检查最新发布回执；缺失时触发 GitHub 更新，防止只增加同平台 cron 仍一起漏跑。已有成功发布或任务执行时跳过；原子计数限制每时段最多 4 次、间隔至少 10 分钟。网页公开显示兜底状态。专用 GitHub Actions Secret 配置完成前保持关闭；完整配置、范围和验证方式见 [独立调度说明](docs/independent-scheduler.md)。

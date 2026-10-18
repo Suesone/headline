@@ -1,0 +1,14 @@
+{
+  "name": "headline-schedule-watchdog",
+  "main": "worker.mjs",
+  "account_id": "8880c572ebb4dc754a21561b44c02b97",
+  "compatibility_date": "2026-10-18",
+  "workers_dev": false,
+  "preview_urls": false,
+  "observability": {"enabled": false},
+  "routes": [{"pattern": "headline.infinitas.top/api/watchdog/*", "zone_name": "infinitas.top"}],
+  "triggers": {"crons": ["2,12,32,52 */2 * * *"]},
+  "vars": {"PUBLIC_HOST": "headline.infinitas.top", "WATCHDOG_ENABLED": "false"},
+  "d1_databases": [{"binding":"WATCHDOG_DB","database_name":"headline-budget","database_id":"f2bf70e0-03ef-4a33-b5e0-45fe125e6baa"}]
+  // GITHUB_ACTIONS_TOKEN: dedicated fine-grained token; only headline / Actions: write.
+}

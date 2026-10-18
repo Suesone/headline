@@ -33,3 +33,5 @@ dialog { width:min(760px,calc(100% - 28px));max-height:90vh;overflow:auto;border
 .article-actions .article-fulltext { margin-left:auto;white-space:nowrap; }
 .article-actions .text-button:hover { color:var(--accent);border-color:var(--accent); }
 @media(max-width:720px) { .article-actions .text-button { min-height:40px;font-size:14px; } }
+
+.watchdog-status { font-size:11px;color:#7b8593;margin:-8px 0 12px; }.watchdog-status.warning { color:#a86d25; }

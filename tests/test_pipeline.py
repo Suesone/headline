@@ -331,6 +331,10 @@ def test_current_collection_disables_nlp_cloud_and_published_translations(monkey
     assert all(w['topics'] == [] for w in d['windows'])
     assert all(day['topics'] == [] for day in d['days'])
     assert d['ai']['status'] == 'on_demand'
+    receipt = c.read_json(root / 'public/data/status.json')
+    assert receipt['generated_at'] == d['generated_at'] and receipt['status'] == d['status']
+    assert 'articles' not in receipt and len(json.dumps(receipt)) < 32000
+    assert all('title' not in source for source in receipt['sources'])
     assert 'test-secret' not in (root / 'public/data/news.json').read_text()
 
 

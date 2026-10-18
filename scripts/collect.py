@@ -311,6 +311,14 @@ def run_metadata(now):
     if schedule not in {'0 */2 * * *', '17 */2 * * *', '37 */2 * * *'}:
         schedule = ''
     metadata = {'event': event, 'schedule': schedule, 'slot': window_id(now)}
+    if event == 'workflow_dispatch' and os.getenv('HEADLINE_TRIGGER_SOURCE') == 'cloudflare-watchdog':
+        metadata['source'] = 'cloudflare-watchdog'
+        requested = os.getenv('HEADLINE_REQUESTED_SLOT', '')
+        try:
+            if abs((now - dt(requested)).total_seconds()) <= 86400:
+                metadata['requested_slot'] = iso(dt(requested))
+        except (ValueError, TypeError):
+            pass
     repository, run_id = os.getenv('GITHUB_REPOSITORY', ''), os.getenv('GITHUB_RUN_ID', '')
     if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository) and run_id.isdigit():
         metadata['run_url'] = f'https://github.com/{repository}/actions/runs/{run_id}'
@@ -404,6 +412,12 @@ def run(now, output, state_path):
         article.pop('extracted', None)
         article.pop('extraction_version', None)
     write_json(output, published)
+    # Small published receipt for the independent watchdog (no article text or secrets).
+    write_json(output.with_name('status.json'), {
+        'generated_at': data['generated_at'], 'status': data['status'],
+        'last_success_at': data['last_success_at'], 'trigger': data['trigger'],
+        'sources': [{k: source.get(k) for k in ('id', 'status', 'received')} for source in data['sources']],
+    })
     print(f"RSS: {data['status']}; {len(data['articles'])} articles; AI: {data['ai']['status']}")
     return data
 

@@ -35,18 +35,20 @@ def needs_update(now, event, schedule, published=None):
 def main():
     now = datetime.now(timezone.utc)
     event, schedule = os.getenv('TRIGGER_EVENT', ''), os.getenv('TRIGGER_SCHEDULE', '')
+    external = event == 'workflow_dispatch' and os.getenv('TRIGGER_SOURCE') == 'cloudflare-watchdog'
+    effective_event, effective_schedule = ('schedule', '17 */2 * * *') if external else (event, schedule)
     published = None
-    if event == 'schedule' and schedule in BACKUPS:
+    if effective_event == 'schedule' and effective_schedule in BACKUPS:
         try:
-            url = 'https://headline.infinitas.top/data/news.json?check=' + str(int(now.timestamp()))
+            url = 'https://headline.infinitas.top/data/status.json?check=' + str(int(now.timestamp()))
             request = Request(url, headers={'User-Agent': 'Headline schedule recovery', 'Cache-Control': 'no-cache'})
             with urlopen(request, timeout=15) as response:
-                raw = response.read(3_000_001)
-            if len(raw) <= 3_000_000:
+                raw = response.read(32_001)
+            if len(raw) <= 32_000:
                 published = json.loads(raw)
         except Exception:
             pass  # Fail open: a failed check must never suppress recovery.
-    update, reason = needs_update(now, event, schedule, published)
+    update, reason = needs_update(now, effective_event, effective_schedule, published)
     output = os.getenv('GITHUB_OUTPUT')
     if output:
         with Path(output).open('a') as handle:

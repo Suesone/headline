@@ -2,6 +2,11 @@
   "name": "headline-private-gateway",
   "private": true,
   "type": "module",
-  "scripts": {"test": "node --test ../tests/cloud-gateway.test.mjs", "deploy": "npx wrangler@4 deploy"},
-  "dependencies": {"jose": "^6.0.0"}
+  "scripts": {
+    "test": "node --test ../tests/cloud-gateway.test.mjs ../tests/watchdog.test.mjs",
+    "deploy": "npx wrangler@4 deploy"
+  },
+  "dependencies": {
+    "jose": "^6.0.0"
+  }
 }

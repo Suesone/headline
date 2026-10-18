@@ -49,7 +49,7 @@ def test_guard_checks_published_site_and_skips_duplicate_without_reading_repo_st
     monkeypatch.setattr(guard, 'urlopen', response)
     guard.main()
     assert output.read_text() == 'should_update=false\n'
-    assert seen[0].startswith('https://headline.infinitas.top/data/news.json?check=')
+    assert seen[0].startswith('https://headline.infinitas.top/data/status.json?check=')
     assert '跳过重复抓取' in summary.read_text()
 
 
@@ -70,3 +70,27 @@ def test_run_metadata_distinguishes_automatic_from_manual_and_links_workflow(mon
                     'run_url':'https://github.com/Suesone/headline/actions/runs/123'}
     monkeypatch.setenv('HEADLINE_TRIGGER_EVENT','workflow_dispatch')
     assert collect.run_metadata(NOW)['schedule'] == ''
+
+
+def test_cloudflare_dispatch_rechecks_receipt_to_prevent_a_duplicate_run(monkeypatch, tmp_path):
+    import json
+    from datetime import datetime, timezone
+    from io import BytesIO
+    monkeypatch.setenv('TRIGGER_EVENT', 'workflow_dispatch')
+    monkeypatch.setenv('TRIGGER_SOURCE', 'cloudflare-watchdog')
+    monkeypatch.setenv('GITHUB_OUTPUT', str(tmp_path/'output'))
+    monkeypatch.delenv('GITHUB_STEP_SUMMARY', raising=False)
+    monkeypatch.setattr(guard, 'urlopen', lambda *a, **k: BytesIO(json.dumps(published(datetime.now(timezone.utc).isoformat())).encode()))
+    guard.main()
+    assert (tmp_path/'output').read_text() == 'should_update=false\n'
+
+
+def test_cloudflare_metadata_records_the_requested_slot_but_rejects_arbitrary_input(monkeypatch):
+    monkeypatch.setenv('HEADLINE_TRIGGER_EVENT','workflow_dispatch')
+    monkeypatch.setenv('HEADLINE_TRIGGER_SOURCE','cloudflare-watchdog')
+    monkeypatch.setenv('HEADLINE_REQUESTED_SLOT','2026-10-18T14:00:00.000Z')
+    metadata = collect.run_metadata(NOW)
+    assert metadata['source'] == 'cloudflare-watchdog'
+    assert metadata['requested_slot'] == '2026-10-18T14:00:00Z'
+    monkeypatch.setenv('HEADLINE_REQUESTED_SLOT','untrusted arbitrary input')
+    assert 'requested_slot' not in collect.run_metadata(NOW)

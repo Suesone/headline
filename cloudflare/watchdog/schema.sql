@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS watchdog_health (
+  id INTEGER PRIMARY KEY CHECK (id = 1),
+  payload TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS watchdog_attempts (
+  slot INTEGER PRIMARY KEY,
+  attempts INTEGER NOT NULL DEFAULT 0,
+  last_attempt INTEGER NOT NULL DEFAULT 0
+);

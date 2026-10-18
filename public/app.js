@@ -231,7 +231,7 @@ function renderStatus() {
   const outdated = missedSlot || Date.now() - Date.parse(data.generated_at) > 3 * 3600000;
   $('run-status').textContent = `${ok}/${enabled.length} 个订阅流读取成功 · 实际更新时间 ${format(data.generated_at)}${outdated ? ' · 本时段尚未更新，调度可能延迟' : ''}${data.status==='error' ? ' · 本次失败，保留旧新闻' : data.status==='partial' ? ' · 部分来源读取失败，保留旧记录' : ''}`;
   const trigger = data.trigger || {};
-  const triggerLabel = trigger.event === 'schedule' ? (trigger.schedule === '0 */2 * * *' ? '整点定时' : '定时补抓') : ({workflow_dispatch:'手动更新',push:'代码发布',local:'本机更新'}[trigger.event]);
+  const triggerLabel = trigger.event === 'schedule' ? (trigger.schedule === '0 */2 * * *' ? '整点定时' : '定时补抓') : trigger.event === 'workflow_dispatch' && trigger.source === 'cloudflare-watchdog' ? 'Cloudflare 补抓' : ({workflow_dispatch:'手动更新',push:'代码发布',local:'本机更新'}[trigger.event]);
   if (triggerLabel) $('run-status').append(document.createTextNode(' · 触发：' + triggerLabel));
   if (trigger.run_url && /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/actions\/runs\/\d+$/.test(trigger.run_url)) {
     $('run-status').append(document.createTextNode(' · '),link('查看运行 ↗',trigger.run_url));
@@ -246,8 +246,21 @@ function renderStatus() {
     row.append(link('使用条件 ↗',s.license_url || s.terms_url)); $('sources-list').append(row);
   }
 }
+async function loadWatchdogStatus() {
+  const node = $('watchdog-status');
+  if (!HeadlineLocal.isCloudHost(location)) { node.hidden = true; return; }
+  try {
+    const response = await fetch('/api/watchdog/status',{cache:'no-store',credentials:'omit',signal:AbortSignal.timeout(6000)});
+    if (!response.ok) throw new Error();
+    const status = await response.json();
+    const heartbeatMissing = status.enabled && (!status.last_checked_at || Date.now() - Date.parse(status.last_checked_at) > 135 * 60000);
+    node.textContent = '独立定时兜底：' + (heartbeatMissing ? '尚未取得近期检查记录' : status.message || '暂不可用') + (status.last_checked_at ? ' · 上次检查 ' + format(status.last_checked_at) : '') + (status.enabled && status.next_check_at ? ' · 下次检查 ' + format(status.next_check_at) : '');
+    node.classList.toggle('warning',!status.enabled || heartbeatMissing || ['credentials','github_unavailable','unavailable','capped'].includes(status.last_result));
+  } catch { node.textContent = '独立定时兜底：暂时无法读取状态；新闻更新状态见上方。'; }
+}
 async function load() {
   initTranslation();
+  loadWatchdogStatus();
   try {
     const response = await fetch('./data/news.json',{cache:'no-cache'}); if (!response.ok) throw new Error('Data unavailable');
     data = await response.json(); if (data.schema_version !== 1 || !Array.isArray(data.articles)) throw new Error('Invalid data');
