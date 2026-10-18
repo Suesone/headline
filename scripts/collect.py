@@ -56,13 +56,29 @@ def plain(value, limit=600):
 
 
 def apply_source_policy(article, source):
-    article['analysis_allowed'] = source.get('mode') != 'links_only'
+    default = source.get('mode') not in {'links_only', 'read_only'}
+    article['analysis_allowed'] = source.get('topics_enabled', default)
+    article['ai_allowed'] = source.get('ai_enabled', default)
+    article['topics_title_only'] = source.get('topics_title_only', False)
     article['time_basis'] = source.get('time_basis', 'publication')
-    if not article['analysis_allowed']:
+    if source.get('mode') == 'links_only':
         article['summary'] = ''
+    if not article['analysis_allowed']:
         article['topics'] = []
+        article.pop('extraction_version', None)
+    if not article['ai_allowed']:
         article.pop('title_zh', None)
     return article
+
+
+def author_allowed(article, source):
+    """Conservative gate for feeds mixing original and agency material."""
+    allowed = source.get('allowed_authors')
+    if allowed is not None and article.get('author', '') not in allowed:
+        return False
+    credit = '\n'.join(article.get(k, '') for k in ('author', 'title', 'summary'))
+    return not any(re.search(r'\b' + re.escape(word) + r'\b', credit, re.I)
+                   for word in source.get('exclude_credit_patterns', []))
 
 
 def canonical_url(value):
@@ -124,13 +140,17 @@ def parse_feed(content, source, now):
             if allowed and not any(host == domain or host.endswith('.' + domain) for domain in allowed):
                 raise ValueError('Article URL outside configured publisher')
             identity = source['id'] + ':' + str(entry.get('id') or url)
-            articles.append(apply_source_policy({
+            article = apply_source_policy({
                 'id': digest(identity), 'identities': [identity], 'source_id': source['id'],
                 'publisher': source.get('publisher', source['name']), 'title': title, 'url': url,
                 'summary': plain(entry.get('summary')), 'author': plain(entry.get('author', ''), 160),
                 'published_at': iso(published), 'first_seen_at': iso(now), 'window_id': window_id(published),
                 'topics': [],
-            }, source))
+            }, source)
+            if not author_allowed(article, source):
+                skipped += 1
+                continue
+            articles.append(article)
         except (ValueError, TypeError, OverflowError):
             skipped += 1
     return articles, skipped
@@ -183,6 +203,7 @@ def merge_articles(previous, incoming, cutoff):
                 match['topics'] = []
                 match.pop('title_zh', None)
                 match.pop('extracted', None)
+                match.pop('extraction_version', None)
         else:
             merged.append(article)
     return sorted(merged, key=lambda a: (a['published_at'], a['id']), reverse=True)
@@ -203,7 +224,7 @@ class TopicExtractor:
         return self.aliases.get(name.casefold(), name)
 
     def extract(self, article):
-        text = article['title'] + '.\n' + article['summary']
+        text = article['title'] + '.\n' + ('' if article.get('topics_title_only') else article['summary'])
         terms = {}
         doc = self.nlp(text)
         noun_phrases = [self.normalize(chunk.text).casefold() for chunk in doc.noun_chunks if '\n' not in chunk.text]
@@ -299,13 +320,14 @@ def run(now, output, state_path, enable_ai=True):
         results = list(executor.map(lambda s: fetch_source(s, now), sources))
     incoming = [a for articles, _ in results for a in articles]
     allowed = {s['id'] for s in sources if s.get('enabled')}
-    old = [a for a in previous.get('articles', []) if a['source_id'] in allowed]
-    articles = merge_articles(old, incoming, cutoff)
     source_map = {s['id']: s for s in sources}
+    old = [a for a in previous.get('articles', []) if a['source_id'] in allowed
+           and author_allowed(a, source_map[a['source_id']])]
+    articles = merge_articles(old, incoming, cutoff)
     for article in articles:
         apply_source_policy(article, source_map[article['source_id']])
     aliases = read_json(ROOT / 'config/aliases.json')
-    extraction_version = digest('topics-v4:' + json.dumps(aliases, sort_keys=True))
+    extraction_version = digest('topics-v5:' + json.dumps(aliases, sort_keys=True) + json.dumps([(s['id'], s.get('topics_title_only', False)) for s in sources]))
     pending = [a for a in articles if a.get('analysis_allowed', True) and a.get('extraction_version') != extraction_version]
     if pending:
         extractor = TopicExtractor(aliases)

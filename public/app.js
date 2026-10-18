@@ -3,15 +3,16 @@ const $ = (id) => document.getElementById(id);
 let data, activeTopic = null;
 function sourceTileClass(source) {
   if (source.id === 'all') return 'tile-all';
-  if (source.id === 'global-voices') return 'tile-global-voices';
-  if (source.id === 'nasa') return 'tile-nasa';
+  if (source.publisher === 'NPR') return 'tile-npr';
+  if (source.publisher === 'CNBC') return 'tile-cnbc';
+  if (source.publisher === 'VOA') return 'tile-voa';
   if (source.id === 'reuters-community') return 'tile-reuters';
   if (source.id.startsWith('bbc')) return 'tile-bbc';
   if (source.id.startsWith('guardian')) return 'tile-guardian';
   return 'tile-generic';
 }
 function sourceInitials(source) {
-  return ({all: '榜', 'global-voices': 'GV', nasa: 'NASA', 'reuters-community': 'R', wikinews: 'W'})[source.id] || (source.publisher === 'BBC' ? 'BBC' : source.name.slice(0, 2).toUpperCase());
+  return ({all: '榜', 'reuters-community': 'R'})[source.id] || source.publisher;
 }
 function renderShortcuts() {
   const list = $('source-shortcuts'); list.replaceChildren();
@@ -23,7 +24,7 @@ function renderShortcuts() {
     button.type = 'button';
     button.setAttribute('aria-pressed', String(source.id === $('source-select').value));
     button.setAttribute('aria-label', source.enabled ? source.name : source.name + ' 未启用，查看原因');
-    button.append(el('span', sourceInitials(source), 'source-tile ' + sourceTileClass(source)), el('span', source.id === 'all' ? source.name : source.publisher), el('span', source.enabled ? (source.id === 'all' ? '新闻总览' : source.relay_name ? '社区 RSS' : '英文资讯') : '未启用 · 查看原因', 'shortcut-subtitle'));
+    button.append(el('span', sourceInitials(source), 'source-tile ' + sourceTileClass(source)), el('span', source.id === 'all' ? source.name : source.publisher), el('span', source.enabled ? (source.id === 'all' ? '新闻总览' : source.ai_enabled ? '热词 · 可选 AI' : source.topics_enabled ? '阅读 · 热词' : '英文阅读') : '未启用 · 查看原因', 'shortcut-subtitle'));
     if (!source.enabled) button.title = source.note;
     button.addEventListener('click', () => {
       if (!source.enabled) { $('source-details').open = true; $('source-details').scrollIntoView({behavior:'smooth', block:'start'}); return; }
@@ -61,10 +62,11 @@ function topicPanel(topic, rank, daily = false) {
 }
 function renderTopics() {
   const current = selectedWindow() || data.windows.find(w => w.id === data.latest_window_id);
-  $('realtime-caption').textContent = current ? `${format(current.start)} — ${format(current.end)} · 点击话题查看报道` : '人物、地点与事件，点击展开相关报道。';
+  const eligible = current ? data.articles.filter(a => current.article_ids.includes(a.id) && a.analysis_allowed !== false).length : 0;
+  $('realtime-caption').textContent = current ? `${format(current.start)} — ${format(current.end)} · ${eligible} 篇报道参与统计 · 点击话题查看报道` : '人物、地点与事件，点击展开相关报道。';
   const realtime = $('window-topics'); realtime.replaceChildren();
   if (!current) realtime.append(el('p', '选择一个四小时时段查看话题。', 'panel-description'));
-  else if (!current.topics.length) realtime.append(el('p', '本时段暂无可提炼的话题。', 'panel-description'));
+  else if (!current.topics.length) realtime.append(el('p', current.article_ids.length && !eligible ? '本时段的报道来自仅供阅读的来源，未纳入热词。可切换较早时段查看。' : '本时段暂无可提炼的话题。', 'panel-description'));
   else current.topics.forEach((topic, i) => realtime.append(topicPanel(topic, i)));
   const day = data.days.find(d => d.date === $('day-select').value);
   const daily = $('day-topics'); daily.replaceChildren();
@@ -113,14 +115,14 @@ function renderNews() {
       const sourceInfo = data.sources.find(s => s.id === article.source_id);
       q('.article-index').textContent = String(index + 1);
       q('.article-time').textContent = (article.time_basis === 'feed_publication' ? '订阅日期 ' : '') + format(article.published_at);
-      q('.article-topic-count').textContent = article.analysis_allowed === false ? '社区 RSS · 原文链接' : `${article.topics.length} 个关联话题`;
+      q('.article-topic-count').textContent = article.analysis_allowed === false ? '仅供阅读' : `${article.topics.length} 个关联话题`;
       if (article.analysis_allowed === false) q('.article-details summary').textContent = '来源与链接';
       q('.article-link').textContent = article.title;
       const url = safeUrl(article.url);
       if (url) { q('.article-link').href = url; q('.original-link').href = url; }
       q('.article-summary').textContent = article.summary;
       if (!article.summary) q('.article-summary').hidden = true;
-      if (bilingual && article.analysis_allowed !== false) { q('.article-translation').hidden = false; q('.article-translation').textContent = article.title_zh ? article.title_zh + ' · AI 译文' : '本条暂未生成译文'; }
+      if (bilingual) { q('.article-translation').hidden = false; q('.article-translation').textContent = article.ai_allowed === false ? '此来源未启用 AI 翻译' : article.title_zh ? article.title_zh + ' · AI 译文' : '本条暂未生成译文'; }
       for (const topic of article.topics.slice(0, 3)) {
         const button = el('button', topic.label, 'article-tag'); button.type = 'button';
         button.addEventListener('click', () => {
@@ -134,7 +136,7 @@ function renderNews() {
       cardList.append(node);
     });
     const footer = el('div', undefined, 'source-card-footer');
-    footer.append(el('span', group.source.relay_name ? `${group.source.relay_name} 社区 RSS · 按订阅日期排列` : '按报道关联话题与时间排列'), link('来源网站 ↗', group.source.homepage));
+    footer.append(el('span', group.source.relay_name ? `${group.source.relay_name} 社区 RSS · 按订阅日期排列` : group.source.community_name ? '社区目录收录 · 官方 RSS' : '官方 RSS · 英文报道'), link(group.source.publisher === 'BBC' ? 'BBC News ↗' : '来源网站 ↗', group.source.homepage));
     card.append(footer); list.append(card);
   }
 }
@@ -147,6 +149,8 @@ function renderSources() {
     row.append(el('p', source.message || source.note));
     if (source.status === 'ok' && source.note) row.append(el('p', source.note));
     if (source.last_success_at) row.append(el('p', `上次成功：${format(source.last_success_at)}`));
+    if (source.enabled) row.append(el('p', `热词：${source.topics_enabled ? '参与' : '不参与'} · AI：${source.ai_enabled ? '可选（需配置免费密钥）' : '不参与'}`));
+    if (source.community_url) row.append(link(source.community_name + ' ↗', source.community_url), document.createTextNode(' · '));
     row.append(link('来源网站 ↗', source.homepage), link(source.relay_name ? '社区项目 ↗' : '使用条件 ↗', source.terms_url)); list.append(row);
   }
   $('ai-status').textContent = `AI 状态：${data.ai.message}`;

@@ -11,18 +11,26 @@
 
 ## 当前来源与限制
 
-首批候选 BBC World、BBC Business、Guardian World **都能读取 RSS**，但本项目自动分析/AI 的使用条件尚未满足，默认禁用。BBC 允许有条件的个人 RSS 展示，可与分析功能分开评估。详细接口、RSSHub 与 Google News 实测见 [大新闻源接入研究](docs/news-sources.md)。
+已移除测试阶段的 Global Voices、NASA、Wikinews。当前来源：
 
-已启用 **Reuters · 社区 RSS**（[Feedseek](https://github.com/trvny/feedseek) 维护，100 条标题链接实测；不参与 AI 或热词统计，详见 [社区 RSS 采用说明](docs/community-rss.md)）、**Global Voices**（国际公民媒体，CC BY 3.0）和 **NASA**（官方科学资讯，遵循 NASA 使用指引）。Global Voices 和 NASA 不是 AP 的替代通讯社，发布频率较低，部分四小时时段为空是正常情况。Wikinews 候选订阅实测 404，默认禁用。后续可在拿到合适许可后加入更多主流来源。
+| 来源 | 阅读 | 热词 | AI |
+| --- | --- | --- | --- |
+| Reuters（Feedseek 社区转发） | 是 | 否 | 否 |
+| BBC World / Business（社区目录收录的官方 RSS） | 是 | 否 | 否 |
+| NPR News（社区目录收录的官方 RSS） | 是 | 标题实体与短语统计 | 否 |
+| CNBC International（社区目录收录的官方 RSS） | 是 | 否 | 否 |
+| VOA 英文 China / Asia、Korean Peninsula 原创频道 | 是 | 是 | 可选，尚需免费密钥 |
+| AFP 法新社 | 暂未启用 | 否 | 否 |
 
-每条新闻保留作者（若订阅提供）、来源、原文链接与许可；只用 RSS 标题和短摘要。没有全文抓取、图片下载或付费墙绕过。
+“社区维护”包括社区整理的官方订阅目录和社区转发两种，页面分别标注。官方源可用时直接读取官方地址，避免增加公共转发服务器故障。社区维护不改变新闻内容的使用条件。
 
-依据（实施时核查）：
+BBC 限制计算分析；NPR 的 Content Feeds 条款明确限制翻译，标题实体计数作为本站统计显示，不改变原文；CNBC 当前 Versant 条款限制翻译和内容再利用。它们没有被宣称为获得 AI 许可的来源。VOA 只收录已核验原创署名，不收录已知 Reuters/AP/AFP 转载，未知署名也跳过；多个 VOA 频道在热词统计中仍只算一个媒体。VOA 周末更新较少。
 
-- [BBC 使用条件](https://www.bbc.com/usingthebbc/terms-of-use/)
-- [Guardian 条款第 3 节](https://www.theguardian.com/help/terms-of-service)
-- [Global Voices 许可声明](https://globalvoices.org/about/)
-- [NASA 使用指引](https://www.nasa.gov/nasa-brand-center/images-and-media/)
+AFP 公开 Fact Check RSS 候选实测 403，也不等同于综合新闻。官方 API 提供试用，未验证到可长期零费用运行的综合新闻订阅，暂时禁用。没有把 France 24 当作 AFP 直属新闻源。
+
+详细依据、实测与边界见 [主流来源说明](docs/major-news-sources.md)。历史研究保留在 [接入研究](docs/news-sources.md) 和 [社区 RSS 说明](docs/community-rss.md)，当前采用情况以本节及 sources.json 为准。
+
+每条新闻保留署名（若订阅提供）、来源与原文链接。只使用 RSS 标题和短摘要，没有全文抓取、图片下载或付费墙绕过。
 
 ## 本地运行
 
@@ -54,11 +62,13 @@ python -m http.server 8765 --directory public
 
 ### 修改新闻源
 
-编辑 `config/sources.json`。新增一项，设置唯一 `id`、名称、媒体主体 `publisher`、RSS `url`、来源主页、许可链接、条款链接和说明；确认允许公开显示、分析、翻译后，再把 `enabled` 设为 `true`。不要提交需登录的订阅链接或带私人令牌的 URL。
+编辑 `config/sources.json`。新增一项，设置唯一 `id`、名称、媒体主体 `publisher`、RSS `url`、来源主页、许可链接、条款链接和说明；分别检查阅读、统计与 AI 使用条件，再设置 `enabled`、`topics_enabled`、`ai_enabled`。不要提交需登录的订阅链接或带私人令牌的 URL。
 
 `mode: links_only` 用于只展示标题与原文链接的来源，自动排除摘要、热词和 AI；`relay_name`、`relay_url` 标记社区维护者；`allowed_link_domains` 限制链接域名；`max_feed_age_hours` 可检测陈旧订阅。
 
-`publisher` 应使用真实媒体主体：同一媒体多个频道只算一个独立来源。可用 `exclude_title_prefixes` 忽略固定前缀；NASA 默认过滤 APOD 页面索引噪声。
+`mode: read_only` 保留 RSS 阅读内容，默认关闭热词与 AI；`topics_enabled` 和 `ai_enabled` 可以独立设置。`community_name` / `community_url` 记录订阅目录，`relay_name` / `relay_url` 专指转发。VOA 的 `allowed_authors` 是保守的原创署名白名单；新增记者需先核查，`exclude_credit_patterns` 过滤第三方稿件信用标记。
+
+`publisher` 应使用真实媒体主体：同一媒体多个频道只算一个独立来源。可用 `exclude_title_prefixes` 忽略固定前缀。
 
 编辑 `config/aliases.json` 可以合并话题别名，例如 US、U.S. → United States。不确定的同名人物不要直接合并。热词由模型与统计工具提取，可能误判；点击查看原报道再判断。
 
@@ -72,7 +82,7 @@ python -m http.server 8765 --directory public
 4. 在 `config/settings.json` 中，将 `ai.free_plan_confirmed` 改为 `true`。默认模型是 `@cf/qwen/qwen3-30b-a3b-fp8`，`ai.enabled` 可以随时关闭。
 5. 手动运行更新。查看页面底部 AI 状态；额度不足、账户检查失败或模型失效时暂停新增 AI。
 
-每次最多翻译 40 个当前时段标题，并解释前 10 个话题。页面的中英开关只显示已有缓存，不发起 API 调用。AI 只接收公开标题、短摘要和话题，不接收个人信息。
+每次最多翻译 40 个当前时段标题，并解释前 10 个话题。页面的中英开关只显示已有缓存，不发起 API 调用。AI 只接收配置允许的原创新闻标题、短摘要和话题，不接收个人信息。
 
 更换密钥：在 Secrets 中更新 `CF_API_TOKEN`，然后手动运行；不要把密钥写进源码、网页或公开 Issues。免费额度以账户为单位，其他项目也会消耗额度。程序在调用前核查 Workers 订阅并拒绝付费/试用计划；免费账户被升级或政策变化后，应先关闭 `ai.enabled`。AI 文字仍可能有误，引用链接不能自动证明每一句话正确。
 

@@ -248,3 +248,60 @@ def test_stale_community_feed_is_not_reported_as_healthy(monkeypatch):
     entries, status = c.fetch_source({**SOURCES[0], 'max_feed_age_hours': 36}, NOW)
     assert entries == [] and status['status'] == 'error'
     assert '36' in status['message']
+
+
+def test_read_only_display_and_topic_ai_controls_are_independent():
+    item = article()
+    c.apply_source_policy(item, {'mode': 'read_only', 'topics_enabled': True, 'ai_enabled': False})
+    assert item['summary'] and item['topics']
+    assert item['analysis_allowed'] and not item['ai_allowed']
+    item['title_zh'] = 'old translation'
+    c.apply_source_policy(item, {'mode': 'read_only'})
+    assert item['summary'] and not item['topics'] and 'title_zh' not in item
+    assert 'extraction_version' not in item
+
+
+def test_original_author_gate_rejects_agencies_and_unknown_authors():
+    source = {'allowed_authors': ['VOA Reporter'], 'exclude_credit_patterns': ['Reuters', 'Associated Press', 'AFP']}
+    item = article(); item['author'] = 'VOA Reporter'
+    assert c.author_allowed(item, source)
+    item['summary'] = 'Reporting by Reuters'
+    assert not c.author_allowed(item, source)
+    item['summary'] = ''; item['author'] = 'Unknown Reporter'
+    assert not c.author_allowed(item, source)
+
+
+def test_mixed_topic_never_leaks_read_only_news_to_ai(monkeypatch, tmp_path):
+    ai_env(monkeypatch)
+    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
+    read_only, allowed = article(), article('two', 'b')
+    read_only['ai_allowed'] = False
+    calls = []
+    def generate(account, token, model, task, payload):
+        calls.append(task)
+        if task == 'translation':
+            assert [a['id'] for a in payload] == ['two']
+            return {'translations': [{'id': 'two', 'text': '测试'}]}
+        assert all([a['id'] for a in t['articles']] == ['two'] for t in payload)
+        return {'contexts': [{'id': TERM['id'], 'text': '不应保留', 'article_ids': ['one']}]}
+    monkeypatch.setattr(ai, 'generate', generate)
+    d = dataset([read_only, allowed]); ai.enrich(d, ai_settings(), tmp_path / 'cache.json', NOW)
+    assert calls == ['translation', 'context']
+    assert 'title_zh' not in d['articles'][0]
+    assert all('context_zh' not in t for w in d['windows'] for t in w['topics'])
+
+
+def test_topic_only_source_never_calls_ai_even_for_context(monkeypatch, tmp_path):
+    ai_env(monkeypatch)
+    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
+    monkeypatch.setattr(ai, 'generate', lambda *a: pytest.fail('Topic-only content cannot enter AI'))
+    item = article(); item['ai_allowed'] = False
+    ai.enrich(dataset([item]), ai_settings(), tmp_path / 'cache.json', NOW)
+
+
+def test_revised_rss_content_invalidates_extraction_version():
+    old = article(); old['extraction_version'] = 'current-model'
+    updated = deepcopy(old); updated['summary'] = 'A revised report about Korea.'
+    merged = c.merge_articles([old], [updated], NOW - timedelta(days=30))
+    assert len(merged) == 1 and merged[0]['id'] == old['id']
+    assert 'extraction_version' not in merged[0] and merged[0]['topics'] == []

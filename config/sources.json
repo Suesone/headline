@@ -20,55 +20,26 @@
     "max_feed_age_hours": 36
   },
   {
-    "id": "global-voices",
-    "name": "Global Voices",
-    "publisher": "Global Voices",
-    "url": "https://globalvoices.org/feed/",
-    "homepage": "https://globalvoices.org/",
-    "enabled": true,
-    "license": "CC BY 3.0",
-    "license_url": "https://creativecommons.org/licenses/by/3.0/",
-    "terms_url": "https://globalvoices.org/about/",
-    "note": "国际公民媒体；保留作者、来源、原文和许可，AI 译文单独标记。"
-  },
-  {
-    "id": "nasa",
-    "name": "NASA",
-    "publisher": "NASA",
-    "url": "https://www.nasa.gov/feed/",
-    "homepage": "https://www.nasa.gov/",
-    "enabled": true,
-    "license": "NASA 使用指引（保留第三方权利）",
-    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-    "terms_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
-    "note": "美国航天局官方科学资讯；仅使用标题和短摘要，署名来源，不暗示 NASA 背书。",
-    "exclude_title_prefixes": [
-      "APOD:"
-    ]
-  },
-  {
-    "id": "wikinews",
-    "name": "Wikinews",
-    "publisher": "Wikinews",
-    "url": "https://en.wikinews.org/w/index.php?title=Special:NewsFeed&feed=atom",
-    "homepage": "https://en.wikinews.org/",
-    "enabled": false,
-    "license": "CC BY 4.0 (2024-12-16 起)",
-    "license_url": "https://creativecommons.org/licenses/by/4.0/",
-    "terms_url": "https://en.wikinews.org/wiki/Wikinews:Copyright",
-    "note": "订阅地址实测返回 404，暂时禁用；修复后再启用。"
-  },
-  {
     "id": "bbc-world",
     "name": "BBC World",
     "publisher": "BBC",
     "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
     "homepage": "https://www.bbc.com/news/world",
-    "enabled": false,
+    "enabled": true,
     "license": "保留所有权利",
     "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
     "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
-    "note": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。获得适用许可后再启用。"
+    "note": "社区目录收录的 BBC 官方 RSS；保留 BBC News 署名和原文链接。仅供阅读，不参与计算分析与 AI。",
+    "mode": "read_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
+    "community_name": "Plenary RSS 目录",
+    "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
+    "allowed_link_domains": [
+      "bbc.com",
+      "bbc.co.uk"
+    ],
+    "max_feed_age_hours": 96
   },
   {
     "id": "bbc-business",
@@ -76,22 +47,144 @@
     "publisher": "BBC",
     "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
     "homepage": "https://www.bbc.com/news/business",
-    "enabled": false,
+    "enabled": true,
     "license": "保留所有权利",
     "license_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
     "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
-    "note": "RSS 可读取；计算分析及 AI 使用许可未满足，默认禁用。"
+    "note": "社区目录收录的 BBC 官方 RSS；保留 BBC News 署名和原文链接。仅供阅读，不参与计算分析与 AI。",
+    "mode": "read_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
+    "community_name": "Plenary RSS 目录",
+    "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
+    "allowed_link_domains": [
+      "bbc.com",
+      "bbc.co.uk"
+    ],
+    "max_feed_age_hours": 96
   },
   {
-    "id": "guardian-world",
-    "name": "The Guardian World",
-    "publisher": "The Guardian",
-    "url": "https://www.theguardian.com/world/rss",
-    "homepage": "https://www.theguardian.com/world",
+    "id": "npr-news",
+    "name": "NPR News",
+    "publisher": "NPR",
+    "url": "https://feeds.npr.org/1001/rss.xml",
+    "homepage": "https://www.npr.org/",
+    "terms_url": "https://www.npr.org/about-npr/179876898/terms-of-use",
+    "license": "原文版权归来源所有；个人非商业阅读",
+    "license_url": "https://www.npr.org/about-npr/179876898/terms-of-use",
+    "enabled": true,
+    "max_feed_age_hours": 96,
+    "community_name": "Semantic News RSS 目录",
+    "community_url": "https://github.com/semantic-news/rss-feeds/blob/master/en-general.md",
+    "note": "社区目录收录 NPR 1001 新闻频道；采用当前官方 HTTPS RSS。本站统计标题中的人物、地点和机构出现次数；原始标题与摘要保留。订阅条款限制翻译，故不向 AI 发送内容。",
+    "mode": "read_only",
+    "topics_enabled": true,
+    "ai_enabled": false,
+    "allowed_link_domains": [
+      "npr.org"
+    ],
+    "topics_title_only": true
+  },
+  {
+    "id": "cnbc-world",
+    "name": "CNBC International",
+    "publisher": "CNBC",
+    "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+    "homepage": "https://www.cnbc.com/world/",
+    "terms_url": "https://www.versantmedia.com/terms/prohibited-actions",
+    "license": "原文版权归来源所有；个人非商业阅读",
+    "license_url": "https://www.versantmedia.com/terms/prohibited-actions",
+    "enabled": true,
+    "max_feed_age_hours": 96,
+    "community_name": "Plenary RSS 目录",
+    "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
+    "note": "社区目录收录的 CNBC 官方国际新闻 RSS；仅供阅读。当前条款限制内容再利用与翻译，未开启热词与 AI。",
+    "mode": "read_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
+    "allowed_link_domains": [
+      "cnbc.com"
+    ]
+  },
+  {
+    "id": "voa-mandarin",
+    "name": "VOA · China / Asia",
+    "publisher": "VOA",
+    "url": "https://www.voanews.com/api/ziroool-vomx-tpemtpoi",
+    "homepage": "https://www.voanews.com/",
+    "terms_url": "https://www.voanews.com/p/5338.html",
+    "license": "VOA 原创文字使用政策（第三方内容除外）",
+    "license_url": "https://www.voanews.com/p/5338.html",
+    "enabled": true,
+    "max_feed_age_hours": 96,
+    "note": "VOA 当前官方目录中的英文报道频道，参与热词与可选 AI。只收录已核验的原创署名，过滤 Reuters / AP / AFP 转载；周末更新可能较少。",
+    "topics_enabled": true,
+    "ai_enabled": true,
+    "allowed_link_domains": [
+      "voanews.com"
+    ],
+    "allowed_authors": [
+      "webdesk@voanews.com (VOA Mandarin)",
+      "webdesk@voanews.com (Daphne Fan)",
+      "webdesk@voanews.com (Lin Feng)",
+      "webdesk@voanews.com (Sharon Wu)",
+      "webdesk@voanews.com (Guofu Yang)",
+      "webdesk@voanews.com (Joyce Huang)"
+    ],
+    "exclude_credit_patterns": [
+      "Reuters",
+      "Associated Press",
+      "Agence France",
+      "AFP",
+      "AP News"
+    ]
+  },
+  {
+    "id": "voa-korean",
+    "name": "VOA · Korean Peninsula",
+    "publisher": "VOA",
+    "url": "https://www.voanews.com/api/zprooil-vomx-tpe_tpop",
+    "homepage": "https://www.voanews.com/",
+    "terms_url": "https://www.voanews.com/p/5338.html",
+    "license": "VOA 原创文字使用政策（第三方内容除外）",
+    "license_url": "https://www.voanews.com/p/5338.html",
+    "enabled": true,
+    "max_feed_age_hours": 96,
+    "note": "VOA 当前官方目录中的英文报道频道，参与热词与可选 AI。只收录已核验的原创署名，过滤 Reuters / AP / AFP 转载；周末更新可能较少。",
+    "topics_enabled": true,
+    "ai_enabled": true,
+    "allowed_link_domains": [
+      "voanews.com"
+    ],
+    "allowed_authors": [
+      "webdesk@voanews.com (Sangjin Cho)",
+      "webdesk@voanews.com (Joeun Lee, Sangjin Cho)",
+      "webdesk@voanews.com (Jiha Ham)",
+      "webdesk@voanews.com (Young Gyo Kim, Sangjin Cho)",
+      "webdesk@voanews.com (Eunjung Cho)",
+      "webdesk@voanews.com (Joeun Lee)"
+    ],
+    "exclude_credit_patterns": [
+      "Reuters",
+      "Associated Press",
+      "Agence France",
+      "AFP",
+      "AP News"
+    ]
+  },
+  {
+    "id": "afp",
+    "name": "AFP · 法新社",
+    "publisher": "AFP",
+    "url": "https://factcheck.afp.com/rss.xml",
+    "homepage": "https://www.afp.com/",
     "enabled": false,
+    "mode": "read_only",
+    "topics_enabled": false,
+    "ai_enabled": false,
     "license": "保留所有权利",
-    "license_url": "https://www.theguardian.com/help/terms-of-service",
-    "terms_url": "https://www.theguardian.com/help/terms-of-service",
-    "note": "条款第 3 节限制自动聚合、分析及 AI 使用，默认禁用。"
+    "license_url": "https://www.afp.com/en/our-offer/afp-stories",
+    "terms_url": "https://www.afp.com/en/our-offer/afp-stories",
+    "note": "尚未找到可验证、稳定且免费的英文综合新闻社区 RSS；Fact Check 候选返回 403，且不等同于综合新闻。官方 API 提供试用，未纳入零费用方案。"
   }
 ]

@@ -86,19 +86,23 @@ def enrich(data, settings, cache_path, now):
     def topic_payload(topic):
         return {'id': topic['id'], 'label': topic['label'], 'articles': [
             {k: available[aid][k] for k in ('id', 'title', 'summary')}
-            for aid in topic['article_ids'][:6] if aid in available]}
+            for aid in topic['article_ids'] if aid in available and available[aid].get('ai_allowed', available[aid].get('analysis_allowed', True))][:6]}
     def context_key(topic):
         return digest(model + ':context:' + json.dumps(topic_payload(topic), sort_keys=True))
     def apply_cache():
         for article in data['articles']:
             article.pop('title_zh', None)
-            if not article.get('analysis_allowed', True):
+            if not article.get('ai_allowed', article.get('analysis_allowed', True)):
                 continue
             entry = cache.get(title_key(article))
             if entry:
                 article['title_zh'] = entry['text']
         for window in data['windows']:
             for topic in window['topics']:
+                topic.pop('context_zh', None)
+                topic.pop('context_article_ids', None)
+                if not topic_payload(topic)['articles']:
+                    continue
                 entry = cache.get(context_key(topic))
                 if entry:
                     topic['context_zh'] = entry['text']
@@ -117,7 +121,7 @@ def enrich(data, settings, cache_path, now):
         return
     try:
         verify_free_account(account, token)
-        selected = [available[aid] for aid in (latest or {}).get('article_ids', []) if aid in available and available[aid].get('analysis_allowed', True)]
+        selected = [available[aid] for aid in (latest or {}).get('article_ids', []) if aid in available and available[aid].get('ai_allowed', available[aid].get('analysis_allowed', True))]
         pending = [a for a in selected if title_key(a) not in cache][:settings['max_titles_per_run']]
         if pending:
             result = generate(account, token, model, 'translation', [{'id': a['id'], 'title': a['title']} for a in pending])
@@ -131,7 +135,7 @@ def enrich(data, settings, cache_path, now):
                     if text:
                         cache[title_key(ids[item['id']])] = {'text': text, 'created_at': iso(now)}
             write_json(cache_path, cache)
-        topics = [t for t in (latest or {}).get('topics', []) if context_key(t) not in cache][:settings['max_topics_per_run']]
+        topics = [t for t in (latest or {}).get('topics', []) if topic_payload(t)['articles'] and context_key(t) not in cache][:settings['max_topics_per_run']]
         if topics:
             result = generate(account, token, model, 'context', [topic_payload(t) for t in topics])
             ids = {t['id']: t for t in topics}
@@ -143,7 +147,8 @@ def enrich(data, settings, cache_path, now):
                     continue
                 topic = ids[item['id']]
                 references = item.get('article_ids', [])
-                if not isinstance(references, list) or not references or not all(isinstance(x, str) and x in topic['article_ids'][:6] for x in references):
+                permitted = {a['id'] for a in topic_payload(topic)['articles']}
+                if not isinstance(references, list) or not references or not all(isinstance(x, str) and x in permitted for x in references):
                     continue
                 text = plain(item['text'], 350)
                 if text:
