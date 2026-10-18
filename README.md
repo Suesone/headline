@@ -45,7 +45,7 @@ python3 -m scripts.local_reader --provider gemini --allow-google-upload --free-t
 3. 终端会提示输入密钥，输入不回显，只存于进程内存。不要把密钥发到聊天或写入命令历史。也支持本机已有的 `GEMINI_API_KEY` 环境变量，程序不会打印它。
 4. 打开 **http://127.0.0.1:8765/**，选择 **Gemini API · 原文发送 Google**，再按需翻译。无需安装 Ollama。
 
-默认模型 `gemini-2.5-flash-lite`，当前官方列有免费档；每次启动最多 20 个推理请求。只翻译显示/选中的文字，重复文字使用本页缓存。额度或速率限制（429）会暂停本次启动后续请求，不自动重试、切换模型或付费升级。全文按段发送 Google，可用 `--max-gemini-requests 40` 调整会话上限（最多 100）。
+默认模型 `gemini-3.5-flash-lite`，当前官方列有免费档；每次启动最多 20 个推理请求。只翻译显示/选中的文字，重复文字使用本页缓存。额度或速率限制（429）会暂停本次启动后续请求，不自动重试、切换模型或付费升级。全文按段发送 Google，可用 `--max-gemini-requests 40` 调整会话上限（最多 100）。
 
 **零费用的前提是你的项目实际处于未关联计费的免费档。程序不能仅凭 API Key 核实账单状态；会话上限也不能为付费项目保证零费用。** 请在 AI Studio 核实 Billing Tier；免费政策、模型或地区不可用时暂停使用。[价格](https://ai.google.dev/gemini-api/docs/pricing) · [计费状态说明](https://ai.google.dev/gemini-api/docs/billing)
 

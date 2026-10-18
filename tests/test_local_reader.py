@@ -116,7 +116,7 @@ def test_gemini_request_key_is_header_only_and_never_in_status(monkeypatch):
     transport = Transport(); monkeypatch.setattr(local, 'DIRECT', transport)
     assert runtime.translate('Selected title only') == '译文'
     request = transport.requests[0]
-    assert request.full_url == 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent'
+    assert request.full_url == 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent'
     assert key not in request.full_url and request.get_header('X-goog-api-key') == key
     payload = json.loads(request.data)
     assert payload['contents'][0]['parts'][0]['text'] == 'Selected title only'

@@ -49,7 +49,9 @@ test('redirect login requires matching CSRF cookie, allowed origin and valid Goo
  const callback=(body='credential=token&g_csrf_token=random',cookie='g_csrf_token=random',origin='https://accounts.google.com')=>new Request('https://headline.infinitas.top/api/cloud/google/callback',{method:'POST',headers:{Origin:origin,Cookie:cookie,'Content-Type':'application/x-www-form-urlencoded'},body});
  for(const req of [callback(undefined,''),callback(undefined,'g_csrf_token=wrong'),callback(undefined,undefined,'https://evil.example'),callback('credential=token&g_csrf_token=random&g_csrf_token=random')]) assert.equal((await handler(req,env)).status,403);
  assert.equal(verified,0);
- const response=await handler(callback(),env);assert.equal(response.status,303);assert.equal(response.headers.get('Location'),'https://headline.infinitas.top/#local-tools');assert.match(response.headers.get('Set-Cookie'),/HttpOnly; Secure; SameSite=Strict/);assert.equal(verified,1);
+ const noOrigin=callback();noOrigin.headers.delete('Origin');assert.equal((await handler(noOrigin,env)).status,303);
+ const nullOrigin=callback(undefined,undefined,'null');assert.equal((await handler(nullOrigin,env)).status,303);
+ const response=await handler(callback(),env);assert.equal(response.status,303);assert.equal(response.headers.get('Location'),'https://headline.infinitas.top/#local-tools');assert.match(response.headers.get('Set-Cookie'),/HttpOnly; Secure; SameSite=Strict/);assert.equal(verified,3);
  const invalid=createHandler({verifyGoogle:async()=>{throw Error('invalid identity');}});assert.equal((await invalid(callback(),env)).status,401);
 });
 test('Worker never proxies public pages or unknown routes',async()=>{
@@ -69,4 +71,14 @@ test('Google 429 pauses all later calls and raw upstream errors never reach the 
  const env=environment();let calls=0;const handler=createHandler({authenticate,fetcher:async()=>{calls++;return new Response('fake-key-not-real private raw error',{status:429});}});
  const first=await handler(request(),env);assert.equal(first.status,429);assert.doesNotMatch(await first.text(),/fake-key-not-real|private raw/);
  assert.equal((await handler(request(),env)).status,429);assert.equal(calls,1);
+});
+test('Gemini trims pasted key whitespace and returns safe stage-specific failures',async()=>{
+ const env=environment();env.GEMINI_API_KEY='  fake-key-not-real\n';
+ const handler=createHandler({authenticate,fetcher:async(_url,options)=>{assert.equal(options.headers['x-goog-api-key'],'fake-key-not-real');throw Error('private raw upstream detail');}});
+ const response=await handler(request(),env);assert.equal(response.status,503);assert.match((await response.json()).message,/连接 Gemini/);
+ const invalid=await handler(request(),{...env,GEMINI_API_KEY:'key\ninvalid'});assert.match((await invalid.json()).message,/Secret 格式无效/);
+});
+test('upstream permission errors expose only status and allowlisted reason',async()=>{
+ const env=environment();const handler=createHandler({authenticate,fetcher:async()=>Response.json({error:{message:'fake-key-not-real private text',status:'PERMISSION_DENIED',details:[{reason:'API_KEY_SERVICE_BLOCKED',metadata:{key:'private'}}]}},{status:403})});
+ const response=await handler(request(),env);assert.equal(response.status,502);const body=await response.text();assert.match(body,/HTTP 403.*API_KEY_SERVICE_BLOCKED/);assert.doesNotMatch(body,/fake-key-not-real|private|metadata/);
 });

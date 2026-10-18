@@ -17,7 +17,9 @@
 - 自定义域名 HTTPS 校验通过；API 路由已发布，未登录 status 返回 401。
 - 三个 Worker Secret 名称均已核实存在；未读取密钥值。账号主人已确认 Gemini 项目为未关联付费计费的 Free Tier，`FREE_TIER_CONFIRMED=true`。
 - Google 客户端的同站回调 URI 已保存；网页采用整页登录，避免依赖弹窗。
-- 自动化验证共 58 项通过，GitHub Pages 发布成功。内置测试浏览器未完成 Google 按钮跳转，真实账号登录后取得译文仍需在 Safari / Chrome 验证，不能将配置完成视为真实翻译验收通过。
+- 自动化验证共 60 项通过。已在正式域名取得登录会话，实际翻译一条 BBC 标题及 RSS 摘要（两段），页面显示中英对照。手机实机尚未单独验收；每台设备需各自登录。
+- 原 `gemini-2.5-flash-lite` 实际返回 404；已核对官方免费档价格并迁移至 `gemini-3.5-flash-lite`，思考级别 minimal。Worker 使用 manual 重定向模式，避免运行时不支持 error 模式；不会跟随上游重定向。
+- Google 回调兼容缺少 Origin 或 Origin 为 null 的表单请求，仍严格校验双提交 CSRF token、Google 签名和获准邮箱。
 
 ## Google 登录设置
 
@@ -30,7 +32,7 @@ Google 登录只验证身份，不向 Google Identity 发送新闻。Worker 校�
 
 ## Gemini 密钥与零费用边界
 
-1. 在 https://aistudio.google.com/api-keys 创建密钥，确认项目为 Free Tier 且未关联计费账户。模型为 `gemini-2.5-flash-lite`，只有官方仍提供免费档时使用。
+1. 在 https://aistudio.google.com/api-keys 创建密钥，确认项目为 Free Tier 且未关联计费账户。模型为 `gemini-3.5-flash-lite`，只有官方仍提供免费档时使用。
 2. Cloudflare → Workers & Pages → headline-private-gateway → Settings → Variables and Secrets → Add：类型 **Secret**，名称 `GEMINI_API_KEY`，值由你直接输入 Cloudflare，不发聊天、不填网页前端。
 3. CLI 等价操作：进入 cloudflare 目录运行 `npx wrangler@4 secret put GEMINI_API_KEY`，在私有提示中输入。不要把真实 Key 写在命令参数、代码或环境示例文件。
 4. 核实 Gemini 项目免费且未关联计费后才把 `FREE_TIER_CONFIRMED` 设为字符串 `true` 并部署。程序不能凭 Key 独立核实 Google 账单状态。
