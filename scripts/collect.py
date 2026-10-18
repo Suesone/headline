@@ -185,12 +185,12 @@ class TopicExtractor:
         return self.aliases.get(name.casefold(), name)
 
     def extract(self, article):
-        text = article['title'] + '\n' + article['summary']
+        text = article['title'] + '.\n' + article['summary']
         terms = {}
         doc = self.nlp(text)
-        noun_phrases = [self.normalize(chunk.text).casefold() for chunk in doc.noun_chunks]
+        noun_phrases = [self.normalize(chunk.text).casefold() for chunk in doc.noun_chunks if '\n' not in chunk.text]
         for ent in doc.ents:
-            if ent.label_ in {'PERSON', 'GPE', 'ORG', 'EVENT', 'NORP', 'FAC', 'LOC'}:
+            if '\n' not in ent.text and ent.label_ in {'PERSON', 'GPE', 'ORG', 'EVENT', 'NORP', 'FAC', 'LOC'}:
                 label = self.normalize(ent.text)
                 if len(label) >= 2 and label.casefold() not in STOP and len(label.split()) <= 6:
                     terms[label.casefold()] = {'id': digest(label.casefold()), 'label': label, 'kind': 'entity'}
@@ -284,7 +284,7 @@ def run(now, output, state_path, enable_ai=True):
     old = [a for a in previous.get('articles', []) if a['source_id'] in allowed]
     articles = merge_articles(old, incoming, cutoff)
     aliases = read_json(ROOT / 'config/aliases.json')
-    extraction_version = digest('topics-v3:' + json.dumps(aliases, sort_keys=True))
+    extraction_version = digest('topics-v4:' + json.dumps(aliases, sort_keys=True))
     pending = [a for a in articles if a.get('extraction_version') != extraction_version]
     if pending:
         extractor = TopicExtractor(aliases)

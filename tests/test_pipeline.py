@@ -136,6 +136,8 @@ def test_extractor_merges_aliases_and_ignores_dates():
     assert 'Donald Trump' in labels and 'United Nations' in labels
     assert 'Monday' not in labels
     assert len({t['id'] for t in topics}) == len(topics)
+    assert extractor.normalize('U.S.') == extractor.normalize('US') == 'United States'
+    assert extractor.normalize('the United Nations') == 'United Nations'
 
 
 def ai_settings():
