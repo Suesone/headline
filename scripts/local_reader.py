@@ -19,7 +19,7 @@ from urllib.parse import urlsplit
 from urllib.request import Request, HTTPRedirectHandler, ProxyHandler, build_opener
 
 PUBLIC = Path(__file__).resolve().parents[1] / 'public'
-NEWS_URL = 'https://suesone.github.io/headline/data/news.json'
+NEWS_URL = 'https://raw.githubusercontent.com/Suesone/headline/main/public/data/news.json'
 
 
 class NoRedirect(HTTPRedirectHandler):

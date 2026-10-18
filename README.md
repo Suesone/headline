@@ -1,6 +1,6 @@
 # Headline · 国际新闻榜
 
-[打开网页](https://suesone.github.io/headline/) · [源码仓库](https://github.com/Suesone/headline)
+[打开网页](https://headline.infinitas.top/) · [源码仓库](https://github.com/Suesone/headline)
 
 每四小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译按需执行，密钥由本机管理，译文不写入项目文件、不上传 GitHub。Chrome / Ollama 为本地推理；可选 Gemini 经本机接口发送原文到 Google。**
 
@@ -29,7 +29,7 @@ AFP 的 Fact Check 候选复测仍返回 403，且并非综合新闻流，已从
 
 ## 按需翻译：面向入门者
 
-完整说明也在网页的 [本地翻译使用说明](https://suesone.github.io/headline/local-guide.html)。
+完整说明也在网页的 [本地翻译使用说明](https://headline.infinitas.top/local-guide.html)。
 
 ### Gemini API 本机接口（已加入）
 
