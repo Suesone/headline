@@ -60,3 +60,15 @@ test('custom domain Gemini uses authenticated same-origin endpoints without expo
  assert.equal(requests[1][1].credentials,'same-origin');assert.equal(requests[1][1].headers['X-Headline-Cloud'],'1');
  assert.deepEqual(JSON.parse(requests[1][1].body),{text:'Headline'});
 });
+test('Gemini cache can be reopened without prepare, additional requests or storage',async()=> {
+ let calls=0;
+ const client=new LocalTranslator({location:{hostname:'headline.infinitas.top',protocol:'https:'},fetch:async url=> {
+  calls++;return {ok:true,json:async()=>url.endsWith('status')?{ready:true,provider:'gemini',cloud_provider:'Google',local_only:false,model:'gemini-3.5-flash-lite'}:{text:'缓存中文'}};
+ }});
+ client.setEngine('gemini');await client.prepare();await client.translate('Cached headline');
+ assert.equal(calls,2);assert.equal(client.getCached('Cached headline'),'缓存中文');
+ assert.equal(await client.translate('Cached headline'),'缓存中文');assert.equal(calls,2);
+ client.setEngine('browser');assert.equal(client.getCached('Cached headline'),undefined);
+ client.setEngine('gemini');assert.equal(client.getCached('Cached headline'),'缓存中文');
+ client.clear();assert.equal(client.getCached('Cached headline'),undefined);
+});

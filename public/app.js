@@ -5,14 +5,22 @@ const format = stamp => new Intl.DateTimeFormat('zh-CN', {timeZone:'Asia/Shangha
 function safeUrl(value) { try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) && !u.username && !u.password ? u.href : null; } catch { return null; } }
 function link(text, value, className) { const n = el('a', text, className); const url = safeUrl(value); if (url) { n.href = url; n.target = '_blank'; n.rel = 'noopener noreferrer'; } return n; }
 function option(value, text) { const n = el('option',text); n.value = value; return n; }
-let data, busy = false, controller = null, rendering = 0;
+let data, busy = false, controller = null, rendering = 0, translationsVisible = true;
 const limits = new Map(), selected = new Set();
 const translator = new HeadlineLocal.LocalTranslator();
 translator.setEngine('gemini');
 const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
 const engineNote = () => translator.engine === 'gemini' ? '原文发送 Google；本项目仅在本页保存译文，不上传 GitHub。Google 可能按其条款处理输入与输出。' : '译文只在此页面，未发送云端翻译服务。';
 function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',Reuters:'reuters','The Guardian':'guardian','The Washington Post':'wapo',NHK:'nhk'}[s.publisher] || 'all'); }
-function sourceIcon(s) { return el('span', s.id === 'all' ? '榜' : ({Reuters:'R','The Guardian':'G','The Washington Post':'WP'}[s.publisher] || s.publisher), 'source-tile ' + sourceClass(s)); }
+function sourceIcon(s) {
+  const wrap = el('span', s.id === 'all' ? '榜' : ({Reuters:'R','The Guardian':'G','The Washington Post':'WP'}[s.publisher] || s.publisher), 'source-tile ' + sourceClass(s));
+  const filename = {Reuters:'reuters',BBC:'bbc',NPR:'npr',CNBC:'cnbc','The Guardian':'guardian','The Washington Post':'washingtonpost',NHK:'nhk'}[s.publisher];
+  if (filename) {
+    const img = el('img'); img.src = `./icons/${filename}.${filename === 'cnbc' ? 'ico' : filename === 'washingtonpost' ? 'jpg' : 'png'}`; img.alt = ''; img.width = 40; img.height = 40;
+    img.addEventListener('error', () => img.remove(), {once:true}); wrap.append(img);
+  }
+  return wrap;
+}
 function sourceInfo(id) { return data.sources.find(s => s.id === id); }
 function rankSetting(key, fallback, max = 30) { const value = data.ranking?.[key]; return Number.isInteger(value) && value > 0 && value <= max ? value : fallback; }
 function pool() {
@@ -38,8 +46,8 @@ function shortcuts() {
 function textBlock(text, article, part, tag, className) {
   const n = el(tag,text,className); n.lang = 'en'; n.dataset.translation = text; n.dataset.article = article.id; n.dataset.part = part;
   const translated = el('p',undefined,'translated-text'); translated.lang = 'zh-CN'; translated.hidden = true;
-  const cached = translator.cache.get(translator.engine + ':' + (translator.model || '') + ':' + text);
-  if (cached) { translated.textContent = cached; translated.hidden = false; }
+  const cached = translator.getCached(text);
+  if (cached) { translated.textContent = cached; translated.hidden = !translationsVisible; }
   const wrap = el('div',undefined,'translation-pair'); wrap.append(n,translated); return wrap;
 }
 function updateSelection() { $('translate-selected').textContent = `翻译所选报道（${selected.size}）`; }
@@ -69,14 +77,14 @@ function articleNode(article, rank, featured, board = null) {
 function render() {
   rendering++; selected.clear(); updateSelection(); shortcuts();
   const articles = pool(), now = Date.parse(data.generated_at);
-  const board = HeadlineRanking.buildBoard(articles,now,rankSetting('board_limit',12));
+  const board = HeadlineRanking.buildBoard(articles,now,rankSetting('board_limit',10));
   const list = $('board-list'); list.replaceChildren();
   $('board-count').textContent = `${board.length} 条精选`;
   if (!board.length) list.append(el('p','当前时段没有报道，请切换到最近 24 小时或历史时段。','empty-state'));
-  board.forEach((entry,i) => list.append(articleNode(entry.article,i + 1,i < 3,entry)));
+  board.forEach((entry,i) => list.append(articleNode(entry.article,i + 1,true,entry)));
   $('article-count').textContent = `${articles.length} 篇报道`;
   const window = data.windows.find(w => w.id === $('window-select').value);
-  const featured = rankSetting('featured_per_source',2,5);
+  const featured = rankSetting('featured_per_source',3,5);
   $('period-caption').textContent = window ? `${format(window.start)} — ${format(window.end)} · 北京时间` : $('window-select').value === 'recent' ? `最近 24 小时 · 已完成时段 · 前 ${featured} 条标题加大` : `最近 30 天 · 已完成时段 · 前 ${featured} 条标题加大`;
   const grid = $('news-list'); grid.replaceChildren();
   for (const s of data.sources.filter(s => s.enabled && ($('source-select').value === 'all' || s.id === $('source-select').value))) {
@@ -102,25 +110,40 @@ function setBusy(value) {
   $('cancel-fulltext').hidden = !value;
 }
 function visible(n) { const r = n.getBoundingClientRect(); return r.width > 0 && r.height > 0 && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth; }
+function setTranslationVisibility(show, announce = false) {
+  translationsVisible = show;
+  for (const node of document.querySelectorAll('.translated-text')) node.hidden = !show || !node.textContent;
+  $('fulltext-output').hidden = !show || !$('fulltext-output').textContent;
+  const hasTranslations = translator.cache.size > 0 || Boolean($('fulltext-output').textContent);
+  for (const id of ['toggle-translations','toggle-translations-dock']) {
+    const button = $(id); button.textContent = show ? '隐藏译文' : '显示译文';
+    button.setAttribute('aria-pressed',String(show)); button.disabled = !hasTranslations;
+  }
+  if (announce) $('translation-status').textContent = show ? '已显示缓存译文，没有调用 AI。' : '已隐藏译文，缓存仍保留在本页；再次显示或翻译相同文字时复用缓存。';
+}
 async function translateNodes(nodes) {
   if (busy) return;
   const unique = [...new Set(nodes.map(n => n.dataset.translation))].filter(Boolean);
   if (!unique.length) { $('translation-status').textContent = '当前屏幕没有新闻文字。请先选择报道，或滚动到新闻处点击“翻译”。'; return; }
+  setTranslationVisibility(true);
+  // Reopening a cached translation needs neither login/status checks nor inference.
+  const missing = unique.filter(text => !translator.getCached(text));
   const generation = rendering; controller = new AbortController(); setBusy(true);
   $('translation-status').textContent = `正在连接${engineLabel()}翻译接口…`;
   try {
-    translator.setEngine($('translation-engine').value); await translator.prepare();
+    translator.setEngine($('translation-engine').value); if (missing.length) await translator.prepare();
     for (const [i,text] of unique.entries()) {
       controller.signal.throwIfAborted();
       $('translation-status').textContent = `正在通过${engineLabel()}翻译 ${i + 1}/${unique.length} 段，共 ${unique.reduce((sum,t)=>sum+t.length,0)} 个原文字符；重复文字复用缓存。`;
       const result = await translator.translate(text,{signal:controller.signal});
       if (generation !== rendering) continue;
       // Update only already rendered text, including its duplicated board/source occurrence.
-      for (const node of document.querySelectorAll('[data-translation]')) if (node.dataset.translation === text) { const out = node.nextElementSibling; out.textContent = result; out.hidden = false; }
+      for (const node of document.querySelectorAll('[data-translation]')) if (node.dataset.translation === text) { const out = node.nextElementSibling; out.textContent = result; out.hidden = !translationsVisible; }
     }
-    $('translation-status').textContent = `已通过${engineLabel()}翻译 ${unique.length} 段。${engineNote()}`;
+    setTranslationVisibility(translationsVisible);
+    $('translation-status').textContent = missing.length ? `已通过${engineLabel()}翻译 ${unique.length} 段。${engineNote()}` : `已显示 ${unique.length} 段缓存译文，没有调用 AI。`;
   } catch (error) { $('translation-status').textContent = error.name === 'AbortError' ? '已停止后续翻译，已完成的译文保留在本页。' : error.message; }
-  finally { setBusy(false); controller = null; }
+  finally { setBusy(false); controller = null; setTranslationVisibility(translationsVisible); }
 }
 function openFulltext(article = {title: '自选英文文本', url: ''}) {
   if (busy) return;
@@ -132,22 +155,25 @@ function openFulltext(article = {title: '自选英文文本', url: ''}) {
 async function translateFulltext() {
   if (busy) return;
   const text = $('fulltext-input').value.trim(); if (!text) { $('fulltext-status').textContent = '请先粘贴正文或导入 .txt。'; return; }
+  setTranslationVisibility(true);
   controller = new AbortController(); setBusy(true); $('fulltext-input').disabled = true; $('fulltext-file').disabled = true;
   $('fulltext-output').textContent = ''; $('fulltext-output').hidden = true;
   $('fulltext-status').textContent = `正在准备${engineLabel()}翻译引擎…`;
   try {
     translator.setEngine($('translation-engine').value); await translator.prepare();
     const result = await translator.translate(text,{signal:controller.signal,progress:(done,total)=> { $('fulltext-status').textContent = `${engineLabel()}全文翻译：${done}/${total} 段。${text.length} 字符。${engineNote()}`; }});
-    $('fulltext-output').textContent = result; $('fulltext-output').hidden = false;
+    $('fulltext-output').textContent = result; $('fulltext-output').hidden = !translationsVisible;
+    setTranslationVisibility(translationsVisible);
     $('fulltext-status').textContent = `全文翻译完成。${engineNote()}`;
   } catch (error) { $('fulltext-status').textContent = error.name === 'AbortError' ? '已停止全文翻译。' : error.message; }
-  finally { setBusy(false); $('fulltext-input').disabled = false; $('fulltext-file').disabled = false; controller = null; }
+  finally { setBusy(false); $('fulltext-input').disabled = false; $('fulltext-file').disabled = false; controller = null; setTranslationVisibility(translationsVisible); }
 }
 function clearTranslations() {
   if (busy) return;
   translator.clear(); for (const n of document.querySelectorAll('.translated-text')) { n.textContent = ''; n.hidden = true; }
   $('fulltext-input').value = ''; $('fulltext-output').textContent = ''; $('fulltext-output').hidden = true; $('fulltext-file').value = ''; $('fulltext-status').textContent = ''; $('fulltext-size').textContent = '0 字符';
-  $('translation-status').textContent = '已清除本页译文和全文输入。不会自动重新翻译。';
+  setTranslationVisibility(true);
+  $('translation-status').textContent = '已清除本页译文和缓存。下次翻译需要重新调用 AI。';
 }
 function initTranslation() {
   $('cloud-login').hidden = !HeadlineLocal.isCloudHost(location);
@@ -158,6 +184,11 @@ function initTranslation() {
   $('open-manual-fulltext').addEventListener('click',() => openFulltext());
   new MutationObserver(() => { $('translation-toast').textContent = $('translation-status').textContent; $('translation-toast').hidden = false; }).observe($('translation-status'),{childList:true,subtree:true,characterData:true});
   $('clear-translations').addEventListener('click',clearTranslations);
+  for (const id of ['toggle-translations','toggle-translations-dock']) $(id).addEventListener('click', () => {
+    if (translationsVisible) controller?.abort();
+    setTranslationVisibility(!translationsVisible,true);
+  });
+  setTranslationVisibility(translationsVisible);
   $('translation-engine').addEventListener('change',() => { translator.setEngine($('translation-engine').value); $('translation-location').textContent = translator.engine === 'gemini' ? 'GOOGLE CLOUD API' : 'LOCAL ONLY'; $('translation-status').textContent = `已切换${engineLabel()}引擎，点击后才翻译。${engineNote()}`; });
   $('close-fulltext').addEventListener('click',() => { controller?.abort(); $('fulltext-dialog').close(); });
   $('fulltext-dialog').addEventListener('cancel',()=>controller?.abort());

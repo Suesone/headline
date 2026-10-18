@@ -82,6 +82,7 @@
       this.pending.set(key, work);
       try { return await work; } finally { this.pending.delete(key); }
     }
+    getCached(text) { return this.cache.get(this.engine + ':' + (this.model || '') + ':' + text); }
     clear() { this.cache.clear(); }
   }
   const api = {LocalTranslator, splitText, isLoopback, isCloudHost};

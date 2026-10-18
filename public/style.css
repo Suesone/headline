@@ -17,3 +17,12 @@ dialog { width:min(760px,calc(100% - 28px));max-height:90vh;overflow:auto;border
 .board-list .featured>.article-index { color:white; }
 
 .tile-guardian { background:#052962;color:#fff; }.tile-wapo { background:#222;color:#fff; }.tile-nhk { background:#fff;color:#c42631;border:1px solid #e6e9ef; }
+
+/* Publisher favicons are self-hosted; text initials remain as a load-error fallback. */
+.source-tile,.source-card-icon { position:relative;overflow:hidden; }
+.source-tile img,.source-card-icon img { position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:white;padding:5px; }
+.source-card-icon img { padding:2px; }
+.featured .article-title { font-family:Arial,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;font-size:18px;font-weight:700;color:#111; }
+@media(max-width:720px) { .featured .article-title { font-size:17px; } }
+
+.featured .translated-text { font-size:17px;font-weight:700;color:#111; }
