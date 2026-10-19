@@ -75,6 +75,14 @@ test('public status is read only; wrong host, paths and POST cannot trigger GitH
     assert.equal((await handleStatus(new Request(url,{method}),env)).status,404);
   }
 });
+test('enabling a configured watchdog replaces the previous disabled receipt with pending',async t=> {
+  const env=environment(t);
+  env.WATCHDOG_ENABLED='false';
+  await runCheck(env,{now:NOW,fetcher:()=>assert.fail('must not fetch')});
+  env.WATCHDOG_ENABLED='true';
+  const body=await (await handleStatus(new Request('https://headline.infinitas.top/api/watchdog/status'),env)).json();
+  assert.equal(body.enabled,true);assert.equal(body.last_result,'pending');
+});
 test('GitHub permission failures and raw upstream errors cannot leak the secret',async t=> {
   const env=environment(t);
   const denied=await runCheck(env,{now:NOW,fetcher:async url=>url.includes('/data/status.json')?json(stale):json({message:TOKEN},401)});

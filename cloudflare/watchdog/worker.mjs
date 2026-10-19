@@ -4,6 +4,7 @@ const API = 'https://api.github.com/repos/Suesone/headline/actions/workflows/upd
 const HOUR = 3600000, SLOT = 2 * HOUR;
 const ACTIVE = new Set(['queued','in_progress','waiting','pending','requested']);
 export const RESULTS = {
+  pending:'独立兜底已启用，等待首次定时检查',
   disabled:'Cloudflare 兜底尚未开启', missing_token:'尚未配置专用 GitHub 凭据',
   healthy:'本时段新闻已成功发布，无需补抓', running:'已有更新任务执行或排队中',
   dispatched:'已请求 GitHub 补抓，等待任务完成发布', cooldown:'已请求补抓，等待下一次检查',
@@ -83,7 +84,8 @@ export async function handleStatus(request,env) {
   if(url.protocol!=='https:' || url.hostname!==HOST || url.pathname!=='/api/watchdog/status' || request.method!=='GET')return reply(404,{message:'接口不存在'});
   try {
     const stored=await readHealth(env);
-    const last_result=!configured(env)?'disabled':!tokenReady(env)?'missing_token':stored.last_result||'unavailable';
+    const last_result=!configured(env)?'disabled':!tokenReady(env)?'missing_token':
+      !stored.last_result || ['disabled','missing_token'].includes(stored.last_result)?'pending':stored.last_result;
     return reply(200,{enabled:configured(env)&&tokenReady(env),last_result,message:RESULTS[last_result]||RESULTS.unavailable,
       last_checked_at:stored.last_checked_at||null,last_dispatch_at:stored.last_dispatch_at||null,
       dispatch_count:stored.dispatch_count||0,next_check_at:nextCheck(Date.now())});
