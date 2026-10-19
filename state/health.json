@@ -78,6 +78,20 @@
       },
       "articles": 500,
       "failed_sources": []
+    },
+    {
+      "at": "2026-10-19T00:28:40.209211Z",
+      "slot": "2026-10-19T08:00+08:00",
+      "status": "ok",
+      "ai": "on_demand",
+      "trigger": {
+        "event": "schedule",
+        "schedule": "37 */2 * * *",
+        "slot": "2026-10-19T08:00+08:00",
+        "run_url": "https://github.com/Suesone/headline/actions/runs/39180912477"
+      },
+      "articles": 504,
+      "failed_sources": []
     }
   ],
   "note": "更新频率变更为两小时，重新开始覆盖观察",
