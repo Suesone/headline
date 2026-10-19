@@ -122,21 +122,18 @@
       "failed_sources": []
     },
     {
-      "at": "2026-10-19T12:36:12.193470Z",
+      "at": "2026-10-19T12:39:40.902855Z",
       "slot": "2026-10-19T20:00+08:00",
-      "status": "partial",
+      "status": "ok",
       "ai": "on_demand",
       "trigger": {
-        "event": "workflow_dispatch",
+        "event": "push",
         "schedule": "",
         "slot": "2026-10-19T20:00+08:00",
-        "run_url": "https://github.com/Suesone/headline/actions/runs/39253281597"
+        "run_url": "https://github.com/Suesone/headline/actions/runs/39253727820"
       },
-      "articles": 596,
-      "failed_sources": [
-        "washingtonpost-world",
-        "nhk-world"
-      ]
+      "articles": 601,
+      "failed_sources": []
     }
   ],
   "note": "更新频率变更为两小时，重新开始覆盖观察",

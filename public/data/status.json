@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-19T12:36:12.193470Z",
-  "status": "partial",
-  "last_success_at": "2026-10-19T12:36:12.193470Z",
+  "generated_at": "2026-10-19T12:39:40.902855Z",
+  "status": "ok",
+  "last_success_at": "2026-10-19T12:39:40.902855Z",
   "trigger": {
-    "event": "workflow_dispatch",
+    "event": "push",
     "schedule": "",
     "slot": "2026-10-19T20:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/39253281597"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/39253727820"
   },
   "sources": [
     {
@@ -41,13 +41,13 @@
     },
     {
       "id": "washingtonpost-world",
-      "status": "error",
-      "received": null
+      "status": "ok",
+      "received": 20
     },
     {
       "id": "nhk-world",
-      "status": "error",
-      "received": null
+      "status": "ok",
+      "received": 20
     }
   ]
 }
