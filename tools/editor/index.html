@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Headline · 本机外观编辑器</title><link rel="stylesheet" href="./editor.css"><script src="./editor.js" defer></script></head>
+<body><aside><header><span class="badge">仅在你的电脑</span><h1>调整阅读外观</h1><p>拖动即可预览。保存到项目后，下次打开会保留；公开网页没有编辑入口。</p></header>
+<form id="controls"><fieldset><legend>文字</legend>
+<label>电脑标题字号 <output id="titleSize-value"></output><input name="titleSize" type="range" min="14" max="28" step="1"></label>
+<label>手机标题字号 <output id="mobileSize-value"></output><input name="mobileSize" type="range" min="14" max="26" step="1"></label>
+<label>标题粗细<select name="weight"><option value="500">中等</option><option value="600">较粗</option><option value="700">粗体</option><option value="800">特粗</option></select></label>
+</fieldset><fieldset><legend>布局</legend>
+<label>新闻上下留白 <output id="spacing-value"></output><input name="spacing" type="range" min="8" max="28" step="1"></label>
+<label>页面最大宽度 <output id="width-value"></output><input name="width" type="range" min="960" max="1600" step="8"></label>
+<label>电脑来源列数<select name="columns"><option value="2">两列</option><option value="3">三列</option><option value="4">四列</option></select></label><p class="hint">窄屏仍自动减少列数，手机保持单列。</p>
+</fieldset><fieldset><legend>配色</legend><div class="colors">
+<label>强调色<input name="accent" type="color"></label><label>页面底色<input name="background" type="color"></label><label>标题颜色<input name="titleColor" type="color"></label>
+</div></fieldset><div class="actions"><button type="submit" class="primary">保存到本地项目</button><button id="revert" type="button">撤销未保存修改</button><button id="reset" type="button">预览默认样式</button></div>
+<p id="status" role="status" aria-live="polite">正在连接本机编辑器…</p><p class="hint">这里不调用 Gemini，也不处理 API 密钥。保存不会自动上传 GitHub；需要上线时，告诉我“发布本地外观调整”。</p></form></aside>
+<main><div class="preview-bar"><strong>实时预览</strong><div><button id="desktop" aria-pressed="true">电脑</button><button id="mobile" aria-pressed="false">手机</button></div><span>与公开网站相同的页面与本地新闻数据</span></div><div id="preview-stage"><div id="preview-canvas"><iframe id="preview" title="新闻网页外观预览" sandbox="allow-scripts allow-same-origin" src="/index.html"></iframe></div></div></main></body></html>

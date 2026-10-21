@@ -62,6 +62,8 @@ node --test tests/*.test.cjs
 
 ## 文件
 
+本机外观编辑：双击项目里的 **编辑网页外观.command**，即可调整颜色、字号与间距并实时预览。保存只写本地项目，公开网页没有编辑入口。详见[使用说明](docs/local-appearance-editor.md)。
+
 - `public/`：发布的网页、排序与本地翻译客户端；`data/news.json` 只包含新闻快照。
 - `scripts/collect.py`：RSS 获取、清洗、去重、归档。没有定时云端翻译入口。
 - `scripts/local_reader.py`：本机阅读器、云功能关闭的 Ollama，以及明确启用后才调用的 Gemini 接口。
