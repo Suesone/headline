@@ -102,29 +102,26 @@
     "max_items": 10
   },
   {
-    "id": "nhk-japanese",
+    "id": "nhk-hatena",
     "name": "NHK ニュース · 日本語",
     "publisher": "NHK",
     "language": "ja",
-    "url": "https://news.google.com/rss/search?q=site%3Anews.web.nhk+when%3A2d&hl=ja&gl=JP&ceid=JP%3Aja",
+    "url": "https://b.hatena.ne.jp/entrylist?url=https%3A%2F%2Fnews.web.nhk%2F&mode=rss",
     "homepage": "https://news.web.nhk/newsweb/",
     "enabled": true,
     "mode": "links_only",
-    "time_basis": "feed_publication",
+    "time_basis": "community_collection",
     "allowed_link_domains": [
-      "news.google.com"
-    ],
-    "entry_source_domains": [
       "news.web.nhk"
     ],
     "japanese_titles_only": true,
-    "relay_name": "Google News 聚合",
-    "relay_url": "https://news.google.com/",
+    "relay_name": "Hatena Bookmark",
+    "relay_url": "https://b.hatena.ne.jp/site/news.web.nhk/",
     "max_items": 10,
     "max_feed_age_hours": 48,
-    "terms_url": "https://policies.google.com/terms",
-    "license_url": "https://policies.google.com/terms",
-    "license": "新闻内容权利归 NHK；聚合可访问不代表额外转载许可",
-    "note": "Google News 日语 RSS 聚合；仅收录来源域名为 news.web.nhk 且标题含日文假名的 NHK 报道。非 NHK 官方 RSS，标题链接经 Google News 跳转；不抓取摘要或全文。"
+    "terms_url": "https://policies.hatena.ne.jp/terms",
+    "license_url": "https://policies.hatena.ne.jp/terms",
+    "license": "原标题归 NHK；社区收录不授予额外内容权利",
+    "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。"
   }
 ]

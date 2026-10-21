@@ -74,7 +74,7 @@ function shortcuts() {
   for (const s of sources) {
     const button = el('button',undefined,'source-shortcut' + (s.id === $('source-select').value ? ' active' : ''));
     button.type = 'button'; button.setAttribute('aria-pressed',String(s.id === $('source-select').value));
-    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? (s.using_fallback ? 'Google News 备用' : '日语 · Google News') : s.relay_name ? '社区 RSS' : '官方 RSS','shortcut-subtitle'));
+    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? (s.using_fallback ? 'Google News 备用' : '日语 · Google News') : s.relay_name ? (s.language === 'ja' ? '日语 · 社区 RSS' : '社区 RSS') : '官方 RSS','shortcut-subtitle'));
     button.addEventListener('click',() => { if (busy) return; $('source-select').value = s.id; render(); }); list.append(button);
   }
 }
@@ -97,7 +97,7 @@ function articleNode(article, rank, featured, board = null) {
   body.append(title);
   const meta = el('div',undefined,'article-meta');
   const credit = source.publisher === 'BBC' ? 'BBC News' : source.publisher;
-  meta.append(link(credit,source.homepage),el('span',(article.time_basis === 'feed_publication' ? '订阅 ' : '') + format(article.published_at)));
+  meta.append(link(credit,source.homepage),el('span',(article.time_basis === 'community_collection' ? '社区收录 ' : article.time_basis === 'feed_publication' ? '订阅 ' : '') + format(article.published_at)));
   if (board && board.publisher_count > 1) meta.append(el('span',`${board.publisher_count} 家媒体 · 同标题`,'cross-source'));
   if (board) meta.append(el('span',`来源榜第 ${Math.min(...board.positions.map(p=>p.position))} 位`));
   if (article.time_basis === 'feed_publication' && new URL(article.url).hostname === 'news.google.com') meta.append(el('span','经 Google News 跳转'));

@@ -305,3 +305,26 @@ def test_japanese_aggregation_rejects_english_and_unrelated_publishers():
     assert skipped == 3 and len(articles) == 1
     assert articles[0]['title'] == '政府が新たな方針を発表'
     assert articles[0]['summary'] == ''
+
+
+def test_japanese_community_rdf_has_direct_links_and_collection_dates():
+    xml = '''<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <channel rdf:about="https://b.hatena.ne.jp/site/news.web.nhk/"><title>NHK community</title></channel>
+      <item rdf:about="https://news.web.nhk/newsweb/na/test"><title>政府が方針を発表</title><link>https://news.web.nhk/newsweb/na/test</link><dc:date>2026-10-18T00:00:00Z</dc:date><description>Unwanted community comments</description></item>
+      <item rdf:about="https://news.web.nhk.attacker.example/test"><title>政府が方針を発表</title><link>https://news.web.nhk.attacker.example/test</link><dc:date>2026-10-18T00:00:00Z</dc:date></item>
+      <item rdf:about="https://news.google.com/test"><title>政府が方針を発表</title><link>https://news.google.com/test</link><dc:date>2026-10-18T00:00:00Z</dc:date></item>
+      <item rdf:about="https://news.web.nhk/english"><title>English story</title><link>https://news.web.nhk/english</link><dc:date>2026-10-18T00:00:00Z</dc:date></item>
+    </rdf:RDF>'''
+    source = {'id':'nhk-hatena', 'name':'NHK', 'enabled':True, 'mode':'links_only',
+              'allowed_link_domains':['news.web.nhk'], 'japanese_titles_only':True,
+              'time_basis':'community_collection'}
+    items, skipped = c.parse_feed(xml.encode(), source, NOW)
+    assert len(items) == 1 and skipped == 3
+    assert items[0]['url'] == 'https://news.web.nhk/newsweb/na/test'
+    assert items[0]['time_basis'] == 'community_collection'
+    assert items[0]['published_at'] == '2026-10-18T00:00:00Z'
+    assert items[0]['summary'] == ''
+    old = article(source='nhk-japanese')
+    old['url'] = 'https://news.google.com/test'
+    assert c.retain_articles([old,*items], [source], NOW) == items

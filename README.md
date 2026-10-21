@@ -18,9 +18,9 @@
 
 ## 来源
 
-当前启用六个订阅流：BBC World、BBC Business、NPR News、CNBC International、The Guardian World、NHK ニュース（日语 Google News 聚合）。已移除 Reuters、The Washington Post 与 NHK WORLD-JAPAN，其旧报道也从发布数据中清理。
+当前启用六个订阅流：BBC World、BBC Business、NPR News、CNBC International、The Guardian World、NHK ニュース（日语 Hatena 社区 RSS）。已移除 Reuters、The Washington Post 与 NHK WORLD-JAPAN，其旧报道也从发布数据中清理。
 
-已删除未启用的 NHK 官方 RSS 配置，改用实测可用的 Google News 日语 RSS 聚合。仅接收来源域名为 `news.web.nhk`、标题含日文假名的 NHK 报道；页面明确标注 Google News 聚合及跳转链接，不把它称作 NHK 官方源或社区镜像。每时段十条、五条折叠和 72 小时存档规则同其他来源。Gemini 支持英文和日文原文按需译成中文。聚合可访问并不改变原始内容权利。验证记录见 [NHK 日语接入](docs/nhk-one.md)。
+已删除未启用的 NHK 官方 RSS 配置，并将 Google News 日语跳转源替换为实测可用的 Hatena Bookmark 社区 RSS。仅接收 `news.web.nhk` 域名、标题含日文假名的新闻，标题链接直达 NHK 原文。页面标注“社区收录”时间，不冒充原文首次发布时间；社区可能重新收录旧文，也不保证覆盖全部 NHK 报道。旧 Google 跳转记录随源标识更换从当前数据清理。每时段十条、五条折叠和 72 小时存档规则不变。Gemini 支持日语标题按需译成中文。验证记录见 [NHK 日语接入](docs/nhk-one.md)。
 
 ## 按需翻译：面向入门者
 

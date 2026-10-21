@@ -1,14 +1,14 @@
-# NHK 日语新闻接入（2026-10-21）
+# NHK 日语直达源验证（2026-10-21）
 
-已删除未启用的 nhk-one 官方 RSS 配置，改为启用 nhk-japanese。
+当前启用 nhk-hatena；已移除 nhk-one 官方配置及 nhk-japanese Google News 跳转源。
 
-- 接入：Google News 日语 RSS 聚合（hl=ja、gl=JP、ceid=JP:ja），查询 site:news.web.nhk when:2d。
-- 本机实测：返回 RSS 2.0，100 条候选；有当天日语标题、pubDate、NHK 来源标签和 Google News 跳转链接。采集器最多接收 10 条有效条目。
-- 来源过滤：RSS source.href 的域名必须是 news.web.nhk 或其子域，拒绝混入其他媒体、相似恶意域名和缺失来源标签的条目。
-- 语种过滤：标题至少含一个日文平假名或片假名，拒绝英文 NHK WORLD-JAPAN；可能排除少量仅含汉字的日语标题。
-- 显示：仅标题，不保存或显示聚合摘要；经 Google News 跳转。聚合发布时间不保证等同于 NHK 原站首次发布时间。
-- 免费、无需 API Key；不是 NHK 官方 RSS，也不是 RSSHub 社区转发。
-- RSSHub /nhk/news_web_easy 本次读取返回 HTTP 错误，未配置为可用源。未引入未经验证的公共镜像。
-- 删除旧官方源并不代表其技术上无法读取：此前实测可读，但未启用。此次按用户要求直接移除配置。
+- RSS：https://b.hatena.ne.jp/entrylist?url=https%3A%2F%2Fnews.web.nhk%2F&mode=rss
+- 提供者：Hatena Bookmark 社区，站点收录列表 https://b.hatena.ne.jp/site/news.web.nhk/ 。
+- 本机实测 HTTP 200，RSS 1.0/RDF，30 条候选，含当天日语标题及 dc:date。采集器已验证最多接收 10 条有效条目。
+- item.link 直接指向 https://news.web.nhk/newsweb/na/...，无需 Google News 或 Hatena 评论页中转；仅接受 news.web.nhk 域名并校验日语假名。
+- dc:date 为社区收录时间，不保证等同于 NHK 原文首次发布时间。社区可能重新关注旧文，覆盖也并非完整新闻流。页面时间前标注“社区收录”。
+- 只保存原标题和原文链接，不保存 RSS 摘要、社区评论、全文。原标题权利仍归 NHK，社区可访问不代表额外转载许可。
+- 新源使用独立 id，旧 Google News 跳转条目不会进入当前 72 小时存档。
+- RSSHub 官方公共实例 /nhk/news_web_easy 本次返回 403；rssforever 实例读取超时，未作为已验证来源或静默备用。
 
-本接入只验证技术可用性，聚合不授予额外内容权利。原标题归 NHK，不抓取正文，不绕过登录或付费访问。
+参考：https://b.hatena.ne.jp/help/entry/faq （域名/URL 新着书签 RSS）与 https://github.com/DIYgod/RSSHub/blob/master/lib/routes/nhk/news-web-easy.tsx （NHK Easy 社区实现）。
