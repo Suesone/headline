@@ -62,7 +62,7 @@ node --test tests/*.test.cjs
 
 ## 文件
 
-本机外观编辑：双击项目里的 **编辑网页外观.command**，即可调整颜色、字号与间距并实时预览。保存只写本地项目，公开网页没有编辑入口。详见[使用说明](docs/local-appearance-editor.md)。
+本机外观编辑：双击项目里的 **编辑网页外观.command**，即可修改页面文案、配色、字号、间距和列数，并实时预览电脑／手机效果。保存只写本地项目，公开网页没有编辑入口。需要上线时告诉 Codex“发布本地外观调整”。详见[使用说明](docs/local-appearance-editor.md)。
 
 - `public/`：发布的网页、排序与本地翻译客户端；`data/news.json` 只包含新闻快照。
 - `scripts/collect.py`：RSS 获取、清洗、去重、归档。没有定时云端翻译入口。

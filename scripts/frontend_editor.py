@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+import html
+import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 from pathlib import Path
@@ -11,18 +13,22 @@ import threading
 import webbrowser
 
 ROOT = Path(__file__).resolve().parents[1]
+TEXTS = dict(pageHeading='国际新闻榜', intro='先看榜中榜，再读你关心的头条。',
+             boardHeading='榜中榜', boardIntro='汇集各源前列报道，先读值得关注的新闻。',
+             sourcesHeading='来源榜单', archiveHeading='新闻存档', footerText='世界新闻，保持好奇。')
 DEFAULTS = dict(titleSize=18, mobileSize=17, weight=700, spacing=15, width=1336,
-                columns=3, accent='#e8576d', background='#f5f6f8', titleColor='#111111')
+                columns=3, boardColumns=2, accent='#e8576d', background='#f5f6f8', titleColor='#111111', **TEXTS)
 RANGES = dict(titleSize=(14, 28), mobileSize=(14, 26), spacing=(8, 28), width=(960, 1600))
 VARIABLES = dict(titleSize='--reader-title-size', mobileSize='--reader-mobile-size',
                  weight='--reader-weight', spacing='--reader-spacing', width='--reader-width',
                  columns='--reader-columns', accent='--accent', background='--bg',
-                 titleColor='--reader-title-color')
+                 titleColor='--reader-title-color', boardColumns='--reader-board-columns')
 RULES = '''
 .page { max-width:var(--reader-width,1336px); }
 .article,.board-list .article { padding-top:var(--reader-spacing,15px);padding-bottom:var(--reader-spacing,15px); }
 .article-title,.featured .article-title { font-size:var(--reader-title-size,18px);font-weight:var(--reader-weight,700);color:var(--reader-title-color,#111111); }
 @media(min-width:1101px) { .news-grid { grid-template-columns:repeat(var(--reader-columns,3),minmax(0,1fr)); } }
+@media(min-width:721px) { .board-list { grid-template-columns:repeat(var(--reader-board-columns,2),minmax(0,1fr)); } }
 @media(max-width:720px) { .article-title,.featured .article-title { font-size:var(--reader-mobile-size,17px); } }
 '''
 
@@ -34,9 +40,13 @@ def validate(value):
         if key in RANGES:
             if type(item) is not int or not RANGES[key][0] <= item <= RANGES[key][1]:
                 raise ValueError('数值超出允许范围')
-        elif key in ('weight', 'columns'):
-            if type(item) is not int or item not in ((500,600,700,800) if key == 'weight' else (2,3,4)):
+        elif key in ('weight', 'columns', 'boardColumns'):
+            allowed = {'weight':(500,600,700,800), 'columns':(2,3,4), 'boardColumns':(1,2)}[key]
+            if type(item) is not int or item not in allowed:
                 raise ValueError('字号粗细或列数无效')
+        elif key in TEXTS:
+            if not isinstance(item, str) or not item.strip() or len(item) > 160 or any(ord(c) < 32 for c in item):
+                raise ValueError('文字须为 1–160 字的单行内容')
         elif not isinstance(item, str) or not re.fullmatch(r'#[0-9a-fA-F]{6}', item):
             raise ValueError('颜色格式无效')
     return dict(value)
@@ -44,7 +54,7 @@ def validate(value):
 
 def stylesheet(value):
     value = validate(value)
-    declarations = '\n'.join(f'  {VARIABLES[key]}: {item}{"px" if key in RANGES else ""};' for key,item in value.items())
+    declarations = '\n'.join(f'  {VARIABLES[key]}: {item}{"px" if key in RANGES else ""};' for key,item in value.items() if key in VARIABLES)
     return '/* Saved with the local Headline editor. */\n:root {\n' + declarations + '\n}\n' + RULES
 
 
@@ -52,9 +62,18 @@ def save_settings(root, value):
     value = validate(value)
     settings = root / 'config/appearance.json'
     css = root / 'public/appearance.css'
+    page = root / 'public/index.html'
+    markup = page.read_text(encoding='utf-8')
+    for key in TEXTS:
+        # Only marked plain-text elements; never accept HTML, selectors or paths.
+        pattern = r'(<([a-z0-9]+)\b[^>]*\bdata-editor-text="' + key + r'"[^>]*>)[^<]*(</\2>)'
+        markup = re.sub(pattern, lambda m: m[1] + html.escape(value[key]) + m[3], markup)
+    css_content = stylesheet(value)
+    version = hashlib.sha256(css_content.encode()).hexdigest()[:12]
+    markup = re.sub(r'\./appearance\.css\?v=[^"\s]+', './appearance.css?v=' + version, markup)
     # Fixed destinations only; no filenames or CSS supplied by the browser.
     for path, content in ((settings,json.dumps(value,ensure_ascii=False,indent=2)+'\n'),
-                          (css,stylesheet(value))):
+                          (css,css_content), (page,markup)):
         temporary = path.with_suffix(path.suffix + '.tmp')
         temporary.write_text(content,encoding='utf-8')
         temporary.replace(path)
@@ -89,6 +108,8 @@ class EditorHandler(SimpleHTTPRequestHandler):
             return self.reply(dict(settings=self.server.saved, defaults=DEFAULTS, token=self.server.token))
         if path == '/_draft.css':
             return self.reply(stylesheet(self.server.draft),'text/css; charset=utf-8')
+        if path == '/_editor/draft-text':
+            return self.reply({key:self.server.draft[key] for key in TEXTS})
         if path in ('/_editor/', '/_editor/editor.js', '/_editor/editor.css'):
             filename = {'/_editor/':'index.html','/_editor/editor.js':'editor.js','/_editor/editor.css':'editor.css'}[path]
             content_type = {'index.html':'text/html','editor.js':'text/javascript','editor.css':'text/css'}[filename]
@@ -115,7 +136,7 @@ class EditorHandler(SimpleHTTPRequestHandler):
             return self.reply({'error':'不存在'},status=404)
         try:
             length = int(self.headers.get('Content-Length','0'))
-            if not 0 < length <= 4096:
+            if not 0 < length <= 16384:
                 raise ValueError('请求大小无效')
             value = validate(json.loads(self.rfile.read(length)))
             if self.path.endswith('/save'):
@@ -131,7 +152,7 @@ class EditorHandler(SimpleHTTPRequestHandler):
 
 def make_server(root=ROOT, port=8766):
     root = Path(root)
-    saved = validate(json.loads((root/'config/appearance.json').read_text()))
+    saved = validate({**DEFAULTS, **json.loads((root/'config/appearance.json').read_text())})
     server = ThreadingHTTPServer(('127.0.0.1',port),EditorHandler)
     server.root, server.saved, server.draft = root, saved, dict(saved)
     server.token = secrets.token_hex(32)

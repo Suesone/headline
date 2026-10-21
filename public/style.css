@@ -39,3 +39,5 @@ dialog { width:min(760px,calc(100% - 28px));max-height:90vh;overflow:auto;border
 .article-title { font-family:Arial,"Helvetica Neue","PingFang SC","Microsoft YaHei",sans-serif;font-size:18px;font-weight:700;line-height:1.5;color:#111; }
 .archive-section { margin-top:30px; } .archive-section .news-grid { margin-top:16px; } .archive-source-heading { padding:16px;border-bottom:1px solid var(--rule); } .archive-expand { margin:12px 17px; }
 @media(max-width:720px) { .article-title { font-size:17px; } }
+
+footer p .editor-footer-copy{font-size:10px;margin-top:0}

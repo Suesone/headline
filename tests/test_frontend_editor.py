@@ -15,11 +15,20 @@ def test_settings_reject_css_injection_and_unexpected_fields(tmp_path):
         with pytest.raises(ValueError):
             e.validate({**e.DEFAULTS,**changes})
     (tmp_path/'public').mkdir(); (tmp_path/'config').mkdir()
+    (tmp_path/'public/index.html').write_text('<h1 data-editor-text="pageHeading">旧标题</h1>')
     value = {**e.DEFAULTS,'titleSize':22,'accent':'#112233'}
     e.save_settings(tmp_path,value)
     assert json.loads((tmp_path/'config/appearance.json').read_text()) == value
     css = (tmp_path/'public/appearance.css').read_text()
     assert '--reader-title-size: 22px;' in css and '--accent: #112233;' in css
+    text = {**value, 'pageHeading':'<script>alert("test")</script>', 'boardColumns':1}
+    e.save_settings(tmp_path,text)
+    page = (tmp_path/'public/index.html').read_text()
+    assert '&lt;script&gt;' in page and '<script>' not in page
+    assert 'pageHeading' not in (tmp_path/'public/appearance.css').read_text()
+    for bad in ('', 'x'*161, 'hello\nworld'):
+        with pytest.raises(ValueError):
+            e.validate({**value, 'intro':bad})
 
 
 def test_editor_requires_local_host_origin_and_token_and_keeps_preview_unsaved(tmp_path):

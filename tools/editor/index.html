@@ -3,11 +3,21 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Headline · 本机外观编辑器</title><link rel="stylesheet" href="./editor.css"><script src="./editor.js" defer></script></head>
 <body><aside><header><span class="badge">仅在你的电脑</span><h1>调整阅读外观</h1><p>拖动即可预览。保存到项目后，下次打开会保留；公开网页没有编辑入口。</p></header>
-<form id="controls"><fieldset><legend>文字</legend>
+<form id="controls"><fieldset><legend>页面文案</legend>
+<label>页面标题<input name="pageHeading" type="text" maxlength="160"></label>
+<label>页面介绍<input name="intro" type="text" maxlength="160"></label>
+<label>榜中榜名称<input name="boardHeading" type="text" maxlength="160"></label>
+<label>榜中榜介绍<input name="boardIntro" type="text" maxlength="160"></label>
+<label>来源榜单名称<input name="sourcesHeading" type="text" maxlength="160"></label>
+<label>存档名称<input name="archiveHeading" type="text" maxlength="160"></label>
+<label>页脚文字<input name="footerText" type="text" maxlength="160"></label>
+<p class="hint">栏目名称会同步修改顶部导航。新闻原标题与运行状态由采集系统维护。</p>
+</fieldset><fieldset><legend>字号</legend>
 <label>电脑标题字号 <output id="titleSize-value"></output><input name="titleSize" type="range" min="14" max="28" step="1"></label>
 <label>手机标题字号 <output id="mobileSize-value"></output><input name="mobileSize" type="range" min="14" max="26" step="1"></label>
 <label>标题粗细<select name="weight"><option value="500">中等</option><option value="600">较粗</option><option value="700">粗体</option><option value="800">特粗</option></select></label>
 </fieldset><fieldset><legend>布局</legend>
+<label>榜中榜列数<select name="boardColumns"><option value="1">单列</option><option value="2">两列</option></select></label>
 <label>新闻上下留白 <output id="spacing-value"></output><input name="spacing" type="range" min="8" max="28" step="1"></label>
 <label>页面最大宽度 <output id="width-value"></output><input name="width" type="range" min="960" max="1600" step="8"></label>
 <label>电脑来源列数<select name="columns"><option value="2">两列</option><option value="3">三列</option><option value="4">四列</option></select></label><p class="hint">窄屏仍自动减少列数，手机保持单列。</p>
