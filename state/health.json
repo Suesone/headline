@@ -364,19 +364,17 @@
       "failed_sources": []
     },
     {
-      "at": "2026-10-21T14:11:09.951595Z",
+      "at": "2026-10-21T14:43:26.398990Z",
       "slot": "2026-10-21T22:00+08:00",
       "status": "ok",
       "ai": "on_demand",
       "trigger": {
-        "event": "workflow_dispatch",
-        "schedule": "",
+        "event": "schedule",
+        "schedule": "0 */2 * * *",
         "slot": "2026-10-21T22:00+08:00",
-        "source": "cloudflare-watchdog",
-        "requested_slot": "2026-10-21T14:00:00Z",
-        "run_url": "https://github.com/Suesone/headline/actions/runs/39613229978"
+        "run_url": "https://github.com/Suesone/headline/actions/runs/39619269287"
       },
-      "articles": 285,
+      "articles": 286,
       "failed_sources": []
     }
   ],
