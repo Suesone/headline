@@ -1,30 +1,23 @@
 {
-  "generated_at": "2026-10-21T10:02:33.023938Z",
+  "generated_at": "2026-10-21T11:39:13.978182Z",
   "status": "ok",
-  "last_success_at": "2026-10-21T10:02:33.023938Z",
+  "last_success_at": "2026-10-21T11:39:13.978182Z",
   "trigger": {
-    "event": "workflow_dispatch",
+    "event": "push",
     "schedule": "",
     "slot": "2026-10-21T18:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-21T10:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/39581550293"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/39593482301"
   },
   "sources": [
     {
-      "id": "reuters-community",
-      "status": "ok",
-      "received": 20
-    },
-    {
       "id": "bbc-world",
       "status": "ok",
-      "received": 20
+      "received": 10
     },
     {
       "id": "bbc-business",
       "status": "ok",
-      "received": 20
+      "received": 10
     },
     {
       "id": "npr-news",
@@ -34,22 +27,17 @@
     {
       "id": "cnbc-world",
       "status": "ok",
-      "received": 20
+      "received": 10
     },
     {
       "id": "guardian-world",
       "status": "ok",
-      "received": 20
+      "received": 10
     },
     {
-      "id": "washingtonpost-world",
-      "status": "ok",
-      "received": 20
-    },
-    {
-      "id": "nhk-world",
-      "status": "ok",
-      "received": 20
+      "id": "nhk-one",
+      "status": "disabled",
+      "received": null
     }
   ]
 }
