@@ -1,0 +1,97 @@
+{
+  "checked_on": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "scope": "Current RSS feeds, first 10 entries each. Image URLs counted, not downloaded or licensed. Nontracking URLs are candidates, not validated image responses.",
+  "results": [
+    {
+      "id": "bbc-world",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "status": 200,
+      "entries_checked": 10,
+      "images": {
+        "media_thumbnail": 10,
+        "media_content": 0,
+        "enclosures": 0,
+        "html_img": 0,
+        "html_nontracking_candidate": 0,
+        "tracking_pixel": 0,
+        "hatena_imageurl": 0
+      }
+    },
+    {
+      "id": "bbc-business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "status": 200,
+      "entries_checked": 10,
+      "images": {
+        "media_thumbnail": 10,
+        "media_content": 0,
+        "enclosures": 0,
+        "html_img": 0,
+        "html_nontracking_candidate": 0,
+        "tracking_pixel": 0,
+        "hatena_imageurl": 0
+      }
+    },
+    {
+      "id": "npr-news",
+      "url": "https://feeds.npr.org/1001/rss.xml",
+      "status": 200,
+      "entries_checked": 10,
+      "images": {
+        "media_thumbnail": 0,
+        "media_content": 0,
+        "enclosures": 0,
+        "html_img": 10,
+        "html_nontracking_candidate": 8,
+        "tracking_pixel": 10,
+        "hatena_imageurl": 0
+      }
+    },
+    {
+      "id": "cnbc-world",
+      "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+      "status": 200,
+      "entries_checked": 10,
+      "images": {
+        "media_thumbnail": 0,
+        "media_content": 0,
+        "enclosures": 0,
+        "html_img": 0,
+        "html_nontracking_candidate": 0,
+        "tracking_pixel": 0,
+        "hatena_imageurl": 0
+      }
+    },
+    {
+      "id": "guardian-world",
+      "url": "https://www.theguardian.com/world/rss",
+      "status": 200,
+      "entries_checked": 10,
+      "images": {
+        "media_thumbnail": 0,
+        "media_content": 10,
+        "enclosures": 0,
+        "html_img": 0,
+        "html_nontracking_candidate": 0,
+        "tracking_pixel": 0,
+        "hatena_imageurl": 0
+      }
+    },
+    {
+      "id": "nhk-hatena",
+      "url": "https://b.hatena.ne.jp/entrylist?url=https%3A%2F%2Fnews.web.nhk%2F&mode=rss",
+      "status": 200,
+      "entries_checked": 10,
+      "images": {
+        "media_thumbnail": 0,
+        "media_content": 0,
+        "enclosures": 0,
+        "html_img": 10,
+        "html_nontracking_candidate": 10,
+        "tracking_pixel": 0,
+        "hatena_imageurl": 10
+      }
+    }
+  ]
+}
