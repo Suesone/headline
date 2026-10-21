@@ -74,7 +74,7 @@ function shortcuts() {
   for (const s of sources) {
     const button = el('button',undefined,'source-shortcut' + (s.id === $('source-select').value ? ' active' : ''));
     button.type = 'button'; button.setAttribute('aria-pressed',String(s.id === $('source-select').value));
-    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? 'Google News 备用' : s.relay_name ? '社区 RSS' : '官方 RSS','shortcut-subtitle'));
+    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? (s.using_fallback ? 'Google News 备用' : '日语 · Google News') : s.relay_name ? '社区 RSS' : '官方 RSS','shortcut-subtitle'));
     button.addEventListener('click',() => { if (busy) return; $('source-select').value = s.id; render(); }); list.append(button);
   }
 }
@@ -150,7 +150,7 @@ function render() {
       more.setAttribute('aria-expanded',String(expanded)); more.setAttribute('aria-label',`${expanded ? '收起' : '更多'}：${s.name}`);
       more.addEventListener('click',() => { if (busy) return; if (expanded) expandedSources.delete(s.id); else expandedSources.add(s.id); render(); }); footer.append(more);
     }
-    else footer.append(el('span',s.relay_name ? `${s.relay_name}${s.relay_name === 'Google News 聚合' ? ' · 备用' : ' 社区 RSS'}` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
+    else footer.append(el('span',s.relay_name ? `${s.relay_name}${s.relay_name === 'Google News 聚合' ? (s.using_fallback ? ' · 备用' : '') : ' 社区 RSS'}` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
     footer.append(link(s.publisher === 'BBC' ? 'BBC News ↗' : '来源网站 ↗',s.homepage)); card.append(footer); grid.append(card);
   }
 }
