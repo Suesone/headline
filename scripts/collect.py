@@ -55,6 +55,9 @@ def plain(value, limit=600):
 
 
 def apply_source_policy(article, source):
+    for suffix in source.get('title_suffixes', []):
+        if article['title'].rstrip().endswith(suffix):
+            article['title'] = article['title'].rstrip()[:-len(suffix)].rstrip()
     # Strip retired analysis and cloud-enrichment fields from retained snapshots.
     for key in ('topics', 'analysis_allowed', 'topics_title_only', 'ai_allowed',
                 'extraction_version', 'extracted', 'title_zh'):

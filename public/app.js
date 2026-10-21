@@ -74,7 +74,7 @@ function shortcuts() {
   for (const s of sources) {
     const button = el('button',undefined,'source-shortcut' + (s.id === $('source-select').value ? ' active' : ''));
     button.type = 'button'; button.setAttribute('aria-pressed',String(s.id === $('source-select').value));
-    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? (s.using_fallback ? 'Google News 备用' : '日语 · Google News') : s.relay_name ? (s.language === 'ja' ? '日语 · 社区 RSS' : '社区 RSS') : '官方 RSS','shortcut-subtitle'));
+    button.setAttribute('aria-label',s.name); button.append(sourceIcon(s),el('span',s.id === 'all' ? '全部来源' : s.name.replace(' · 社区 RSS','')),el('span',s.id === 'all' ? '新闻总览' : s.relay_name === 'Google News 聚合' ? (s.using_fallback ? 'Google News 备用' : '日语 · Google News') : s.relay_name ? '社区RSS' : '官方 RSS','shortcut-subtitle'));
     button.addEventListener('click',() => { if (busy) return; $('source-select').value = s.id; render(); }); list.append(button);
   }
 }
@@ -97,7 +97,7 @@ function articleNode(article, rank, featured, board = null) {
   body.append(title);
   const meta = el('div',undefined,'article-meta');
   const credit = source.publisher === 'BBC' ? 'BBC News' : source.publisher;
-  meta.append(link(credit,source.homepage),el('span',(article.time_basis === 'community_collection' ? '社区收录 ' : article.time_basis === 'feed_publication' ? '订阅 ' : '') + format(article.published_at)));
+  meta.append(link(credit,source.homepage),el('span',(article.time_basis === 'feed_publication' ? '订阅 ' : '') + format(article.published_at)));
   if (board && board.publisher_count > 1) meta.append(el('span',`${board.publisher_count} 家媒体 · 同标题`,'cross-source'));
   if (board) meta.append(el('span',`来源榜第 ${Math.min(...board.positions.map(p=>p.position))} 位`));
   if (article.time_basis === 'feed_publication' && new URL(article.url).hostname === 'news.google.com') meta.append(el('span','经 Google News 跳转'));
@@ -136,7 +136,9 @@ function render() {
     const items = HeadlineRanking.rankSources(articles.filter(a => a.source_id === s.id),now);
     const card = el('section',undefined,'source-card'); card.setAttribute('aria-label',s.name + ' 新闻榜单');
     const header = el('div',undefined,'source-card-header'); const icon = sourceIcon(s); icon.className = 'source-card-icon ' + sourceClass(s);
-    header.append(icon,el('h3',s.name)); card.append(header);
+    const sourceHeading = el('div'); sourceHeading.append(el('h3',s.name));
+    if (s.time_basis === 'community_collection') sourceHeading.append(el('span','社区RSS','shortcut-subtitle'));
+    header.append(icon,sourceHeading); card.append(header);
     const rows = el('div',undefined,'source-card-list');
     if (!items.length) { rows.append(el('p','所选时段暂无报道。可前往“新闻存档”查看历史。','empty-state')); }
     const collapsedLimit = rankSetting('per_source_limit',5);
@@ -150,7 +152,7 @@ function render() {
       more.setAttribute('aria-expanded',String(expanded)); more.setAttribute('aria-label',`${expanded ? '收起' : '更多'}：${s.name}`);
       more.addEventListener('click',() => { if (busy) return; if (expanded) expandedSources.delete(s.id); else expandedSources.add(s.id); render(); }); footer.append(more);
     }
-    else footer.append(el('span',s.relay_name ? `${s.relay_name}${s.relay_name === 'Google News 聚合' ? (s.using_fallback ? ' · 备用' : '') : ' 社区 RSS'}` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
+    else if (s.time_basis !== 'community_collection') footer.append(el('span',s.relay_name ? `${s.relay_name}${s.relay_name === 'Google News 聚合' ? (s.using_fallback ? ' · 备用' : '') : ' 社区 RSS'}` : s.community_name ? '社区目录 · 官方 RSS' : '官方 RSS'));
     footer.append(link(s.publisher === 'BBC' ? 'BBC News ↗' : '来源网站 ↗',s.homepage)); card.append(footer); grid.append(card);
   }
 }

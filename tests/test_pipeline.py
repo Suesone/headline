@@ -328,3 +328,17 @@ def test_japanese_community_rdf_has_direct_links_and_collection_dates():
     old = article(source='nhk-japanese')
     old['url'] = 'https://news.google.com/test'
     assert c.retain_articles([old,*items], [source], NOW) == items
+
+
+def test_nhk_title_suffix_is_removed_from_new_and_retained_articles():
+    source = {'mode': 'links_only', 'title_suffixes': ['｜NHK ニュース', '| NHK ニュース']}
+    for suffix in source['title_suffixes']:
+        item = article(title='政府が方針を発表 ' + suffix)
+        c.apply_source_policy(item, source)
+        assert item['title'] == '政府が方針を発表'
+        c.apply_source_policy(item, source)
+        assert item['title'] == '政府が方針を発表'
+    item = article(title='NHK ニュースが伝える新たな動き')
+    assert c.apply_source_policy(item, source)['title'] == item['title']
+    other = article(title='政府が方針を発表 ｜NHK ニュース')
+    assert c.apply_source_policy(other, {})['title'].endswith('｜NHK ニュース')
