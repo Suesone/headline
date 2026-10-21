@@ -1,17 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-21T11:39:13.978182Z",
+  "generated_at": "2026-10-21T11:45:27.072646Z",
   "trigger": {
     "event": "push",
     "schedule": "",
     "slot": "2026-10-21T18:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/39593482301"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/39594249614"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
   "latest_window_id": "2026-10-21T16:00+08:00",
   "today": "2026-10-21",
-  "last_success_at": "2026-10-21T11:39:13.978182Z",
+  "last_success_at": "2026-10-21T11:45:27.072646Z",
   "status": "ok",
   "sources": [
     {
@@ -35,8 +35,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-21T11:39:13.978182Z",
-      "last_success_at": "2026-10-21T11:39:13.978182Z",
+      "checked_at": "2026-10-21T11:45:27.072646Z",
+      "last_success_at": "2026-10-21T11:45:27.072646Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -65,8 +65,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-21T11:39:13.978182Z",
-      "last_success_at": "2026-10-21T11:39:13.978182Z",
+      "checked_at": "2026-10-21T11:45:27.072646Z",
+      "last_success_at": "2026-10-21T11:45:27.072646Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -94,8 +94,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-21T11:39:13.978182Z",
-      "last_success_at": "2026-10-21T11:39:13.978182Z",
+      "checked_at": "2026-10-21T11:45:27.072646Z",
+      "last_success_at": "2026-10-21T11:45:27.072646Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -123,8 +123,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-21T11:39:13.978182Z",
-      "last_success_at": "2026-10-21T11:39:13.978182Z",
+      "checked_at": "2026-10-21T11:45:27.072646Z",
+      "last_success_at": "2026-10-21T11:45:27.072646Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -152,8 +152,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-21T11:39:13.978182Z",
-      "last_success_at": "2026-10-21T11:39:13.978182Z",
+      "checked_at": "2026-10-21T11:45:27.072646Z",
+      "last_success_at": "2026-10-21T11:45:27.072646Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -162,25 +162,39 @@
       "using_fallback": false
     },
     {
-      "id": "nhk-one",
-      "name": "NHK ONE",
+      "id": "nhk-japanese",
+      "name": "NHK ニュース · 日本語",
       "publisher": "NHK",
-      "url": "https://news.web.nhk/n-data/conf/na/rss/cat0.xml",
+      "language": "ja",
+      "url": "https://news.google.com/rss/search?q=site%3Anews.web.nhk+when%3A2d&hl=ja&gl=JP&ceid=JP%3Aja",
       "homepage": "https://news.web.nhk/newsweb/",
-      "enabled": false,
+      "enabled": true,
       "mode": "links_only",
+      "time_basis": "feed_publication",
       "allowed_link_domains": [
+        "news.google.com"
+      ],
+      "entry_source_domains": [
         "news.web.nhk"
       ],
+      "japanese_titles_only": true,
+      "relay_name": "Google News 聚合",
+      "relay_url": "https://news.google.com/",
       "max_items": 10,
-      "max_feed_age_hours": 96,
-      "terms_url": "https://www.nhk.or.jp/toppage/rss/index.html",
-      "license_url": "https://www.nhk.or.jp/toppage/rss/index.html",
-      "license": "仅限个人使用；官方未允许程序再发布",
-      "note": "官方 RSS 已验证可读，内容为日语。官方说明不允许程序再发布，故公开站点暂不启用。",
-      "status": "disabled",
-      "message": "官方 RSS 已验证可读，内容为日语。官方说明不允许程序再发布，故公开站点暂不启用。",
-      "last_success_at": null
+      "max_feed_age_hours": 48,
+      "terms_url": "https://policies.google.com/terms",
+      "license_url": "https://policies.google.com/terms",
+      "license": "新闻内容权利归 NHK；聚合可访问不代表额外转载许可",
+      "note": "Google News 日语 RSS 聚合；仅收录来源域名为 news.web.nhk 且标题含日文假名的 NHK 报道。非 NHK 官方 RSS，标题链接经 Google News 跳转；不抓取摘要或全文。",
+      "status": "ok",
+      "checked_at": "2026-10-21T11:45:27.072646Z",
+      "last_success_at": "2026-10-21T11:45:27.072646Z",
+      "received": 10,
+      "skipped": 0,
+      "fetch_limit": 10,
+      "message": "已读取 10 条；跳过 0 条无效记录",
+      "active_feed_url": "https://news.google.com/rss/search?q=site%3Anews.web.nhk+when%3A2d&hl=ja&gl=JP&ceid=JP%3Aja",
+      "using_fallback": false
     }
   ],
   "articles": [
@@ -199,7 +213,7 @@
       "first_seen_at": "2026-10-21T11:39:13.978182Z",
       "window_id": "2026-10-21T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -217,7 +231,7 @@
       "first_seen_at": "2026-10-21T11:39:13.978182Z",
       "window_id": "2026-10-21T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -235,7 +249,7 @@
       "first_seen_at": "2026-10-21T10:02:33.023938Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -253,8 +267,44 @@
       "first_seen_at": "2026-10-21T10:02:33.023938Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "a252aedf4e16ff82c163b9ee",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTFBFNzV4Y3BDUWstWFRMT2pjcWEwU3p3Y09rdFVVVzhFS1lZNGhuU3ZUb1lGR3ViOUVncVk0bm9xaHJGVjB2azVmMDFjUVZlcTRVYkpLUVZvdXpGSmpNSkM0"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "気象庁長官 緊急地震速報を誤発表「非常に遺憾 対策検討」",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBFNzV4Y3BDUWstWFRMT2pjcWEwU3p3Y09rdFVVVzhFS1lZNGhuU3ZUb1lGR3ViOUVncVk0bm9xaHJGVjB2azVmMDFjUVZlcTRVYkpLUVZvdXpGSmpNSkM0?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T09:29:35Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T16:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
+    },
+    {
+      "id": "63a61463910c3354edafe161",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE93ZnRwT3JTd1VCdURzWGVQUWFiTElDQ2l4T3h1cTZWbndrTUxNT3JNNGVFbW96WFFJbmJveUszZWM3T2tlSlBUUjA1eGlPLS0xSjg5MUFHeWU0WDdEdnVv"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "天皇皇后両陛下 海づくり大会で大阪へ サイバー攻撃で日程変更",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE93ZnRwT3JTd1VCdURzWGVQUWFiTElDQ2l4T3h1cTZWbndrTUxNT3JNNGVFbW96WFFJbmJveUszZWM3T2tlSlBUUjA1eGlPLS0xSjg5MUFHeWU0WDdEdnVv?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T09:27:00Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T16:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "b8b528de66bbaffa9a719821",
@@ -263,15 +313,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "US citizen Stephen Hubbard freed by Russia and 'on his way home', Trump says",
+      "title": "US citizen Stephen Hubbard freed by Russia as Trump envoy meets Putin",
       "url": "https://www.bbc.co.uk/news/articles/c6m24l9v3745o?at_campaign=rss&at_medium=RSS",
-      "summary": "The former teacher has been released without any \"swap\" required, according to the president.",
+      "summary": "The 74-year-old former teacher has been released without any \"swap\" required, Trump says.",
       "author": "",
       "published_at": "2026-10-21T09:22:23Z",
       "first_seen_at": "2026-10-21T10:02:33.023938Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -289,7 +339,7 @@
       "first_seen_at": "2026-10-21T10:02:33.023938Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -307,7 +357,7 @@
       "first_seen_at": "2026-10-21T10:02:33.023938Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -325,7 +375,7 @@
       "first_seen_at": "2026-10-21T10:02:33.023938Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -343,7 +393,7 @@
       "first_seen_at": "2026-10-21T08:55:20.266559Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -361,7 +411,7 @@
       "first_seen_at": "2026-10-21T11:39:13.978182Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -379,7 +429,7 @@
       "first_seen_at": "2026-10-21T08:55:20.266559Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -397,7 +447,7 @@
       "first_seen_at": "2026-10-21T08:55:20.266559Z",
       "window_id": "2026-10-21T16:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -451,7 +501,7 @@
       "first_seen_at": "2026-10-21T08:55:20.266559Z",
       "window_id": "2026-10-21T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -505,7 +555,7 @@
       "first_seen_at": "2026-10-21T08:02:34.389024Z",
       "window_id": "2026-10-21T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -523,7 +573,7 @@
       "first_seen_at": "2026-10-21T08:02:34.389024Z",
       "window_id": "2026-10-21T14:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -543,6 +593,24 @@
       "feed_rank": 13,
       "rank_observed_at": "2026-10-21T10:02:33.023938Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "04060b640fa8f1bc7c0585a3",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE5MYjJwaDh0dHF3RHdNWUFfR1p2Z0IxT0VOMjlRYzdmZ0N5RG51djB6aVlMVFZnNWd4b01WR3VLOGg4YzU1X0lTU1dCNml5eFA0TUE5MHFHMTBDVzB2eHZv"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "iPS心筋シート承認後1例目の手術 医師会見「患者の経過良好」",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5MYjJwaDh0dHF3RHdNWUFfR1p2Z0IxT0VOMjlRYzdmZ0N5RG51djB6aVlMVFZnNWd4b01WR3VLOGg4YzU1X0lTU1dCNml5eFA0TUE5MHFHMTBDVzB2eHZv?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T06:35:17Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T14:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "64abdd568d71ff9d42cac420",
@@ -577,7 +645,7 @@
       "first_seen_at": "2026-10-21T08:02:34.389024Z",
       "window_id": "2026-10-21T14:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -595,8 +663,44 @@
       "first_seen_at": "2026-10-21T08:02:34.389024Z",
       "window_id": "2026-10-21T14:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "bbce238a43e89a5615e57e4f",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE4yZVFXeTRza0hHOFg5RlM4WnpKZjIyVEViTnJqSEdnRFVOZ1JqMWdHQ2VOeU5fWFJXQ1RGc3JUNTh5RGZZcVNEUEExOXQ4bHlZNDE5UU9qQlo4YjM4Rnlj"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "同居女性に暴行加え死亡させた疑い 38歳容疑者を逮捕 警視庁",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE4yZVFXeTRza0hHOFg5RlM4WnpKZjIyVEViTnJqSEdnRFVOZ1JqMWdHQ2VOeU5fWFJXQ1RGc3JUNTh5RGZZcVNEUEExOXQ4bHlZNDE5UU9qQlo4YjM4Rnlj?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T06:01:00Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T14:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
+    },
+    {
+      "id": "055701dd8da78be2b14ee893",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE80Y3pRdG82czdsZUFZeFh5WU5vNDM3dHo4bWphaXcya3VUdk5ISHFtc1ZfSThsWFhrODN0OUtXWmN1WC0wYW9wSng1YnEwVzZqRDJ4WFdDd05ObnRmNEQ4"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "16歳女性が衰弱死 国賠訴訟で県や国は争う姿勢 神戸地裁",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE80Y3pRdG82czdsZUFZeFh5WU5vNDM3dHo4bWphaXcya3VUdk5ISHFtc1ZfSThsWFhrODN0OUtXWmN1WC0wYW9wSng1YnEwVzZqRDJ4WFdDd05ObnRmNEQ4?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T05:59:00Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T12:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "e352ad167dc7540c31fbb36f",
@@ -613,7 +717,7 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -631,7 +735,7 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -649,7 +753,7 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -667,7 +771,7 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -721,7 +825,7 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -757,7 +861,7 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -775,8 +879,26 @@
       "first_seen_at": "2026-10-21T06:02:30.310974Z",
       "window_id": "2026-10-21T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "a650d942a9093c4e1a490379",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE9NdzFnS205UW1WZklXeGxwb05JS0FTZ0JpOWczeG9RRXgwX2JNREQ2YjlXS2VMZ04xZENJMy1jMXBZNFNObUNzbWkxc2FhdlEwN2E5eElaZTZRb3hCOXp3"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "兵庫 「ショウリンジ」称し交番侵入か 小学生など補導や検挙",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9NdzFnS205UW1WZklXeGxwb05JS0FTZ0JpOWczeG9RRXgwX2JNREQ2YjlXS2VMZ04xZENJMy1jMXBZNFNObUNzbWkxc2FhdlEwN2E5eElaZTZRb3hCOXp3?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T03:55:00Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T10:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "cdc7fb0409a6cea11e528bc5",
@@ -883,7 +1005,7 @@
       "first_seen_at": "2026-10-21T02:02:36.120008Z",
       "window_id": "2026-10-21T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -919,8 +1041,26 @@
       "first_seen_at": "2026-10-21T02:02:36.120008Z",
       "window_id": "2026-10-21T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "7b901e605821127493ba4d33",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE51ay11TXQ1NEo0dm5EQnN3Q2Y3a19yYXlvaU5PLVV1aGN0a011UzVXck9DUjRkbUxEbXFiSkJyWkU2LUpQSGF4RXR6TkZYWnRhZ3dQRFZhMDhmUWxLZmZB"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "今年度上半期の貿易収支 2兆8000億円余の赤字",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE51ay11TXQ1NEo0dm5EQnN3Q2Y3a19yYXlvaU5PLVV1aGN0a011UzVXck9DUjRkbUxEbXFiSkJyWkU2LUpQSGF4RXR6TkZYWnRhZ3dQRFZhMDhmUWxLZmZB?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-21T00:03:09Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-21T08:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "f3029b3e117783e7b2c4da7a",
@@ -973,7 +1113,7 @@
       "first_seen_at": "2026-10-21T00:02:35.095969Z",
       "window_id": "2026-10-21T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1009,7 +1149,7 @@
       "first_seen_at": "2026-10-21T00:02:35.095969Z",
       "window_id": "2026-10-21T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1027,7 +1167,7 @@
       "first_seen_at": "2026-10-21T00:02:35.095969Z",
       "window_id": "2026-10-21T06:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1082,7 +1222,7 @@
       "first_seen_at": "2026-10-21T00:02:35.095969Z",
       "window_id": "2026-10-21T06:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1100,7 +1240,7 @@
       "first_seen_at": "2026-10-20T22:02:36.659324Z",
       "window_id": "2026-10-21T04:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1137,7 +1277,7 @@
       "first_seen_at": "2026-10-20T22:02:36.659324Z",
       "window_id": "2026-10-21T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1191,7 +1331,7 @@
       "first_seen_at": "2026-10-20T22:02:36.659324Z",
       "window_id": "2026-10-21T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1247,7 +1387,7 @@
       "first_seen_at": "2026-10-20T20:02:40.711472Z",
       "window_id": "2026-10-21T02:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1284,7 +1424,7 @@
       "first_seen_at": "2026-10-20T20:02:40.711472Z",
       "window_id": "2026-10-21T02:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1392,7 +1532,7 @@
       "first_seen_at": "2026-10-20T18:02:34.862524Z",
       "window_id": "2026-10-21T00:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1446,7 +1586,7 @@
       "first_seen_at": "2026-10-20T18:02:34.862524Z",
       "window_id": "2026-10-21T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1482,7 +1622,7 @@
       "first_seen_at": "2026-10-20T18:02:34.862524Z",
       "window_id": "2026-10-20T22:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1518,7 +1658,7 @@
       "first_seen_at": "2026-10-20T16:02:35.654994Z",
       "window_id": "2026-10-20T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1556,7 +1696,7 @@
       "first_seen_at": "2026-10-20T16:02:35.654994Z",
       "window_id": "2026-10-20T22:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1720,7 +1860,7 @@
       "first_seen_at": "2026-10-20T13:04:28.010883Z",
       "window_id": "2026-10-20T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -1739,7 +1879,7 @@
       "first_seen_at": "2026-10-20T12:02:38.635895Z",
       "window_id": "2026-10-20T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -2083,7 +2223,7 @@
       "first_seen_at": "2026-10-20T10:02:35.642473Z",
       "window_id": "2026-10-20T16:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -2102,7 +2242,7 @@
       "first_seen_at": "2026-10-20T10:02:35.642473Z",
       "window_id": "2026-10-20T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -2176,7 +2316,7 @@
       "first_seen_at": "2026-10-20T06:45:29.601021Z",
       "window_id": "2026-10-20T14:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -2302,7 +2442,7 @@
       "first_seen_at": "2026-10-20T06:45:29.601021Z",
       "window_id": "2026-10-20T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -2505,6 +2645,24 @@
       "feed_rank": 18,
       "rank_observed_at": "2026-10-20T06:02:34.797832Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "53cc71e348f3700c16d61de5",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE9WaWl4bnZXeWtkZlB0aEVMRmlDSmt0eXVfUGRMU2xQMFZoRmVKeDhBLU9RQUI2dlN5ZlJsRlY1T0lESU9ONkF5eUhCVkdmckFKTkF0X0N5TDY5RHdhWnFj"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "不正な口座開設防止へICチップ確認 金融機関で前倒しの動き | NHKニュース | 金融、ＡＩ・ネット・ＩＴ、サイバー攻撃",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9WaWl4bnZXeWtkZlB0aEVMRmlDSmt0eXVfUGRMU2xQMFZoRmVKeDhBLU9RQUI2dlN5ZlJsRlY1T0lESU9ONkF5eUhCVkdmckFKTkF0X0N5TDY5RHdhWnFj?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-20T01:48:00Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-20T08:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "fa30048c6725aaa5ebc04c2e",
@@ -2757,8 +2915,26 @@
       "first_seen_at": "2026-10-20T00:02:38.766430Z",
       "window_id": "2026-10-20T06:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "1f48101f01e693b5e5dcab23",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE82a3FSU25PbFhsOXRJeWxuMFRKSVVoejZYU1NtUkNtcXMzcm1fNUxpLTczSEl4YUduSTd1MFNuVmpIOGgxSXc2RWV3cHBnYTZxSkMxRnZGV0xMeU8yWUxR"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "「声を上げ続けて」 500日拘束された記者が語るロシアの実態",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE82a3FSU25PbFhsOXRJeWxuMFRKSVVoejZYU1NtUkNtcXMzcm1fNUxpLTczSEl4YUduSTd1MFNuVmpIOGgxSXc2RWV3cHBnYTZxSkMxRnZGV0xMeU8yWUxR?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-19T22:25:58Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-20T06:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "3ad6b513d39971a6f7d5c87d",
@@ -2978,6 +3154,24 @@
       "feed_rank": 18,
       "rank_observed_at": "2026-10-20T16:02:35.654994Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "97f3e556e74c80f111ace4a7",
+      "identities": [
+        "nhk-japanese:CBMiX0FVX3lxTE5WUzJYQjRsWWZ4RDg2WE5LM1JHdXN5YVF5blB3VzNCWnkteWFIeVdkUHdkdXh1cEY2Rnc2a29rVEg1THZMb2ZDTzZnand3c1VUandXX1dHUklSTE1yOWpF"
+      ],
+      "source_id": "nhk-japanese",
+      "publisher": "NHK",
+      "title": "盛岡 東北自動車道で車６台絡む事故 1台炎上し1人死亡",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5WUzJYQjRsWWZ4RDg2WE5LM1JHdXN5YVF5blB3VzNCWnkteWFIeVdkUHdkdXh1cEY2Rnc2a29rVEg1THZMb2ZDTzZnand3c1VUandXX1dHUklSTE1yOWpF?oc=5",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-19T19:59:00Z",
+      "first_seen_at": "2026-10-21T11:45:27.072646Z",
+      "window_id": "2026-10-20T02:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
+      "time_basis": "feed_publication"
     },
     {
       "id": "77dc1ea76c0f52417689f946",
@@ -3213,7 +3407,7 @@
       "first_seen_at": "2026-10-19T18:02:38.563927Z",
       "window_id": "2026-10-20T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -3287,7 +3481,7 @@
       "first_seen_at": "2026-10-19T16:20:15.127956Z",
       "window_id": "2026-10-19T22:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -3722,7 +3916,7 @@
       "first_seen_at": "2026-10-19T12:36:12.193470Z",
       "window_id": "2026-10-19T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-21T11:39:13.978182Z",
+      "rank_observed_at": "2026-10-21T11:45:27.072646Z",
       "time_basis": "publication"
     },
     {
@@ -5494,6 +5688,7 @@
       "end": "2026-10-19T20:00:00Z",
       "date": "2026-10-20",
       "article_ids": [
+        "97f3e556e74c80f111ace4a7",
         "77dc1ea76c0f52417689f946",
         "d19f3cbf45a44c57123a97bc",
         "555137cf2dd7d2e20ed8a81f",
@@ -5533,6 +5728,7 @@
         "e5a990da1bdc815835dd2c25",
         "a8a28cc57561105a288d5fe1",
         "094178a04dcad2ef4b94697b",
+        "1f48101f01e693b5e5dcab23",
         "3ad6b513d39971a6f7d5c87d"
       ]
     },
@@ -5545,6 +5741,7 @@
         "2d790531ce75742315b3a82d",
         "1c2b4f52034f0f11e36e90eb",
         "fb79daa19994d638162b129b",
+        "53cc71e348f3700c16d61de5",
         "fa30048c6725aaa5ebc04c2e",
         "b2475feea4e2280f6259505b",
         "c91c7b42156fbb45708b9777",
@@ -5735,6 +5932,7 @@
         "ee4cfaad263888dd6573d88d",
         "1c91555f6fa5fcd4876f3836",
         "9a1f34fe41baf96f1209a7ad",
+        "7b901e605821127493ba4d33",
         "f3029b3e117783e7b2c4da7a"
       ]
     },
@@ -5744,6 +5942,7 @@
       "end": "2026-10-21T04:00:00Z",
       "date": "2026-10-21",
       "article_ids": [
+        "a650d942a9093c4e1a490379",
         "cdc7fb0409a6cea11e528bc5",
         "d2d4c03e93dff667f9d2cfa4",
         "c95e9e5cb3feb1d1e9455612"
@@ -5755,6 +5954,7 @@
       "end": "2026-10-21T06:00:00Z",
       "date": "2026-10-21",
       "article_ids": [
+        "055701dd8da78be2b14ee893",
         "e352ad167dc7540c31fbb36f",
         "7c732064048f4d0629f65634",
         "5fc75319d790b5f433354305",
@@ -5781,9 +5981,11 @@
         "e89243f454fefbc29f47b69a",
         "b7cb204fea72cc6f77a814f5",
         "d15ee41253b3f8df1e8132ca",
+        "04060b640fa8f1bc7c0585a3",
         "64abdd568d71ff9d42cac420",
         "ad7035a7c1aaebee1b565070",
-        "a5c7fe56541a57eeb6ca4d19"
+        "a5c7fe56541a57eeb6ca4d19",
+        "bbce238a43e89a5615e57e4f"
       ]
     },
     {
@@ -5794,6 +5996,8 @@
       "article_ids": [
         "a7b0dba5b48b48e603595c1f",
         "70aa0da554b4c01ba0402cb7",
+        "a252aedf4e16ff82c163b9ee",
+        "63a61463910c3354edafe161",
         "b8b528de66bbaffa9a719821",
         "e4ec237fa22d64aa136fb54d",
         "80384848cbd1f9b3fdfa4c48",
