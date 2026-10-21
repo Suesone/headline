@@ -138,6 +138,8 @@ def parse_feed(content, source, now):
                     title = title[:-len(' - ' + credit)].strip()
             if source.get('english_titles_only') and re.search(r'[\u3040-\u30ff\u3400-\u9fff]', title):
                 raise ValueError('Not an English headline')
+            if source.get('japanese_titles_only') and not re.search(r'[\u3040-\u30ff]', title):
+                raise ValueError('Not a Japanese headline')
             if not title:
                 raise ValueError('No title')
             if any(title.casefold().startswith(prefix.casefold()) for prefix in source.get('exclude_title_prefixes', [])):

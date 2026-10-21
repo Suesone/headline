@@ -102,21 +102,29 @@
     "max_items": 10
   },
   {
-    "id": "nhk-one",
-    "name": "NHK ONE",
+    "id": "nhk-japanese",
+    "name": "NHK ニュース · 日本語",
     "publisher": "NHK",
-    "url": "https://news.web.nhk/n-data/conf/na/rss/cat0.xml",
+    "language": "ja",
+    "url": "https://news.google.com/rss/search?q=site%3Anews.web.nhk+when%3A2d&hl=ja&gl=JP&ceid=JP%3Aja",
     "homepage": "https://news.web.nhk/newsweb/",
-    "enabled": false,
+    "enabled": true,
     "mode": "links_only",
+    "time_basis": "feed_publication",
     "allowed_link_domains": [
+      "news.google.com"
+    ],
+    "entry_source_domains": [
       "news.web.nhk"
     ],
+    "japanese_titles_only": true,
+    "relay_name": "Google News 聚合",
+    "relay_url": "https://news.google.com/",
     "max_items": 10,
-    "max_feed_age_hours": 96,
-    "terms_url": "https://www.nhk.or.jp/toppage/rss/index.html",
-    "license_url": "https://www.nhk.or.jp/toppage/rss/index.html",
-    "license": "仅限个人使用；官方未允许程序再发布",
-    "note": "官方 RSS 已验证可读，内容为日语。官方说明不允许程序再发布，故公开站点暂不启用。"
+    "max_feed_age_hours": 48,
+    "terms_url": "https://policies.google.com/terms",
+    "license_url": "https://policies.google.com/terms",
+    "license": "新闻内容权利归 NHK；聚合可访问不代表额外转载许可",
+    "note": "Google News 日语 RSS 聚合；仅收录来源域名为 news.web.nhk 且标题含日文假名的 NHK 报道。非 NHK 官方 RSS，标题链接经 Google News 跳转；不抓取摘要或全文。"
   }
 ]

@@ -2,7 +2,7 @@
 
 [打开网页](https://headline.infinitas.top/) · [源码仓库](https://github.com/Suesone/headline)
 
-每两小时整理主流英文 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译按需执行，译文仅留当前页面内存，不写入项目文件或 GitHub。网页默认选中 Gemini，已移除 Chrome / Ollama 翻译选项；跨设备 Gemini 通过 Google 登录保护的 Cloudflare 接口发送原文到 Google，密钥保存在 Worker Secret。**
+每两小时整理主流英文及日语新闻 RSS，先展示“榜中榜”，再按来源阅读。公开网站无需登录、无常驻服务器、零服务费。**翻译按需执行，译文仅留当前页面内存，不写入项目文件或 GitHub。网页默认选中 Gemini，已移除 Chrome / Ollama 翻译选项；跨设备 Gemini 通过 Google 登录保护的 Cloudflare 接口发送原文到 Google，密钥保存在 Worker Secret。**
 
 ## 当前功能
 
@@ -18,9 +18,9 @@
 
 ## 来源
 
-当前启用五个订阅流：BBC World、BBC Business、NPR News、CNBC International、The Guardian World。已移除 Reuters、The Washington Post 与 NHK WORLD-JAPAN，其旧报道也从发布数据中清理。
+当前启用六个订阅流：BBC World、BBC Business、NPR News、CNBC International、The Guardian World、NHK ニュース（日语 Google News 聚合）。已移除 Reuters、The Washington Post 与 NHK WORLD-JAPAN，其旧报道也从发布数据中清理。
 
-NHK ONE 官方 RSS `https://news.web.nhk/n-data/conf/na/rss/cat0.xml` 已实测可读，标题为日语。但[官方 RSS 说明](https://www.nhk.or.jp/toppage/rss/index.html)仅限个人使用，并明确不允许程序再发布；已在配置中登记为禁用，不向公开站点转载。没有用社区转发绕开该限制。
+已删除未启用的 NHK 官方 RSS 配置，改用实测可用的 Google News 日语 RSS 聚合。仅接收来源域名为 `news.web.nhk`、标题含日文假名的 NHK 报道；页面明确标注 Google News 聚合及跳转链接，不把它称作 NHK 官方源或社区镜像。每时段十条、五条折叠和 72 小时存档规则同其他来源。Gemini 支持英文和日文原文按需译成中文。聚合可访问并不改变原始内容权利。验证记录见 [NHK 日语接入](docs/nhk-one.md)。
 
 ## 按需翻译：面向入门者
 

@@ -79,7 +79,7 @@ function shortcuts() {
   }
 }
 function textBlock(text, article, part, tag, className) {
-  const n = el(tag,text,className); n.lang = 'en'; n.dataset.translation = text; n.dataset.article = article.id; n.dataset.part = part;
+  const n = el(tag,text,className); n.lang = sourceInfo(article.source_id)?.language || 'en'; n.dataset.translation = text; n.dataset.article = article.id; n.dataset.part = part;
   const translated = el('p',undefined,'translated-text'); translated.lang = 'zh-CN'; translated.hidden = true;
   const cached = translator.getCached(text);
   if (cached) { translated.textContent = cached; translated.hidden = !translationsVisible || hiddenArticleTranslations.has(article.id); }
@@ -201,7 +201,7 @@ async function translateNodes(nodes) {
   } catch (error) { $('translation-status').textContent = error.name === 'AbortError' ? '已停止后续翻译，已完成的译文保留在本页。' : error.message; }
   finally { setBusy(false); controller = null; setTranslationVisibility(translationsVisible); }
 }
-function openFulltext(article = {title: '自选英文文本', url: ''}) {
+function openFulltext(article = {title: '自选新闻文本', url: ''}) {
   if (busy) return;
   $('fulltext-article').textContent = article.title;
   const url = safeUrl(article.url); $('fulltext-original').hidden = !url; if (url) $('fulltext-original').href = url; else $('fulltext-original').removeAttribute('href');

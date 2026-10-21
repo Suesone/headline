@@ -289,3 +289,19 @@ def test_source_window_quota_survives_repeat_and_late_arrivals():
 def test_removed_and_disabled_sources_do_not_enter_archive():
     assert not dataset([article(source='removed')])['articles']
     assert not c.retain_articles([article()], [{**SOURCES[0], 'enabled':False}], NOW)
+
+
+def test_japanese_aggregation_rejects_english_and_unrelated_publishers():
+    def item(title, domain, key):
+        return f'<item><guid>{key}</guid><title>{title} - NHKニュース</title><link>https://news.google.com/rss/articles/{key}</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate><source url="https://{domain}">NHKニュース</source></item>'
+    xml = ('<rss version="2.0"><channel><title>NHK</title>' +
+           item('政府が新たな方針を発表', 'news.web.nhk', 'ja') +
+           item('Japan announces policy', 'news.web.nhk', 'en') +
+           item('政府が新たな方針を発表', 'news.web.nhk.attacker.test', 'fake') +
+           item('政府が新たな方針を発表', 'another.example', 'other') + '</channel></rss>').encode()
+    source = {**SOURCES[0], 'mode':'links_only', 'allowed_link_domains':['news.google.com'],
+              'entry_source_domains':['news.web.nhk'], 'japanese_titles_only':True}
+    articles, skipped = c.parse_feed(xml, source, NOW)
+    assert skipped == 3 and len(articles) == 1
+    assert articles[0]['title'] == '政府が新たな方針を発表'
+    assert articles[0]['summary'] == ''
