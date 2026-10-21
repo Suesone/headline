@@ -5,10 +5,9 @@ import json
 import pytest
 
 from scripts import collect as c
-from archive import cloud_ai as ai
 
 NOW = c.dt('2026-10-18T08:07:00+08:00')
-SETTINGS = {'retention_days': 30, 'topics_per_window': 15}
+SETTINGS = {'retention_days': 3}
 SOURCES = [{'id': 'a', 'name': 'A', 'publisher': 'A', 'enabled': True, 'url': 'https://example.org/a'},
            {'id': 'b', 'name': 'B', 'publisher': 'B', 'enabled': True, 'url': 'https://example.org/b'}]
 STATES = [{'id': s['id'], 'status': 'ok', 'last_success_at': c.iso(NOW)} for s in SOURCES]
@@ -42,8 +41,8 @@ def test_midnight_assigns_previous_day_and_excludes_open_window():
     now = c.dt('2026-10-18T00:05:00+08:00')
     d = dataset([article(stamp='2026-10-17T23:00:00+08:00'), article('open', stamp='2026-10-18T00:01:00+08:00')], now)
     assert d['latest_window_id'] == '2026-10-17T22:00+08:00'
-    assert d['days'][0]['topics'] == []
-    assert d['days'][1]['topics'][0]['article_count'] == 1
+    assert d['days'][0]['date'] == '2026-10-18'
+    assert d['days'][1]['date'] == '2026-10-17'
     assert all('open' not in w['article_ids'] for w in d['windows'])
 
 
@@ -53,21 +52,11 @@ def test_late_article_updates_original_window_not_current():
     assert next(w for w in d['windows'] if w['id'] == d['latest_window_id'])['article_ids'] == []
 
 
-def test_daily_union_counts_articles_once_and_independent_publishers():
-    a, b, extra = article(), article('two', 'b'), article('three', 'a', '2026-10-18T01:00:00+08:00')
-    a['topics'].append(TERM)
-    t = dataset([a, b, extra])['days'][0]['topics'][0]
-    assert t['article_count'] == 3
-    assert t['source_count'] == 2
-    assert t['first_seen_at'] == extra['published_at']
-    b['publisher'] = a['publisher']
-    assert c.rank_topics([a, b])[0]['source_count'] == 1
-
 
 def test_retention_cutoff():
     d = dataset([article('old', stamp='2026-09-18T01:00:00+08:00'), article()])
     assert [a['id'] for a in d['articles']] == ['one']
-    assert len(d['days']) == 30
+    assert len(d['days']) == 1
 
 
 def test_canonical_url_and_unsafe_url():
@@ -129,90 +118,9 @@ def test_retry_and_disabled_sources(monkeypatch):
     assert len(calls) == 3
 
 
-def test_extractor_merges_aliases_and_ignores_dates():
-    pytest.importorskip('spacy')
-    pytest.importorskip('yake')
-    import spacy
-    if not spacy.util.is_package('en_core_web_sm'):
-        pytest.skip('Archived NLP model is not installed')
-    extractor = c.TopicExtractor(c.read_json(c.ROOT / 'config/aliases.json'))
-    a = article(title='Donald Trump meets United Nations officials in Japan')
-    a['summary'] = 'Trump discussed sanctions with the UN on Monday.'
-    topics = extractor.extract(a)
-    labels = [t['label'] for t in topics]
-    assert 'Donald Trump' in labels and 'United Nations' in labels
-    assert 'Monday' not in labels
-    assert len({t['id'] for t in topics}) == len(topics)
-    assert extractor.normalize('U.S.') == extractor.normalize('US') == 'United States'
-    assert extractor.normalize('the United Nations') == 'United Nations'
 
 
-def ai_settings():
-    return {'enabled': True, 'free_plan_confirmed': True, 'model': '@cf/qwen/qwen3-30b-a3b-fp8',
-            'max_titles_per_run': 40, 'max_topics_per_run': 10}
 
-
-def ai_env(monkeypatch):
-    monkeypatch.setenv('CF_ACCOUNT_ID', 'a' * 32)
-    monkeypatch.setenv('CF_API_TOKEN', 'test-token')
-
-
-def test_missing_credentials_never_call_api(monkeypatch, tmp_path):
-    monkeypatch.delenv('CF_API_TOKEN', raising=False)
-    monkeypatch.setattr(ai, 'cloudflare_json', lambda *a, **k: pytest.fail('Must not call API'))
-    d = dataset()
-    ai.enrich(d, ai_settings(), tmp_path / 'cache.json', NOW)
-    assert d['ai']['status'] == 'disabled'
-
-
-def test_paid_plan_and_unverified_plan_block_calls(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'cloudflare_json', lambda *a: [{'rate_plan': {'id': 'workers_paid', 'public_name': 'Workers Paid'}, 'state': 'active'}])
-    monkeypatch.setattr(ai, 'generate', lambda *a: pytest.fail('Paid plan cannot generate'))
-    d = dataset()
-    ai.enrich(d, ai_settings(), tmp_path / 'cache.json', NOW)
-    assert d['ai']['status'] == 'unavailable'
-    settings = ai_settings(); settings['free_plan_confirmed'] = False
-    ai.enrich(d, settings, tmp_path / 'cache.json', NOW)
-    assert d['ai']['status'] == 'disabled'
-
-
-def test_free_ai_cache_and_context_references(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
-    calls = []
-    def generate(account, token, model, task, payload):
-        calls.append(task)
-        if task == 'translation':
-            return {'translations': [{'id': 'one', 'text': '美国宣布气候协议'}, {'id': 'invented', 'text': '错误'}]}
-        return {'contexts': [{'id': TERM['id'], 'text': '美国宣布新协议。', 'article_ids': ['one']}]}
-    monkeypatch.setattr(ai, 'generate', generate)
-    path = tmp_path / 'cache.json'
-    d = dataset(); ai.enrich(d, ai_settings(), path, NOW)
-    assert d['articles'][0]['title_zh'] == '美国宣布气候协议'
-    topic = next(w for w in d['windows'] if w['id'] == d['latest_window_id'])['topics'][0]
-    assert topic['context_article_ids'] == ['one']
-    d = dataset(); ai.enrich(d, ai_settings(), path, NOW)
-    assert calls == ['translation', 'context']
-    assert d['ai']['status'] == 'ok'
-
-
-def test_ai_exhaustion_preserves_news(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
-    def exhausted(*args):
-        raise ai.AIUnavailable('免费额度用尽')
-    monkeypatch.setattr(ai, 'generate', exhausted)
-    d = dataset(); ai.enrich(d, ai_settings(), tmp_path / 'cache.json', NOW)
-    assert d['ai']['status'] == 'unavailable' and len(d['articles']) == 1
-
-
-def test_hallucinated_context_reference_rejected(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
-    monkeypatch.setattr(ai, 'generate', lambda *a: {'contexts': [{'id': TERM['id'], 'text': 'unsupported', 'article_ids': ['made-up']}]})
-    d = dataset(); ai.enrich(d, ai_settings(), tmp_path / 'cache.json', NOW)
-    assert all('context_zh' not in t for w in d['windows'] for t in w['topics'])
 
 
 def test_invalid_feed_and_naive_timestamp_rejected():
@@ -228,25 +136,12 @@ def test_community_links_only_strips_content_and_checks_publisher_domain():
     xml = b'''<rss version="2.0"><channel><title>Community</title><item><title>Japan talks</title><link>https://www.reuters.com/world/example/</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate><description>Do not republish this body</description></item><item><title>Wrong publisher</title><link>https://reuters.com.attacker.example/story</link><pubDate>Sun, 18 Oct 2026 00:00:00 GMT</pubDate></item></channel></rss>'''
     entries, skipped = c.parse_feed(xml, source, NOW)
     assert len(entries) == 1 and skipped == 1
-    assert entries[0]['summary'] == '' and not entries[0]['analysis_allowed']
+    assert entries[0]['summary'] == '' and 'topics' not in entries[0]
     assert entries[0]['time_basis'] == 'feed_publication'
     old = article(); old['title_zh'] = '旧译文'
     c.apply_source_policy(old, source)
-    assert old['topics'] == [] and 'title_zh' not in old
+    assert 'topics' not in old and 'title_zh' not in old
 
-
-def test_links_only_never_receive_ai_or_cached_translation(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'verify_free_account', lambda *args: None)
-    monkeypatch.setattr(ai, 'generate', lambda *args: pytest.fail('Link-only articles must not call AI'))
-    item = article(); c.apply_source_policy(item, {'mode': 'links_only'})
-    data = dataset([item])
-    path = tmp_path / 'cache.json'
-    key = c.digest(ai_settings()['model'] + ':title:' + item['title'])
-    c.write_json(path, {key: {'text': 'A cached translation', 'created_at': c.iso(NOW)}})
-    ai.enrich(data, ai_settings(), path, NOW)
-    assert 'title_zh' not in data['articles'][0]
-    assert all(not w['topics'] for w in data['windows'])
 
 
 def test_stale_community_feed_is_not_reported_as_healthy(monkeypatch):
@@ -256,16 +151,6 @@ def test_stale_community_feed_is_not_reported_as_healthy(monkeypatch):
     assert entries == [] and status['status'] == 'error'
     assert '36' in status['message']
 
-
-def test_read_only_display_and_topic_ai_controls_are_independent():
-    item = article()
-    c.apply_source_policy(item, {'mode': 'read_only', 'topics_enabled': True, 'ai_enabled': False})
-    assert item['summary'] and item['topics']
-    assert item['analysis_allowed'] and not item['ai_allowed']
-    item['title_zh'] = 'old translation'
-    c.apply_source_policy(item, {'mode': 'read_only'})
-    assert item['summary'] and not item['topics'] and 'title_zh' not in item
-    assert 'extraction_version' not in item
 
 
 def test_original_author_gate_rejects_agencies_and_unknown_authors():
@@ -278,40 +163,15 @@ def test_original_author_gate_rejects_agencies_and_unknown_authors():
     assert not c.author_allowed(item, source)
 
 
-def test_mixed_topic_never_leaks_read_only_news_to_ai(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
-    read_only, allowed = article(), article('two', 'b')
-    read_only['ai_allowed'] = False
-    calls = []
-    def generate(account, token, model, task, payload):
-        calls.append(task)
-        if task == 'translation':
-            assert [a['id'] for a in payload] == ['two']
-            return {'translations': [{'id': 'two', 'text': '测试'}]}
-        assert all([a['id'] for a in t['articles']] == ['two'] for t in payload)
-        return {'contexts': [{'id': TERM['id'], 'text': '不应保留', 'article_ids': ['one']}]}
-    monkeypatch.setattr(ai, 'generate', generate)
-    d = dataset([read_only, allowed]); ai.enrich(d, ai_settings(), tmp_path / 'cache.json', NOW)
-    assert calls == ['translation', 'context']
-    assert 'title_zh' not in d['articles'][0]
-    assert all('context_zh' not in t for w in d['windows'] for t in w['topics'])
 
-
-def test_topic_only_source_never_calls_ai_even_for_context(monkeypatch, tmp_path):
-    ai_env(monkeypatch)
-    monkeypatch.setattr(ai, 'verify_free_account', lambda *a: None)
-    monkeypatch.setattr(ai, 'generate', lambda *a: pytest.fail('Topic-only content cannot enter AI'))
-    item = article(); item['ai_allowed'] = False
-    ai.enrich(dataset([item]), ai_settings(), tmp_path / 'cache.json', NOW)
-
-
-def test_revised_rss_content_invalidates_extraction_version():
+def test_revised_rss_content_preserves_id_and_strips_legacy_fields():
     old = article(); old['extraction_version'] = 'current-model'
     updated = deepcopy(old); updated['summary'] = 'A revised report about Korea.'
     merged = c.merge_articles([old], [updated], NOW - timedelta(days=30))
     assert len(merged) == 1 and merged[0]['id'] == old['id']
-    assert 'extraction_version' not in merged[0] and merged[0]['topics'] == []
+    c.apply_source_policy(merged[0], SOURCES[0])
+    assert merged[0]['summary'] == updated['summary']
+    assert 'extraction_version' not in merged[0] and 'topics' not in merged[0]
 
 
 def test_current_collection_disables_nlp_cloud_and_published_translations(monkeypatch, tmp_path):
@@ -323,13 +183,12 @@ def test_current_collection_disables_nlp_cloud_and_published_translations(monkey
     old = article('old'); old['title_zh'] = '旧云端译文'
     c.write_json(root / 'state/news.json', {'articles': [old]})
     monkeypatch.setattr(c, 'ROOT', root)
-    monkeypatch.setattr(c, 'TopicExtractor', lambda *a: pytest.fail('Archived NLP must not run'))
     monkeypatch.setattr(c, 'fetch_source', lambda source, now: ([article(source['id'], source['id'])], {'id': source['id'], 'status': 'ok'}))
     monkeypatch.setenv('CF_API_TOKEN', 'test-secret-never-used')
     d = c.run(NOW, root / 'public/data/news.json', root / 'state/news.json')
-    assert all(a['topics'] == [] and 'title_zh' not in a for a in d['articles'])
-    assert all(w['topics'] == [] for w in d['windows'])
-    assert all(day['topics'] == [] for day in d['days'])
+    assert all('topics' not in a and 'title_zh' not in a for a in d['articles'])
+    assert all('topics' not in w for w in d['windows'])
+    assert all('topics' not in day for day in d['days'])
     assert d['ai']['status'] == 'on_demand'
     receipt = c.read_json(root / 'public/data/status.json')
     assert receipt['generated_at'] == d['generated_at'] and receipt['status'] == d['status']
@@ -388,7 +247,7 @@ def test_failed_primary_uses_configured_backup_without_claiming_official_success
     assert state['relay_name'] == 'Google News 聚合' and items
 
 
-@pytest.mark.parametrize('configured,expected', [(None, 20), (100, 20), (7, 7)])
+@pytest.mark.parametrize('configured,expected', [(None, 10), (100, 10), (7, 7)])
 def test_feed_limit_counts_valid_unique_articles_only(configured, expected):
     source = {**SOURCES[0]}
     if configured is not None:
@@ -402,3 +261,31 @@ def test_feed_limit_counts_valid_unique_articles_only(configured, expected):
     assert skipped == 2
     assert len({a['url'] for a in items}) == expected
     assert items[-1]['title'] == f'Headline {expected - 1}'
+
+
+def test_rolling_72_hour_cutoff_and_current_window_archive():
+    before = c.iso(NOW - timedelta(hours=72, seconds=1))
+    exact = c.iso(NOW - timedelta(hours=72))
+    d = dataset([article('expired', stamp=before), article('edge', stamp=exact),
+                 article('open', stamp=c.iso(NOW-timedelta(minutes=1)))])
+    assert {a['id'] for a in d['articles']} == {'edge', 'open'}
+    assert all('open' not in w['article_ids'] for w in d['windows'])
+    assert 'edge' in {id for w in d['windows'] for id in w['article_ids']}
+    assert d['retention_days'] == 3
+
+
+def test_source_window_quota_survives_repeat_and_late_arrivals():
+    old = [article(str(i), title=f'Distinct story number {i}') for i in range(9)]
+    new = [article(str(i), title=f'Distinct story number {i}') for i in range(9, 20)]
+    for item in new:
+        item['first_seen_at'] = c.iso(NOW+timedelta(minutes=1))
+    others = [article('other', source='b'), article('past', stamp='2026-10-18T03:00:00+08:00')]
+    retained = c.retain_articles(old+new+others, SOURCES, NOW)
+    assert len(retained) == 12
+    assert {a['id'] for a in old} <= {a['id'] for a in retained}
+    assert c.retain_articles(retained+new, SOURCES, NOW) == retained
+
+
+def test_removed_and_disabled_sources_do_not_enter_archive():
+    assert not dataset([article(source='removed')])['articles']
+    assert not c.retain_articles([article()], [{**SOURCES[0], 'enabled':False}], NOW)

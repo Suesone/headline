@@ -1,11 +1,8 @@
 {
-  "retention_days": 30,
-  "topics_enabled": false,
-  "topics_per_window": 15,
+  "retention_days": 3,
   "ranking": {
     "board_limit": 10,
-    "per_source_limit": 10,
-    "featured_per_source": 3
+    "per_source_limit": 5
   },
   "translation": {
     "mode": "gemini_on_demand",

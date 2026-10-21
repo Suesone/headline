@@ -1,4 +1,4 @@
-"""RSS → deterministic two-hour windows → optional cached AI → static JSON."""
+"""RSS → bounded two-hour windows → rolling 72-hour archive → static JSON."""
 from __future__ import annotations
 
 import argparse
@@ -22,11 +22,7 @@ import feedparser
 ROOT = Path(__file__).resolve().parents[1]
 TZ = ZoneInfo('Asia/Shanghai')
 WINDOW_HOURS = 2
-MAX_ITEMS_PER_SOURCE = 20
-STOP = {'news', 'world', 'today', 'latest', 'live', 'report', 'reports', 'says', 'said',
-        'watch', 'video', 'people', 'year', 'years', 'day', 'days', 'week', 'month',
-        'story', 'stories', 'new', 'first', 'last', 'global voices', 'wikinews',
-        'according', 'read', 'continue reading', 'breaking news', 'copyright', 'digital'}
+MAX_ITEMS_PER_SOURCE = 10
 
 
 def iso(value):
@@ -59,18 +55,13 @@ def plain(value, limit=600):
 
 
 def apply_source_policy(article, source):
-    default = source.get('mode') not in {'links_only', 'read_only'}
-    article['analysis_allowed'] = source.get('topics_enabled', default)
-    article['ai_allowed'] = source.get('ai_enabled', default)
-    article['topics_title_only'] = source.get('topics_title_only', False)
+    # Strip retired analysis and cloud-enrichment fields from retained snapshots.
+    for key in ('topics', 'analysis_allowed', 'topics_title_only', 'ai_allowed',
+                'extraction_version', 'extracted', 'title_zh'):
+        article.pop(key, None)
     article['time_basis'] = article.get('time_basis', source.get('time_basis', 'publication'))
     if source.get('mode') == 'links_only':
         article['summary'] = ''
-    if not article['analysis_allowed']:
-        article['topics'] = []
-        article.pop('extraction_version', None)
-    if not article['ai_allowed']:
-        article.pop('title_zh', None)
     return article
 
 
@@ -163,7 +154,6 @@ def parse_feed(content, source, now):
                 'publisher': source.get('publisher', source['name']), 'title': title, 'url': url,
                 'summary': plain(entry.get('summary')), 'author': plain(entry.get('author', ''), 160),
                 'published_at': iso(published), 'first_seen_at': iso(now), 'window_id': window_id(published),
-                'topics': [],
                 'feed_rank': position, 'rank_observed_at': iso(now),
             }, source)
             if not author_allowed(article, source):
@@ -236,7 +226,6 @@ def merge_articles(previous, incoming, cutoff):
                 if key in article:
                     match[key] = article[key]
             if changed:
-                match['topics'] = []
                 match.pop('title_zh', None)
                 match.pop('extracted', None)
                 match.pop('extraction_version', None)
@@ -245,62 +234,24 @@ def merge_articles(previous, incoming, cutoff):
     return sorted(merged, key=lambda a: (a['published_at'], a['id']), reverse=True)
 
 
-class TopicExtractor:
-    def __init__(self, aliases):
-        import spacy
-        import yake
-        self.nlp = spacy.load('en_core_web_sm', disable=['lemmatizer'])
-        self.yake = yake.KeywordExtractor(lan='en', n=3, top=15, dedupLim=.8)
-        self.aliases = {variant.casefold().strip(' .,'): name for name, variants in aliases.items() for variant in [name, *variants]}
-
-    def normalize(self, name):
-        name = re.sub(r"[’']s$", '', name.strip(' .,;:!?\"\'()'))
-        name = re.sub(r'\s+', ' ', name)
-        name = re.sub(r'^the ', '', name, flags=re.I)
-        return self.aliases.get(name.casefold(), name)
-
-    def extract(self, article):
-        text = article['title'] + '.\n' + ('' if article.get('topics_title_only') else article['summary'])
-        terms = {}
-        doc = self.nlp(text)
-        noun_phrases = [self.normalize(chunk.text).casefold() for chunk in doc.noun_chunks if '\n' not in chunk.text]
-        for ent in doc.ents:
-            if '\n' not in ent.text and ent.label_ in {'PERSON', 'GPE', 'ORG', 'EVENT', 'NORP', 'FAC', 'LOC'}:
-                label = self.normalize(ent.text)
-                if len(label) >= 2 and label.casefold() not in STOP and len(label.split()) <= 6:
-                    terms[label.casefold()] = {'id': digest(label.casefold()), 'label': label, 'kind': 'entity'}
-        for phrase, score in self.yake.extract_keywords(text):
-            label = self.normalize(phrase)
-            words = label.split()
-            if not any(label.casefold() in chunk for chunk in noun_phrases) or re.search(r"[’']s\b", label):
-                continue
-            tags = self.nlp(label)
-            if any(t.pos_ in {'VERB', 'AUX', 'ADV'} for t in tags) or not any(t.pos_ in {'NOUN', 'PROPN'} for t in tags):
-                continue
-            if (2 <= len(words) <= 3 and score < .10 and len(label) < 70
-                    and not any(w.casefold() in STOP for w in words)
-                    and not any(label.casefold() in key or key in label.casefold() for key in terms)):
-                terms[label.casefold()] = {'id': digest(label.casefold()), 'label': label, 'kind': 'phrase'}
-        return list(terms.values())[:25]
-
-
-def rank_topics(articles, limit=None):
-    topics = {}
-    for article in articles:
-        for term in {t['id']: t for t in article.get('topics', [])}.values():
-            topic = topics.setdefault(term['id'], {**term, 'article_ids': set(), 'publishers': set(),
-                                                  'first_seen_at': article['published_at']})
-            topic['article_ids'].add(article['id'])
-            topic['publishers'].add(article['publisher'])
-            topic['first_seen_at'] = min(topic['first_seen_at'], article['published_at'])
-    ranked = []
-    for topic in topics.values():
-        topic['article_ids'] = sorted(topic['article_ids'])
-        topic['source_count'] = len(topic.pop('publishers'))
-        topic['article_count'] = len(topic['article_ids'])
-        ranked.append(topic)
-    ranked.sort(key=lambda t: (-t['source_count'], -t['article_count'], t['kind'] != 'entity', t['label'].casefold()))
-    return ranked[:limit] if limit is not None else ranked
+def retain_articles(articles, sources, now, retention_days=3):
+    """Rolling retention and a cumulative, stable source/window quota across retries."""
+    allowed = {source['id'] for source in sources if source.get('enabled')}
+    cutoff = now - timedelta(days=retention_days)
+    groups, seen = {}, set()
+    for article in sorted(articles, key=lambda a: (a.get('first_seen_at', a['published_at']),
+                                                   a.get('feed_rank', 100), a['id'])):
+        if article['id'] in seen:
+            continue
+        seen.add(article['id'])
+        if article['source_id'] not in allowed or not cutoff <= dt(article['published_at']) < now:
+            continue
+        article['window_id'] = window_id(dt(article['published_at']))
+        group = groups.setdefault((article['source_id'], article['window_id']), [])
+        if len(group) < MAX_ITEMS_PER_SOURCE:
+            group.append(article)
+    return sorted([a for group in groups.values() for a in group],
+                  key=lambda a: (a['published_at'], a['id']), reverse=True)
 
 
 def run_metadata(now):
@@ -328,33 +279,19 @@ def run_metadata(now):
 def build_dataset(articles, sources, statuses, now, settings, previous=None):
     end = boundary(now)
     latest_start = end - timedelta(hours=WINDOW_HOURS)
-    cutoff = (now.astimezone(TZ).replace(hour=0, minute=0, second=0, microsecond=0)
-              - timedelta(days=settings['retention_days'] - 1))
-    articles = [a for a in articles if cutoff <= dt(a['published_at']) < now]
-    # Rebucket retained history when cadence changes; IDs and publication times stay stable.
-    for article in articles:
-        article['window_id'] = window_id(dt(article['published_at']))
+    cutoff = now - timedelta(days=settings['retention_days'])
+    articles = retain_articles(articles, sources, now, settings['retention_days'])
     complete = [a for a in articles if dt(a['published_at']) < end]
     windows = []
-    cursor = cutoff
+    cursor = boundary(cutoff)
     while cursor < end:
         key = window_id(cursor)
         subset = [a for a in complete if a['window_id'] == key]
-        topics = rank_topics(subset, settings['topics_per_window']) if settings.get('topics_enabled', True) else []
-        weights = {a['id']: max((t['source_count'] for t in topics if a['id'] in t['article_ids']), default=0)
-                   for a in subset}
-        subset.sort(key=lambda a: (weights[a['id']], a['published_at']), reverse=True)
         windows.append({'id': key, 'start': iso(cursor), 'end': iso(cursor + timedelta(hours=WINDOW_HOURS)),
-                        'date': cursor.date().isoformat(), 'article_ids': [a['id'] for a in subset], 'topics': topics})
+                        'date': cursor.date().isoformat(), 'article_ids': [a['id'] for a in subset]})
         cursor += timedelta(hours=WINDOW_HOURS)
-    days = []
-    for n in range(settings['retention_days']):
-        date = (now.astimezone(TZ).date() - timedelta(days=n)).isoformat()
-        day_windows = [w for w in windows if w['date'] == date]
-        selected = {t['id'] for w in day_windows for t in w['topics']}
-        subset = [a for a in complete if a['window_id'][:10] == date]
-        days.append({'date': date, 'topics': [t for t in rank_topics(subset) if t['id'] in selected] if settings.get('topics_enabled', True) else [],
-                     'article_count': len(subset)})
+    days = [{'date': date} for date in sorted({dt(a['published_at']).astimezone(TZ).date().isoformat()
+                                               for a in articles}, reverse=True)]
     enabled = [s for s in statuses if s['status'] != 'disabled']
     successes = sum(s['status'] == 'ok' for s in enabled)
     status = 'ok' if enabled and successes == len(enabled) else 'partial' if successes else 'error'
@@ -369,7 +306,7 @@ def build_dataset(articles, sources, statuses, now, settings, previous=None):
             'latest_window_id': window_id(latest_start), 'today': now.astimezone(TZ).date().isoformat(),
             'last_success_at': iso(now) if successes else (previous or {}).get('last_success_at'),
             'status': status, 'sources': public_sources, 'articles': articles, 'windows': windows,
-            'days': days, 'features': {'topics': settings.get('topics_enabled', True), 'translation': 'on_demand'},
+            'days': days, 'retention_days': settings['retention_days'], 'features': {'translation': 'on_demand'},
             'ranking': settings.get('ranking', {}),
             'ai': {'status': 'on_demand', 'message': '定时流程不调用 AI；网页默认选中 Gemini，点击后才翻译标题'}}
 
@@ -378,7 +315,7 @@ def run(now, output, state_path):
     sources = read_json(ROOT / 'config/sources.json')
     settings = read_json(ROOT / 'config/settings.json')
     previous = read_json(state_path, {})
-    cutoff = now.astimezone(TZ).replace(hour=0, minute=0, second=0, microsecond=0) - timedelta(days=settings['retention_days'] - 1)
+    cutoff = now - timedelta(days=settings['retention_days'])
     with ThreadPoolExecutor(max_workers=3) as executor:
         results = list(executor.map(lambda s: fetch_source(s, now), sources))
     incoming = [a for articles, _ in results for a in articles]
@@ -389,20 +326,6 @@ def run(now, output, state_path):
     articles = merge_articles(old, incoming, cutoff)
     for article in articles:
         apply_source_policy(article, source_map[article['source_id']])
-    aliases = read_json(ROOT / 'config/aliases.json')
-    extraction_version = digest('topics-v5:' + json.dumps(aliases, sort_keys=True) + json.dumps([(s['id'], s.get('topics_title_only', False)) for s in sources]))
-    if not settings.get('topics_enabled', True):
-        for article in articles:
-            article['topics'] = []
-            for key in ('title_zh', 'extraction_version', 'extracted'):
-                article.pop(key, None)
-    pending = [a for a in articles if settings.get('topics_enabled', True) and a.get('analysis_allowed', True) and a.get('extraction_version') != extraction_version]
-    if pending:
-        extractor = TopicExtractor(aliases)
-        for article in pending:
-            article['topics'] = extractor.extract(article)
-            article['extracted'] = True
-            article['extraction_version'] = extraction_version
     data = build_dataset(articles, sources, [state for _, state in results], now, settings, previous)
     # No cloud enrichment: public snapshots contain English RSS content only.
     write_json(state_path, data)

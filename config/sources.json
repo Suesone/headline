@@ -1,28 +1,5 @@
 [
   {
-    "id": "reuters-community",
-    "name": "Reuters · 社区 RSS",
-    "publisher": "Reuters",
-    "url": "https://raw.githubusercontent.com/trvny/feedseek/main/feeds/feed_reuters.xml",
-    "homepage": "https://www.reuters.com/",
-    "enabled": true,
-    "mode": "links_only",
-    "time_basis": "feed_publication",
-    "allowed_link_domains": [
-      "reuters.com"
-    ],
-    "relay_name": "Feedseek",
-    "relay_url": "https://github.com/trvny/feedseek",
-    "license": "原文归 Reuters；社区转发不改变内容权利",
-    "license_url": "https://www.reuters.com/info-pages/terms-of-use/",
-    "terms_url": "https://github.com/trvny/feedseek",
-    "note": "Feedseek 社区转发，约每两小时刷新；仅标题、订阅日期与原文链接，未提供可展示的原文首段。",
-    "max_feed_age_hours": 36,
-    "topics_enabled": false,
-    "ai_enabled": false,
-    "max_items": 20
-  },
-  {
     "id": "bbc-world",
     "name": "BBC World",
     "publisher": "BBC",
@@ -34,8 +11,6 @@
     "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
     "note": "社区目录收录的 BBC 官方 World RSS；保留 BBC News 署名与链接。",
     "mode": "read_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
     "community_name": "Plenary RSS 目录",
     "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
     "allowed_link_domains": [
@@ -43,7 +18,7 @@
       "bbc.co.uk"
     ],
     "max_feed_age_hours": 96,
-    "max_items": 20
+    "max_items": 10
   },
   {
     "id": "bbc-business",
@@ -57,8 +32,6 @@
     "terms_url": "https://www.bbc.com/usingthebbc/terms-of-use/",
     "note": "社区目录收录的 BBC 官方 Business RSS；保留 BBC News 署名与链接。",
     "mode": "read_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
     "community_name": "Plenary RSS 目录",
     "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
     "allowed_link_domains": [
@@ -66,7 +39,7 @@
       "bbc.co.uk"
     ],
     "max_feed_age_hours": 96,
-    "max_items": 20
+    "max_items": 10
   },
   {
     "id": "npr-news",
@@ -83,13 +56,10 @@
     "community_url": "https://github.com/semantic-news/rss-feeds/blob/master/en-general.md",
     "note": "社区目录收录 NPR 1001 新闻频道；直接读取官方 HTTPS RSS，通常仅保留最近 10 条，可能遗漏抓取间隔内被挤出的报道。",
     "mode": "read_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
     "allowed_link_domains": [
       "npr.org"
     ],
-    "topics_title_only": true,
-    "max_items": 20
+    "max_items": 10
   },
   {
     "id": "cnbc-world",
@@ -106,18 +76,14 @@
     "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
     "note": "社区目录收录的 CNBC 官方国际新闻 RSS；标题与简短摘要链接回原文。",
     "mode": "read_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
     "allowed_link_domains": [
       "cnbc.com"
     ],
-    "max_items": 20
+    "max_items": 10
   },
   {
     "enabled": true,
     "mode": "links_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
     "max_feed_age_hours": 96,
     "license": "原文版权归来源所有；保留标题、署名与链接",
     "id": "guardian-world",
@@ -133,81 +99,24 @@
       "theguardian.com"
     ],
     "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
-    "max_items": 20
+    "max_items": 10
   },
   {
-    "enabled": true,
-    "mode": "links_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
-    "max_feed_age_hours": 96,
-    "license": "原文版权归来源所有；保留标题、署名与链接",
-    "id": "washingtonpost-world",
-    "name": "The Washington Post",
-    "publisher": "The Washington Post",
-    "url": "https://feeds.washingtonpost.com/rss/world",
-    "homepage": "https://www.washingtonpost.com/world/",
-    "terms_url": "https://www.washingtonpost.com/rss-terms-of-service/",
-    "license_url": "https://www.washingtonpost.com/rss-terms-of-service/",
-    "community_name": "Plenary RSS 目录",
-    "community_url": "https://github.com/plenaryapp/awesome-rss-feeds",
-    "allowed_link_domains": [
-      "washingtonpost.com"
-    ],
-    "note": "优先社区目录收录的官方 World RSS；官方不可用时使用 Google News 标题聚合，备用覆盖全报并非仅 World。聚合链接经 Google News 跳转，不抓取付费正文。",
-    "fallbacks": [
-      {
-        "url": "https://news.google.com/rss/search?q=site%3Awashingtonpost.com+when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
-        "relay_name": "Google News 聚合",
-        "relay_url": "https://news.google.com/",
-        "allowed_link_domains": [
-          "news.google.com"
-        ],
-        "entry_source_domains": [
-          "washingtonpost.com"
-        ],
-        "time_basis": "feed_publication"
-      }
-    ],
-    "max_items": 20
-  },
-  {
-    "enabled": true,
-    "mode": "links_only",
-    "topics_enabled": false,
-    "ai_enabled": false,
-    "max_feed_age_hours": 96,
-    "license": "原文版权归来源所有；保留标题、署名与链接",
-    "id": "nhk-world",
-    "name": "NHK WORLD-JAPAN",
+    "id": "nhk-one",
+    "name": "NHK ONE",
     "publisher": "NHK",
-    "url": "https://rsshub.app/nhk/news/en?limit=30",
-    "homepage": "https://www3.nhk.or.jp/nhkworld/en/news/",
-    "terms_url": "https://www3.nhk.or.jp/nhkworld/en/terms/",
-    "license_url": "https://www3.nhk.or.jp/nhkworld/en/terms/",
-    "relay_name": "RSSHub",
-    "relay_url": "https://github.com/DIYgod/RSSHub/blob/master/lib/routes/nhk/news.tsx",
+    "url": "https://news.web.nhk/n-data/conf/na/rss/cat0.xml",
+    "homepage": "https://news.web.nhk/newsweb/",
+    "enabled": false,
+    "mode": "links_only",
     "allowed_link_domains": [
-      "nhk.or.jp",
-      "nhkworld.jp"
+      "news.web.nhk"
     ],
-    "note": "优先 RSSHub 社区维护的英文路由；不可用时读取 Google News 中署名域名属于 NHK 的英文标题。备用链接经 Google News 跳转，不抓全文。",
-    "fallbacks": [
-      {
-        "url": "https://news.google.com/rss/search?q=NHK+WORLD+JAPAN+when%3A2d&hl=en-US&gl=US&ceid=US%3Aen",
-        "relay_name": "Google News 聚合",
-        "relay_url": "https://news.google.com/",
-        "allowed_link_domains": [
-          "news.google.com"
-        ],
-        "entry_source_domains": [
-          "nhk.or.jp",
-          "nhkworld.jp"
-        ],
-        "english_titles_only": true,
-        "time_basis": "feed_publication"
-      }
-    ],
-    "max_items": 20
+    "max_items": 10,
+    "max_feed_age_hours": 96,
+    "terms_url": "https://www.nhk.or.jp/toppage/rss/index.html",
+    "license_url": "https://www.nhk.or.jp/toppage/rss/index.html",
+    "license": "仅限个人使用；官方未允许程序再发布",
+    "note": "官方 RSS 已验证可读，内容为日语。官方说明不允许程序再发布，故公开站点暂不启用。"
   }
 ]

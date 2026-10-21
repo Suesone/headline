@@ -8,24 +8,19 @@
 
 - 北京时间 00:00 起每隔 2 小时（每天十二次）由 GitHub Actions 更新，允许调度延迟；每个目标时段的 17 分与 37 分检查已发布数据，若尚未成功发布则补抓，否则跳过。关闭电脑后英文新闻仍可更新。
 - 首页优先“榜中榜”：从各源前五条候选中，按 RSS 顺序与新鲜度推荐；完全相同标题合并，同一媒体多个频道不重复加分。不进行热词或语义分析，也没有虚构的阅读量。
-- 默认看最近 24 小时已完成时段；可以切换两小时时段、最近 30 天和单一来源。
-- 仅展示标题，榜中榜最多 10 条、全部大号黑体，各源前 3 条大号黑体；不展示或翻译 RSS 摘要，不额外抓取正文。
-- 每源每轮最多收录 20 条有效且不重复的 RSS 条目，历史仍保留 30 天。网页每源默认显示十条；“更多”展开当前筛选下的全部剩余报道，“收起”恢复十条。未展示的内容不送入翻译。
+- 默认看最近 24 小时；可以切换两小时时段、最近 72 小时和单一来源。
+- 仅展示标题，榜中榜最多 10 条、全部大号黑体，各源所有标题大号黑体；不展示或翻译 RSS 摘要，不额外抓取正文。
+- 每源每个两小时时段累计最多收录 10 条有效且不重复的 RSS 条目，历史滚动保留 72 小时。网页每源默认显示五条；“更多”展开当前筛选下的全部剩余报道，“收起”恢复五条。未展示的内容不送入翻译。
 - 单条“翻译”点击显示，再次点击隐藏；勾选报道后也可批量翻译。暂时移除当前屏幕翻译；相同文字复用本页内存缓存。可用“隐藏译文／显示译文”切换，不清除缓存、不额外调用 AI；刷新页面或“清除译文”才清除缓存。滚动后不会自动翻译。
 - 个别报道可进入“全文”阅读器，粘贴可正常访问的原文或导入 .txt，在本机按段翻译，支持停止后续段落。不会声称从 RSS 得到全文，不绕过付费墙。
-- 英语查词提供 Cambridge 与 Merriam-Webster 链接，点击后访问词典，不抓取释义。
 
-**实时热词、今日热词与 Cloudflare AI 已归档**。当前工作流不安装 NLP 模型、不提取热词、不读取 Cloudflare 密钥、不调用云端 AI。旧实现保留在 `archive/` 和 Git 历史，未发布到网站。
+热词分析、英语查词及旧 Cloudflare AI 实现已从当前源码删除，Git 历史仍保留历史版本。
 
 ## 来源
 
-当前配置八个订阅流：Reuters（Feedseek 社区转发）、BBC World、BBC Business、NPR News、CNBC International，以及 The Guardian World、The Washington Post、NHK WORLD-JAPAN。新增来源及备用聚合实测见 [第二批来源记录](docs/second-batch-sources.md)。VOA 两个频道因缺少实际可展示内容已移除。BBC、CNBC 优先采用 Plenary 社区目录收录的官方 RSS；NPR 参考 Semantic News 的 1001 频道并采用当前官方 HTTPS 地址。官方地址可用时不额外依赖公共转发服务器。
+当前启用五个订阅流：BBC World、BBC Business、NPR News、CNBC International、The Guardian World。已移除 Reuters、The Washington Post 与 NHK WORLD-JAPAN，其旧报道也从发布数据中清理。
 
-AFP 的 Fact Check 候选复测仍返回 403，且并非综合新闻流，已从当前配置删除。没有找到可核验、稳定、长期零费用的 AFP 英文综合新闻社区 RSS；没有将 France 24 当作 AFP。NASA、Global Voices、Wikinews 测试源此前已移除。
-
-首批实测记录在 [docs/major-rss-probes.json](docs/major-rss-probes.json)，含检查时间、条目数与日期，不保存文章全文。配置可用的来源临时失败时保留旧新闻并提示；不因一次短暂故障立即删除来源。
-
-社区整理或转发不改变内容权利。**本地翻译不等于获得所有媒体条款的豁免或公开传播译文的许可。** 本项目实现私人辅助阅读；原始内容保留来源与链接，不训练模型。
+NHK ONE 官方 RSS `https://news.web.nhk/n-data/conf/na/rss/cat0.xml` 已实测可读，标题为日语。但[官方 RSS 说明](https://www.nhk.or.jp/toppage/rss/index.html)仅限个人使用，并明确不允许程序再发布；已在配置中登记为禁用，不向公开站点转载。没有用社区转发绕开该限制。
 
 ## 按需翻译：面向入门者
 
@@ -54,16 +49,16 @@ python -m pytest -q
 node --test tests/*.test.cjs
 ```
 
-日常英文采集只需要 feedparser；pytest 用于验证。旧 NLP 测试在没有 spaCy/YAKE/模型时跳过，恢复热词需另行安装 `archive/requirements-hotwords.txt` 的依赖。仅预览网页可运行 `python3 -m scripts.local_reader`；可阅读英文，线上翻译请使用自有域名。
+日常英文采集只需要 feedparser；pytest 用于验证。仅预览网页可运行 `python3 -m scripts.local_reader`；可阅读英文，线上翻译请使用自有域名。
 
 - **手动更新**：仓库 → Actions → Update news and deploy → Run workflow。绿色勾表示流程结束，页面显示实际更新时间。
 - **修改来源**：编辑 `config/sources.json` 的 RSS、名称、`publisher`、来源主页、条款与社区目录链接，再手动运行。不要提交需要私人令牌的 URL。
 - **同媒体计数**：`publisher` 是媒体主体，BBC 多频道仍属于同一家媒体。
-- **订阅陈旧**：Reuters 超过 36 小时、其他源超过 96 小时没有有效新条目时提示错误并保留旧数据。NPR 仅最近十条，两小时抓取不能保证完整收录。
+- **订阅陈旧**：来源超过 96 小时没有有效新条目时提示错误并保留旧数据。NPR 仅最近十条，两小时抓取不能保证完整收录。
 - **自动更新暂停**：公开仓库长期无活动可能暂停定时任务，检查 Actions 并手动运行一次。
 - **部署自己的副本**：Fork → Settings → Pages → GitHub Actions → 启用并手动运行。使用免费 github.io 地址，不买域名；修改本地阅读器 NEWS_URL 指向自己的英文数据地址。
 
-每条新闻使用发布日期归档，迟到报道补入原窗口；零点前两小时属于昨天。GUID、规范化链接及同源相似标题去重，记录最近 30 天。Git 历史仍可能保留旧版本。
+每条新闻使用发布日期归档，迟到报道补入原窗口；零点前两小时属于昨天。GUID、规范化链接及同源相似标题去重，滚动保留最近 72 小时；每次抓取物理清理过期快照，页面每分钟隐藏过期记录。Git 历史仍可能保留旧版本。
 
 ## 文件
 
@@ -71,7 +66,6 @@ node --test tests/*.test.cjs
 - `scripts/collect.py`：RSS 获取、清洗、去重、归档。没有定时云端翻译入口。
 - `scripts/local_reader.py`：本机阅读器、云功能关闭的 Ollama，以及明确启用后才调用的 Gemini 接口。
 - `state/news.json`：滚动英文历史；`state/health.json`：免费定时流程的两天运行观察。
-- `archive/`：旧热词页面和云端 AI 代码，仅保留、不发布、不执行。
 - `tests/`：日期边界、去重、来源失败、排序、翻译分段/缓存/取消与本机隔离验证。
 
 不保存个人资料、不设置分析追踪。当前没有 Cloudflare AI 调用，也无需配置或更换其 Secrets；若此前创建过密钥，可自行在 GitHub Secrets 中删除，工作流已不读取它们。
@@ -99,3 +93,7 @@ GitHub 不保证 cron 准点或必达；三个检查仍由同一平台调度，�
 ### 独立于 GitHub cron 的兜底
 
 Cloudflare `headline-schedule-watchdog` 每个偶数小时 02、12、32、52 分检查最新发布回执；缺失时触发 GitHub 更新，防止只增加同平台 cron 仍一起漏跑。已有成功发布或任务执行时跳过；原子计数限制每时段最多 4 次、间隔至少 10 分钟。网页公开显示兜底状态。专用 GitHub Actions Secret 配置完成前保持关闭；完整配置、范围和验证方式见 [独立调度说明](docs/independent-scheduler.md)。
+
+### 新闻存档
+
+首页“新闻存档”支持按北京时间日期和来源筛选，默认每源五条，“更多”展开全部存档，“收起”恢复五条。存档包含最近 72 小时已经收录的新闻，包括尚未结束的当前时段；时段选择器仍按完整两小时窗口展示。重复补抓不会突破每源每时段十条的累计上限。RSS 轮换造成的漏收无法追溯补全；存档不是所有原站报道的完整镜像。过期清理针对当前数据文件，不改写 Git 历史。

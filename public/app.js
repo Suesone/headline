@@ -11,24 +11,59 @@ const translator = new HeadlineLocal.LocalTranslator();
 translator.setEngine('gemini');
 const engineLabel = () => translator.engine === 'gemini' ? 'Gemini 云端' : '本机';
 const engineNote = () => translator.engine === 'gemini' ? '原文发送 Google；本项目仅在本页保存译文，不上传 GitHub。Google 可能按其条款处理输入与输出。' : '译文只在此页面，未发送云端翻译服务。';
-function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc',Reuters:'reuters','The Guardian':'guardian','The Washington Post':'wapo',NHK:'nhk'}[s.publisher] || 'all'); }
+function sourceClass(s) { return 'tile-' + ({BBC:'bbc',NPR:'npr',CNBC:'cnbc','The Guardian':'guardian',NHK:'nhk'}[s.publisher] || 'all'); }
 function sourceIcon(s) {
-  const wrap = el('span', s.id === 'all' ? '榜' : ({Reuters:'R','The Guardian':'G','The Washington Post':'WP'}[s.publisher] || s.publisher), 'source-tile ' + sourceClass(s));
-  const filename = {Reuters:'reuters',BBC:'bbc',NPR:'npr',CNBC:'cnbc','The Guardian':'guardian','The Washington Post':'washingtonpost',NHK:'nhk'}[s.publisher];
+  const wrap = el('span', s.id === 'all' ? '榜' : ({'The Guardian':'G'}[s.publisher] || s.publisher), 'source-tile ' + sourceClass(s));
+  const filename = {BBC:'bbc',NPR:'npr',CNBC:'cnbc','The Guardian':'guardian',NHK:'nhk'}[s.publisher];
   if (filename) {
-    const img = el('img'); img.src = `./icons/${filename}.${filename === 'cnbc' ? 'ico' : filename === 'washingtonpost' ? 'jpg' : 'png'}`; img.alt = ''; img.width = 40; img.height = 40;
+    const img = el('img'); img.src = `./icons/${filename}.${filename === 'cnbc' ? 'ico' : 'png'}`; img.alt = ''; img.width = 40; img.height = 40;
     img.addEventListener('error', () => img.remove(), {once:true}); wrap.append(img);
   }
   return wrap;
 }
 function sourceInfo(id) { return data.sources.find(s => s.id === id); }
 function rankSetting(key, fallback, max = 30) { const value = data.ranking?.[key]; return Number.isInteger(value) && value > 0 && value <= max ? value : fallback; }
+function retainedArticles() {
+  const cutoff = Date.now() - 72 * 3600000;
+  return data.articles.filter(a => Date.parse(a.published_at) >= cutoff && sourceInfo(a.source_id)?.enabled);
+}
+function archiveDate(article) {
+  return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Shanghai'}).format(new Date(article.published_at));
+}
+function initArchive() {
+  for (const s of data.sources.filter(s => s.enabled)) $('archive-source').append(option(s.id,s.name));
+  $('archive-date').addEventListener('change',renderArchive);
+  $('archive-source').addEventListener('change',renderArchive);
+  renderArchive();
+}
+function renderArchive() {
+  const articles = retainedArticles(), dates = [...new Set(articles.map(archiveDate))].sort().reverse();
+  const chosen = $('archive-date').value;
+  $('archive-date').replaceChildren(option('all','最近 72 小时'),...dates.map(date => option(date,date)));
+  $('archive-date').value = dates.includes(chosen) ? chosen : 'all';
+  const grid = $('archive-list'); grid.replaceChildren();
+  for (const source of data.sources.filter(s => s.enabled && ($('archive-source').value === 'all' || s.id === $('archive-source').value))) {
+    const items = articles.filter(a => a.source_id === source.id && ($('archive-date').value === 'all' || archiveDate(a) === $('archive-date').value));
+    const card = el('section',undefined,'source-card');
+    card.append(el('h3',source.name,'archive-source-heading'));
+    const rows = el('div',undefined,'source-card-list'), key = 'archive:' + source.id;
+    const expanded = expandedSources.has(key);
+    if (!items.length) rows.append(el('p','该日期暂无存档。','empty-state'));
+    items.slice(0,expanded ? items.length : 5).forEach((a,i) => rows.append(articleNode(a,i+1,true)));
+    card.append(rows);
+    if (items.length > 5) {
+      const more = el('button',expanded ? '收起' : '更多','archive-expand');
+      more.type = 'button'; more.setAttribute('aria-expanded',String(expanded));
+      more.addEventListener('click',() => { if (busy) return; expanded ? expandedSources.delete(key) : expandedSources.add(key); renderArchive(); });
+      card.append(more);
+    }
+    grid.append(card);
+  }
+}
 function pool() {
   const id = $('window-select').value;
-  const end = Date.parse(data.windows.at(-1)?.end || data.generated_at);
-  const ids = new Set(data.windows.flatMap(w => w.article_ids));
-  let all = data.articles.filter(a => ids.has(a.id));
-  if (id === 'recent') all = all.filter(a => Date.parse(a.published_at) >= end - 24 * 3600000);
+  let all = retainedArticles();
+  if (id === 'recent') all = all.filter(a => Date.parse(a.published_at) >= Date.now() - 24 * 3600000);
   else if (id !== 'all') { const window = data.windows.find(w => w.id === id); const ids = new Set(window?.article_ids || []); all = all.filter(a => ids.has(a.id)); }
   const source = $('source-select').value;
   return all.filter(a => source === 'all' || a.source_id === source);
@@ -92,25 +127,22 @@ function render() {
   const articles = pool(), now = Date.parse(data.generated_at);
   const board = HeadlineRanking.buildBoard(articles,now,rankSetting('board_limit',10));
   const list = $('board-list'); list.replaceChildren();
-  $('board-count').textContent = `${board.length} 条精选`;
   if (!board.length) list.append(el('p','当前时段没有报道，请切换到最近 24 小时或历史时段。','empty-state'));
   board.forEach((entry,i) => list.append(articleNode(entry.article,i + 1,true,entry)));
-  $('article-count').textContent = `${articles.length} 篇报道`;
   const window = data.windows.find(w => w.id === $('window-select').value);
-  const featured = rankSetting('featured_per_source',3,5);
-  $('period-caption').textContent = window ? `${format(window.start)} — ${format(window.end)} · 北京时间` : $('window-select').value === 'recent' ? `最近 24 小时 · 已完成时段 · 前 ${featured} 条标题加大` : `最近 30 天 · 已完成时段 · 前 ${featured} 条标题加大`;
+  $('period-caption').textContent = window ? `${format(window.start)} — ${format(window.end)} · 北京时间` : $('window-select').value === 'recent' ? `最近 24 小时 · 所有标题加大` : `最近 72 小时存档 · 所有标题加大`;
   const grid = $('news-list'); grid.replaceChildren();
   for (const s of data.sources.filter(s => s.enabled && ($('source-select').value === 'all' || s.id === $('source-select').value))) {
     const items = HeadlineRanking.rankSources(articles.filter(a => a.source_id === s.id),now);
     const card = el('section',undefined,'source-card'); card.setAttribute('aria-label',s.name + ' 新闻榜单');
     const header = el('div',undefined,'source-card-header'); const icon = sourceIcon(s); icon.className = 'source-card-icon ' + sourceClass(s);
-    header.append(icon,el('h3',s.name),el('span',`${items.length} 篇`,'source-card-count')); card.append(header);
+    header.append(icon,el('h3',s.name)); card.append(header);
     const rows = el('div',undefined,'source-card-list');
-    if (!items.length) { rows.append(el('p','所选时段暂无报道。可切换“最近 30 天”查看历史。','empty-state')); }
-    const collapsedLimit = rankSetting('per_source_limit',10);
+    if (!items.length) { rows.append(el('p','所选时段暂无报道。可前往“新闻存档”查看历史。','empty-state')); }
+    const collapsedLimit = rankSetting('per_source_limit',5);
     const expanded = expandedSources.has(s.id);
     const limit = expanded ? items.length : collapsedLimit;
-    items.slice(0,limit).forEach((a,i) => rows.append(articleNode(a,i + 1,i < featured)));
+    items.slice(0,limit).forEach((a,i) => rows.append(articleNode(a,i + 1,true)));
     card.append(rows);
     const footer = el('div',undefined,'source-card-footer');
     if (items.length > collapsedLimit) {
@@ -124,7 +156,7 @@ function render() {
 }
 function setBusy(value) {
   busy = value;
-  for (const n of document.querySelectorAll('.article-actions button,.source-shortcut,.source-card-footer button,#translate-selected,#translation-engine,#window-select,#source-select,#translate-fulltext,#clear-translations')) n.disabled = value;
+  for (const n of document.querySelectorAll('.article-actions button,.source-shortcut,.source-card-footer button,.archive-expand,#archive-date,#archive-source,#translate-selected,#translation-engine,#window-select,#source-select,#translate-fulltext,#clear-translations')) n.disabled = value;
   $('cancel-translation').hidden = !value;
   $('cancel-fulltext').hidden = !value;
 }
@@ -238,7 +270,7 @@ function renderStatus() {
   }
   $('run-status').classList.toggle('warning',outdated || data.status !== 'ok');
   const states = {ok:'读取正常',error:'读取失败',disabled:'未启用'};
-  for (const s of enabled) {
+  for (const s of data.sources) {
     const row = el('div',undefined,'source-item'); row.append(el('strong',s.name),el('span',states[s.status] || s.status,'source-state ' + s.status),el('p',s.note),el('p',s.message));
     if (s.last_success_at) row.append(el('p','上次成功：' + format(s.last_success_at)));
     if (s.community_url) row.append(link(s.community_name + ' ↗',s.community_url),document.createTextNode(' · '));
@@ -264,16 +296,17 @@ async function load() {
   try {
     const response = await fetch('./data/news.json',{cache:'no-cache'}); if (!response.ok) throw new Error('Data unavailable');
     data = await response.json(); if (data.schema_version !== 1 || !Array.isArray(data.articles)) throw new Error('Invalid data');
-    const select = $('window-select'); select.replaceChildren(option('recent','最近 24 小时'),option('all','最近 30 天'));
-    for (const w of [...data.windows].reverse()) if (w.article_ids.length) select.append(option(w.id,`${format(w.start)} — ${format(w.end)} · ${w.article_ids.length} 篇`));
+    const select = $('window-select'); select.replaceChildren(option('recent','最近 24 小时'),option('all','最近 72 小时存档'));
+    for (const w of [...data.windows].reverse()) if (w.article_ids.length) select.append(option(w.id,`${format(w.start)} — ${format(w.end)}`));
     select.value = 'recent'; select.disabled = false;
     for (const s of data.sources.filter(s=>s.enabled)) $('source-select').append(option(s.id,s.name)); $('source-select').disabled = false;
     select.addEventListener('change',render); $('source-select').addEventListener('change',render);
-    renderStatus(); render();
+    renderStatus(); render(); initArchive();
+    let retainedCount = retainedArticles().length;
+    setInterval(() => {
+      const count = retainedArticles().length;
+      if (!busy && count !== retainedCount) { retainedCount = count; render(); renderArchive(); }
+    },60000);
   } catch { $('run-status').textContent = '新闻数据暂时不可用，请稍后刷新；翻译仍可用于手动粘贴的文字。'; $('board-list').replaceChildren(el('p','暂时无法加载榜单。','empty-state')); }
 }
-$('dictionary-form').addEventListener('submit',event => {
-  event.preventDefault(); const word = $('dictionary-word').value.trim(); if (!word) return;
-  $('dictionary-links').replaceChildren(link('Cambridge ↗','https://dictionary.cambridge.org/dictionary/english/' + encodeURIComponent(word)),document.createTextNode(' · '),link('Merriam-Webster ↗','https://www.merriam-webster.com/dictionary/' + encodeURIComponent(word)));
-});
 load();
