@@ -331,7 +331,7 @@ def test_japanese_community_rdf_has_direct_links_and_collection_dates():
 
 
 def test_nhk_title_suffix_is_removed_from_new_and_retained_articles():
-    source = {'mode': 'links_only', 'title_suffixes': ['｜NHK ニュース', '| NHK ニュース']}
+    source = next(s for s in c.read_json(c.ROOT / 'config/sources.json') if s['id'] == 'nhk-hatena')
     for suffix in source['title_suffixes']:
         item = article(title='政府が方針を発表 ' + suffix)
         c.apply_source_policy(item, source)
