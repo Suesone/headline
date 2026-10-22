@@ -133,7 +133,7 @@ function render() {
   $('period-caption').textContent = window ? `${format(window.start)} — ${format(window.end)} · 北京时间` : $('window-select').value === 'recent' ? `最近 24 小时 · 所有标题加大` : `最近 72 小时存档 · 所有标题加大`;
   const grid = $('news-list'); grid.replaceChildren();
   for (const s of data.sources.filter(s => s.enabled && ($('source-select').value === 'all' || s.id === $('source-select').value))) {
-    const items = HeadlineRanking.rankSources(articles.filter(a => a.source_id === s.id),now);
+    const items = HeadlineRanking.sourceHeadlines(articles.filter(a => a.source_id === s.id),now);
     const card = el('section',undefined,'source-card'); card.setAttribute('aria-label',s.name + ' 新闻榜单');
     const header = el('div',undefined,'source-card-header'); const icon = sourceIcon(s); icon.className = 'source-card-icon ' + sourceClass(s);
     const sourceHeading = el('div'); sourceHeading.append(el('h3',s.name));

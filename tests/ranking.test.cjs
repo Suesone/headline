@@ -1,8 +1,16 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const {buildBoard,rankSources} = require('../public/ranking.js');
+const {buildBoard,rankSources,sourceHeadlines} = require('../public/ranking.js');
 const now = Date.parse('2026-10-18T04:00:00Z');
 const article = (id,publisher='BBC',source_id='bbc',rank=1,hours=1,title=id) => ({id,publisher,source_id,feed_rank:rank,title,published_at:new Date(now-hours*3600000).toISOString(),rank_observed_at:new Date(now).toISOString()});
+test('source cards cap mixed historical windows at ten without truncating archive input',()=> {
+ const articles=Array.from({length:36},(_,i)=>article(String(i),'BBC','bbc',i%10+1,1+i/2));
+ const ranked=rankSources(articles,now);
+ assert.deepEqual(sourceHeadlines(articles,now),ranked.slice(0,10));
+ assert.equal(articles.length,36);
+ assert.equal(sourceHeadlines(articles.slice(0,3),now).length,3);
+ assert.equal(sourceHeadlines([],now).length,0);
+});
 test('same publisher channels never inflate board score',()=> {
  const one=article('a','BBC','bbc-world',1,1,'Same headline');
  const duplicate=article('b','BBC','bbc-business',1,1,'Same headline!');

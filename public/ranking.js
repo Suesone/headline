@@ -16,6 +16,9 @@
       return score(b) - score(a) || b.published_at.localeCompare(a.published_at) || a.id.localeCompare(b.id);
     });
   }
+  function sourceHeadlines(articles, now) {
+    return rankSources(articles, now).slice(0, 10);
+  }
   function buildBoard(articles, now, limit = 12) {
     const bySource = new Map();
     for (const a of articles) { if (!bySource.has(a.source_id)) bySource.set(a.source_id, []); bySource.get(a.source_id).push(a); }
@@ -36,7 +39,7 @@
       publisher_count: g.votes.size, score: [...g.votes.values()].reduce((a, b) => a + b, 0)}))
       .sort((a, b) => b.score - a.score || b.article.published_at.localeCompare(a.article.published_at) || a.article.id.localeCompare(b.article.id)).slice(0, limit);
   }
-  const api = {rankSources, buildBoard, titleKey};
+  const api = {rankSources, sourceHeadlines, buildBoard, titleKey};
   if (typeof module !== 'undefined') module.exports = api;
   root.HeadlineRanking = api;
 })(globalThis);
