@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-22T13:15:48.861381Z",
+  "generated_at": "2026-10-22T14:03:35.330084Z",
   "trigger": {
-    "event": "push",
+    "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-22T20:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/39785096820"
+    "slot": "2026-10-22T22:00+08:00",
+    "source": "cloudflare-watchdog",
+    "requested_slot": "2026-10-22T14:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/39792203198"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-22T18:00+08:00",
+  "latest_window_id": "2026-10-22T20:00+08:00",
   "today": "2026-10-22",
-  "last_success_at": "2026-10-22T13:15:48.861381Z",
+  "last_success_at": "2026-10-22T14:03:35.330084Z",
   "status": "ok",
   "sources": [
     {
@@ -35,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-22T13:15:48.861381Z",
-      "last_success_at": "2026-10-22T13:15:48.861381Z",
+      "checked_at": "2026-10-22T14:03:35.330084Z",
+      "last_success_at": "2026-10-22T14:03:35.330084Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -65,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-22T13:15:48.861381Z",
-      "last_success_at": "2026-10-22T13:15:48.861381Z",
+      "checked_at": "2026-10-22T14:03:35.330084Z",
+      "last_success_at": "2026-10-22T14:03:35.330084Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -94,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-22T13:15:48.861381Z",
-      "last_success_at": "2026-10-22T13:15:48.861381Z",
+      "checked_at": "2026-10-22T14:03:35.330084Z",
+      "last_success_at": "2026-10-22T14:03:35.330084Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -123,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-22T13:15:48.861381Z",
-      "last_success_at": "2026-10-22T13:15:48.861381Z",
+      "checked_at": "2026-10-22T14:03:35.330084Z",
+      "last_success_at": "2026-10-22T14:03:35.330084Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -152,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-22T13:15:48.861381Z",
-      "last_success_at": "2026-10-22T13:15:48.861381Z",
+      "checked_at": "2026-10-22T14:03:35.330084Z",
+      "last_success_at": "2026-10-22T14:03:35.330084Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -190,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-22T13:15:48.861381Z",
-      "last_success_at": "2026-10-22T13:15:48.861381Z",
+      "checked_at": "2026-10-22T14:03:35.330084Z",
+      "last_success_at": "2026-10-22T14:03:35.330084Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -201,6 +203,96 @@
     }
   ],
   "articles": [
+    {
+      "id": "9951015f6660aa284f3d82d8",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/22/g-s1-148553/argentina-brazil-iguazu-falls-waterfalls-super-el-nino"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Greetings from the Brazil-Argentina border, where waterfalls are flowing at near-record rates",
+      "url": "https://www.npr.org/2026/10/22/g-s1-148553/argentina-brazil-iguazu-falls-waterfalls-super-el-nino",
+      "summary": "The Iguazú Falls span more than a mile across both countries. A rain-soaked October, which scientists link to the Super El Niño, has sent near-record volumes of water surging over the towering cliffs.",
+      "author": "Carrie Kahn",
+      "published_at": "2026-10-22T13:50:55Z",
+      "first_seen_at": "2026-10-22T14:03:35.330084Z",
+      "window_id": "2026-10-22T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "0fde4d02f7d984f83ab7bd3f",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261022de63888"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "血液などでがん調べる自費の検査 学会が意義と限界まとめ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261022de63888",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-22T13:39:42Z",
+      "first_seen_at": "2026-10-22T14:03:35.330084Z",
+      "window_id": "2026-10-22T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "1c361a7f54dc4d5e3a2751c6",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cm75p1kxryl5o#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Ilhan Omar says 'bizarre' pre-dawn raid on her home is forcing her to move out",
+      "url": "https://www.bbc.co.uk/news/articles/cm75p1kxryl5o?at_campaign=rss&at_medium=RSS",
+      "summary": "The congresswoman said federal agents seized over a dozen items, including cell phones and notebooks, as part of a federal investigation.",
+      "author": "",
+      "published_at": "2026-10-22T13:36:21Z",
+      "first_seen_at": "2026-10-22T14:03:35.330084Z",
+      "window_id": "2026-10-22T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "03f382ae3f98994734172a86",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261022de63896"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "サイバー攻撃ぜい弱性悪用の猶予期間4分の1に 研究グループ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261022de63896",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-22T13:32:29Z",
+      "first_seen_at": "2026-10-22T14:03:35.330084Z",
+      "window_id": "2026-10-22T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a2bdb2b2be9d70e08b056613",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261022de63864"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ことしのヨーロッパ議会人権賞「サハロフ賞」にICC",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261022de63864",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-22T13:31:45Z",
+      "first_seen_at": "2026-10-22T14:03:35.330084Z",
+      "window_id": "2026-10-22T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
+      "time_basis": "community_collection"
+    },
     {
       "id": "a0f26c6259cd7924944775f7",
       "identities": [
@@ -216,7 +308,7 @@
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -234,7 +326,7 @@
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -251,8 +343,8 @@
       "published_at": "2026-10-22T12:28:56Z",
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
     },
     {
@@ -269,8 +361,8 @@
       "published_at": "2026-10-22T12:28:13Z",
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
     },
     {
@@ -287,8 +379,8 @@
       "published_at": "2026-10-22T12:27:12Z",
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
     },
     {
@@ -306,7 +398,7 @@
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -323,9 +415,27 @@
       "published_at": "2026-10-22T12:13:02Z",
       "first_seen_at": "2026-10-22T13:14:40.924939Z",
       "window_id": "2026-10-22T20:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
+    },
+    {
+      "id": "b6af354953ec8bb9912dd573",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/c83vqn6zwrx0o#1"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Grandparent hugging consent ad pulled after criticism",
+      "url": "https://www.bbc.co.uk/news/articles/c83vqn6zwrx0o?at_campaign=rss&at_medium=RSS",
+      "summary": "Jim O'Callaghan described the video as \"inappropriate and demeaning to grandparents\".",
+      "author": "",
+      "published_at": "2026-10-22T11:58:34Z",
+      "first_seen_at": "2026-10-22T14:03:35.330084Z",
+      "window_id": "2026-10-22T18:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
+      "time_basis": "publication"
     },
     {
       "id": "41900732299163fc7e94c02f",
@@ -341,8 +451,8 @@
       "published_at": "2026-10-22T11:50:09Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
     },
     {
@@ -359,8 +469,8 @@
       "published_at": "2026-10-22T11:28:24Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -377,8 +487,8 @@
       "published_at": "2026-10-22T11:25:36Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
     },
     {
@@ -395,8 +505,8 @@
       "published_at": "2026-10-22T11:25:08Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "community_collection"
     },
     {
@@ -431,8 +541,8 @@
       "published_at": "2026-10-22T11:23:16Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -468,7 +578,7 @@
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -539,8 +649,8 @@
       "published_at": "2026-10-22T11:04:14Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -558,7 +668,7 @@
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -600,7 +710,8 @@
     {
       "id": "43482c8997ecf14cff688cb3",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cq33xpjekve4o#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq33xpjekve4o#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq33xpjekve4o#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -611,8 +722,8 @@
       "published_at": "2026-10-22T10:17:48Z",
       "first_seen_at": "2026-10-22T12:02:34.206671Z",
       "window_id": "2026-10-22T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -630,7 +741,7 @@
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -738,7 +849,7 @@
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -756,7 +867,7 @@
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -792,7 +903,7 @@
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -802,15 +913,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Two killed in attack on airport in eastern Saudi Arabia, authorities say",
+      "title": "Two killed in Houthi attack on airport in eastern Saudi Arabia, authorities say",
       "url": "https://www.bbc.co.uk/news/articles/cqwy71ww156ro?at_campaign=rss&at_medium=RSS",
-      "summary": "It is the latest in a series of attacks by the Houthi movement which have targeted airports and other sites in the kingdom.",
+      "summary": "It is the latest in a series of attacks by the Houthi movement targeting airports and other sites in the kingdom.",
       "author": "",
       "published_at": "2026-10-22T09:14:48Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -863,8 +974,8 @@
       "published_at": "2026-10-22T09:01:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -899,8 +1010,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -917,8 +1028,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -935,8 +1046,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -953,8 +1064,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -971,8 +1082,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -989,8 +1100,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1007,8 +1118,8 @@
       "published_at": "2026-10-22T09:00:00Z",
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1116,7 +1227,7 @@
       "first_seen_at": "2026-10-22T10:02:32.085244Z",
       "window_id": "2026-10-22T16:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1134,7 +1245,7 @@
       "first_seen_at": "2026-10-22T08:02:34.794351Z",
       "window_id": "2026-10-22T14:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1216,7 +1327,7 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Brent crude near $112 as U.S. and Israel reportedly weigh fresh Iran strikes",
+      "title": "Brent crude tops $112 after Trump says no negotiations with Iran, something will happen 'fairly soon'",
       "url": "https://www.cnbc.com/2026/10/22/oil-prices-today-wti-brent-saudi-arabia.html",
       "summary": "The Middle East conflict could flare up again as the U.S. reportedly plans to resume strikes against Iran.",
       "author": "",
@@ -1224,7 +1335,7 @@
       "first_seen_at": "2026-10-22T06:02:32.361169Z",
       "window_id": "2026-10-22T12:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1296,7 +1407,7 @@
       "first_seen_at": "2026-10-22T07:06:00.290919Z",
       "window_id": "2026-10-22T12:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1332,7 +1443,7 @@
       "first_seen_at": "2026-10-22T06:02:32.361169Z",
       "window_id": "2026-10-22T12:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1368,7 +1479,7 @@
       "first_seen_at": "2026-10-22T06:02:32.361169Z",
       "window_id": "2026-10-22T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1422,7 +1533,7 @@
       "first_seen_at": "2026-10-22T04:02:31.928280Z",
       "window_id": "2026-10-22T10:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1602,7 +1713,7 @@
       "first_seen_at": "2026-10-22T01:59:43.551189Z",
       "window_id": "2026-10-22T08:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1638,7 +1749,7 @@
       "first_seen_at": "2026-10-22T01:59:43.551189Z",
       "window_id": "2026-10-22T08:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1764,7 +1875,7 @@
       "first_seen_at": "2026-10-22T00:02:33.586340Z",
       "window_id": "2026-10-22T06:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1783,7 +1894,7 @@
       "first_seen_at": "2026-10-22T00:02:33.586340Z",
       "window_id": "2026-10-22T06:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -1839,7 +1950,7 @@
       "first_seen_at": "2026-10-22T00:02:33.586340Z",
       "window_id": "2026-10-22T06:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -2163,7 +2274,7 @@
       "first_seen_at": "2026-10-21T22:49:44.597446Z",
       "window_id": "2026-10-22T02:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -2219,7 +2330,7 @@
       "first_seen_at": "2026-10-21T19:42:07.804067Z",
       "window_id": "2026-10-22T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -2345,7 +2456,7 @@
       "first_seen_at": "2026-10-21T18:02:32.825014Z",
       "window_id": "2026-10-22T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -2418,8 +2529,8 @@
       "published_at": "2026-10-21T16:38:06Z",
       "first_seen_at": "2026-10-21T16:45:55.220800Z",
       "window_id": "2026-10-22T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -2709,7 +2820,7 @@
       "first_seen_at": "2026-10-21T14:11:09.951595Z",
       "window_id": "2026-10-21T20:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -3777,7 +3888,7 @@
       "first_seen_at": "2026-10-21T02:02:36.120008Z",
       "window_id": "2026-10-21T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -4145,7 +4256,7 @@
       "first_seen_at": "2026-10-20T20:02:40.711472Z",
       "window_id": "2026-10-21T02:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -4307,7 +4418,7 @@
       "first_seen_at": "2026-10-20T18:02:34.862524Z",
       "window_id": "2026-10-21T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -4379,7 +4490,7 @@
       "first_seen_at": "2026-10-20T16:02:35.654994Z",
       "window_id": "2026-10-20T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -4581,7 +4692,7 @@
       "first_seen_at": "2026-10-20T13:04:28.010883Z",
       "window_id": "2026-10-20T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -5182,7 +5293,7 @@
       "first_seen_at": "2026-10-20T06:45:29.601021Z",
       "window_id": "2026-10-20T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -5637,7 +5748,7 @@
       "first_seen_at": "2026-10-20T00:02:38.766430Z",
       "window_id": "2026-10-20T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-22T13:15:48.861381Z",
+      "rank_observed_at": "2026-10-22T14:03:35.330084Z",
       "time_basis": "publication"
     },
     {
@@ -6223,148 +6334,9 @@
       "feed_rank": 20,
       "rank_observed_at": "2026-10-20T12:02:38.635895Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "f7dabdcc8316fc9d9b604df9",
-      "identities": [
-        "guardian-world:https://www.theguardian.com/technology/2026/oct/20/workplace-privacy-concerns-employers-use-ai-to-monitor-staff"
-      ],
-      "source_id": "guardian-world",
-      "publisher": "The Guardian",
-      "title": "Calls to strengthen workplace privacy in Australia as employers turn to AI to track staff",
-      "url": "https://www.theguardian.com/technology/2026/oct/20/workplace-privacy-concerns-employers-use-ai-to-monitor-staff",
-      "summary": "",
-      "author": "Josh Taylor Technology reporter",
-      "published_at": "2026-10-19T14:00:03Z",
-      "first_seen_at": "2026-10-19T15:02:05.281850Z",
-      "window_id": "2026-10-19T22:00+08:00",
-      "feed_rank": 19,
-      "rank_observed_at": "2026-10-19T22:02:31.479013Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "7a2a0ff72dc6486fbd201e1b",
-      "identities": [
-        "guardian-world:https://www.theguardian.com/australia-news/2026/oct/19/tricky-time-for-lunchboxes-banana-shortage-hits-supermarket-shelves-after-cool-weather-in-queensland"
-      ],
-      "source_id": "guardian-world",
-      "publisher": "The Guardian",
-      "title": "Tricky time for lunchboxes: banana shortage hits supermarket shelves after cool weather in Queensland",
-      "url": "https://www.theguardian.com/australia-news/2026/oct/19/tricky-time-for-lunchboxes-banana-shortage-hits-supermarket-shelves-after-cool-weather-in-queensland",
-      "summary": "",
-      "author": "Jonathan Barrett Business editor",
-      "published_at": "2026-10-19T14:00:03Z",
-      "first_seen_at": "2026-10-19T15:02:05.281850Z",
-      "window_id": "2026-10-19T22:00+08:00",
-      "feed_rank": 20,
-      "rank_observed_at": "2026-10-20T00:46:03.892566Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "1b75e595d0cc1386e6fce018",
-      "identities": [
-        "guardian-world:https://www.theguardian.com/stage/2026/oct/20/after-25-years-australian-dance-star-lucy-guerin-bows-out-of-the-company-she-founded"
-      ],
-      "source_id": "guardian-world",
-      "publisher": "The Guardian",
-      "title": "After 25 years, Australian dance star Lucy Guerin bows out of the company she founded",
-      "url": "https://www.theguardian.com/stage/2026/oct/20/after-25-years-australian-dance-star-lucy-guerin-bows-out-of-the-company-she-founded",
-      "summary": "",
-      "author": "Tim Byrne",
-      "published_at": "2026-10-19T14:00:02Z",
-      "first_seen_at": "2026-10-19T20:45:24.610839Z",
-      "window_id": "2026-10-19T22:00+08:00",
-      "feed_rank": 20,
-      "rank_observed_at": "2026-10-19T22:02:31.479013Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "07c72caa3fa5532a8fc28bd0",
-      "identities": [
-        "cnbc-world:108432393"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "NYSE becomes latest exchange to extend options hours as appetite for around-the-clock trading grows",
-      "url": "https://www.cnbc.com/2026/10/19/nyse-extends-options-trading-hours.html",
-      "summary": "The New York Stock Exchange becomes second major exchange to announce extended-hours options trading for heavily traded ETFs and single stocks, following CBOE.",
-      "author": "",
-      "published_at": "2026-10-19T13:46:50Z",
-      "first_seen_at": "2026-10-19T18:02:38.563927Z",
-      "window_id": "2026-10-19T20:00+08:00",
-      "feed_rank": 19,
-      "rank_observed_at": "2026-10-20T02:02:31.469820Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "725ce8ab8ad54fdbf05d4a8c",
-      "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/c3lylj78777do#0",
-        "bbc-world:https://www.bbc.co.uk/news/articles/c3lylj78777do#1"
-      ],
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "Exiled critic of Rwandan president found beheaded",
-      "url": "https://www.bbc.co.uk/news/articles/c3lylj78777do?at_campaign=rss&at_medium=RSS",
-      "summary": "Former army sergeant major Robert Kabera was a popular YouTuber and singer, who had sought asylum in Uganda.",
-      "author": "",
-      "published_at": "2026-10-19T13:42:41Z",
-      "first_seen_at": "2026-10-19T14:02:40.172803Z",
-      "window_id": "2026-10-19T20:00+08:00",
-      "feed_rank": 20,
-      "rank_observed_at": "2026-10-21T08:02:34.389024Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "d55cc66fb01e85362c34b99a",
-      "identities": [
-        "cnbc-world:108415745"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Google says it can build data centers the right way. Some experts and residents are skeptical",
-      "url": "https://www.cnbc.com/2026/10/19/how-data-centers-are-reshaping-americas-aging-grid-pine-island-minnesota-google.html",
-      "summary": "Google says its Minnesota AI data center will add clean energy to the grid and protect ratepayers. Experts question whether grid upgrades are needed.",
-      "author": "",
-      "published_at": "2026-10-19T13:36:41Z",
-      "first_seen_at": "2026-10-19T18:02:38.563927Z",
-      "window_id": "2026-10-19T20:00+08:00",
-      "feed_rank": 20,
-      "rank_observed_at": "2026-10-20T06:45:29.601021Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "ecf2464e22a8b06469827057",
-      "identities": [
-        "guardian-world:https://www.theguardian.com/music/2026/oct/19/ellie-goulding-diamonds-australia-argyle-mine"
-      ],
-      "source_id": "guardian-world",
-      "publisher": "The Guardian",
-      "title": "Ellie Goulding admits error over promoting diamonds from controversial Australian mine",
-      "url": "https://www.theguardian.com/music/2026/oct/19/ellie-goulding-diamonds-australia-argyle-mine",
-      "summary": "",
-      "author": "Kevin Rawlinson",
-      "published_at": "2026-10-19T13:20:18Z",
-      "first_seen_at": "2026-10-19T14:02:40.172803Z",
-      "window_id": "2026-10-19T20:00+08:00",
-      "feed_rank": 20,
-      "rank_observed_at": "2026-10-19T20:45:24.610839Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-19T20:00+08:00",
-      "start": "2026-10-19T12:00:00Z",
-      "end": "2026-10-19T14:00:00Z",
-      "date": "2026-10-19",
-      "article_ids": [
-        "07c72caa3fa5532a8fc28bd0",
-        "725ce8ab8ad54fdbf05d4a8c",
-        "d55cc66fb01e85362c34b99a",
-        "ecf2464e22a8b06469827057"
-      ]
-    },
     {
       "id": "2026-10-19T22:00+08:00",
       "start": "2026-10-19T14:00:00Z",
@@ -6377,10 +6349,7 @@
         "c43ce7f9ee25983d48ca170b",
         "6318f7ce87da0cdcfa13e560",
         "6ac3f9875d3675e6c5f49a9f",
-        "35b19feb5dcb154da95e843f",
-        "f7dabdcc8316fc9d9b604df9",
-        "7a2a0ff72dc6486fbd201e1b",
-        "1b75e595d0cc1386e6fce018"
+        "35b19feb5dcb154da95e843f"
       ]
     },
     {
@@ -6955,6 +6924,7 @@
       "end": "2026-10-22T12:00:00Z",
       "date": "2026-10-22",
       "article_ids": [
+        "b6af354953ec8bb9912dd573",
         "41900732299163fc7e94c02f",
         "97113027a6c29df4a4cd3daa",
         "c5e8d5dab159d8f06fc9ee50",
@@ -6971,6 +6941,26 @@
         "9312acf701b6bb90f04d34d8",
         "871ec92371b012ed73673504",
         "43482c8997ecf14cff688cb3"
+      ]
+    },
+    {
+      "id": "2026-10-22T20:00+08:00",
+      "start": "2026-10-22T12:00:00Z",
+      "end": "2026-10-22T14:00:00Z",
+      "date": "2026-10-22",
+      "article_ids": [
+        "9951015f6660aa284f3d82d8",
+        "0fde4d02f7d984f83ab7bd3f",
+        "1c361a7f54dc4d5e3a2751c6",
+        "03f382ae3f98994734172a86",
+        "a2bdb2b2be9d70e08b056613",
+        "a0f26c6259cd7924944775f7",
+        "7a8d5e1c55f2d61d0b7e3f09",
+        "53f0cd5239ca99e4142b6b33",
+        "e06de4fd6f8d45cc62ebf65e",
+        "f1cb94fa2563b5fbbba23e3a",
+        "0ca4c9d6b929421a5ee0b02e",
+        "6aab90f4afd0fe3a87c68770"
       ]
     }
   ],
