@@ -1,19 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-25T18:02:49.870597Z",
+  "generated_at": "2026-10-25T20:01:52.389266Z",
   "trigger": {
-    "event": "workflow_dispatch",
-    "schedule": "",
-    "slot": "2026-10-26T02:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-25T18:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40219307253"
+    "event": "schedule",
+    "schedule": "0 */2 * * *",
+    "slot": "2026-10-26T04:00+08:00",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40228787840"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-26T00:00+08:00",
+  "latest_window_id": "2026-10-26T02:00+08:00",
   "today": "2026-10-26",
-  "last_success_at": "2026-10-25T18:02:49.870597Z",
+  "last_success_at": "2026-10-25T20:01:52.389266Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +35,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-25T18:02:49.870597Z",
-      "last_success_at": "2026-10-25T18:02:49.870597Z",
+      "checked_at": "2026-10-25T20:01:52.389266Z",
+      "last_success_at": "2026-10-25T20:01:52.389266Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +65,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-25T18:02:49.870597Z",
-      "last_success_at": "2026-10-25T18:02:49.870597Z",
+      "checked_at": "2026-10-25T20:01:52.389266Z",
+      "last_success_at": "2026-10-25T20:01:52.389266Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +94,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-25T18:02:49.870597Z",
-      "last_success_at": "2026-10-25T18:02:49.870597Z",
+      "checked_at": "2026-10-25T20:01:52.389266Z",
+      "last_success_at": "2026-10-25T20:01:52.389266Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +123,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-25T18:02:49.870597Z",
-      "last_success_at": "2026-10-25T18:02:49.870597Z",
+      "checked_at": "2026-10-25T20:01:52.389266Z",
+      "last_success_at": "2026-10-25T20:01:52.389266Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +152,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-25T18:02:49.870597Z",
-      "last_success_at": "2026-10-25T18:02:49.870597Z",
+      "checked_at": "2026-10-25T20:01:52.389266Z",
+      "last_success_at": "2026-10-25T20:01:52.389266Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +190,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-25T18:02:49.870597Z",
-      "last_success_at": "2026-10-25T18:02:49.870597Z",
+      "checked_at": "2026-10-25T20:01:52.389266Z",
+      "last_success_at": "2026-10-25T20:01:52.389266Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +201,42 @@
     }
   ],
   "articles": [
+    {
+      "id": "2a9dafa8eea6f6b41c23c8b7",
+      "identities": [
+        "guardian-world:https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results"
+      ],
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "Brazil election 2026: Live second round results",
+      "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results",
+      "summary": "",
+      "author": "Seán Clarke and Tom Phillips",
+      "published_at": "2026-10-25T19:37:49Z",
+      "first_seen_at": "2026-10-25T20:01:52.389266Z",
+      "window_id": "2026-10-26T02:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "f05fa6b19720fe44dd7601e9",
+      "identities": [
+        "cnbc-world:108459891"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Ukraine disputes Elon Musk’s claim that its military violated Starlink terms during drone operations",
+      "url": "https://www.cnbc.com/2026/10/25/ukraine-musk-starlink-terms-dispute.html",
+      "summary": "Ukraine challenged Musk’s claim that its military violated Starlink terms, arguing that commercial Starlink limits prevented medium- and long-range strike use.",
+      "author": "",
+      "published_at": "2026-10-25T18:18:49Z",
+      "first_seen_at": "2026-10-25T20:01:52.389266Z",
+      "window_id": "2026-10-26T02:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
+      "time_basis": "publication"
+    },
     {
       "id": "f84b25c3404575ba337e1d1e",
       "identities": [
@@ -218,7 +252,7 @@
       "first_seen_at": "2026-10-25T18:02:49.870597Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -235,8 +269,8 @@
       "published_at": "2026-10-25T17:18:28Z",
       "first_seen_at": "2026-10-25T18:02:49.870597Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -254,7 +288,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -272,7 +306,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -290,7 +324,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -308,7 +342,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -326,7 +360,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -344,7 +378,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -362,7 +396,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -380,7 +414,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -392,13 +426,13 @@
       "publisher": "BBC",
       "title": "Early reports suggest record high turnout in Serbia elections",
       "url": "https://www.bbc.co.uk/news/articles/c6jdmj1ej715o?at_campaign=rss&at_medium=RSS",
-      "summary": "Serbia is heading to the polls as a student movement attempts to oust longtime populist leader Aleksandar Vučić.",
+      "summary": "Polls are closing in Serbia as a student movement attempts to oust longtime populist leader Aleksandar Vučić.",
       "author": "",
       "published_at": "2026-10-25T15:07:00Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -416,7 +450,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -434,7 +468,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -452,7 +486,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -469,8 +503,8 @@
       "published_at": "2026-10-25T13:41:37Z",
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -488,7 +522,7 @@
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -506,7 +540,7 @@
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -524,7 +558,7 @@
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -542,7 +576,7 @@
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -560,7 +594,7 @@
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -578,7 +612,7 @@
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -596,7 +630,7 @@
       "first_seen_at": "2026-10-25T12:48:16.318814Z",
       "window_id": "2026-10-25T20:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "community_collection"
     },
     {
@@ -613,8 +647,8 @@
       "published_at": "2026-10-25T12:00:01Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T20:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -632,7 +666,7 @@
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -649,8 +683,8 @@
       "published_at": "2026-10-25T11:00:01Z",
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -669,7 +703,7 @@
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -705,7 +739,7 @@
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -741,7 +775,7 @@
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -759,7 +793,7 @@
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -777,7 +811,7 @@
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -795,7 +829,7 @@
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -866,8 +900,8 @@
       "published_at": "2026-10-25T08:00:58Z",
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -885,7 +919,7 @@
       "first_seen_at": "2026-10-25T08:02:36.800522Z",
       "window_id": "2026-10-25T14:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -903,7 +937,7 @@
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -939,7 +973,7 @@
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -993,7 +1027,7 @@
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T12:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1058,15 +1092,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Gunmen kill at least 10 villagers and loot shops in north-east Nigeria",
+      "title": "Death toll in Nigeria village raided by gunmen rises to 48, police say",
       "url": "https://www.bbc.co.uk/news/articles/cq1kdlm1ze7do?at_campaign=rss&at_medium=RSS",
-      "summary": "Police are searching for other casualties, with officials warning the actual death toll could rise further.",
+      "summary": "Unidentified gunmen on motorcycles swooped on a remote village on Friday, looting shops and setting houses ablaze.",
       "author": "",
       "published_at": "2026-10-25T03:20:16Z",
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T10:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1084,7 +1118,7 @@
       "first_seen_at": "2026-10-25T06:02:31.952491Z",
       "window_id": "2026-10-25T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1102,7 +1136,7 @@
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T10:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1210,7 +1244,7 @@
       "first_seen_at": "2026-10-25T00:02:30.093216Z",
       "window_id": "2026-10-25T06:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1337,7 +1371,7 @@
       "first_seen_at": "2026-10-24T22:00:44.818283Z",
       "window_id": "2026-10-25T04:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1372,8 +1406,8 @@
       "published_at": "2026-10-24T18:56:29Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T02:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1390,8 +1424,8 @@
       "published_at": "2026-10-24T18:11:44Z",
       "first_seen_at": "2026-10-24T19:52:49.970637Z",
       "window_id": "2026-10-25T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1463,7 +1497,7 @@
       "first_seen_at": "2026-10-24T16:02:34.315981Z",
       "window_id": "2026-10-24T22:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -1481,7 +1515,7 @@
       "first_seen_at": "2026-10-24T16:02:34.315981Z",
       "window_id": "2026-10-24T22:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -2078,7 +2112,7 @@
       "first_seen_at": "2026-10-24T08:02:38.320296Z",
       "window_id": "2026-10-24T12:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -2458,7 +2492,7 @@
       "first_seen_at": "2026-10-24T02:02:35.956383Z",
       "window_id": "2026-10-24T08:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -2477,7 +2511,7 @@
       "first_seen_at": "2026-10-24T02:02:35.956383Z",
       "window_id": "2026-10-24T08:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -2532,7 +2566,7 @@
       "first_seen_at": "2026-10-25T08:02:36.800522Z",
       "window_id": "2026-10-24T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -2733,7 +2767,7 @@
       "first_seen_at": "2026-10-23T22:02:38.270169Z",
       "window_id": "2026-10-24T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -3187,7 +3221,7 @@
       "first_seen_at": "2026-10-23T14:02:33.873810Z",
       "window_id": "2026-10-23T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -3405,7 +3439,7 @@
       "first_seen_at": "2026-10-23T12:02:32.094650Z",
       "window_id": "2026-10-23T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -4020,7 +4054,7 @@
       "first_seen_at": "2026-10-23T08:52:29.788736Z",
       "window_id": "2026-10-23T16:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -4801,7 +4835,7 @@
       "first_seen_at": "2026-10-22T22:02:33.469632Z",
       "window_id": "2026-10-23T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
+      "rank_observed_at": "2026-10-25T20:01:52.389266Z",
       "time_basis": "publication"
     },
     {
@@ -4930,113 +4964,9 @@
       "feed_rank": 8,
       "rank_observed_at": "2026-10-23T06:02:32.842694Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "9d9e6111b24072d56d475ade",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/22/nx-s1-6012682/judge-dhs-noncitizen-voting-operations"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Federal judge restricts DHS field operations looking for noncitizen voters",
-      "url": "https://www.npr.org/2026/10/22/nx-s1-6012682/judge-dhs-noncitizen-voting-operations",
-      "summary": "The judge found the department's field operations to identify noncitizens who voted likely violated the Voting Rights Act, which bars voter intimidation.",
-      "author": "Jude Joffe-Block",
-      "published_at": "2026-10-22T19:16:20Z",
-      "first_seen_at": "2026-10-22T20:02:33.068526Z",
-      "window_id": "2026-10-23T02:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-23T08:52:29.788736Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "81eb48ed39d84dfe9a773f49",
-      "identities": [
-        "cnbc-world:108435357"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "SpaceX and Tesla have high election stakes as Elon Musk pours $366 million into campaigns",
-      "url": "https://www.cnbc.com/2026/10/22/elon-musk-midterm-election-spacex-tesla.html",
-      "summary": "Musk’s biggest political bet is on the Senate, where control could shape future investigations, federal spending and regulations affecting SpaceX and Tesla.",
-      "author": "",
-      "published_at": "2026-10-22T19:09:11Z",
-      "first_seen_at": "2026-10-22T20:02:33.068526Z",
-      "window_id": "2026-10-23T02:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-23T06:02:32.842694Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "f6f66025ae9da75320bd4c40",
-      "identities": [
-        "cnbc-world:108447854"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Trump asked Musk to lift Starlink slowdown, WSJ reports",
-      "url": "https://www.cnbc.com/2026/10/22/trump-musk-starlink-ukraine.html",
-      "summary": "Elon Musk, a critic of Ukrainian President Volodymyr Zelenskyy, had ordered the slowdown of SpaceX's Starlink, The Wall Street Journal previously reported.",
-      "author": "",
-      "published_at": "2026-10-22T19:05:32Z",
-      "first_seen_at": "2026-10-22T20:02:33.068526Z",
-      "window_id": "2026-10-23T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-23T08:52:29.788736Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "abc306036797b43f174be762",
-      "identities": [
-        "bbc-business:https://www.bbc.co.uk/news/articles/cky83vwnyglno#0",
-        "bbc-business:https://www.bbc.co.uk/news/articles/cky83vwnyglno#1"
-      ],
-      "source_id": "bbc-business",
-      "publisher": "BBC",
-      "title": "Zuckerberg wins Meta deal to help him foot bill for possible California billionaire tax",
-      "url": "https://www.bbc.co.uk/news/articles/cky83vwnyglno?at_campaign=rss&at_medium=RSS",
-      "summary": "The Meta boss had said he would exit the state over a wealth tax that has not yet come into force.",
-      "author": "",
-      "published_at": "2026-10-22T18:26:56Z",
-      "first_seen_at": "2026-10-22T20:02:33.068526Z",
-      "window_id": "2026-10-23T02:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T04:02:27.744304Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "d06805f18abe7339ea3994fb",
-      "identities": [
-        "cnbc-world:108438212"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "AI debt and French bonds face a stress test — why it may not be over",
-      "url": "https://www.cnbc.com/2026/10/22/ai-debt-and-french-bonds-stress-test.html",
-      "summary": "Bond markets are signaling unease over AI financing costs and sovereign debt in parts of Europe. More stress tests are coming.",
-      "author": "",
-      "published_at": "2026-10-22T18:13:37Z",
-      "first_seen_at": "2026-10-22T20:02:33.068526Z",
-      "window_id": "2026-10-23T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-23T02:00+08:00",
-      "start": "2026-10-22T18:00:00Z",
-      "end": "2026-10-22T20:00:00Z",
-      "date": "2026-10-23",
-      "article_ids": [
-        "9d9e6111b24072d56d475ade",
-        "81eb48ed39d84dfe9a773f49",
-        "f6f66025ae9da75320bd4c40",
-        "abc306036797b43f174be762",
-        "d06805f18abe7339ea3994fb"
-      ]
-    },
     {
       "id": "2026-10-23T04:00+08:00",
       "start": "2026-10-22T20:00:00Z",
@@ -5576,6 +5506,16 @@
         "4a0ae96c81ea04d242b855f6",
         "4edd637f1bc80a69ad330d06",
         "b2f0a9aa3cd56fb7f9e8728c"
+      ]
+    },
+    {
+      "id": "2026-10-26T02:00+08:00",
+      "start": "2026-10-25T18:00:00Z",
+      "end": "2026-10-25T20:00:00Z",
+      "date": "2026-10-26",
+      "article_ids": [
+        "2a9dafa8eea6f6b41c23c8b7",
+        "f05fa6b19720fe44dd7601e9"
       ]
     }
   ],
