@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T12:02:48.198861Z",
+  "generated_at": "2026-10-26T14:02:37.319546Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-26T20:00+08:00",
+    "slot": "2026-10-26T22:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-26T12:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40319455257"
+    "requested_slot": "2026-10-26T14:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40335879153"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-26T18:00+08:00",
+  "latest_window_id": "2026-10-26T20:00+08:00",
   "today": "2026-10-26",
-  "last_success_at": "2026-10-26T12:02:48.198861Z",
+  "last_success_at": "2026-10-26T14:02:37.319546Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T12:02:48.198861Z",
-      "last_success_at": "2026-10-26T12:02:48.198861Z",
+      "checked_at": "2026-10-26T14:02:37.319546Z",
+      "last_success_at": "2026-10-26T14:02:37.319546Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T12:02:48.198861Z",
-      "last_success_at": "2026-10-26T12:02:48.198861Z",
+      "checked_at": "2026-10-26T14:02:37.319546Z",
+      "last_success_at": "2026-10-26T14:02:37.319546Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T12:02:48.198861Z",
-      "last_success_at": "2026-10-26T12:02:48.198861Z",
+      "checked_at": "2026-10-26T14:02:37.319546Z",
+      "last_success_at": "2026-10-26T14:02:37.319546Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T12:02:48.198861Z",
-      "last_success_at": "2026-10-26T12:02:48.198861Z",
+      "checked_at": "2026-10-26T14:02:37.319546Z",
+      "last_success_at": "2026-10-26T14:02:37.319546Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T12:02:48.198861Z",
-      "last_success_at": "2026-10-26T12:02:48.198861Z",
+      "checked_at": "2026-10-26T14:02:37.319546Z",
+      "last_success_at": "2026-10-26T14:02:37.319546Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-26T12:02:48.198861Z",
-      "last_success_at": "2026-10-26T12:02:48.198861Z",
+      "checked_at": "2026-10-26T14:02:37.319546Z",
+      "last_success_at": "2026-10-26T14:02:37.319546Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -204,21 +204,310 @@
   ],
   "articles": [
     {
+      "id": "bfc11fe8264513a737341c64",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq398p1wd1evo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "AI giant Anthropic unveils plans for blockbuster share listing",
+      "url": "https://www.bbc.co.uk/news/articles/cq398p1wd1evo?at_campaign=rss&at_medium=RSS",
+      "summary": "The company will be the first true artificial intelligence company to go public as tech firms continue to invest heavily in AI.",
+      "author": "",
+      "published_at": "2026-10-26T13:58:40Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "6605543bd8604cc01ff7a082",
+      "identities": [
+        "bbc-business:https://www.bbc.co.uk/news/articles/cq398p1wd1evo#0"
+      ],
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "AI giant Anthropic unveils plans for blockbuster share listing",
+      "url": "https://www.bbc.co.uk/news/articles/cq398p1wd1evo?at_campaign=rss&at_medium=RSS",
+      "summary": "The company will be the first true artificial intelligence company to go public as tech firms continue to invest heavily in AI.",
+      "author": "",
+      "published_at": "2026-10-26T13:58:40Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "e75f8c7289f2534b09056431",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65972"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "大分市佐賀関の火災 被災した170棟余の公費解体の作業終了",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65972",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:51:02Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "d9829c4249f0265244cb8ff9",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de66000"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "政府 OSAで完成済み防衛装備品を同志国に初供与へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de66000",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:49:44Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "b4a3d53831e18e5cac22e7e2",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65793"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "「タイムズカー」個人情報漏えい問題 被害者が集団提訴へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65793",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:45:09Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "e4b0d4b2eecc6743e940b6b7",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65767"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "広島 氏名が誤認識された被爆男性の遺骨 来月遺族のもとに",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65767",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:44:59Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "f7b30b03e77a3701b0cc2255",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65418"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "中国共産党の重要会議「五中全会」始まる 党内の統治が議題",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65418",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:42:54Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "2f5538f6d50e973675f0f0a7",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20260922de51785"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "中国軍制服組トップなど務めた2人が巨額賄賂などで党籍はく奪",
+      "url": "https://news.web.nhk/newsweb/na/nd-20260922de51785",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:39:12Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "30ffc14bf71b24c04d616093",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20260828de47111"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "中国 軍制服組トップら2人を解任 規律違反などの疑いで調査",
+      "url": "https://news.web.nhk/newsweb/na/nd-20260828de47111",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:38:38Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "4b2337528d04346bb52a25b6",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/na-k10015191331000"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "中国 10月に重要会議「五中全会」 来年の党大会へ引き締めか",
+      "url": "https://news.web.nhk/newsweb/na/na-k10015191331000",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:38:14Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "4ea836833a108ab652b9bf36",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261016de60262"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "YOASOBIが「ブラッサム」主題歌に込めたメッセージとは",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261016de60262",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T13:30:18Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a04cd35af7cc867270176da3",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/26/g-s1-149923/australian-judge-rejects-prisoners-human-rights-challenge-to-vegemite-ban"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Australian judge rejects prisoner's human rights challenge to Vegemite ban",
+      "url": "https://www.npr.org/2026/10/26/g-s1-149923/australian-judge-rejects-prisoners-human-rights-challenge-to-vegemite-ban",
+      "summary": "Andre McKechnie, 55, is serving a life sentence for murder. He took his battle for the salty, sticky, black-brown byproduct of brewing beer to the court last year. He argued being refused Vegemite breached the Charter of Human Rights and Responsibilities Act.",
+      "author": "The Associated Press",
+      "published_at": "2026-10-26T13:25:33Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "74802714a092b8935825db2e",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq3dje4g4d5jo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Chris Brown given suspended eight-month prison sentence over nightclub attack",
+      "url": "https://www.bbc.co.uk/news/articles/cq3dje4g4d5jo?at_campaign=rss&at_medium=RSS",
+      "summary": "The R&B star previously pleaded guilty to affray, after attacking a music producer with a glass bottle.",
+      "author": "",
+      "published_at": "2026-10-26T13:25:29Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "2a06eacdead6ffa95cba26fb",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/26/g-s1-149918/what-to-know-about-chinas-plenum-as-xi-seeks-stronger-party-discipline"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "What to know about China's plenum as Xi seeks stronger party discipline",
+      "url": "https://www.npr.org/2026/10/26/g-s1-149918/what-to-know-about-chinas-plenum-as-xi-seeks-stronger-party-discipline",
+      "summary": "This closed-door gathering that started Monday comes about a year before Xi is expected to secure a fourth term and personnel changes to key leadership bodies.",
+      "author": "The Associated Press",
+      "published_at": "2026-10-26T13:20:38Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "7560d92226ea68a921475d22",
+      "identities": [
+        "cnbc-world:108455794"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Fanatics teams up with OpenAI for new AI-powered shopping suggestion feature",
+      "url": "https://www.cnbc.com/2026/10/26/fanatics-openai-codex-sports-merchandise-shopping.html",
+      "summary": "Fanatics is using AI to help shoppers navigate more than 1.5 million items of sports merchandise, with a Shop the Look feature powered by OpenAI Codex.",
+      "author": "",
+      "published_at": "2026-10-26T13:02:37Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "36cce90da6c22daa8dcf675c",
+      "identities": [
+        "cnbc-world:108463655"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Meta announces $95 billion stock offering to fund AI expansion",
+      "url": "https://www.cnbc.com/2026/10/26/meta-stock-offering-ai.html",
+      "summary": "Meta plans to raise $95 billion to fund AI infrastructure and superintelligence, as Nvidia, AMD and Broadcom eye up to $5 billion in shares.",
+      "author": "",
+      "published_at": "2026-10-26T12:42:41Z",
+      "first_seen_at": "2026-10-26T14:02:37.319546Z",
+      "window_id": "2026-10-26T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "45ed6f57b150b0af36eb20da",
       "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65948"
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65948",
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65980"
       ],
       "source_id": "nhk-hatena",
       "publisher": "NHK",
       "title": "原発避難者に公務員宿舎の明け渡し命じる判決 東京地裁",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65948",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65980",
       "summary": "",
       "author": "",
       "published_at": "2026-10-26T11:52:06Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "community_collection"
     },
     {
@@ -236,7 +525,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -253,8 +542,8 @@
       "published_at": "2026-10-26T11:47:00Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -289,8 +578,8 @@
       "published_at": "2026-10-26T11:11:00Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -308,7 +597,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -488,7 +777,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -505,8 +794,8 @@
       "published_at": "2026-10-26T09:47:21Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -541,8 +830,8 @@
       "published_at": "2026-10-26T09:46:06Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -559,8 +848,8 @@
       "published_at": "2026-10-26T09:22:36Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -595,8 +884,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -613,8 +902,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -631,8 +920,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -649,8 +938,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -667,8 +956,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -703,8 +992,8 @@
       "published_at": "2026-10-26T08:42:53Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -714,15 +1003,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Uganda imposes 21-day quarantine on citizens returning from DR Congo",
+      "title": "Nurse killed in attack while responding to Ebola alert in DR Congo",
       "url": "https://www.bbc.co.uk/news/articles/crx2dyd24188o?at_campaign=rss&at_medium=RSS",
-      "summary": "Uganda will also not allow most travellers who have been in DR Congo to transit through the country.",
+      "summary": "Local youths reportedly accused the health workers of contaminating water sources and spreading Ebola.",
       "author": "",
       "published_at": "2026-10-26T08:18:22Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -740,7 +1029,7 @@
       "first_seen_at": "2026-10-26T07:07:50.764652Z",
       "window_id": "2026-10-26T14:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -758,8 +1047,8 @@
       "published_at": "2026-10-26T06:16:15Z",
       "first_seen_at": "2026-10-26T07:07:50.764652Z",
       "window_id": "2026-10-26T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -776,8 +1065,8 @@
       "published_at": "2026-10-26T06:14:11Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -795,7 +1084,7 @@
       "first_seen_at": "2026-10-26T07:07:50.764652Z",
       "window_id": "2026-10-26T14:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -805,15 +1094,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Oil slides over 2% as traders weigh Saudi attack risks, demand destruction",
+      "title": "Oil prices fall as Saudi defense minister travels to Iran for talks to de-escalate conflict",
       "url": "https://www.cnbc.com/2026/10/26/oil-prices-today-wti-brent.html",
       "summary": "Oil prices fell as investors weighed the threat of further attacks on Saudi Arabian energy infrastructure against concerns that elevated prices could erode demand.",
       "author": "",
       "published_at": "2026-10-26T05:18:01Z",
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T10:02:39.420948Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -849,7 +1138,7 @@
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -938,8 +1227,8 @@
       "published_at": "2026-10-26T04:05:28Z",
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1064,8 +1353,8 @@
       "published_at": "2026-10-26T01:23:04Z",
       "first_seen_at": "2026-10-26T02:02:38.976390Z",
       "window_id": "2026-10-26T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1100,8 +1389,8 @@
       "published_at": "2026-10-26T00:37:51Z",
       "first_seen_at": "2026-10-26T01:51:29.475122Z",
       "window_id": "2026-10-26T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1154,8 +1443,8 @@
       "published_at": "2026-10-26T00:26:49Z",
       "first_seen_at": "2026-10-26T01:51:29.475122Z",
       "window_id": "2026-10-26T08:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1173,7 +1462,7 @@
       "first_seen_at": "2026-10-26T01:51:29.475122Z",
       "window_id": "2026-10-26T08:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1190,8 +1479,8 @@
       "published_at": "2026-10-25T23:44:34Z",
       "first_seen_at": "2026-10-26T01:51:29.475122Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1209,8 +1498,8 @@
       "published_at": "2026-10-25T23:33:19Z",
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1259,12 +1548,12 @@
       "title": "Brazil runoff live updates: world leaders congratulate Lula on historic election win as Bolsonaro refuses to concede",
       "url": "https://www.theguardian.com/world/live/2026/oct/25/brazil-election-runoff-live-updates-flavio-bolsonaro-lula",
       "summary": "",
-      "author": "Yohannes Lowe (now) with Adam Fulton and Marina Dunbar (earlier)",
+      "author": "Martin Belam (now) with Yohannes Lowe, Adam Fulton and Marina Dunbar (earlier)",
       "published_at": "2026-10-25T23:16:41Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1318,8 +1607,8 @@
       "published_at": "2026-10-25T22:11:13Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1337,7 +1626,7 @@
       "first_seen_at": "2026-10-25T22:02:39.420468Z",
       "window_id": "2026-10-26T04:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1391,7 +1680,7 @@
       "first_seen_at": "2026-10-25T20:01:52.389266Z",
       "window_id": "2026-10-26T02:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1445,7 +1734,7 @@
       "first_seen_at": "2026-10-25T18:02:49.870597Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1535,7 +1824,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1663,8 +1952,8 @@
       "published_at": "2026-10-25T14:34:33Z",
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-25T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -1681,8 +1970,8 @@
       "published_at": "2026-10-25T14:14:23Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T10:02:39.420948Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -2151,8 +2440,8 @@
       "published_at": "2026-10-25T07:05:30Z",
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -2335,8 +2624,8 @@
       "published_at": "2026-10-25T02:57:30Z",
       "first_seen_at": "2026-10-25T06:02:31.952491Z",
       "window_id": "2026-10-25T10:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -2450,7 +2739,8 @@
     {
       "id": "b99c706ef0d4cf2b83ada6f0",
       "identities": [
-        "bbc-business:https://www.bbc.co.uk/news/articles/cqy8ljkle97ro#0"
+        "bbc-business:https://www.bbc.co.uk/news/articles/cqy8ljkle97ro#0",
+        "bbc-business:https://www.bbc.co.uk/news/articles/cqy8ljkle97ro#1"
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
@@ -2461,8 +2751,8 @@
       "published_at": "2026-10-24T23:15:18Z",
       "first_seen_at": "2026-10-25T00:02:30.093216Z",
       "window_id": "2026-10-25T06:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -3330,7 +3620,7 @@
       "first_seen_at": "2026-10-24T08:02:38.320296Z",
       "window_id": "2026-10-24T12:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -3785,8 +4075,8 @@
       "published_at": "2026-10-23T23:11:31Z",
       "first_seen_at": "2026-10-25T08:02:36.800522Z",
       "window_id": "2026-10-24T06:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T14:02:37.319546Z",
       "time_basis": "publication"
     },
     {
@@ -4389,131 +4679,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-24T10:02:40.159733Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "a30f04fd072bcdf9b9ca9a2b",
-      "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/ck87zlpzny15o#0"
-      ],
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "Seven shot dead by gunmen at church funeral in Jordan, officials say",
-      "url": "https://www.bbc.co.uk/news/articles/ck87zlpzny15o?at_campaign=rss&at_medium=RSS",
-      "summary": "Thirty-four people are also injured in the attack in southern Karak governorate, and a manhunt is now under way.",
-      "author": "",
-      "published_at": "2026-10-23T14:02:16Z",
-      "first_seen_at": "2026-10-23T14:02:33.873810Z",
-      "window_id": "2026-10-23T22:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-24T06:02:31.620333Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "8ceaab1c34c42e96e1de8e4b",
-      "identities": [
-        "cnbc-world:108451650"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "American Express is cutting 5% of its workforce to 'prepare for AI'",
-      "url": "https://www.cnbc.com/2026/10/23/american-express-job-cuts.html",
-      "summary": "Amex, which reported third-quarter results earlier Friday, is taking a $336 million restructuring charge in the quarter, CEO Stephen Squeri said Friday.",
-      "author": "",
-      "published_at": "2026-10-23T13:59:42Z",
-      "first_seen_at": "2026-10-23T14:02:33.873810Z",
-      "window_id": "2026-10-23T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-24T06:02:31.620333Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "89e19c2c52cbc6e56ad77841",
-      "identities": [
-        "guardian-world:https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread"
-      ],
-      "source_id": "guardian-world",
-      "publisher": "The Guardian",
-      "title": "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
-      "url": "https://www.theguardian.com/world/2026/oct/23/ebola-swiss-patient-nigeria-dr-congo-concerns-virus-spread",
-      "summary": "",
-      "author": "Carlos Mureithi in Nairobi and agencies",
-      "published_at": "2026-10-23T13:43:46Z",
-      "first_seen_at": "2026-10-23T14:02:33.873810Z",
-      "window_id": "2026-10-23T20:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "3239f77d7719a4ae6d4fa8a3",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261023de64349"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "今月放鳥のトキ2羽が死がいで見つかる 石川",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64349",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-23T13:18:15Z",
-      "first_seen_at": "2026-10-23T14:02:33.873810Z",
-      "window_id": "2026-10-23T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-24T02:03:21.263846Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "3224a247301947eccee05683",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Authorities investigating whether first Kenya and Nigeria Ebola cases crossed paths",
-      "url": "https://www.npr.org/2026/10/23/g-s1-149515/africa-ebola-outbreak",
-      "summary": "Nigeria this week recorded its first case of Ebola in the current outbreak, which has spread from the epicenter in Congo to several other African countries.",
-      "author": "Kate Bartlett",
-      "published_at": "2026-10-23T12:41:39Z",
-      "first_seen_at": "2026-10-23T14:02:33.873810Z",
-      "window_id": "2026-10-23T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-24T10:02:40.159733Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "aea7d0b1f8afc779439aeb7b",
-      "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/c59vzjm118j1o#0",
-        "bbc-world:https://www.bbc.co.uk/news/articles/c59vzjm118j1o#1"
-      ],
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "Denmark to ban mink farming in government U-turn",
-      "url": "https://www.bbc.co.uk/news/articles/c59vzjm118j1o?at_campaign=rss&at_medium=RSS",
-      "summary": "Once the world's largest producer of mink pelts, the nation's industry has declined in recent years.",
-      "author": "",
-      "published_at": "2026-10-23T12:17:45Z",
-      "first_seen_at": "2026-10-23T14:02:33.873810Z",
-      "window_id": "2026-10-23T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-24T04:02:39.422090Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-23T20:00+08:00",
-      "start": "2026-10-23T12:00:00Z",
-      "end": "2026-10-23T14:00:00Z",
-      "date": "2026-10-23",
-      "article_ids": [
-        "8ceaab1c34c42e96e1de8e4b",
-        "89e19c2c52cbc6e56ad77841",
-        "3239f77d7719a4ae6d4fa8a3",
-        "3224a247301947eccee05683",
-        "aea7d0b1f8afc779439aeb7b"
-      ]
-    },
     {
       "id": "2026-10-23T22:00+08:00",
       "start": "2026-10-23T14:00:00Z",
@@ -4528,8 +4696,7 @@
         "8dd06f395e8f96fbe3198153",
         "4a1479682d79c19cc1e3adf0",
         "7becc29f735eb66eeef8beb4",
-        "0b5b3567e0f1bc4fba14cefc",
-        "a30f04fd072bcdf9b9ca9a2b"
+        "0b5b3567e0f1bc4fba14cefc"
       ]
     },
     {
@@ -5024,6 +5191,30 @@
         "ee70af4d370e137aa1a040bd",
         "998d0f0f6c74ac6645e6bfd4",
         "1448999cf8e07a3c3bc199ae"
+      ]
+    },
+    {
+      "id": "2026-10-26T20:00+08:00",
+      "start": "2026-10-26T12:00:00Z",
+      "end": "2026-10-26T14:00:00Z",
+      "date": "2026-10-26",
+      "article_ids": [
+        "bfc11fe8264513a737341c64",
+        "6605543bd8604cc01ff7a082",
+        "e75f8c7289f2534b09056431",
+        "d9829c4249f0265244cb8ff9",
+        "b4a3d53831e18e5cac22e7e2",
+        "e4b0d4b2eecc6743e940b6b7",
+        "f7b30b03e77a3701b0cc2255",
+        "2f5538f6d50e973675f0f0a7",
+        "30ffc14bf71b24c04d616093",
+        "4b2337528d04346bb52a25b6",
+        "4ea836833a108ab652b9bf36",
+        "a04cd35af7cc867270176da3",
+        "74802714a092b8935825db2e",
+        "2a06eacdead6ffa95cba26fb",
+        "7560d92226ea68a921475d22",
+        "36cce90da6c22daa8dcf675c"
       ]
     }
   ],
