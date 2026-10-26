@@ -1,19 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T00:02:36.448588Z",
+  "generated_at": "2026-10-26T01:51:29.475122Z",
   "trigger": {
-    "event": "workflow_dispatch",
-    "schedule": "",
+    "event": "schedule",
+    "schedule": "0 */2 * * *",
     "slot": "2026-10-26T08:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-26T00:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40247395225"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40256211453"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
   "latest_window_id": "2026-10-26T06:00+08:00",
   "today": "2026-10-26",
-  "last_success_at": "2026-10-26T00:02:36.448588Z",
+  "last_success_at": "2026-10-26T01:51:29.475122Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +35,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T00:02:36.448588Z",
-      "last_success_at": "2026-10-26T00:02:36.448588Z",
+      "checked_at": "2026-10-26T01:51:29.475122Z",
+      "last_success_at": "2026-10-26T01:51:29.475122Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +65,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T00:02:36.448588Z",
-      "last_success_at": "2026-10-26T00:02:36.448588Z",
+      "checked_at": "2026-10-26T01:51:29.475122Z",
+      "last_success_at": "2026-10-26T01:51:29.475122Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +94,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T00:02:36.448588Z",
-      "last_success_at": "2026-10-26T00:02:36.448588Z",
+      "checked_at": "2026-10-26T01:51:29.475122Z",
+      "last_success_at": "2026-10-26T01:51:29.475122Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +123,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T00:02:36.448588Z",
-      "last_success_at": "2026-10-26T00:02:36.448588Z",
+      "checked_at": "2026-10-26T01:51:29.475122Z",
+      "last_success_at": "2026-10-26T01:51:29.475122Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +152,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T00:02:36.448588Z",
-      "last_success_at": "2026-10-26T00:02:36.448588Z",
+      "checked_at": "2026-10-26T01:51:29.475122Z",
+      "last_success_at": "2026-10-26T01:51:29.475122Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +190,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-26T00:02:36.448588Z",
-      "last_success_at": "2026-10-26T00:02:36.448588Z",
+      "checked_at": "2026-10-26T01:51:29.475122Z",
+      "last_success_at": "2026-10-26T01:51:29.475122Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +201,126 @@
     }
   ],
   "articles": [
+    {
+      "id": "04cace5cf85b70f1e9163e39",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "将棋 西山朋佳女流四冠 プロ入り表明 初の女性プロ棋士誕生へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65487",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T01:42:51Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "1e562eb3339b3005a1726aa3",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Brazil's Lula wins presidential election in runoff vote",
+      "url": "https://www.cnbc.com/2026/10/26/brazil-lula-win-presidential-election-runoff-vote.html",
+      "summary": "Brazil's Lula wins record fourth term in presidential runoff with markets falling and real set to weaken.",
+      "author": "",
+      "published_at": "2026-10-26T01:10:46Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "4f172dbafac9f52ab85f5343",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "SpaceX closes $40 billion debt deal for AI chips, Elon Musk says",
+      "url": "https://www.cnbc.com/2026/10/26/spacex-closes-40-billion-debt-deal-for-ai-chips-elon-musk-.html",
+      "summary": "Elon Musk said in an X post that SpaceX has closed $40 billion in debt financing to purchase GPUs.",
+      "author": "",
+      "published_at": "2026-10-26T00:37:51Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "00683a838d72b76a692983a5",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ヨルダンの教会で銃撃事件7人死亡 テロ事件として捜査",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64643",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T00:35:13Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "0d0364f4270d5f884dd5e485",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Brazil's left-wing President Lula elected for fourth term",
+      "url": "https://www.npr.org/2026/10/25/nx-s1-6016299/brazil-lula-bolsonaro-election",
+      "summary": "Brazil's 80-year-old left-wing leader President Lula defeats Flávio Bolsonaro in a bitterly contested runoff.",
+      "author": "Catherine Osborn",
+      "published_at": "2026-10-26T00:35:00Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "6b7265e515e6d8afb41aabca",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Healey's Budget needs to sustain the stronger economy through gathering clouds",
+      "url": "https://www.bbc.co.uk/news/articles/ck87z4ng2l03o?at_campaign=rss&at_medium=RSS",
+      "summary": "The economic is positive now but come January things could become trickier for the Labour government",
+      "author": "",
+      "published_at": "2026-10-26T00:26:49Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "b7d1d8539bd11337adbb53e0",
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "Lula wins fourth term as Brazil president after historic upset over far-right Flávio Bolsonaro",
+      "url": "https://www.theguardian.com/world/2026/oct/26/lula-wins-brazil-election",
+      "summary": "",
+      "author": "Tom Phillips in São Paulo and Tiago Rogero in Brasília",
+      "published_at": "2026-10-26T00:19:05Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T08:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "e4eaea0a360a0381a1c4759c",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Data centre debate heats up ahead of US midterms - here's what you need to know",
+      "url": "https://www.bbc.co.uk/news/articles/cq2e9we7w2ejo?at_campaign=rss&at_medium=RSS",
+      "summary": "Data centres are the lifeblood of our digital world, but there are growing concerns about their environmental impact. The BBC explores their rise in charts.",
+      "author": "",
+      "published_at": "2026-10-25T23:44:34Z",
+      "first_seen_at": "2026-10-26T01:51:29.475122Z",
+      "window_id": "2026-10-26T06:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
+      "time_basis": "publication"
+    },
     {
       "id": "c600b92eba9e6c9f4dca95bb",
       "source_id": "nhk-hatena",
@@ -214,8 +332,8 @@
       "published_at": "2026-10-25T23:22:31Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -229,15 +347,15 @@
       "published_at": "2026-10-25T23:19:12Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
       "id": "65ae7ac159e14488413154cd",
       "source_id": "guardian-world",
       "publisher": "The Guardian",
-      "title": "Brazil runoff live updates: ballot count resumes after two-hour voting extension",
+      "title": "Brazil runoff live updates: Lula speaks after historic victory over Flávio Bolsonaro",
       "url": "https://www.theguardian.com/world/live/2026/oct/25/brazil-election-runoff-live-updates-flavio-bolsonaro-lula",
       "summary": "",
       "author": "Adam Fulton (now); Marina Dunbar (earlier)",
@@ -245,7 +363,7 @@
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -259,23 +377,23 @@
       "published_at": "2026-10-25T22:39:45Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
       "id": "50b98ff3497c59c88c914244",
       "source_id": "nhk-hatena",
       "publisher": "NHK",
-      "title": "ブラジル大統領選挙 決選投票 全土で2時間延長後に終了",
+      "title": "ブラジル大統領選挙 決選投票 現職のルーラ大統領が当選",
       "url": "https://news.web.nhk/newsweb/na/nd-20261026de65416",
       "summary": "",
       "author": "",
       "published_at": "2026-10-25T22:32:09Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -290,14 +408,14 @@
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
       "id": "f8c97cb5556c552149c1c5cd",
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Serbia's veteran ruler Vučić concedes election to student-led protest movement",
+      "title": "Elation across Serbia after veteran ruler Vučić concedes to student-led protest movement",
       "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_campaign=rss&at_medium=RSS",
       "summary": "The populist right-wing leader of 12 years says it is \"clear\" his party has lost the vote billed as a referendum on the country's future.",
       "author": "",
@@ -305,7 +423,7 @@
       "first_seen_at": "2026-10-25T22:02:39.420468Z",
       "window_id": "2026-10-26T04:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -334,23 +452,23 @@
       "published_at": "2026-10-25T20:35:35Z",
       "first_seen_at": "2026-10-25T22:02:39.420468Z",
       "window_id": "2026-10-26T04:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
       "id": "2a9dafa8eea6f6b41c23c8b7",
       "source_id": "guardian-world",
       "publisher": "The Guardian",
-      "title": "Brazil election 2026: Live second round results",
+      "title": "Brazil election 2026: Full second round results as Lula wins comeback against Flávio Bolsonaro",
       "url": "https://www.theguardian.com/world/ng-interactive/2026/oct/25/brazil-election-2026-live-second-round-results",
       "summary": "",
       "author": "Seán Clarke and Tom Phillips",
       "published_at": "2026-10-25T19:37:49Z",
       "first_seen_at": "2026-10-25T20:01:52.389266Z",
       "window_id": "2026-10-26T02:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -364,8 +482,8 @@
       "published_at": "2026-10-25T18:18:49Z",
       "first_seen_at": "2026-10-25T20:01:52.389266Z",
       "window_id": "2026-10-26T02:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -379,8 +497,8 @@
       "published_at": "2026-10-25T17:50:35Z",
       "first_seen_at": "2026-10-25T18:02:49.870597Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -394,8 +512,8 @@
       "published_at": "2026-10-25T17:18:28Z",
       "first_seen_at": "2026-10-25T18:02:49.870597Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -409,8 +527,8 @@
       "published_at": "2026-10-25T16:46:58Z",
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -424,8 +542,8 @@
       "published_at": "2026-10-25T16:42:42Z",
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -439,8 +557,8 @@
       "published_at": "2026-10-25T16:40:23Z",
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -454,8 +572,8 @@
       "published_at": "2026-10-25T16:33:40Z",
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -470,7 +588,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -484,8 +602,8 @@
       "published_at": "2026-10-25T16:18:41Z",
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -499,8 +617,8 @@
       "published_at": "2026-10-25T16:00:00Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -515,7 +633,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -544,8 +662,8 @@
       "published_at": "2026-10-25T15:03:17Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -560,7 +678,7 @@
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -574,8 +692,8 @@
       "published_at": "2026-10-25T14:14:23Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -589,8 +707,8 @@
       "published_at": "2026-10-25T13:41:37Z",
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -604,8 +722,8 @@
       "published_at": "2026-10-25T13:04:10Z",
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -619,8 +737,8 @@
       "published_at": "2026-10-25T13:01:32Z",
       "first_seen_at": "2026-10-25T14:02:35.850053Z",
       "window_id": "2026-10-25T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "community_collection"
     },
     {
@@ -709,8 +827,8 @@
       "published_at": "2026-10-25T12:00:01Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T20:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -724,8 +842,8 @@
       "published_at": "2026-10-25T11:24:58Z",
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -755,7 +873,7 @@
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -784,8 +902,8 @@
       "published_at": "2026-10-25T10:00:00Z",
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T18:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -830,7 +948,7 @@
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -844,8 +962,8 @@
       "published_at": "2026-10-25T09:00:00Z",
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -859,8 +977,8 @@
       "published_at": "2026-10-25T09:00:00Z",
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -919,8 +1037,8 @@
       "published_at": "2026-10-25T08:00:58Z",
       "first_seen_at": "2026-10-25T10:02:28.610033Z",
       "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -950,7 +1068,7 @@
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -979,8 +1097,8 @@
       "published_at": "2026-10-25T06:00:15Z",
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T14:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -1025,7 +1143,7 @@
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -1085,7 +1203,7 @@
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T10:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -1099,8 +1217,8 @@
       "published_at": "2026-10-25T02:57:30Z",
       "first_seen_at": "2026-10-25T06:02:31.952491Z",
       "window_id": "2026-10-25T10:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -1115,7 +1233,7 @@
       "first_seen_at": "2026-10-25T07:01:13.406279Z",
       "window_id": "2026-10-25T10:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -1205,7 +1323,7 @@
       "first_seen_at": "2026-10-25T00:02:30.093216Z",
       "window_id": "2026-10-25T06:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -1924,8 +2042,8 @@
       "published_at": "2026-10-24T05:00:01Z",
       "first_seen_at": "2026-10-24T08:02:38.320296Z",
       "window_id": "2026-10-24T12:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -2240,7 +2358,7 @@
       "first_seen_at": "2026-10-24T02:02:35.956383Z",
       "window_id": "2026-10-24T08:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -2254,8 +2372,8 @@
       "published_at": "2026-10-24T00:05:45Z",
       "first_seen_at": "2026-10-24T02:02:35.956383Z",
       "window_id": "2026-10-24T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -2300,7 +2418,7 @@
       "first_seen_at": "2026-10-25T08:02:36.800522Z",
       "window_id": "2026-10-24T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -2840,7 +2958,7 @@
       "first_seen_at": "2026-10-23T14:02:33.873810Z",
       "window_id": "2026-10-23T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -3530,7 +3648,7 @@
       "first_seen_at": "2026-10-23T08:52:29.788736Z",
       "window_id": "2026-10-23T16:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
+      "rank_observed_at": "2026-10-26T01:51:29.475122Z",
       "time_basis": "publication"
     },
     {
@@ -3847,126 +3965,6 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-25T10:02:28.610033Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "369f57ea1440ae3b184ac990",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "CNBC Daily Open: AI spending fears haunt markets before Halloween",
-      "url": "https://www.cnbc.com/2026/10/23/cnbc-daily-open-ai-spending-elon-musk-bill-ackman-jensen-huang.html",
-      "summary": "Halloween is still about a week away, but markets are already getting some of the heebiee-jeebees.",
-      "author": "",
-      "published_at": "2026-10-23T01:42:35Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-23T08:52:29.788736Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "6370b77c881e37a6c60b60de",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Wealthy Chinese move offshore money to U.S. banks as Beijing’s tax net widens",
-      "url": "https://www.cnbc.com/2026/10/23/wealthy-chinese-tax-offshore-trusts-capital-control-.html",
-      "summary": "Bankers and lawyers say Chinese clients' demand for U.S. bank accounts has gathered pace as Beijing tightens the screws on Chinese offshore wealth.",
-      "author": "",
-      "published_at": "2026-10-23T01:23:12Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-23T14:29:46.354991Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "495d8e93ae80c50bb13eec48",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "乗客の20代女性に性的暴行か タクシー運転手を逮捕 警視庁",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261022de63833",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-23T01:05:46Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-23T04:02:33.968156Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "97410e9078b41228e9b123f3",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "拘束中のスー・チー氏と電話 次男“生存確認できてよかった”",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de63992",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-23T00:55:10Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-23T04:02:33.968156Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "425cc8d9a2d92c26ba8590b6",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "「シャモンダウイルスのヒトへの感染を初確認」 フランス",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de63995",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-23T00:55:07Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-23T04:02:33.968156Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "5d74b113f02832b53d0f09d1",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "ウクライナ衛星制限 トランプ大統領「マスク氏が元に戻した」",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64005",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-23T00:55:02Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-23T02:03:52.367289Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "31506ac3ee47070a72c63951",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "SK Hynix shares jump over 4% after early losses as chipmaker scraps Solidigm IPO plans",
-      "url": "https://www.cnbc.com/2026/10/23/sk-hynix-solidigm-ipo-.html",
-      "summary": "SK Hynix shares closed 4% higher after an initial drop in early trading as the chipmaker halted review of Solidigm IPO plans in the U.S.",
-      "author": "",
-      "published_at": "2026-10-23T00:53:36Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-23T10:02:30.696674Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "934acef26005000a53d96859",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "SpaceX records $561 million investment gain from stake in Elon Musk's Boring Co.",
-      "url": "https://www.cnbc.com/2026/10/22/spacex-records-561-million-investment-gain-from-stake-in-boring-co.html",
-      "summary": "SpaceX's stake in Boring Co. helped boost its net income in the third quarter.",
-      "author": "",
-      "published_at": "2026-10-23T00:46:09Z",
-      "first_seen_at": "2026-10-23T02:02:30.663347Z",
-      "window_id": "2026-10-23T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-23T08:52:29.788736Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
@@ -3975,16 +3973,7 @@
       "start": "2026-10-23T00:00:00Z",
       "end": "2026-10-23T02:00:00Z",
       "date": "2026-10-23",
-      "article_ids": [
-        "369f57ea1440ae3b184ac990",
-        "6370b77c881e37a6c60b60de",
-        "495d8e93ae80c50bb13eec48",
-        "97410e9078b41228e9b123f3",
-        "425cc8d9a2d92c26ba8590b6",
-        "5d74b113f02832b53d0f09d1",
-        "31506ac3ee47070a72c63951",
-        "934acef26005000a53d96859"
-      ]
+      "article_ids": []
     },
     {
       "id": "2026-10-23T10:00+08:00",
@@ -4501,6 +4490,7 @@
       "end": "2026-10-26T00:00:00Z",
       "date": "2026-10-26",
       "article_ids": [
+        "e4eaea0a360a0381a1c4759c",
         "c600b92eba9e6c9f4dca95bb",
         "753913ccf6a8bf248c7748c4",
         "65ae7ac159e14488413154cd",
