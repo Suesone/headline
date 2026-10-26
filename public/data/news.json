@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-26T16:02:44.533663Z",
+  "generated_at": "2026-10-26T18:03:10.511630Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-27T00:00+08:00",
+    "slot": "2026-10-27T02:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-26T16:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40355169003"
+    "requested_slot": "2026-10-26T18:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40374123834"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-26T22:00+08:00",
+  "latest_window_id": "2026-10-27T00:00+08:00",
   "today": "2026-10-27",
-  "last_success_at": "2026-10-26T16:02:44.533663Z",
+  "last_success_at": "2026-10-26T18:03:10.511630Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T16:02:44.533663Z",
-      "last_success_at": "2026-10-26T16:02:44.533663Z",
+      "checked_at": "2026-10-26T18:03:10.511630Z",
+      "last_success_at": "2026-10-26T18:03:10.511630Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T16:02:44.533663Z",
-      "last_success_at": "2026-10-26T16:02:44.533663Z",
+      "checked_at": "2026-10-26T18:03:10.511630Z",
+      "last_success_at": "2026-10-26T18:03:10.511630Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T16:02:44.533663Z",
-      "last_success_at": "2026-10-26T16:02:44.533663Z",
+      "checked_at": "2026-10-26T18:03:10.511630Z",
+      "last_success_at": "2026-10-26T18:03:10.511630Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T16:02:44.533663Z",
-      "last_success_at": "2026-10-26T16:02:44.533663Z",
+      "checked_at": "2026-10-26T18:03:10.511630Z",
+      "last_success_at": "2026-10-26T18:03:10.511630Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-26T16:02:44.533663Z",
-      "last_success_at": "2026-10-26T16:02:44.533663Z",
+      "checked_at": "2026-10-26T18:03:10.511630Z",
+      "last_success_at": "2026-10-26T18:03:10.511630Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-26T16:02:44.533663Z",
-      "last_success_at": "2026-10-26T16:02:44.533663Z",
+      "checked_at": "2026-10-26T18:03:10.511630Z",
+      "last_success_at": "2026-10-26T18:03:10.511630Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -204,18 +204,108 @@
   ],
   "articles": [
     {
+      "id": "06ff2213d15f09d2d80ac37b",
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "How Lula beat far-right Bolsonaro in Brazil – The Latest",
+      "url": "https://www.theguardian.com/news/audio/2026/oct/26/how-lula-beat-far-right-bolsonaro-in-brazil-the-latest",
+      "summary": "",
+      "author": "Presented by Michael Safi with Tom Phillips; produced by Angus Neale; senior producer Bryony Moore",
+      "published_at": "2026-10-26T17:38:16Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-27T00:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "304165bbaf139f5b197e0d40",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Lula wins Brazil runoff after prediction markets favored Bolsonaro",
+      "url": "https://www.cnbc.com/2026/10/26/lula-brazil-election-prediction-markets.html",
+      "summary": "While prediction market odds pointed to a clear Bolsonaro victory, Lula emerged the winner in a tight race.",
+      "author": "",
+      "published_at": "2026-10-26T17:29:37Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-27T00:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "56008e38ee6e27a1b31f61d1",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "東京 大田区が窓口の受付時間を1時間短縮へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65528",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T17:23:13Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-27T00:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "e2930dccad706f778472992b",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Anthropic's blockbuster share listing - 5 surprising things we now know",
+      "url": "https://www.bbc.co.uk/news/articles/cwn8d7g29vd9o?at_campaign=rss&at_medium=RSS",
+      "summary": "Anthropic’s IPO prospectus is 355 pages and full of never before disclosed company information.",
+      "author": "",
+      "published_at": "2026-10-26T17:20:54Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-27T00:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "d9d68ab0efa51b5c438f6c3f",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "北海道新聞記者と「領事面会」実施 健康状態に問題なし 外務省",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de66041",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-26T16:49:20Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-27T00:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a0c6993f351bf9c9d080d024",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "NBA enters prediction markets with Kalshi, Polymarket partnerships",
+      "url": "https://www.cnbc.com/2026/10/26/nba-kalshi-polymarket-prediction-markets.html",
+      "summary": "The league also inked a memorandum of understanding with the CFTC, the federal regulator of prediction markets.",
+      "author": "",
+      "published_at": "2026-10-26T16:00:59Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-27T00:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "4282364da3b1d04aee62f02d",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Microsoft offers voluntary buyouts to 60,000 employees",
+      "title": "Microsoft offers voluntary buyouts to 60,000 employees as AI leads to efficiency push",
       "url": "https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
-      "summary": "Microsoft is trying to balance a rapid infrastructure build-out with capital efficiency.",
+      "summary": "Microsoft is trying to balance a rapid AI infrastructure build-out with capital efficiency.",
       "author": "",
       "published_at": "2026-10-26T15:59:04Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -229,8 +319,8 @@
       "published_at": "2026-10-26T15:54:18Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -244,8 +334,8 @@
       "published_at": "2026-10-26T15:54:11Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -259,9 +349,54 @@
       "published_at": "2026-10-26T15:54:06Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
+    },
+    {
+      "id": "26a5d0f3fecbce81dd7a732a",
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "‘Democracy always’: Lula vows no return to dictatorship in Brazil after election win",
+      "url": "https://www.theguardian.com/world/2026/oct/26/brazil-lula-vow-democracy-always-election-win",
+      "summary": "",
+      "author": "Tom Phillips in São Paulo and Tiago Rogero in Brasília",
+      "published_at": "2026-10-26T15:51:18Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-26T22:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "c99fbed7ea4f3a25ebffb25b",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Catholic bishops apologise for 'exploited' Trump meeting",
+      "url": "https://www.bbc.co.uk/news/articles/cw8rz1d286v3o?at_campaign=rss&at_medium=RSS",
+      "summary": "Two bishops in images that show them praying with Trump have said they believed the meeting was private.",
+      "author": "",
+      "published_at": "2026-10-26T15:46:31Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-26T22:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "6e2dfcd6808731205c18b32a",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Police arrest teenager after shooting that injured 12, including children, in Florida",
+      "url": "https://www.bbc.co.uk/news/articles/ckpdg8vnv171o?at_campaign=rss&at_medium=RSS",
+      "summary": "The incident happened on Saturday night, close to an American football stadium where a game had just been played.",
+      "author": "",
+      "published_at": "2026-10-26T15:45:30Z",
+      "first_seen_at": "2026-10-26T18:03:10.511630Z",
+      "window_id": "2026-10-26T22:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
+      "time_basis": "publication"
     },
     {
       "id": "12247c9cc4d3d2f5a39b0a6b",
@@ -275,7 +410,7 @@
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -304,8 +439,8 @@
       "published_at": "2026-10-26T15:08:28Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -320,7 +455,7 @@
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -334,8 +469,8 @@
       "published_at": "2026-10-26T14:37:21Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -350,7 +485,7 @@
       "first_seen_at": "2026-10-26T14:36:34.884536Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -364,8 +499,8 @@
       "published_at": "2026-10-26T14:13:18Z",
       "first_seen_at": "2026-10-26T14:36:34.884536Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -380,7 +515,7 @@
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -395,7 +530,7 @@
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -410,7 +545,7 @@
       "first_seen_at": "2026-10-26T14:36:34.884536Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -424,8 +559,8 @@
       "published_at": "2026-10-26T13:51:02Z",
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -439,8 +574,8 @@
       "published_at": "2026-10-26T13:49:44Z",
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -560,7 +695,7 @@
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -574,8 +709,8 @@
       "published_at": "2026-10-26T13:25:29Z",
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -590,7 +725,7 @@
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -604,8 +739,8 @@
       "published_at": "2026-10-26T13:18:57Z",
       "first_seen_at": "2026-10-26T14:36:34.884536Z",
       "window_id": "2026-10-26T20:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -634,8 +769,8 @@
       "published_at": "2026-10-26T12:42:41Z",
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -649,8 +784,8 @@
       "published_at": "2026-10-26T11:52:06Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "community_collection"
     },
     {
@@ -665,7 +800,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -710,7 +845,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -725,7 +860,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -875,7 +1010,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -889,8 +1024,8 @@
       "published_at": "2026-10-26T09:47:21Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -912,15 +1047,15 @@
       "id": "2321c4705b843e6b0e110033",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Neocloud stocks fall as Elon Musk says more than 200 of them face 'guppy-level death'",
+      "title": "Elon Musk says more than 200 neoclouds face 'guppy-level death'",
       "url": "https://www.cnbc.com/2026/10/26/neocloud-stocks-today-coreweave-nebius-iren-elon-musk.html",
       "summary": "Investors are already questioning the debt-fueled expansion of neoclouds and whether the large AI infrastructure build-out will generate long-term returns.",
       "author": "",
       "published_at": "2026-10-26T09:46:06Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -935,7 +1070,7 @@
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -964,8 +1099,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -974,13 +1109,13 @@
       "publisher": "NPR",
       "title": "Republicans are spending millions and still may not win districts drawn to favor them",
       "url": "https://www.npr.org/2026/10/26/nx-s1-6008167/republican-redistricting-midterms-competitive-map",
-      "summary": "Republicans redrew Congressional district lines to try to tilt the midterms in their favor. But now they are facing expensive and competitive races they had hoped to outmaneuver.",
+      "summary": "Republicans redrew congressional district lines to try to tilt the midterms in their favor. But now they are facing expensive and competitive races they had hoped to outmaneuver.",
       "author": "Tamara Keith",
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -994,8 +1129,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1009,8 +1144,8 @@
       "published_at": "2026-10-26T09:00:00Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1025,7 +1160,7 @@
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1069,8 +1204,8 @@
       "published_at": "2026-10-26T08:18:22Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1084,8 +1219,8 @@
       "published_at": "2026-10-26T06:44:33Z",
       "first_seen_at": "2026-10-26T07:07:50.764652Z",
       "window_id": "2026-10-26T14:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1114,8 +1249,8 @@
       "published_at": "2026-10-26T06:14:11Z",
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1137,15 +1272,15 @@
       "id": "03ce097395990df04eed6438",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Oil prices fall as Saudi defense minister travels to Iran for talks to de-escalate conflict",
+      "title": "Oil ticks lower as Saudi defense minister meets with Iran's president in Tehran to de-escalate",
       "url": "https://www.cnbc.com/2026/10/26/oil-prices-today-wti-brent.html",
-      "summary": "Oil prices fell as investors weighed the threat of further attacks on Saudi Arabian energy infrastructure against concerns that elevated prices could erode demand.",
+      "summary": "Investors are worried about the vulnerability of Saudi energy infrastructure and the risk of another disruption to production, refining or export facilities.",
       "author": "",
       "published_at": "2026-10-26T05:18:01Z",
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1175,7 +1310,7 @@
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1354,8 +1489,8 @@
       "published_at": "2026-10-26T01:23:04Z",
       "first_seen_at": "2026-10-26T02:02:38.976390Z",
       "window_id": "2026-10-26T08:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1429,8 +1564,8 @@
       "published_at": "2026-10-26T00:26:49Z",
       "first_seen_at": "2026-10-26T01:51:29.475122Z",
       "window_id": "2026-10-26T08:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1459,8 +1594,8 @@
       "published_at": "2026-10-25T23:44:34Z",
       "first_seen_at": "2026-10-26T01:51:29.475122Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1512,15 +1647,15 @@
       "id": "65ae7ac159e14488413154cd",
       "source_id": "guardian-world",
       "publisher": "The Guardian",
-      "title": "Brazil runoff live updates: world leaders congratulate Lula on historic election win as Bolsonaro refuses to concede",
+      "title": "Brazil runoff as it happened: world leaders congratulate Lula on historic election win as Bolsonaro refuses to concede",
       "url": "https://www.theguardian.com/world/live/2026/oct/25/brazil-election-runoff-live-updates-flavio-bolsonaro-lula",
       "summary": "",
       "author": "Tom Ambrose (now); Martin Belam, Yohannes Lowe, Adam Fulton and Marina Dunbar (earlier)",
       "published_at": "2026-10-25T23:16:41Z",
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1579,8 +1714,8 @@
       "published_at": "2026-10-25T21:25:04Z",
       "first_seen_at": "2026-10-25T22:02:39.420468Z",
       "window_id": "2026-10-26T04:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1669,8 +1804,8 @@
       "published_at": "2026-10-25T17:18:28Z",
       "first_seen_at": "2026-10-25T18:02:49.870597Z",
       "window_id": "2026-10-26T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1745,7 +1880,7 @@
       "first_seen_at": "2026-10-25T17:17:14.703436Z",
       "window_id": "2026-10-26T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -1864,8 +1999,8 @@
       "published_at": "2026-10-25T14:14:23Z",
       "first_seen_at": "2026-10-25T16:02:35.691881Z",
       "window_id": "2026-10-25T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -2254,8 +2389,8 @@
       "published_at": "2026-10-25T07:05:30Z",
       "first_seen_at": "2026-10-25T12:02:36.196140Z",
       "window_id": "2026-10-25T14:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -2509,8 +2644,8 @@
       "published_at": "2026-10-24T23:15:18Z",
       "first_seen_at": "2026-10-25T00:02:30.093216Z",
       "window_id": "2026-10-25T06:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -3229,8 +3364,8 @@
       "published_at": "2026-10-24T05:00:01Z",
       "first_seen_at": "2026-10-24T08:02:38.320296Z",
       "window_id": "2026-10-24T12:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -3604,8 +3739,8 @@
       "published_at": "2026-10-23T23:11:31Z",
       "first_seen_at": "2026-10-25T08:02:36.800522Z",
       "window_id": "2026-10-24T06:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T16:02:44.533663Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-26T18:03:10.511630Z",
       "time_basis": "publication"
     },
     {
@@ -3877,113 +4012,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-24T14:02:42.668662Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "aa3eaf8f15ca292b0277b2a2",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "DOJ sues to block Alaska from certifying Senate race winner if Republican narrowly loses",
-      "url": "https://www.cnbc.com/2026/10/23/alaska-senate-election-doj-lawsuit-sullivan.html",
-      "summary": "There are two Dan Sullivans on the ballot in the Senate race in Alaska. The DOJ says that fact could help Democratic nominee Mary Peltola defeat both of them.",
-      "author": "",
-      "published_at": "2026-10-23T17:42:30Z",
-      "first_seen_at": "2026-10-23T18:02:34.659325Z",
-      "window_id": "2026-10-24T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-23T18:02:34.659325Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "71164a60f9e0b7cb591714d7",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Musk's SpaceX is still restricting Starlink in Ukraine and the toll is rising",
-      "url": "https://www.cnbc.com/2026/10/23/ukraine-says-starlink-restrictions-remain-despite-trump-assurances.html",
-      "summary": "Since last week, Ukraine has reported restrictions on Starshield, a version of SpaceX's Starlink, hampering its military operations against Russia.",
-      "author": "",
-      "published_at": "2026-10-23T17:41:25Z",
-      "first_seen_at": "2026-10-23T18:02:34.659325Z",
-      "window_id": "2026-10-24T00:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-24T12:02:33.635958Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "27b1537cfb5d3e127427881f",
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "A D.C. park was made 'for the pleasure of the people.' Trump's plan would change that",
-      "url": "https://www.npr.org/2026/10/23/nx-s1-6010488/east-potomac-trump-golf-hains-point",
-      "summary": "Trump's most recent rendering of East Potomac Park overtakes the D.C. peninsula with a sprawling golf course, without the grassy areas and road beloved by locals. That's prompted grassroots pushback.",
-      "author": "Rachel Treisman",
-      "published_at": "2026-10-23T17:35:14Z",
-      "first_seen_at": "2026-10-23T18:02:34.659325Z",
-      "window_id": "2026-10-24T00:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-24T12:02:33.635958Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "8fc0c68322db6bfbfe66739a",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Qatar deal to buy U.S. natural gas shows how Iran war has redrawn global energy markets",
-      "url": "https://www.cnbc.com/2026/10/23/cheniere-qatar-energy-lng-natural-gas-iran-war-strait-hormuz.html",
-      "summary": "The Iran war is transforming global energy markets and benefiting U.S. companies, especially liquefied natural gas exporters.",
-      "author": "",
-      "published_at": "2026-10-23T17:25:29Z",
-      "first_seen_at": "2026-10-23T18:02:34.659325Z",
-      "window_id": "2026-10-24T00:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-24T08:26:18.292279Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "6cdb7a3571c617154f68fc55",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "環境省 最大2万2000件漏えいか ブラストメールに不正アクセス",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64630",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-23T17:16:35Z",
-      "first_seen_at": "2026-10-23T18:02:34.659325Z",
-      "window_id": "2026-10-24T00:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-24T02:03:21.263846Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "b043af613d8097bb442e5c38",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Doctors call Moderna, Merck cancer vaccine data a major advancement — despite Wall Street reaction",
-      "url": "https://www.cnbc.com/2026/10/23/moderna-merck-cancer-vaccine-data.html",
-      "summary": "Six melanoma specialists said the Moderna and Merck vaccine results represent a clinically meaningful result for melanoma patients who underwent surgery.",
-      "author": "",
-      "published_at": "2026-10-23T17:15:08Z",
-      "first_seen_at": "2026-10-23T18:02:34.659325Z",
-      "window_id": "2026-10-24T00:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-23T22:41:30.341170Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-24T00:00+08:00",
-      "start": "2026-10-23T16:00:00Z",
-      "end": "2026-10-23T18:00:00Z",
-      "date": "2026-10-24",
-      "article_ids": [
-        "aa3eaf8f15ca292b0277b2a2",
-        "71164a60f9e0b7cb591714d7",
-        "27b1537cfb5d3e127427881f",
-        "8fc0c68322db6bfbfe66739a",
-        "6cdb7a3571c617154f68fc55",
-        "b043af613d8097bb442e5c38"
-      ]
-    },
     {
       "id": "2026-10-24T02:00+08:00",
       "start": "2026-10-23T18:00:00Z",
@@ -4500,6 +4531,9 @@
         "7b0e74dbb117821a77d3d2a1",
         "55537c790e68e2c129140dc2",
         "13bbe650b8ee7b89fafadad7",
+        "26a5d0f3fecbce81dd7a732a",
+        "c99fbed7ea4f3a25ebffb25b",
+        "6e2dfcd6808731205c18b32a",
         "12247c9cc4d3d2f5a39b0a6b",
         "da7b9ac94793b2a3d0154b3a",
         "d8bb4d33ce5421a0b01a814a",
@@ -4508,9 +4542,26 @@
         "0c983535096aaee014b47fbe",
         "7ecaa7f8a7c5b8888cbbff20"
       ]
+    },
+    {
+      "id": "2026-10-27T00:00+08:00",
+      "start": "2026-10-26T16:00:00Z",
+      "end": "2026-10-26T18:00:00Z",
+      "date": "2026-10-27",
+      "article_ids": [
+        "06ff2213d15f09d2d80ac37b",
+        "304165bbaf139f5b197e0d40",
+        "56008e38ee6e27a1b31f61d1",
+        "e2930dccad706f778472992b",
+        "d9d68ab0efa51b5c438f6c3f",
+        "a0c6993f351bf9c9d080d024"
+      ]
     }
   ],
   "days": [
+    {
+      "date": "2026-10-27"
+    },
     {
       "date": "2026-10-26"
     },
