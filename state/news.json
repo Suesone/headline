@@ -1,19 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T12:02:41.405506Z",
+  "generated_at": "2026-10-27T13:40:24.906780Z",
   "trigger": {
-    "event": "workflow_dispatch",
-    "schedule": "",
+    "event": "schedule",
+    "schedule": "0 */2 * * *",
     "slot": "2026-10-27T20:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-27T12:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40500623707"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40514037188"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
   "latest_window_id": "2026-10-27T18:00+08:00",
   "today": "2026-10-27",
-  "last_success_at": "2026-10-27T12:02:41.405506Z",
+  "last_success_at": "2026-10-27T13:40:24.906780Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +35,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T12:02:41.405506Z",
-      "last_success_at": "2026-10-27T12:02:41.405506Z",
+      "checked_at": "2026-10-27T13:40:24.906780Z",
+      "last_success_at": "2026-10-27T13:40:24.906780Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +65,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T12:02:41.405506Z",
-      "last_success_at": "2026-10-27T12:02:41.405506Z",
+      "checked_at": "2026-10-27T13:40:24.906780Z",
+      "last_success_at": "2026-10-27T13:40:24.906780Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +94,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T12:02:41.405506Z",
-      "last_success_at": "2026-10-27T12:02:41.405506Z",
+      "checked_at": "2026-10-27T13:40:24.906780Z",
+      "last_success_at": "2026-10-27T13:40:24.906780Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +123,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T12:02:41.405506Z",
-      "last_success_at": "2026-10-27T12:02:41.405506Z",
+      "checked_at": "2026-10-27T13:40:24.906780Z",
+      "last_success_at": "2026-10-27T13:40:24.906780Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +152,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T12:02:41.405506Z",
-      "last_success_at": "2026-10-27T12:02:41.405506Z",
+      "checked_at": "2026-10-27T13:40:24.906780Z",
+      "last_success_at": "2026-10-27T13:40:24.906780Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +190,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-27T12:02:41.405506Z",
-      "last_success_at": "2026-10-27T12:02:41.405506Z",
+      "checked_at": "2026-10-27T13:40:24.906780Z",
+      "last_success_at": "2026-10-27T13:40:24.906780Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +201,258 @@
     }
   ],
   "articles": [
+    {
+      "id": "fff63d34c1287d73e883e33c",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66664"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "サッカー エムバペ選手が謝罪声明 「中国の独裁者」SNS発言で",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66664",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T13:39:17Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "0f987a4948b6b7b4fdfc64dd",
+      "identities": [
+        "cnbc-world:108464732"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Fed expected to hold rates steady, but Warsh may point way to more hikes",
+      "url": "https://www.cnbc.com/2026/10/27/federal-reserve-rates-kevin-warsh.html",
+      "summary": "Markets overwhelmingly expect no change in benchmark interest rates following September's increase.",
+      "author": "",
+      "published_at": "2026-10-27T13:37:51Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "d30264827693c699bbffba1a",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66585"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ニデック 創業者の永守氏らに損害賠償求め提訴へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66585",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T13:34:56Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "aee57b35ac1abe3a39679226",
+      "identities": [
+        "cnbc-world:108448107"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Boeing narrows third-quarter loss as defense sales rise, but focus remains on 737 Max production",
+      "url": "https://www.cnbc.com/2026/10/27/-boeing-ba-q3-2026-earnings.html",
+      "summary": "Boeing is set to brief investors on its aircraft production outlook when it reports quarterly results before the market opens Tuesday.",
+      "author": "",
+      "published_at": "2026-10-27T13:25:42Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "36433912826c967b53fcd5ad",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cmx28de233r2o#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Nanotyrannus skeleton goes to auction in New York with £4.5m price tag",
+      "url": "https://www.bbc.co.uk/news/articles/cmx28de233r2o?at_campaign=rss&at_medium=RSS",
+      "summary": "The auction of the rare skeleton comes amid debate in the scientific community about whether dinosaur remains should end up in private hands or public view.",
+      "author": "",
+      "published_at": "2026-10-27T13:23:32Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9dfecdadea07d842d21aeac2",
+      "identities": [
+        "cnbc-world:108464630"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Ripple strikes deal with Robinhood to expand its RLSUD digital dollar",
+      "url": "https://www.cnbc.com/2026/10/27/ripple-strikes-deal-with-robinhood-to-expand-its-rlsud-digital-dollar.html",
+      "summary": "As crypto evolves past its trading roots, and global markets shift to 24/7 liquidity, stablecoins are becoming essential financial infrastructure.",
+      "author": "",
+      "published_at": "2026-10-27T13:23:06Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "2123f90f9476a1ca0fb6cca0",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66665"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "安保3文書の有識者会議“増税も選択肢として排除せず”の意見",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66665",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T13:13:51Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "0774c6e0fa672d06797fd9c1",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/c6vgj813mlelo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Norway and Finland leaders hold rare call with Putin",
+      "url": "https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_campaign=rss&at_medium=RSS",
+      "summary": "This is the first time European leaders have had direct communication with Russia's president in more than a year.",
+      "author": "",
+      "published_at": "2026-10-27T13:12:24Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9fa9b2c81373e1d89e2f54a5",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66097"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "フグはヒトより「うまみ」感知か ノーベル賞注目アミノ酸研究",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66097",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T12:56:53Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "ddc80adb02b5aab89285eb75",
+      "identities": [
+        "cnbc-world:108465625"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "World Bank's Banga: Availability of capital 'not really an issue' as AI demand drives up borrowing costs",
+      "url": "https://www.cnbc.com/2026/10/27/world-bank-president-ajay-banga.html",
+      "summary": "World Bank President Ajay Banga came on CNBC's \"Squawk Box\" on Oct. 27, 2026.",
+      "author": "",
+      "published_at": "2026-10-27T12:50:13Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "58f0c9cc4779d699d5ae7b10",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66321"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "UAゼンセン 賃金水準低い正社員やパートなど7％賃上げ要求へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66321",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T12:49:09Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "b2b9fca352b5550e76569c35",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66297"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "KDDI 新会社を設立 フィジカルAI事業に本格的に参入へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66297",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T12:37:00Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "cffe68493b7fd0de8bdcf1e5",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66247"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "井林国交相が政治資金パーティー「大臣規範抵触せず」",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66247",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T12:29:02Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "8ae044ea5c03960c53ecbe2f",
+      "identities": [
+        "cnbc-world:108464525"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Coca-Cola hikes earnings outlook, even as it sees lackluster demand in North America",
+      "url": "https://www.cnbc.com/2026/10/27/coca-cola-ko-q3-2026-earnings.html",
+      "summary": "Coca-Cola stock has climbed about 32% so far this year, raising the beverage company's market cap to roughly $398 billion.",
+      "author": "",
+      "published_at": "2026-10-27T12:20:36Z",
+      "first_seen_at": "2026-10-27T13:40:24.906780Z",
+      "window_id": "2026-10-27T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
+      "time_basis": "publication"
+    },
     {
       "id": "8208799017ae4b8536b2fb88",
       "identities": [
@@ -236,7 +486,7 @@
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -246,15 +496,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Netherlands makes U-turn over Eurovision return",
+      "title": "Netherlands pulls out of Eurovision again over Israel participation",
       "url": "https://www.bbc.co.uk/news/articles/cmr4y5dvlzneo?at_campaign=rss&at_medium=RSS",
       "summary": "A Dutch broadcaster reverses a decision to take part, citing \"sensitivities\" over Israel's participation.",
       "author": "",
       "published_at": "2026-10-27T11:23:19Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -289,8 +539,8 @@
       "published_at": "2026-10-27T11:18:31Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -307,8 +557,8 @@
       "published_at": "2026-10-27T11:18:00Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "community_collection"
     },
     {
@@ -325,8 +575,8 @@
       "published_at": "2026-10-27T10:49:31Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "community_collection"
     },
     {
@@ -343,8 +593,8 @@
       "published_at": "2026-10-27T10:48:21Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "community_collection"
     },
     {
@@ -380,7 +630,7 @@
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -469,8 +719,8 @@
       "published_at": "2026-10-27T10:08:51Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -649,8 +899,8 @@
       "published_at": "2026-10-27T09:07:41Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -668,7 +918,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -686,7 +936,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -704,7 +954,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -722,7 +972,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -740,7 +990,7 @@
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -776,7 +1026,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -822,15 +1072,15 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Mbappé dropped by major Chinese brands as backlash grows over Mao joke",
+      "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
       "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_campaign=rss&at_medium=RSS",
-      "summary": "He allegedly said the funniest \"meme\" about him is the one where they put his face on \"a Chinese dictator\".",
+      "summary": "The France star had referred to the former Chinese leader as a \"dictator\" during an interview about memes.",
       "author": "",
       "published_at": "2026-10-27T07:15:08Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -840,15 +1090,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Mbappé dropped by major Chinese brands as backlash grows over Mao joke",
+      "title": "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
       "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_campaign=rss&at_medium=RSS",
-      "summary": "He allegedly said the funniest \"meme\" about him is the one where they put his face on \"a Chinese dictator\".",
+      "summary": "The France star had referred to the former Chinese leader as a \"dictator\" during an interview about memes.",
       "author": "",
       "published_at": "2026-10-27T07:15:08Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -884,7 +1134,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -902,7 +1152,7 @@
       "first_seen_at": "2026-10-27T06:53:06.502962Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -956,7 +1206,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -974,7 +1224,7 @@
       "first_seen_at": "2026-10-27T06:02:36.379402Z",
       "window_id": "2026-10-27T12:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -992,7 +1242,7 @@
       "first_seen_at": "2026-10-27T06:02:36.379402Z",
       "window_id": "2026-10-27T12:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1010,7 +1260,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1287,7 +1537,8 @@
     {
       "id": "2e5173c466afd131ae2ca84a",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cq8ezg4364epo#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq8ezg4364epo#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq8ezg4364epo#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -1298,8 +1549,8 @@
       "published_at": "2026-10-27T03:10:55Z",
       "first_seen_at": "2026-10-27T04:02:35.902516Z",
       "window_id": "2026-10-27T10:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1352,14 +1603,15 @@
       "published_at": "2026-10-27T02:40:17Z",
       "first_seen_at": "2026-10-27T04:02:35.902516Z",
       "window_id": "2026-10-27T10:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
       "id": "1b1ae288861f4076aad50219",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/ckly0xqjnlwvo#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/ckly0xqjnlwvo#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/ckly0xqjnlwvo#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -1370,8 +1622,8 @@
       "published_at": "2026-10-27T02:01:27Z",
       "first_seen_at": "2026-10-27T04:02:35.902516Z",
       "window_id": "2026-10-27T10:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1389,7 +1641,7 @@
       "first_seen_at": "2026-10-27T02:02:35.901209Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1406,8 +1658,8 @@
       "published_at": "2026-10-27T01:46:38Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T08:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1497,7 +1749,7 @@
       "first_seen_at": "2026-10-27T00:57:20.118587Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1515,7 +1767,7 @@
       "first_seen_at": "2026-10-27T00:57:20.118587Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1659,7 +1911,7 @@
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1676,8 +1928,8 @@
       "published_at": "2026-10-26T22:46:35Z",
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1723,15 +1975,15 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Chancellor to cut tariffs on some food and freeze fuel duty to give families 'breathing space'",
+      "title": "Minimum wage set to rise but 18-20 year-olds will not get bigger increase",
       "url": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_campaign=rss&at_medium=RSS",
-      "summary": "A series of small announcements are part of John Healey's pledge to give households help with the cost of living.",
+      "summary": "Chancellor John Healey will reveal the new pay rates in the Budget, and has also announced measures to help households with the cost of living.",
       "author": "",
       "published_at": "2026-10-26T22:30:02Z",
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1948,7 +2200,7 @@
       "first_seen_at": "2026-10-26T20:02:43.994931Z",
       "window_id": "2026-10-27T00:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -1966,7 +2218,7 @@
       "first_seen_at": "2026-10-26T18:03:10.511630Z",
       "window_id": "2026-10-27T00:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2020,7 +2272,7 @@
       "first_seen_at": "2026-10-26T18:03:10.511630Z",
       "window_id": "2026-10-27T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2255,7 +2507,7 @@
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2347,7 +2599,7 @@
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2746,7 +2998,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2926,7 +3178,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2945,7 +3197,7 @@
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -2955,15 +3207,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "How war, security and coalition math are shaping the Israeli election",
+      "title": "Israel election puts Netanyahu’s wartime leadership on the line as Trump urges voters to return him to power",
       "url": "https://www.cnbc.com/2026/10/26/israel-election-netanyahu-iran-gaza-palestine.html",
       "summary": "Israeli voters will head to the polls to cast their votes in a general election on Tuesday.",
       "author": "",
       "published_at": "2026-10-26T09:46:59Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -3290,7 +3542,7 @@
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -3508,7 +3760,7 @@
       "first_seen_at": "2026-10-26T02:02:38.976390Z",
       "window_id": "2026-10-26T08:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -3709,7 +3961,7 @@
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "rank_observed_at": "2026-10-27T13:40:24.906780Z",
       "time_basis": "publication"
     },
     {
@@ -5220,60 +5472,6 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-25T04:02:27.744304Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "8ef2ee82016cefcd2e5bfbc0",
-      "identities": [
-        "cnbc-world:108455305"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "After SpaceX restores high-speed service, Musk claims Ukraine violated Starlink agreement",
-      "url": "https://www.cnbc.com/2026/10/24/ukraine-starlink-starshield-service-restored.html",
-      "summary": "Ukraine says restrictions on Starlink and Starshield have been lifted, restoring connectivity to fast-moving military systems after disruptions.",
-      "author": "",
-      "published_at": "2026-10-24T13:00:35Z",
-      "first_seen_at": "2026-10-24T13:40:30.761833Z",
-      "window_id": "2026-10-24T20:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T18:02:49.870597Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "161be767910364b634143bfd",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261024de64864"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "鳥取 琴浦町 発電所の風車から出火 けが人なし【動画】",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64864",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T12:33:19Z",
-      "first_seen_at": "2026-10-24T13:40:30.761833Z",
-      "window_id": "2026-10-24T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T02:02:30.057591Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "2aa79d0200640944719bb06a",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261019de61354"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "お笑い芸人・ワッキーさん がん後遺症と向き合いながら舞台へ",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261019de61354",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T12:14:51Z",
-      "first_seen_at": "2026-10-24T13:40:30.761833Z",
-      "window_id": "2026-10-24T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T02:02:30.057591Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
@@ -5282,11 +5480,7 @@
       "start": "2026-10-24T12:00:00Z",
       "end": "2026-10-24T14:00:00Z",
       "date": "2026-10-24",
-      "article_ids": [
-        "8ef2ee82016cefcd2e5bfbc0",
-        "161be767910364b634143bfd",
-        "2aa79d0200640944719bb06a"
-      ]
+      "article_ids": []
     },
     {
       "id": "2026-10-24T22:00+08:00",
