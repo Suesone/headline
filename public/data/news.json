@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-27T10:02:44.346905Z",
+  "generated_at": "2026-10-27T12:02:41.405506Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-27T18:00+08:00",
+    "slot": "2026-10-27T20:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-27T10:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40485367512"
+    "requested_slot": "2026-10-27T12:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40500623707"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-27T16:00+08:00",
+  "latest_window_id": "2026-10-27T18:00+08:00",
   "today": "2026-10-27",
-  "last_success_at": "2026-10-27T10:02:44.346905Z",
+  "last_success_at": "2026-10-27T12:02:41.405506Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T10:02:44.346905Z",
-      "last_success_at": "2026-10-27T10:02:44.346905Z",
+      "checked_at": "2026-10-27T12:02:41.405506Z",
+      "last_success_at": "2026-10-27T12:02:41.405506Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T10:02:44.346905Z",
-      "last_success_at": "2026-10-27T10:02:44.346905Z",
+      "checked_at": "2026-10-27T12:02:41.405506Z",
+      "last_success_at": "2026-10-27T12:02:41.405506Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T10:02:44.346905Z",
-      "last_success_at": "2026-10-27T10:02:44.346905Z",
+      "checked_at": "2026-10-27T12:02:41.405506Z",
+      "last_success_at": "2026-10-27T12:02:41.405506Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T10:02:44.346905Z",
-      "last_success_at": "2026-10-27T10:02:44.346905Z",
+      "checked_at": "2026-10-27T12:02:41.405506Z",
+      "last_success_at": "2026-10-27T12:02:41.405506Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-27T10:02:44.346905Z",
-      "last_success_at": "2026-10-27T10:02:44.346905Z",
+      "checked_at": "2026-10-27T12:02:41.405506Z",
+      "last_success_at": "2026-10-27T12:02:41.405506Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-27T10:02:44.346905Z",
-      "last_success_at": "2026-10-27T10:02:44.346905Z",
+      "checked_at": "2026-10-27T12:02:41.405506Z",
+      "last_success_at": "2026-10-27T12:02:41.405506Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,231 @@
     }
   ],
   "articles": [
+    {
+      "id": "8208799017ae4b8536b2fb88",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "UPS beats quarterly expectations, raises full-year guidance again",
+      "url": "https://www.cnbc.com/2026/10/27/ups-ups-q3-2026-earnings.html",
+      "summary": "UPS beat Wall Street expectations for its third-quarter results and raised its full-year guidance for the second quarter in a row.",
+      "author": "",
+      "published_at": "2026-10-27T11:42:51Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "b6734ff32b450e74283e2909",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrats have a midterm edge, poll shows. And, Israelis vote in high-stakes election",
+      "url": "https://www.npr.org/2026/10/27/g-s1-150052/up-first-newsletter-midterms-polling-data-voter-fraud-israel-prime-minister-elections",
+      "summary": "Democrats are still holding a slight edge with Election Day a week away, according to a new NPR/PBS News/Marist poll. And, Israelis are casting their votes in an election that could change leadership.",
+      "author": "Brittney Melton",
+      "published_at": "2026-10-27T11:39:52Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "2e77709aad7ffdf8a9623128",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Netherlands makes U-turn over Eurovision return",
+      "url": "https://www.bbc.co.uk/news/articles/cmr4y5dvlzneo?at_campaign=rss&at_medium=RSS",
+      "summary": "A Dutch broadcaster reverses a decision to take part, citing \"sensitivities\" over Israel's participation.",
+      "author": "",
+      "published_at": "2026-10-27T11:23:19Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "2064520b80bb835629ead692",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Man charged with assisting ‘foreign intelligence service’ after incident at UK base used for Iran strikes",
+      "url": "https://www.cnbc.com/2026/10/27/uk-national-security-raf-fairford-iran.html",
+      "summary": "Two men face U.K. national security charges after an incident at a British air base used by U.S. forces during strikes on Iran.",
+      "author": "",
+      "published_at": "2026-10-27T11:22:42Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "1e35135a6c82a6d5a9ac01ad",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Melania Trump-brokered local ceasefire begins as Russia continues attacks on Ukraine",
+      "url": "https://www.cnbc.com/2026/10/27/russia-ukraine-zelenskyy-trump-putin-ceasefire.html",
+      "summary": "An Oleshky ceasefire brokered by Melania Trump began Tuesday as Russia launched missiles and drones at cities across Ukraine.",
+      "author": "",
+      "published_at": "2026-10-27T11:18:31Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "8babfa71c8c62810a061697f",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "NHK次期経営計画案 “公共メディアプラットフォーム”へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66588",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T11:18:00Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "0dbd98fff54cd589ef0a7ca2",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "卵の小売価格が過去最高“鳥インフルエンザの影響続く”農水省",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66318",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:49:31Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "5df45da07491a9c482919461",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "東大総長選で教職員有志が2回目の要望書を提出",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66543",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:48:21Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "7155cbe281cec6cd6a5d9996",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "GLAY・TERUさんプロデュースの芸術祭 再来年開催へ 函館",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66586",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:30:31Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a0f839a98c9d75a9e3372862",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "How Aldi is pushing down grocery prices",
+      "url": "https://www.npr.org/sections/planet-money/2026/10/27/g-s1-149358/how-aldi-is-pushing-down-grocery-prices",
+      "summary": "The German-owned chain's low prices are winning over shoppers — and pushing competitors to respond.",
+      "author": "Alex Mayyasi",
+      "published_at": "2026-10-27T10:30:00Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "83e24d9bafc0515aad9a5846",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "恵山 サラサドウダンの紅葉見頃 北海道 函館",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66528",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:29:52Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "365ea83e27158207fdf525e1",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "北朝鮮軍が韓国の対岸1.4キロの近距離に自走砲を配置",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66516",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:29:35Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a1fc85697b327d9d24e17f71",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "韓国と北朝鮮 軍事境界線付近 地雷爆発めぐり国連で非難の応酬",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65609",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:29:07Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "c847819f40921e598c34dcff",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "大分大学の元教授 背任容疑で逮捕 大学に約3400万円損害か",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66485",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-27T10:24:48Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "75ab48e6bfc8a59e1bb1e67a",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Porsche profit rebounds as luxury carmaker reduces exposure to China",
+      "url": "https://www.cnbc.com/2026/10/27/porsche-china-profit-recovery.html",
+      "summary": "Luxury German carmaker Porsche said it's rapidly reducing its exposure to the Chinese autos market after reporting a profit recovery in the first nine months.",
+      "author": "",
+      "published_at": "2026-10-27T10:08:51Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T18:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
     {
       "id": "36ceeb3617f144c933d7f356",
       "source_id": "nhk-hatena",
@@ -214,8 +439,8 @@
       "published_at": "2026-10-27T10:01:58Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "community_collection"
     },
     {
@@ -350,7 +575,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -364,8 +589,8 @@
       "published_at": "2026-10-27T09:00:00Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -380,7 +605,7 @@
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -394,8 +619,8 @@
       "published_at": "2026-10-27T09:00:00Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -409,8 +634,23 @@
       "published_at": "2026-10-27T08:48:45Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "aefc80202eede9734e17c2e2",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Data centers are a hot-button issue for Ohioans as midterms near",
+      "url": "https://www.npr.org/2026/10/27/nx-s1-5989174/candidates-work-to-ease-concerns-as-data-centers-become-hot-button-issue-for-ohioans",
+      "summary": "In Ohio, many people are displeased with the state's rapid buildout of data centers. It's a hot-button issue in the midterms, as political candidates from both parties try to ease voter concerns.",
+      "author": "Andrea Hsu",
+      "published_at": "2026-10-27T08:45:52Z",
+      "first_seen_at": "2026-10-27T12:02:41.405506Z",
+      "window_id": "2026-10-27T16:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -434,13 +674,13 @@
       "publisher": "BBC",
       "title": "Truce begins in Ukraine city where residents ate weeds to survive",
       "url": "https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_campaign=rss&at_medium=RSS",
-      "summary": "The ceasefire in Oleshky, secured by US First Lady Melania Trump, is meant to allow aid deliveries and the evacuation of civilians.",
+      "summary": "The Oleshky ceasefire, which the White House said was secured by US First Lady Melania Trump, is meant to allow aid to get in and civilians to get out.",
       "author": "",
       "published_at": "2026-10-27T08:01:22Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -454,8 +694,8 @@
       "published_at": "2026-10-27T07:34:34Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -469,38 +709,38 @@
       "published_at": "2026-10-27T07:16:35Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
       "id": "d5c4c1135a960065d0f1cf5f",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Major Chinese brands drop Mbappé as backlash grows over Mao joke",
+      "title": "Mbappé dropped by major Chinese brands as backlash grows over Mao joke",
       "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_campaign=rss&at_medium=RSS",
-      "summary": "He allegedly said his \"favourite meme\" is \"the one where they put my face on a Chinese dictator\".",
+      "summary": "He allegedly said the funniest \"meme\" about him is the one where they put his face on \"a Chinese dictator\".",
       "author": "",
       "published_at": "2026-10-27T07:15:08Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
       "id": "35712606ab2897556fea3392",
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Major Chinese brands drop Mbappé as backlash grows over Mao joke",
+      "title": "Mbappé dropped by major Chinese brands as backlash grows over Mao joke",
       "url": "https://www.bbc.co.uk/news/articles/cv62yg0erp8zo?at_campaign=rss&at_medium=RSS",
-      "summary": "He allegedly said his \"favourite meme\" is \"the one where they put my face on a Chinese dictator\".",
+      "summary": "He allegedly said the funniest \"meme\" about him is the one where they put his face on \"a Chinese dictator\".",
       "author": "",
       "published_at": "2026-10-27T07:15:08Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -530,7 +770,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -544,8 +784,8 @@
       "published_at": "2026-10-27T06:30:54Z",
       "first_seen_at": "2026-10-27T06:53:06.502962Z",
       "window_id": "2026-10-27T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -590,7 +830,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -604,8 +844,8 @@
       "published_at": "2026-10-27T05:46:18Z",
       "first_seen_at": "2026-10-27T06:02:36.379402Z",
       "window_id": "2026-10-27T12:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -619,23 +859,23 @@
       "published_at": "2026-10-27T05:45:44Z",
       "first_seen_at": "2026-10-27T06:02:36.379402Z",
       "window_id": "2026-10-27T12:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
       "id": "bbcf365d549b6b7b45f8ae2c",
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Israel heads to polls for pivotal election defined by security and democracy",
+      "title": "Turnout so far highest in decades as Israelis vote in pivotal election",
       "url": "https://www.bbc.co.uk/news/articles/c3j47l4kdez4o?at_campaign=rss&at_medium=RSS",
-      "summary": "Many fear neither of the leading political blocs will win enough seats for a majority - meaning weeks or months of political wrangling may lie ahead.",
+      "summary": "The elections - the first since the Hamas-led attacks on Israel and the wars which followed - are widely seen as a referendum on Benjamin Netanyahu.",
       "author": "",
       "published_at": "2026-10-27T05:45:08Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -664,8 +904,8 @@
       "published_at": "2026-10-27T05:30:10Z",
       "first_seen_at": "2026-10-27T06:02:36.379402Z",
       "window_id": "2026-10-27T12:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -784,8 +1024,8 @@
       "published_at": "2026-10-27T04:43:56Z",
       "first_seen_at": "2026-10-27T06:02:36.379402Z",
       "window_id": "2026-10-27T12:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -875,7 +1115,7 @@
       "first_seen_at": "2026-10-27T04:02:35.902516Z",
       "window_id": "2026-10-27T10:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -920,7 +1160,7 @@
       "first_seen_at": "2026-10-27T04:02:35.902516Z",
       "window_id": "2026-10-27T10:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -935,14 +1175,14 @@
       "first_seen_at": "2026-10-27T04:02:35.902516Z",
       "window_id": "2026-10-27T10:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
       "id": "146a434cbd351661266701cb",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Apple says it will replace iPhone Duo handsets with screen problems",
+      "title": "Apple to replace iPhone Duos affected by screen problem",
       "url": "https://www.bbc.co.uk/news/articles/c893zwlev2xpo?at_campaign=rss&at_medium=RSS",
       "summary": "Photos shared online showed faults appearing on the screens of Apple's first foldable device.",
       "author": "",
@@ -950,7 +1190,7 @@
       "first_seen_at": "2026-10-27T02:02:35.901209Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -965,7 +1205,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1040,7 +1280,7 @@
       "first_seen_at": "2026-10-27T00:57:20.118587Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1055,7 +1295,7 @@
       "first_seen_at": "2026-10-27T00:57:20.118587Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1175,7 +1415,7 @@
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1189,8 +1429,8 @@
       "published_at": "2026-10-26T22:46:35Z",
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1227,15 +1467,15 @@
       "id": "b9cc206f92082557abfd7f57",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Budget measures to include fuel duty freeze and food tariff cuts",
+      "title": "Chancellor to cut tariffs on some food and freeze fuel duty to give families 'breathing space'",
       "url": "https://www.bbc.co.uk/news/articles/c6d93gq1xdgno?at_campaign=rss&at_medium=RSS",
-      "summary": "The BBC understands the government will also freeze fuel duty again in the Budget.",
+      "summary": "A series of small announcements are part of John Healey's pledge to give households help with the cost of living.",
       "author": "",
       "published_at": "2026-10-26T22:30:02Z",
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1339,8 +1579,8 @@
       "published_at": "2026-10-26T19:16:28Z",
       "first_seen_at": "2026-10-26T20:02:43.994931Z",
       "window_id": "2026-10-27T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1415,7 +1655,7 @@
       "first_seen_at": "2026-10-26T20:02:43.994931Z",
       "window_id": "2026-10-27T00:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1430,7 +1670,7 @@
       "first_seen_at": "2026-10-26T18:03:10.511630Z",
       "window_id": "2026-10-27T00:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1475,7 +1715,7 @@
       "first_seen_at": "2026-10-26T18:03:10.511630Z",
       "window_id": "2026-10-27T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1670,7 +1910,7 @@
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -1745,7 +1985,7 @@
       "first_seen_at": "2026-10-26T14:02:37.319546Z",
       "window_id": "2026-10-26T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2075,7 +2315,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2225,7 +2465,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2240,7 +2480,7 @@
       "first_seen_at": "2026-10-26T10:02:39.420948Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2255,7 +2495,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2525,7 +2765,7 @@
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2705,7 +2945,7 @@
       "first_seen_at": "2026-10-26T02:02:38.976390Z",
       "window_id": "2026-10-26T08:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -2870,7 +3110,7 @@
       "first_seen_at": "2026-10-25T23:38:40.305184Z",
       "window_id": "2026-10-26T06:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
+      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
       "time_basis": "publication"
     },
     {
@@ -4162,160 +4402,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-25T02:02:30.057591Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "0fb8f8ec54643da4dd6dc973",
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Perspective: The next James Bond",
-      "url": "https://www.npr.org/2026/10/24/nx-s1-6004258/perspective-the-next-james-bond",
-      "summary": "A new James Bond is nigh, to replace the last actor in the 64 year-old movie franchise. What evil forces will the new 007 face? Killer Drones? Killer AI? Killer lettuce?",
-      "author": "Scott Simon",
-      "published_at": "2026-10-24T12:00:00Z",
-      "first_seen_at": "2026-10-24T13:40:30.761833Z",
-      "window_id": "2026-10-24T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T10:02:28.610033Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "d35dbec32b554b2303f45a99",
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Gunmen open fire at a church during a funeral in Jordan, killing 7 and wounding 40",
-      "url": "https://www.npr.org/2026/10/24/nx-s1-6015414/shooting-church-jordan",
-      "summary": "Footage broadcast on Jordanian state television showed three gunmen firing shots at a Greek Orthodox church in the city of Karak on Friday.",
-      "author": "The Associated Press",
-      "published_at": "2026-10-24T11:59:08Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T08:02:36.800522Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "fa431c655fb410bffb8bdc86",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "リニア中央新幹線 地下ホーム初公開 まちはどう変わる？",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64791",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T11:18:04Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T00:02:30.093216Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "0f6850cadd6934ca25d0b5d4",
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "Ukraine says Starlink connection 'now stable' after network limits",
-      "url": "https://www.bbc.co.uk/news/articles/cwkg5md14j8go?at_campaign=rss&at_medium=RSS",
-      "summary": "The slowed Starlink connections had affected the Ukraine's military and drone operations for a week.",
-      "author": "",
-      "published_at": "2026-10-24T11:17:35Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-25T08:02:36.800522Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "c53b148504e35ad119f106f5",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "クマからどう身を守る？ 「ヒグマ出没情報マップ」で徹底分析",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64022",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T11:16:12Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T00:02:30.093216Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "07a8c70190cd1807ae8fd990",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "キム総書記「最強の軍隊建設」訴えるも対立深める韓国言及せず",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64777",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T11:13:38Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-24T22:00:44.818283Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "4b239a9c7418f621238b461a",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "台風30号 台湾で1人死亡 600人以上けが 日本人学校で門倒れる",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64639",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T10:37:25Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-24T22:00:44.818283Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "5358e5d40fb0b42ecc604ada",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "フランスで再び抗議デモ実施へ パリの街に警戒感広がる",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261024de64652",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T10:37:16Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-24T22:00:44.818283Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "9937bb6500e2b8981f998cd9",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "千葉 JR内房線11月から全線で運転再開 久留里線は復旧断念",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64305",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-24T10:07:57Z",
-      "first_seen_at": "2026-10-24T12:02:33.635958Z",
-      "window_id": "2026-10-24T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-24T20:12:31.491285Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-24T18:00+08:00",
-      "start": "2026-10-24T10:00:00Z",
-      "end": "2026-10-24T12:00:00Z",
-      "date": "2026-10-24",
-      "article_ids": [
-        "d35dbec32b554b2303f45a99",
-        "fa431c655fb410bffb8bdc86",
-        "0f6850cadd6934ca25d0b5d4",
-        "c53b148504e35ad119f106f5",
-        "07a8c70190cd1807ae8fd990",
-        "4b239a9c7418f621238b461a",
-        "5358e5d40fb0b42ecc604ada",
-        "9937bb6500e2b8981f998cd9"
-      ]
-    },
     {
       "id": "2026-10-24T20:00+08:00",
       "start": "2026-10-24T12:00:00Z",
@@ -4324,8 +4413,7 @@
       "article_ids": [
         "8ef2ee82016cefcd2e5bfbc0",
         "161be767910364b634143bfd",
-        "2aa79d0200640944719bb06a",
-        "0fb8f8ec54643da4dd6dc973"
+        "2aa79d0200640944719bb06a"
       ]
     },
     {
@@ -4855,8 +4943,34 @@
         "3a76cd4936b27a19cbadc041",
         "19a3c01385d52f0c8dd0317c",
         "8ec745aef31e9cb6670908e2",
+        "aefc80202eede9734e17c2e2",
         "ebb8c3dfd2af6540f55d817b",
         "729a056b67582b971b5c6648"
+      ]
+    },
+    {
+      "id": "2026-10-27T18:00+08:00",
+      "start": "2026-10-27T10:00:00Z",
+      "end": "2026-10-27T12:00:00Z",
+      "date": "2026-10-27",
+      "article_ids": [
+        "8208799017ae4b8536b2fb88",
+        "b6734ff32b450e74283e2909",
+        "2e77709aad7ffdf8a9623128",
+        "2064520b80bb835629ead692",
+        "1e35135a6c82a6d5a9ac01ad",
+        "8babfa71c8c62810a061697f",
+        "0dbd98fff54cd589ef0a7ca2",
+        "5df45da07491a9c482919461",
+        "7155cbe281cec6cd6a5d9996",
+        "a0f839a98c9d75a9e3372862",
+        "83e24d9bafc0515aad9a5846",
+        "365ea83e27158207fdf525e1",
+        "a1fc85697b327d9d24e17f71",
+        "c847819f40921e598c34dcff",
+        "75ab48e6bfc8a59e1bb1e67a",
+        "36ceeb3617f144c933d7f356",
+        "3c398d43dfdc1d24365be569"
       ]
     }
   ],
