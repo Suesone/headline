@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T08:02:33.710020Z",
+  "generated_at": "2026-10-28T10:02:37.989442Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-28T16:00+08:00",
+    "slot": "2026-10-28T18:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-28T08:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40653940497"
+    "requested_slot": "2026-10-28T10:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40668889783"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-28T14:00+08:00",
+  "latest_window_id": "2026-10-28T16:00+08:00",
   "today": "2026-10-28",
-  "last_success_at": "2026-10-28T08:02:33.710020Z",
+  "last_success_at": "2026-10-28T10:02:37.989442Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T08:02:33.710020Z",
-      "last_success_at": "2026-10-28T08:02:33.710020Z",
+      "checked_at": "2026-10-28T10:02:37.989442Z",
+      "last_success_at": "2026-10-28T10:02:37.989442Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T08:02:33.710020Z",
-      "last_success_at": "2026-10-28T08:02:33.710020Z",
+      "checked_at": "2026-10-28T10:02:37.989442Z",
+      "last_success_at": "2026-10-28T10:02:37.989442Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T08:02:33.710020Z",
-      "last_success_at": "2026-10-28T08:02:33.710020Z",
+      "checked_at": "2026-10-28T10:02:37.989442Z",
+      "last_success_at": "2026-10-28T10:02:37.989442Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T08:02:33.710020Z",
-      "last_success_at": "2026-10-28T08:02:33.710020Z",
+      "checked_at": "2026-10-28T10:02:37.989442Z",
+      "last_success_at": "2026-10-28T10:02:37.989442Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T08:02:33.710020Z",
-      "last_success_at": "2026-10-28T08:02:33.710020Z",
+      "checked_at": "2026-10-28T10:02:37.989442Z",
+      "last_success_at": "2026-10-28T10:02:37.989442Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-28T08:02:33.710020Z",
-      "last_success_at": "2026-10-28T08:02:33.710020Z",
+      "checked_at": "2026-10-28T10:02:37.989442Z",
+      "last_success_at": "2026-10-28T10:02:37.989442Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,240 @@
     }
   ],
   "articles": [
+    {
+      "id": "ea07137b32a58280ce128d58",
+      "identities": [
+        "cnbc-world:108473516"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Ten people confirmed dead in high-speed Spain train crash, local media report",
+      "url": "https://www.cnbc.com/2026/10/28/spain-high-speed-train-crash.html",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-28T09:50:29Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "6795214172f7c4b5bd8a9517",
+      "identities": [
+        "guardian-world:https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says-top-health-official"
+      ],
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "Africa’s ‘unprecedented’ Ebola outbreak could reach UK, says top health official",
+      "url": "https://www.theguardian.com/global-development/2026/oct/28/africa-ebola-outbreak-could-reach-uk-says-top-health-official",
+      "summary": "",
+      "author": "Sarah Johnson",
+      "published_at": "2026-10-28T09:37:49Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "4736b28564692be9085230a2",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261028de67231"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "日本サッカー協会 岡田武史氏が副会長を辞任",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261028de67231",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-28T09:34:59Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "4cd2bd4e6d4b768747b7c04f",
+      "identities": [
+        "cnbc-world:108473423"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Treasury yields tick higher ahead of Federal Reserve interest rate decision",
+      "url": "https://www.cnbc.com/2026/10/28/us-treasurys-bonds-yields-federal-reserve.html",
+      "summary": "Treasury yields edged higher as traders await the Federal Reserve's latest monetary policy decision.",
+      "author": "",
+      "published_at": "2026-10-28T09:22:26Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "3ac568b711f901ea4eab4957",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261028de67229"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "女子中学生にわいせつ画像撮影させたか 38歳の容疑者逮捕",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261028de67229",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-28T09:15:59Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "ec422a95474469ad02ccb226",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/nx-s1-5953069/national-education-association-nea-president-princess-moss-politics"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "New teachers union president wants to steer educators away from partisan politics",
+      "url": "https://www.npr.org/2026/10/28/nx-s1-5953069/national-education-association-nea-president-princess-moss-politics",
+      "summary": "NEA President Princess Moss wants to move her organization, the nation's largest labor union, toward issue-based advocacy — and away from party politics.",
+      "author": "Sequoia Carrillo",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "e0d4287d7b30cccc72f7cd77",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/nx-s1-5793936/college-student-voting"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Why many student voters have a right to choose where to register to vote",
+      "url": "https://www.npr.org/2026/10/28/nx-s1-5793936/college-student-voting",
+      "summary": "Student voters studying outside their hometown have a right to choose where they register to vote. Advocates say a Montana legal fight is a reminder of a misunderstanding of those students' rights.",
+      "author": "Hansi Lo Wang",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "cd1dbdd0b1cf3ab89755e9a4",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/nx-s1-6019276/data-centers-ai-midterms-ohio"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "How a lifelong Republican came to lead the data center battle in Ohio",
+      "url": "https://www.npr.org/2026/10/28/nx-s1-6019276/data-centers-ai-midterms-ohio",
+      "summary": "In Ohio, many people are displeased with the state's rapid buildout of data centers. It's a hot issue in the midterms, as political candidates from both parties try to ease voter concerns.",
+      "author": "Andrea Hsu",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "70eb05edf98400ccf0d90ae6",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/g-s1-150296/287g-local-police-immigration-ice"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Partnerships between ICE and local police surge, report finds",
+      "url": "https://www.npr.org/2026/10/28/g-s1-150296/287g-local-police-immigration-ice",
+      "summary": "The number of state and local officers working with Immigration and Customs Enforcement has doubled in size in the last eight months, according to a new report from the immigration reform advocacy group FWD.us.",
+      "author": "Jaclyn Diaz",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "41af50da3d39bde9c55732ad",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/nx-s1-6019613/organ-donor-ethics-risk"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Are you an organ donor? Here are some rule changes you may want to know",
+      "url": "https://www.npr.org/2026/10/28/nx-s1-6019613/organ-donor-ethics-risk",
+      "summary": "Transplant teams can talk to families about organ donation before they've decided whether to continue life-sustaining medical care for loved ones. Until now, that has been forbidden.",
+      "author": "Rob Stein",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "3be829d35187ff3e0f077071",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/nx-s1-5940017/senate-campaign-fundraising-actblue-winred-ossoff"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Senate candidates built up massive campaign war chests with out-of-state donations",
+      "url": "https://www.npr.org/2026/10/28/nx-s1-5940017/senate-campaign-fundraising-actblue-winred-ossoff",
+      "summary": "In several competitive U.S. Senate contests, candidates have built healthy campaign accounts with out-of-state donations. But the messages to those donors is very different from the one back at home.",
+      "author": "Rahul Mukherjee",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "09e21e8740c9a444553b55ba",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/28/g-s1-150095/democrats-prepare-election-fraud-claims"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Here's how Democrats in Congress are preparing for election fraud claims",
+      "url": "https://www.npr.org/2026/10/28/g-s1-150095/democrats-prepare-election-fraud-claims",
+      "summary": "Congressional Democrats are working with good governance groups to create an action plan for any potential claims of election fraud.",
+      "author": "Eric McDaniel",
+      "published_at": "2026-10-28T09:00:00Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "0e098220b3e6771cde2cdff9",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261028de66757"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "“納屋”で生活を続ける女性",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261028de66757",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-28T08:04:18Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "community_collection"
+    },
     {
       "id": "191c355465f2cab07d086afe",
       "identities": [
@@ -235,8 +469,26 @@
       "published_at": "2026-10-28T07:57:51Z",
       "first_seen_at": "2026-10-28T08:02:33.710020Z",
       "window_id": "2026-10-28T14:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "187dbed9502791749ed8e755",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cwj342k62exyo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Luxury cruise passengers stranded in Cambodia due to soaring fuel costs",
+      "url": "https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_campaign=rss&at_medium=RSS",
+      "summary": "The Villa Vie Odyssey suspended its voyage and is working with passengers on \"temporary living arrangements\".",
+      "author": "",
+      "published_at": "2026-10-28T07:53:20Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -253,8 +505,8 @@
       "published_at": "2026-10-28T07:06:56Z",
       "first_seen_at": "2026-10-28T08:02:33.710020Z",
       "window_id": "2026-10-28T14:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -271,8 +523,8 @@
       "published_at": "2026-10-28T06:26:32Z",
       "first_seen_at": "2026-10-28T08:02:33.710020Z",
       "window_id": "2026-10-28T14:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -289,8 +541,8 @@
       "published_at": "2026-10-28T06:15:31Z",
       "first_seen_at": "2026-10-28T08:02:33.710020Z",
       "window_id": "2026-10-28T14:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -325,8 +577,8 @@
       "published_at": "2026-10-28T06:00:01Z",
       "first_seen_at": "2026-10-28T08:02:33.710020Z",
       "window_id": "2026-10-28T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -336,15 +588,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "UBS pre-tax profits jump 27% in third quarter to $3.59 billion as wealth inflows surge",
+      "title": "UBS pretax profits jump 27% in third quarter to $3.59 billion as wealth inflows surge",
       "url": "https://www.cnbc.com/2026/10/28/ubs-earnings-third-quarter.html",
-      "summary": "UBS reported a third quarter pre-tax profit of almost $3.6 billion.",
+      "summary": "UBS reported a third quarter pretax profit of almost $3.6 billion.",
       "author": "",
       "published_at": "2026-10-28T05:58:39Z",
       "first_seen_at": "2026-10-28T06:02:35.164584Z",
       "window_id": "2026-10-28T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -362,7 +614,7 @@
       "first_seen_at": "2026-10-28T06:02:35.164584Z",
       "window_id": "2026-10-28T12:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -379,8 +631,8 @@
       "published_at": "2026-10-28T05:26:46Z",
       "first_seen_at": "2026-10-28T06:02:35.164584Z",
       "window_id": "2026-10-28T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -397,8 +649,8 @@
       "published_at": "2026-10-28T05:26:09Z",
       "first_seen_at": "2026-10-28T06:02:35.164584Z",
       "window_id": "2026-10-28T12:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -415,8 +667,26 @@
       "published_at": "2026-10-28T05:16:41Z",
       "first_seen_at": "2026-10-28T06:02:35.164584Z",
       "window_id": "2026-10-28T12:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "308ce43da9cf4b318f03f3d4",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "King acknowledges 'suffering of the past' as Caribbean tour begins",
+      "url": "https://www.bbc.co.uk/news/articles/cmwyv8ld22z1o?at_campaign=rss&at_medium=RSS",
+      "summary": "The King is on a nine-day tour that will take him to three countries, including the Bahamas, Guyana and Antigua and Barbuda.",
+      "author": "",
+      "published_at": "2026-10-28T04:32:36Z",
+      "first_seen_at": "2026-10-28T10:02:37.989442Z",
+      "window_id": "2026-10-28T12:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -451,8 +721,8 @@
       "published_at": "2026-10-28T04:00:50Z",
       "first_seen_at": "2026-10-28T04:02:33.397114Z",
       "window_id": "2026-10-28T12:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -470,7 +740,7 @@
       "first_seen_at": "2026-10-28T04:02:33.397114Z",
       "window_id": "2026-10-28T10:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -487,8 +757,8 @@
       "published_at": "2026-10-28T03:35:38Z",
       "first_seen_at": "2026-10-28T04:02:33.397114Z",
       "window_id": "2026-10-28T10:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -506,7 +776,7 @@
       "first_seen_at": "2026-10-28T04:02:33.397114Z",
       "window_id": "2026-10-28T10:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -523,8 +793,8 @@
       "published_at": "2026-10-28T03:29:50Z",
       "first_seen_at": "2026-10-28T04:02:33.397114Z",
       "window_id": "2026-10-28T10:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "community_collection"
     },
     {
@@ -560,7 +830,7 @@
       "first_seen_at": "2026-10-28T04:02:33.397114Z",
       "window_id": "2026-10-28T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -606,7 +876,7 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Israel election appears to have no clear winner with Netanyahu, opponent Eisenkot far short of majorities",
+      "title": "Israeli bonds, shekel fall as election leaves Netanyahu and others far short of majorities",
       "url": "https://www.cnbc.com/2026/10/28/israel-election-netanyahu-trump-gaza-.html",
       "summary": "Exit polls show Prime Minister Benjamin Netanyahu's alliance and Gadi Eisenkot's opposition bloc both well off the numbers needed to form a governing majority.",
       "author": "",
@@ -614,7 +884,7 @@
       "first_seen_at": "2026-10-28T02:38:38.987760Z",
       "window_id": "2026-10-28T10:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -650,7 +920,7 @@
       "first_seen_at": "2026-10-28T02:02:37.304812Z",
       "window_id": "2026-10-28T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -668,7 +938,7 @@
       "first_seen_at": "2026-10-28T02:02:37.304812Z",
       "window_id": "2026-10-28T08:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -703,8 +973,8 @@
       "published_at": "2026-10-27T23:45:49Z",
       "first_seen_at": "2026-10-28T00:02:35.378002Z",
       "window_id": "2026-10-28T06:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -740,7 +1010,7 @@
       "first_seen_at": "2026-10-28T02:02:37.304812Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -758,7 +1028,7 @@
       "first_seen_at": "2026-10-28T00:02:35.378002Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1027,8 +1297,8 @@
       "published_at": "2026-10-27T21:12:39Z",
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1045,8 +1315,8 @@
       "published_at": "2026-10-27T21:09:12Z",
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1065,7 +1335,7 @@
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1101,7 +1371,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1119,7 +1389,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1190,8 +1460,8 @@
       "published_at": "2026-10-27T19:30:37Z",
       "first_seen_at": "2026-10-27T20:02:40.628068Z",
       "window_id": "2026-10-28T02:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1262,8 +1532,8 @@
       "published_at": "2026-10-27T18:43:41Z",
       "first_seen_at": "2026-10-27T20:02:40.628068Z",
       "window_id": "2026-10-28T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1317,7 +1587,7 @@
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1353,7 +1623,7 @@
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1424,8 +1694,8 @@
       "published_at": "2026-10-27T16:11:35Z",
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -1804,8 +2074,8 @@
       "published_at": "2026-10-27T13:12:24Z",
       "first_seen_at": "2026-10-27T13:40:24.906780Z",
       "window_id": "2026-10-27T20:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -2423,19 +2693,20 @@
     {
       "id": "8ec745aef31e9cb6670908e2",
       "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6012225/morning-news-brief"
+        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6012225/morning-news-brief",
+        "npr-news:https://www.npr.org/2026/10/28/nx-s1-6012226/morning-news-brief"
       ],
       "source_id": "npr-news",
       "publisher": "NPR",
       "title": "Morning news brief",
-      "url": "https://www.npr.org/2026/10/27/nx-s1-6012225/morning-news-brief",
-      "summary": "A new NPR poll reveals Democrats' advantage going into Election Day, congressional Democrats are forming a task force to protect the election, Netanyahu vies for reelection as polls open in Israel.",
-      "author": "Steve Inskeep",
+      "url": "https://www.npr.org/2026/10/28/nx-s1-6012226/morning-news-brief",
+      "summary": "President Trump crisscrosses the country with scattershot closing messages midterms approach, deadlock after Israeli election shows no clear winner, Fed expected to hold interest rates steady.",
+      "author": "A Martínez",
       "published_at": "2026-10-27T08:48:45Z",
       "first_seen_at": "2026-10-27T10:02:44.346905Z",
       "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T19:01:43.294084Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -2562,7 +2833,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -2617,7 +2888,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -2690,7 +2961,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -3133,7 +3404,8 @@
     {
       "id": "99de89b80fbd488725dcdf1e",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cq62yg6rggj0o#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq62yg6rggj0o#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cq62yg6rggj0o#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -3144,8 +3416,8 @@
       "published_at": "2026-10-27T01:46:38Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -3235,7 +3507,7 @@
       "first_seen_at": "2026-10-27T00:57:20.118587Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -3469,7 +3741,7 @@
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -3993,8 +4265,8 @@
       "published_at": "2026-10-26T15:07:23Z",
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -4484,8 +4756,8 @@
       "published_at": "2026-10-26T11:00:40Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -4664,8 +4936,8 @@
       "published_at": "2026-10-26T09:59:27Z",
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -5028,8 +5300,8 @@
       "published_at": "2026-10-26T05:00:22Z",
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -5247,7 +5519,7 @@
       "first_seen_at": "2026-10-26T02:02:38.976390Z",
       "window_id": "2026-10-26T08:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T08:02:33.710020Z",
+      "rank_observed_at": "2026-10-28T10:02:37.989442Z",
       "time_basis": "publication"
     },
     {
@@ -6122,188 +6394,9 @@
       "feed_rank": 8,
       "rank_observed_at": "2026-10-25T16:02:35.691881Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "0b74ffedf8c0cacf4817007c",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/25/nx-s1-6011190/meta-facebook-settlement-beauty-filters-ai"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "When a teen posts a selfie, how much filter is 'too much' filter?",
-      "url": "https://www.npr.org/2026/10/25/nx-s1-6011190/meta-facebook-settlement-beauty-filters-ai",
-      "summary": "The recent Meta settlement includes a clause banning \"cosmetic procedure filters\" for teens. But defining what constitutes an extreme makeover isn't easy.",
-      "author": "Chloe Veltman",
-      "published_at": "2026-10-25T10:00:00Z",
-      "first_seen_at": "2026-10-25T12:02:36.196140Z",
-      "window_id": "2026-10-25T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-26T08:02:42.808230Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "c8e1a95b069ae95bce68c2bc",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261025de65227"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "電子漫画「ピッコマ」 顧客のメールアドレス約100万件流出",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261025de65227",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-25T09:19:35Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-25T16:02:35.691881Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "82fce2e79f3e1e0f72914f41",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/25/nx-s1-6009402/midterm-blue-wave-map-arkansas-democrats-cotton-shoffner-hill-jones"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "In Arkansas, Democrats see an opening at the edge of the competitive midterms map",
-      "url": "https://www.npr.org/2026/10/25/nx-s1-6009402/midterm-blue-wave-map-arkansas-democrats-cotton-shoffner-hill-jones",
-      "summary": "In a sign of the potentially dire midterm political environment, Republicans have spent millions of dollars playing defense in Arkansas, one of the most conservative states in the country.",
-      "author": "Stephen Fowler",
-      "published_at": "2026-10-25T09:00:00Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-26T00:02:36.448588Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "7e2470ed2b9419ed07e020e6",
-      "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo#0",
-        "bbc-world:https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo#1"
-      ],
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
-      "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_campaign=rss&at_medium=RSS",
-      "summary": "The tech billionaire accuses Ukraine of violating its terms of service by using the network for military activity.",
-      "author": "",
-      "published_at": "2026-10-25T09:00:00Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-26T12:02:48.198861Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "59afba2650882d20cf5c7a00",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/25/nx-s1-5995460/midterms-independent-candidates-nebraska-montana"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Independent candidates sense a moment. Some Democrats hope they're right.",
-      "url": "https://www.npr.org/2026/10/25/nx-s1-5995460/midterms-independent-candidates-nebraska-montana",
-      "summary": "As they look to win the Senate, Democrats are hoping that independent candidates in Nebraska and Montana can help them topple Republicans in a part of the country where their own brand is hurting.",
-      "author": "Barbara Sprunt",
-      "published_at": "2026-10-25T09:00:00Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-26T08:02:42.808230Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "4aefe6e593a10c627fa0b8cf",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/25/nx-s1-5977810/paid-family-bonding-leave-dads-moms-california-colorado-washington-states"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "More dads taking paid family leave for a new baby, sometimes as much as moms are",
-      "url": "https://www.npr.org/2026/10/25/nx-s1-5977810/paid-family-bonding-leave-dads-moms-california-colorado-washington-states",
-      "summary": "The U.S. has no national law for paid parental leave. But in states that do, more dads are using the benefit, sometimes more than moms. The change comes as Americans say having kids is unaffordable.",
-      "author": "Elly Yu",
-      "published_at": "2026-10-25T09:00:00Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-26T08:02:42.808230Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "4d1ff083f0ab673edfc53636",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261023de64488"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "自治体が利用するIT関連会社“55万件のメアド不正利用された”",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64488",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-25T08:13:45Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-25T16:02:35.691881Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "4fb93dfe40e03cf79120bc83",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261023de64394"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "IT関連会社アルカディアが不正アクセス受け会見",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64394",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-25T08:12:37Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-25T12:48:16.318814Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "2b20bb1348556c81fba94e25",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261023de64444"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "西宮の閉院病院の個人情報含む廃棄書類が路上に散乱 兵庫 尼崎",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64444",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-25T08:12:35Z",
-      "first_seen_at": "2026-10-25T10:02:28.610033Z",
-      "window_id": "2026-10-25T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-25T12:48:16.318814Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-25T16:00+08:00",
-      "start": "2026-10-25T08:00:00Z",
-      "end": "2026-10-25T10:00:00Z",
-      "date": "2026-10-25",
-      "article_ids": [
-        "c8e1a95b069ae95bce68c2bc",
-        "82fce2e79f3e1e0f72914f41",
-        "7e2470ed2b9419ed07e020e6",
-        "59afba2650882d20cf5c7a00",
-        "4aefe6e593a10c627fa0b8cf",
-        "4d1ff083f0ab673edfc53636",
-        "4fb93dfe40e03cf79120bc83",
-        "2b20bb1348556c81fba94e25"
-      ]
-    },
     {
       "id": "2026-10-25T18:00+08:00",
       "start": "2026-10-25T10:00:00Z",
@@ -6313,8 +6406,7 @@
         "acdd337dfb318da60a51e263",
         "4902cfdc694891cc80e34e38",
         "1b16bf517f9e1aad5f82cc56",
-        "13f4a0e54af1eff69ff44bed",
-        "0b74ffedf8c0cacf4817007c"
+        "13f4a0e54af1eff69ff44bed"
       ]
     },
     {
@@ -6893,6 +6985,7 @@
         "c521afad1651e0d4817d3070",
         "dfb4b983eaa292130429a72b",
         "298f03d6113b40abcf9f32f7",
+        "308ce43da9cf4b318f03f3d4",
         "8b1fad5716efc5f6500b2d69",
         "ac881ff22b87bf4876f957a7"
       ]
@@ -6905,11 +6998,33 @@
       "article_ids": [
         "191c355465f2cab07d086afe",
         "14ac733afea50bff5813e291",
+        "187dbed9502791749ed8e755",
         "db8619f17a989c8f31c885c9",
         "19c2242e60816bc34bca96e7",
         "63f8a8370c486d812f05c62a",
         "5b34f47305c66f2448352557",
         "09bb64b7cd11ce2715d9b968"
+      ]
+    },
+    {
+      "id": "2026-10-28T16:00+08:00",
+      "start": "2026-10-28T08:00:00Z",
+      "end": "2026-10-28T10:00:00Z",
+      "date": "2026-10-28",
+      "article_ids": [
+        "ea07137b32a58280ce128d58",
+        "6795214172f7c4b5bd8a9517",
+        "4736b28564692be9085230a2",
+        "4cd2bd4e6d4b768747b7c04f",
+        "3ac568b711f901ea4eab4957",
+        "ec422a95474469ad02ccb226",
+        "e0d4287d7b30cccc72f7cd77",
+        "cd1dbdd0b1cf3ab89755e9a4",
+        "70eb05edf98400ccf0d90ae6",
+        "41af50da3d39bde9c55732ad",
+        "3be829d35187ff3e0f077071",
+        "09e21e8740c9a444553b55ba",
+        "0e098220b3e6771cde2cdff9"
       ]
     }
   ],
