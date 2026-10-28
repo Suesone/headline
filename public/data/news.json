@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T00:02:35.378002Z",
+  "generated_at": "2026-10-28T02:02:37.304812Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-28T08:00+08:00",
+    "slot": "2026-10-28T10:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-28T00:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/40606112560"
+    "requested_slot": "2026-10-28T02:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/40618534208"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-28T06:00+08:00",
+  "latest_window_id": "2026-10-28T08:00+08:00",
   "today": "2026-10-28",
-  "last_success_at": "2026-10-28T00:02:35.378002Z",
+  "last_success_at": "2026-10-28T02:02:37.304812Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T00:02:35.378002Z",
-      "last_success_at": "2026-10-28T00:02:35.378002Z",
+      "checked_at": "2026-10-28T02:02:37.304812Z",
+      "last_success_at": "2026-10-28T02:02:37.304812Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T00:02:35.378002Z",
-      "last_success_at": "2026-10-28T00:02:35.378002Z",
+      "checked_at": "2026-10-28T02:02:37.304812Z",
+      "last_success_at": "2026-10-28T02:02:37.304812Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T00:02:35.378002Z",
-      "last_success_at": "2026-10-28T00:02:35.378002Z",
+      "checked_at": "2026-10-28T02:02:37.304812Z",
+      "last_success_at": "2026-10-28T02:02:37.304812Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T00:02:35.378002Z",
-      "last_success_at": "2026-10-28T00:02:35.378002Z",
+      "checked_at": "2026-10-28T02:02:37.304812Z",
+      "last_success_at": "2026-10-28T02:02:37.304812Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-28T00:02:35.378002Z",
-      "last_success_at": "2026-10-28T00:02:35.378002Z",
+      "checked_at": "2026-10-28T02:02:37.304812Z",
+      "last_success_at": "2026-10-28T02:02:37.304812Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-28T00:02:35.378002Z",
-      "last_success_at": "2026-10-28T00:02:35.378002Z",
+      "checked_at": "2026-10-28T02:02:37.304812Z",
+      "last_success_at": "2026-10-28T02:02:37.304812Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -204,33 +204,78 @@
   ],
   "articles": [
     {
+      "id": "27b034b5ab4f3e61a3e86d8f",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "U.S. to issue visas to Flávio Bolsonaro as his whereabouts remain unclear",
+      "url": "https://www.npr.org/2026/10/27/nx-s1-6019678/u-s-to-issue-visas-to-flavio-bolsonaro-as-his-whereabouts-remain-unclear",
+      "summary": "Flávio Bolsonaro leaves Brazil for the U.S. amid a money-laundering probe, as Washington agrees to issue visas to him and his family.",
+      "author": "Carrie Kahn",
+      "published_at": "2026-10-28T01:58:08Z",
+      "first_seen_at": "2026-10-28T02:02:37.304812Z",
+      "window_id": "2026-10-28T08:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "af148e831b8dc45779afc22a",
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "King Charles to discuss legacy of slavery with Commonwealth leaders at summit",
+      "url": "https://www.theguardian.com/world/2026/oct/28/king-charles-confirms-he-will-discuss-legacy-of-slavery-at-commonwealth-summit",
+      "summary": "",
+      "author": "Natricia Duncan Caribbean correspondent",
+      "published_at": "2026-10-28T00:07:22Z",
+      "first_seen_at": "2026-10-28T02:02:37.304812Z",
+      "window_id": "2026-10-28T08:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "3c0f094acd44e6e872bbcfc4",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "'An annoying buzz': The search for stealthier drones",
+      "url": "https://www.bbc.co.uk/news/articles/ck1exgejq3xvo?at_campaign=rss&at_medium=RSS",
+      "summary": "As drone deliveries become more commonplace, their makers are looking for ways to make them quieter.",
+      "author": "",
+      "published_at": "2026-10-28T00:01:10Z",
+      "first_seen_at": "2026-10-28T02:02:37.304812Z",
+      "window_id": "2026-10-28T08:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "cc9de1f1bcc9cdc30bc71620",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
       "title": "Indian investors rush to Nvidia, SpaceX, Apple as local trading apps roll out access to U.S. stocks",
       "url": "https://www.cnbc.com/2026/10/28/india-us-stocks-retail-access.html",
-      "summary": "Major Indian brokerages unlock access to U.S. markets for millions of retail investors",
+      "summary": "Major Indian brokerages are providing retail investors access to U.S. stocks at a time when the local market has been battered.",
       "author": "",
       "published_at": "2026-10-28T00:00:20Z",
       "first_seen_at": "2026-10-28T00:02:35.378002Z",
       "window_id": "2026-10-28T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
       "id": "22f3ab6c3a942364211964dc",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "SK Hynix third-quarter profit sharply beats estimates on AI memory boost",
+      "title": "SK Hynix shares soar over 8% as profit beats, chipmaker to return $25 billion to investors",
       "url": "https://www.cnbc.com/2026/10/28/sk-hynix-third-quarter-profit.html",
-      "summary": "South Korean chipmaker SK Hynix on Wednesday reported its third-quarter earnings.",
+      "summary": "Shares of South Korean chipmaker SK Hynix soared over 8% on Wednesday as third-quarter profit sharply beats estimates.",
       "author": "",
       "published_at": "2026-10-27T23:45:49Z",
       "first_seen_at": "2026-10-28T00:02:35.378002Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -245,8 +290,23 @@
       "first_seen_at": "2026-10-28T00:02:35.378002Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
+    },
+    {
+      "id": "d54e16ec60b00daf13374a43",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "China's families are now supporting more old people than kids",
+      "url": "https://www.bbc.co.uk/news/articles/cr20wzwyzl1qo?at_campaign=rss&at_medium=RSS",
+      "summary": "The latest figures mark a major milestone as Beijing grapples with an ageing population.",
+      "author": "",
+      "published_at": "2026-10-27T23:16:08Z",
+      "first_seen_at": "2026-10-28T02:02:37.304812Z",
+      "window_id": "2026-10-28T06:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
+      "time_basis": "publication"
     },
     {
       "id": "d780a0be8f60eee41da2d1c5",
@@ -259,8 +319,8 @@
       "published_at": "2026-10-27T23:07:06Z",
       "first_seen_at": "2026-10-28T00:02:35.378002Z",
       "window_id": "2026-10-28T06:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -275,7 +335,7 @@
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -290,7 +350,7 @@
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -305,7 +365,7 @@
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -320,7 +380,7 @@
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -335,7 +395,7 @@
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -350,7 +410,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -365,7 +425,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -380,7 +440,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -395,7 +455,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "community_collection"
     },
     {
@@ -410,7 +470,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -425,7 +485,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -440,7 +500,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -454,8 +514,8 @@
       "published_at": "2026-10-27T21:17:57Z",
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -485,7 +545,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -500,7 +560,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -514,23 +574,23 @@
       "published_at": "2026-10-27T20:54:48Z",
       "first_seen_at": "2026-10-27T23:17:01.732007Z",
       "window_id": "2026-10-28T04:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
       "id": "3be70050dcc01ea01ffe824d",
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "Israel's election has a high turnout, lifting opposition hopes of beating Netanyahu",
+      "title": "Israel's election turnout soars, lifting opposition hopes of beating Netanyahu",
       "url": "https://www.npr.org/2026/10/27/nx-s1-6019381/israel-elections",
-      "summary": "Israelis voted in their highest numbers in decades in a tense national election on Tuesday to decide whether to stick with Prime Minister Benjamin Netanyahu's far-right coalition or change course.",
+      "summary": "Israelis voted in their highest numbers in over two decades in a tense national election to decide whether to stick with Prime Minister Benjamin Netanyahu's far-right coalition.",
       "author": "NPR's International Desk",
       "published_at": "2026-10-27T20:45:39Z",
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -544,8 +604,8 @@
       "published_at": "2026-10-27T20:23:46Z",
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -560,7 +620,7 @@
       "first_seen_at": "2026-10-27T22:02:35.643527Z",
       "window_id": "2026-10-28T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -589,8 +649,8 @@
       "published_at": "2026-10-27T19:53:12Z",
       "first_seen_at": "2026-10-27T20:02:40.628068Z",
       "window_id": "2026-10-28T02:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -620,7 +680,7 @@
       "first_seen_at": "2026-10-27T20:02:40.628068Z",
       "window_id": "2026-10-28T02:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -650,7 +710,7 @@
       "first_seen_at": "2026-10-27T19:01:43.294084Z",
       "window_id": "2026-10-28T02:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -680,7 +740,7 @@
       "first_seen_at": "2026-10-27T20:02:40.628068Z",
       "window_id": "2026-10-28T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -710,7 +770,7 @@
       "first_seen_at": "2026-10-27T20:02:40.628068Z",
       "window_id": "2026-10-28T02:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -724,8 +784,8 @@
       "published_at": "2026-10-27T17:44:26Z",
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -754,8 +814,8 @@
       "published_at": "2026-10-27T17:35:50Z",
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -784,8 +844,8 @@
       "published_at": "2026-10-27T17:01:37Z",
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -815,7 +875,7 @@
       "first_seen_at": "2026-10-27T18:02:39.151011Z",
       "window_id": "2026-10-28T00:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -904,8 +964,8 @@
       "published_at": "2026-10-27T14:41:17Z",
       "first_seen_at": "2026-10-27T16:02:51.005681Z",
       "window_id": "2026-10-27T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -920,7 +980,7 @@
       "first_seen_at": "2026-10-27T16:02:51.005681Z",
       "window_id": "2026-10-27T22:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -949,8 +1009,8 @@
       "published_at": "2026-10-27T14:15:21Z",
       "first_seen_at": "2026-10-27T16:02:51.005681Z",
       "window_id": "2026-10-27T22:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -964,8 +1024,8 @@
       "published_at": "2026-10-27T14:12:35Z",
       "first_seen_at": "2026-10-27T16:02:51.005681Z",
       "window_id": "2026-10-27T22:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1040,7 +1100,7 @@
       "first_seen_at": "2026-10-27T13:40:24.906780Z",
       "window_id": "2026-10-27T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1130,7 +1190,7 @@
       "first_seen_at": "2026-10-27T13:40:24.906780Z",
       "window_id": "2026-10-27T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1249,8 +1309,8 @@
       "published_at": "2026-10-27T11:39:52Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1369,8 +1429,8 @@
       "published_at": "2026-10-27T10:30:00Z",
       "first_seen_at": "2026-10-27T12:02:41.405506Z",
       "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1759,8 +1819,8 @@
       "published_at": "2026-10-27T07:15:08Z",
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1775,7 +1835,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1805,7 +1865,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -1865,7 +1925,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2224,8 +2284,8 @@
       "published_at": "2026-10-27T01:48:04Z",
       "first_seen_at": "2026-10-27T02:02:35.901209Z",
       "window_id": "2026-10-27T08:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2240,7 +2300,7 @@
       "first_seen_at": "2026-10-27T08:02:34.166282Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2307,15 +2367,15 @@
       "id": "26ae69f19fb8b1e01a3811d7",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "I'm a single mum on £41,000 and limit my weekly shop to £40 - it's hard",
+      "title": "I get £4,062 a year and am trying my best - here's what I want from the Budget",
       "url": "https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_campaign=rss&at_medium=RSS",
-      "summary": "People earning from £380 a month to £150,000 a year tell the BBC what they want to see in this year's Budget.",
+      "summary": "People on a range of incomes from £4,062 to £150,000 a year tell the BBC what they want to see in this year's Budget.",
       "author": "",
       "published_at": "2026-10-27T00:01:00Z",
       "first_seen_at": "2026-10-27T00:57:20.118587Z",
       "window_id": "2026-10-27T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2390,7 +2450,7 @@
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2465,7 +2525,7 @@
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2510,7 +2570,7 @@
       "first_seen_at": "2026-10-27T00:02:45.586330Z",
       "window_id": "2026-10-27T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2749,8 +2809,8 @@
       "published_at": "2026-10-26T17:20:54Z",
       "first_seen_at": "2026-10-26T18:03:10.511630Z",
       "window_id": "2026-10-27T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -2945,7 +3005,7 @@
       "first_seen_at": "2026-10-26T16:02:44.533663Z",
       "window_id": "2026-10-26T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -3350,7 +3410,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -3500,7 +3560,7 @@
       "first_seen_at": "2026-10-26T12:02:48.198861Z",
       "window_id": "2026-10-26T16:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -3800,7 +3860,7 @@
       "first_seen_at": "2026-10-26T06:02:34.536484Z",
       "window_id": "2026-10-26T12:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
+      "rank_observed_at": "2026-10-28T02:02:37.304812Z",
       "time_basis": "publication"
     },
     {
@@ -5062,49 +5122,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-25T10:02:28.610033Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "0d08c41a8d931c87da88f7c0",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "福岡県議会 元副議長が就任前に藏内氏に500万円手渡したと証言",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64536",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-25T01:16:25Z",
-      "first_seen_at": "2026-10-25T01:50:01.969761Z",
-      "window_id": "2026-10-25T08:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-25T08:02:36.800522Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "395b1b807baa34e5a2df1330",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "高級腕時計買い取り販売会社 不正還付で約5億8000万円追徴課税",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261023de64595",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-25T01:09:10Z",
-      "first_seen_at": "2026-10-25T01:50:01.969761Z",
-      "window_id": "2026-10-25T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-25T08:02:36.800522Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-25T08:00+08:00",
-      "start": "2026-10-25T00:00:00Z",
-      "end": "2026-10-25T02:00:00Z",
-      "date": "2026-10-25",
-      "article_ids": [
-        "0d08c41a8d931c87da88f7c0",
-        "395b1b807baa34e5a2df1330"
-      ]
-    },
     {
       "id": "2026-10-25T10:00+08:00",
       "start": "2026-10-25T02:00:00Z",
@@ -5700,12 +5720,25 @@
       "article_ids": [
         "22f3ab6c3a942364211964dc",
         "4169113e3583803c37b14a10",
+        "d54e16ec60b00daf13374a43",
         "d780a0be8f60eee41da2d1c5",
         "f287440ad7474c68a058c54c",
         "372dabf3e8cfa2050fc03997",
         "c7adf8e7573d443de1d01a02",
         "f1da30e714aaac5ac986210d",
         "e2749f5696f2decb810fd26c"
+      ]
+    },
+    {
+      "id": "2026-10-28T08:00+08:00",
+      "start": "2026-10-28T00:00:00Z",
+      "end": "2026-10-28T02:00:00Z",
+      "date": "2026-10-28",
+      "article_ids": [
+        "27b034b5ab4f3e61a3e86d8f",
+        "af148e831b8dc45779afc22a",
+        "3c0f094acd44e6e872bbcfc4",
+        "cc9de1f1bcc9cdc30bc71620"
       ]
     }
   ],
