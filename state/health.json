@@ -2,20 +2,6 @@
   "started_at": "2026-10-18T13:28:49.481265Z",
   "runs": [
     {
-      "at": "2026-10-27T00:57:20.118587Z",
-      "slot": "2026-10-27T08:00+08:00",
-      "status": "ok",
-      "ai": "on_demand",
-      "trigger": {
-        "event": "schedule",
-        "schedule": "0 */2 * * *",
-        "slot": "2026-10-27T08:00+08:00",
-        "run_url": "https://github.com/Suesone/headline/actions/runs/40429577263"
-      },
-      "articles": 253,
-      "failed_sources": []
-    },
-    {
       "at": "2026-10-27T02:02:35.901209Z",
       "slot": "2026-10-27T10:00+08:00",
       "status": "ok",
@@ -368,25 +354,25 @@
       "failed_sources": []
     },
     {
-      "at": "2026-10-29T00:02:32.939556Z",
+      "at": "2026-10-29T01:19:45.688539Z",
       "slot": "2026-10-29T08:00+08:00",
       "status": "ok",
       "ai": "on_demand",
       "trigger": {
-        "event": "workflow_dispatch",
-        "schedule": "",
+        "event": "schedule",
+        "schedule": "0 */2 * * *",
         "slot": "2026-10-29T08:00+08:00",
-        "source": "cloudflare-watchdog",
-        "requested_slot": "2026-10-29T00:00:00Z",
-        "run_url": "https://github.com/Suesone/headline/actions/runs/40791355552"
+        "run_url": "https://github.com/Suesone/headline/actions/runs/40799698578"
       },
-      "articles": 389,
+      "articles": 392,
       "failed_sources": []
     }
   ],
   "note": "更新频率变更为两小时，重新开始覆盖观察",
   "window_hours": 2,
   "observation_complete": true,
-  "missing_slots": [],
-  "healthy": true
+  "missing_slots": [
+    "2026-10-27T08:00+08:00"
+  ],
+  "healthy": false
 }
