@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T08:02:40.578580Z",
+  "generated_at": "2026-10-30T10:02:41.247608Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-10-30T16:00+08:00",
+    "slot": "2026-10-30T18:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-10-30T08:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41023752702"
+    "requested_slot": "2026-10-30T10:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41037746233"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-10-30T14:00+08:00",
+  "latest_window_id": "2026-10-30T16:00+08:00",
   "today": "2026-10-30",
-  "last_success_at": "2026-10-30T08:02:40.578580Z",
+  "last_success_at": "2026-10-30T10:02:41.247608Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-30T08:02:40.578580Z",
-      "last_success_at": "2026-10-30T08:02:40.578580Z",
+      "checked_at": "2026-10-30T10:02:41.247608Z",
+      "last_success_at": "2026-10-30T10:02:41.247608Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-30T08:02:40.578580Z",
-      "last_success_at": "2026-10-30T08:02:40.578580Z",
+      "checked_at": "2026-10-30T10:02:41.247608Z",
+      "last_success_at": "2026-10-30T10:02:41.247608Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-30T08:02:40.578580Z",
-      "last_success_at": "2026-10-30T08:02:40.578580Z",
+      "checked_at": "2026-10-30T10:02:41.247608Z",
+      "last_success_at": "2026-10-30T10:02:41.247608Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-30T08:02:40.578580Z",
-      "last_success_at": "2026-10-30T08:02:40.578580Z",
+      "checked_at": "2026-10-30T10:02:41.247608Z",
+      "last_success_at": "2026-10-30T10:02:41.247608Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-10-30T08:02:40.578580Z",
-      "last_success_at": "2026-10-30T08:02:40.578580Z",
+      "checked_at": "2026-10-30T10:02:41.247608Z",
+      "last_success_at": "2026-10-30T10:02:41.247608Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-10-30T08:02:40.578580Z",
-      "last_success_at": "2026-10-30T08:02:40.578580Z",
+      "checked_at": "2026-10-30T10:02:41.247608Z",
+      "last_success_at": "2026-10-30T10:02:41.247608Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,456 @@
     }
   ],
   "articles": [
+    {
+      "id": "c3c35fdc4e832dac686b2b42",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68271"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "米制裁で入国困難なICC赤根所長 国連総会は動画で報告へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68271",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:53:57Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "509ede55e3cd9083c80b36a7",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68325"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "どうなる？ 消費税減税と「支援金」",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68325",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:52:14Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "39ab558f806aadfd5bdf9eca",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68521"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "皇居東御苑にカフェ備えた新施設「大手休憩所」が完成",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68521",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:49:18Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "312ad2b55c56865f123e4b2a",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68694"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "外務省 不正アクセスで個人情報約3600件漏えいの可能性",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68694",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:47:47Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "939bf9e8440b7cd40b296d4d",
+      "identities": [
+        "cnbc-world:108484895"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Amazon falls 7%, Intel plunges 25% in premarket trading, as pressure mounts after earnings",
+      "url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html",
+      "summary": "Investors are nervous about the massive AI spending from the tech giants and whether that will pay off.",
+      "author": "",
+      "published_at": "2026-10-30T09:16:27Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "d967c5d6d8af50b1ac839c07",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68418"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "人気SFドラマ「スター・トレック」出演の英俳優死去",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68418",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:13:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "229c33866fa0443ea147b1b1",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68585"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "大和証券G 約11万人の個人情報流出おそれで“対策を強化”",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68585",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:05:33Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "c4f95691031829f5e7af36ff",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68570"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "全日空 3万7000人超の情報漏えいか 一部でパスポート番号も",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68570",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:05:27Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "3e41f7036c09947b6552b11e",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68476"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "使わないで！ハロウィーン仮装ナース服などに「赤十字マーク」",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68476",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:05:22Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "00f1d873475f329d087a3360",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68230"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "トクリュウ対策で通信アプリ遠隔把握の法案 衆議院で審議入り",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68230",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T09:00:52Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "f5bbed342cf0239e0d8bf473",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/g-s1-149560/2026-vote-midterm-election-local-voter-guides"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "2026 midterm election voter guides: Find local resources in your community",
+      "url": "https://www.npr.org/2026/10/30/g-s1-149560/2026-vote-midterm-election-local-voter-guides",
+      "summary": "NPR member stations are gathering information for voters — from voter guides down to local races. Scroll through to find your state and the resources available from your local member station.",
+      "author": "The NPR Network",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "bfe509c77ce9528f4ff84d90",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6022353/midterms-state-legislatures-pennsylvania"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrats seek to weaken the Republican lead in state legislatures",
+      "url": "https://www.npr.org/2026/10/30/nx-s1-6022353/midterms-state-legislatures-pennsylvania",
+      "summary": "Republicans control 10 more state legislatures than Democrats. That's where most laws on taxes, abortion, crime and schools are made.",
+      "author": "Carmen Russell-Sluchansky",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "bca3bedd29eedb4bb083b364",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6022278/ai-artificial-intelligence-teens-jed-common-sense-media"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Nearly 2 out of 3 teens and tweens use AI chatbots, new research shows",
+      "url": "https://www.npr.org/2026/10/30/nx-s1-6022278/ai-artificial-intelligence-teens-jed-common-sense-media",
+      "summary": "Most kids say they use chatbots for help with homework and when they're stressed, lonely, or anxious. And how they use chatbots is tied to their mental health.",
+      "author": "Rhitu Chatterjee",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "855c9a0e870812e1357ef020",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/g-s1-149975/2026-midterms-senate-map"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Here are the Senate races to watch ahead of Election Day",
+      "url": "https://www.npr.org/2026/10/30/g-s1-149975/2026-midterms-senate-map",
+      "summary": "The competitive map for control of the U.S. Senate has expanded considerably in the final days before Election Day. Here's a ranking of those competitive races from most likely to flip to least likely.",
+      "author": "Domenico Montanaro",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "410dc3f6ae73f0490c04a271",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6018566/halloween-candy-prices-chocolate"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Candy prices got you scared stiff? What to know about the cost of Halloween this year",
+      "url": "https://www.npr.org/2026/10/30/nx-s1-6018566/halloween-candy-prices-chocolate",
+      "summary": "Prices for candy, the most popular Halloween purchase, and gum have risen 7.7% in one year and are up more than 18% in two years, according to the latest federal data.",
+      "author": "Joe Hernandez",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "2da910f4279ff078e174960a",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6018258/affordability-florida-amendment-3"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "'Affordability? For who?' Voters decide between helping homeowners or public services",
+      "url": "https://www.npr.org/2026/10/30/nx-s1-6018258/affordability-florida-amendment-3",
+      "summary": "Candidates across the U.S. have paid lip service to affordability issues. In Florida, the question of how to save voters money, and at what cost, is literally on the ballot.",
+      "author": "Marissa J. Lang",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "218a1d1f24c2df8b6ff7cd8a",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/g-s1-150445/trump-midterms-ai-china-star-trek-dhs-news-quiz"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "On what anatomical feature was Trump fixated this week? The quiz knows — do you?",
+      "url": "https://www.npr.org/2026/10/30/g-s1-150445/trump-midterms-ai-china-star-trek-dhs-news-quiz",
+      "summary": "Hint: He likes them big (and he cannot lie).",
+      "author": "Holly J. Morris",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "1f753e66ebc5214bd6c3cf6b",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6022142/new-citizens-immigrant-voting-ice-trump"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "For voters from immigrant families and new citizens, voting is bigger than themselves",
+      "url": "https://www.npr.org/2026/10/30/nx-s1-6022142/new-citizens-immigrant-voting-ice-trump",
+      "summary": "While many young voters are focused on the cost of living in the election, for some from immigrant families, the political calculation — and their votes — is often about even more than the economy.",
+      "author": "Saige Miller",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "0b7a12830881e1b4fdd5aca6",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/nx-s1-5995628/trump-va-home-loan-program-veterans-paying"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Trump's VA killed a home loan program. Thousands of veterans are paying the price",
+      "url": "https://www.npr.org/2026/10/30/nx-s1-5995628/trump-va-home-loan-program-veterans-paying",
+      "summary": "An NPR investigation finds that more than 15,000 military veterans were put into much-higher-cost home loans after the Trump administration cut a key program. Many now pay $1,000 more per month.",
+      "author": "Chris Arnold",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "09048da51e172fb99d7ec4a2",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/10/30/g-s1-150761/israel-election-politics-deadlock-arabs"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Israel is in a political deadlock. What comes next?",
+      "url": "https://www.npr.org/2026/10/30/g-s1-150761/israel-election-politics-deadlock-arabs",
+      "summary": "Israel's consequential election has ended in a deadlock, with neither side able to claim a majority, What happens now?",
+      "author": "Itay Stern",
+      "published_at": "2026-10-30T09:00:00Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "a8bcaf409221df97b26bea68",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261029de68115"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "共産 志位議長“綱領改定で躍進の時代を”党勢拡大目指す考え",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261029de68115",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-10-30T08:37:06Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "e01985b15a39195d6908a8c1",
+      "identities": [
+        "cnbc-world:108484725"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Indian AI infrastructure firm reportedly seeks to raise $3 billion of debt to buy Nvidia's next-generation chips",
+      "url": "https://www.cnbc.com/2026/10/30/nvidia-india-ai-chips-computing.html",
+      "summary": "Within two years, AM Intelligence plans to set up 400 MW of compute capacity using Nvidia's Rubin graphics processing units.",
+      "author": "",
+      "published_at": "2026-10-30T08:19:14Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "ab9ca63c6187e4f03d6c5e8b",
+      "identities": [
+        "cnbc-world:108484647"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Trump, Vance scrap planned appearances in final stretch of midterm campaign",
+      "url": "https://www.cnbc.com/2026/10/30/trump-vance-rally-midterm-elections-.html",
+      "summary": "Trump and JD Vance have canceled planned appearances across three states, reducing in-person campaigning in the final days before midterm elections.",
+      "author": "",
+      "published_at": "2026-10-30T08:18:13Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "bfcc21906becb45169aae98a",
+      "identities": [
+        "cnbc-world:108483724"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Binance's $6.3 billion hack: What we know and what comes next",
+      "url": "https://www.cnbc.com/2026/10/30/billions-in-crypto-frozen-in-binance-hack-heres-what-happens-next-.html",
+      "summary": "Billions in crypto assets have been frozen following a potential Binance security breach, raising questions about whether the funds can be recovered.",
+      "author": "",
+      "published_at": "2026-10-30T08:04:50Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "d929dc9b780ab06c0c92c6e3",
+      "identities": [
+        "bbc-business:https://www.bbc.co.uk/news/articles/ckzd623pldqgo#0"
+      ],
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Yorkshire Water boss resigns after firm downgraded",
+      "url": "https://www.bbc.co.uk/news/articles/ckzd623pldqgo?at_campaign=rss&at_medium=RSS",
+      "summary": "Nicola Shaw, who has led the company since 2022, will step down in January, it is announced.",
+      "author": "",
+      "published_at": "2026-10-30T07:54:08Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T14:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
     {
       "id": "5f65ed989eebac71a3555628",
       "identities": [
@@ -236,7 +686,43 @@
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T14:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "55a266872245476cc7faa0f8",
+      "identities": [
+        "cnbc-world:108484648"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Foxconn hopes to own 50% of the global AI server market within a couple years",
+      "url": "https://www.cnbc.com/2026/10/30/hon-hai-technology-group-foxconn-ai-server-young-liu-.html",
+      "summary": "Foxconn's chairman told CNBC that AI demand remains strong as the company eyes U.S. expansion and a larger share of the global AI server market.",
+      "author": "",
+      "published_at": "2026-10-30T07:43:39Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T14:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "55a33f7cdd7f265fd6109980",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/videos/cwly4p6e9264o#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "'I made the wrong decision,' Hyrox athlete who soiled herself in race tells BBC",
+      "url": "https://www.bbc.co.uk/news/videos/cwly4p6e9264o?at_campaign=rss&at_medium=RSS",
+      "summary": "Speaking exclusively to the BBC, Joanna Wietrzyk says her determination to win the Hyrox race in September had clouded her judgement.",
+      "author": "",
+      "published_at": "2026-10-30T07:33:27Z",
+      "first_seen_at": "2026-10-30T10:02:41.247608Z",
+      "window_id": "2026-10-30T14:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -253,8 +739,8 @@
       "published_at": "2026-10-30T07:33:25Z",
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T14:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -271,8 +757,8 @@
       "published_at": "2026-10-30T07:29:10Z",
       "first_seen_at": "2026-10-30T08:02:40.578580Z",
       "window_id": "2026-10-30T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -325,8 +811,8 @@
       "published_at": "2026-10-30T07:12:49Z",
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -397,8 +883,8 @@
       "published_at": "2026-10-30T06:02:23Z",
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -415,8 +901,8 @@
       "published_at": "2026-10-30T06:00:01Z",
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T14:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -614,7 +1100,7 @@
       "first_seen_at": "2026-10-30T06:02:34.609997Z",
       "window_id": "2026-10-30T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -632,7 +1118,7 @@
       "first_seen_at": "2026-10-30T06:02:34.609997Z",
       "window_id": "2026-10-30T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -685,8 +1171,8 @@
       "published_at": "2026-10-30T03:38:24Z",
       "first_seen_at": "2026-10-30T04:02:35.692489Z",
       "window_id": "2026-10-30T10:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -704,7 +1190,7 @@
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T10:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T07:47:10.742562Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -793,8 +1279,8 @@
       "published_at": "2026-10-30T01:44:24Z",
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T08:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -847,8 +1333,8 @@
       "published_at": "2026-10-30T01:35:40Z",
       "first_seen_at": "2026-10-30T06:02:34.609997Z",
       "window_id": "2026-10-30T08:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -872,7 +1358,8 @@
     {
       "id": "26161f53cb151e58b88ef0e5",
       "identities": [
-        "bbc-business:https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o#0"
+        "bbc-business:https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o#0",
+        "bbc-business:https://www.bbc.co.uk/news/articles/cwg7xp8kx4v5o#1"
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
@@ -883,8 +1370,8 @@
       "published_at": "2026-10-30T01:20:57Z",
       "first_seen_at": "2026-10-30T01:23:29.597812Z",
       "window_id": "2026-10-30T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -992,8 +1479,8 @@
       "published_at": "2026-10-30T00:17:28Z",
       "first_seen_at": "2026-10-30T07:47:10.742562Z",
       "window_id": "2026-10-30T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1021,7 +1508,7 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "From workshops to the catwalk - why mended clothes are going mainstream",
+      "title": "From Levi's to Primark - the fashion chains selling mended clothes",
       "url": "https://www.bbc.co.uk/news/articles/cmwy9qe5r1z3o?at_campaign=rss&at_medium=RSS",
       "summary": "A new generation is embracing eye-catching patching and visible mends.",
       "author": "",
@@ -1029,7 +1516,7 @@
       "first_seen_at": "2026-10-30T00:02:33.100751Z",
       "window_id": "2026-10-30T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1100,8 +1587,8 @@
       "published_at": "2026-10-29T23:56:02Z",
       "first_seen_at": "2026-10-30T00:02:33.100751Z",
       "window_id": "2026-10-30T06:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1274,15 +1761,15 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Google value plunges by $500bn as AI fears rattle Wall Street",
+      "title": "Google value plunges by $500bn as AI search hits ad sales",
       "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_campaign=rss&at_medium=RSS",
       "summary": "Google spooked investors so badly that its stock hit a six-month low, after it revealed its AI search summaries were affecting ad revenue.",
       "author": "",
       "published_at": "2026-10-29T22:17:52Z",
       "first_seen_at": "2026-10-30T06:02:34.609997Z",
       "window_id": "2026-10-30T06:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1310,15 +1797,15 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Google value plunges by $500bn as AI fears rattle Wall Street",
+      "title": "Google value plunges by $500bn as AI search hits ad sales",
       "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o?at_campaign=rss&at_medium=RSS",
       "summary": "Google spooked investors so badly that its stock hit a six-month low, after it revealed its AI search summaries were affecting ad revenue.",
       "author": "",
       "published_at": "2026-10-29T21:52:13Z",
       "first_seen_at": "2026-10-29T22:02:34.209118Z",
       "window_id": "2026-10-30T04:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1517,8 +2004,8 @@
       "published_at": "2026-10-29T20:05:57Z",
       "first_seen_at": "2026-10-29T20:41:59.292173Z",
       "window_id": "2026-10-30T04:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1626,7 +2113,7 @@
       "first_seen_at": "2026-10-29T18:02:36.268142Z",
       "window_id": "2026-10-30T00:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1644,7 +2131,7 @@
       "first_seen_at": "2026-10-29T18:02:36.268142Z",
       "window_id": "2026-10-30T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1680,8 +2167,8 @@
       "published_at": "2026-10-29T17:15:05Z",
       "first_seen_at": "2026-10-29T20:02:34.363206Z",
       "window_id": "2026-10-30T00:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1771,7 +2258,7 @@
       "first_seen_at": "2026-10-29T16:02:37.536117Z",
       "window_id": "2026-10-29T22:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -1807,8 +2294,8 @@
       "published_at": "2026-10-29T15:18:04Z",
       "first_seen_at": "2026-10-29T16:02:37.536117Z",
       "window_id": "2026-10-29T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -2045,8 +2532,8 @@
       "published_at": "2026-10-29T13:19:24Z",
       "first_seen_at": "2026-10-29T14:02:34.988043Z",
       "window_id": "2026-10-29T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -2371,8 +2858,8 @@
       "published_at": "2026-10-29T11:34:03Z",
       "first_seen_at": "2026-10-29T12:02:33.539450Z",
       "window_id": "2026-10-29T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -2588,8 +3075,8 @@
       "published_at": "2026-10-29T09:58:05Z",
       "first_seen_at": "2026-10-29T10:02:37.645441Z",
       "window_id": "2026-10-29T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -4032,7 +4519,7 @@
       "first_seen_at": "2026-10-28T21:55:37.426869Z",
       "window_id": "2026-10-29T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -4213,7 +4700,7 @@
       "first_seen_at": "2026-10-28T21:55:37.426869Z",
       "window_id": "2026-10-29T04:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -4762,7 +5249,7 @@
       "first_seen_at": "2026-10-28T16:02:43.996450Z",
       "window_id": "2026-10-28T22:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -5069,7 +5556,7 @@
       "first_seen_at": "2026-10-28T12:02:38.488545Z",
       "window_id": "2026-10-28T18:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -5396,7 +5883,7 @@
       "first_seen_at": "2026-10-28T10:02:37.989442Z",
       "window_id": "2026-10-28T16:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-10-30T08:02:40.578580Z",
+      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "publication"
     },
     {
@@ -7640,339 +8127,9 @@
       "feed_rank": 8,
       "rank_observed_at": "2026-10-27T14:06:51.141039Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "36ceeb3617f144c933d7f356",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65556"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "【地震情報】宮城 福島で震度3 津波の心配なし",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65556",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T10:01:58Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T12:02:41.405506Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "3c398d43dfdc1d24365be569",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66082"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "フランス マクロン大統領 秩序維持を強調 高校生はデモ継続へ",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66082",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T10:01:32Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "58abbc65b8316f24d181e6cb",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de66022"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "外国人の出生 過去最多 1割超の自治体も3倍に",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261026de66022",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:49:13Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "24459f05b100c76ff7c44f40",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66079"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "介護保険制度の見直しへ議論本格化 金融所得の反映など検討",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66079",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:47:29Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "5ed20d50ae059eaf9de92fc9",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de66045"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "【地震速報】熊本 水俣で震度3 津波の心配なし",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261026de66045",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:43:53Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "509dde4586c115be10ec6ff9",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66402"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "ブラジル大統領選左派勝利 右派政党結果認める 通貨は大幅安",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66402",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:40:19Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "e2ec725831f9e51b6bba8831",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261026de65484"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "個人情報流出でカード不正利用の2次被害 悪用の最新手口は",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261026de65484",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:37:12Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "d903b96a408451fc182a3384",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66534"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "国連人権理事会「イスラエルが西岸地区で『人道に対する罪』」",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66534",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:37:00Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "f360ba2418aa7d0c68f2be40",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66122"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "“財源確保重要”“税率を元に戻す際の影響大きい”参考人質疑",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66122",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T09:34:14Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "ce9d99c303755861ef94f034",
-      "identities": [
-        "cnbc-world:108467883"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Nvidia, AMD to invest $4 billion in Meta as tech giants deepen AI partnership",
-      "url": "https://www.cnbc.com/2026/10/27/nvidia-invest-meta.html",
-      "summary": "Meta on Monday announced plans to raise a total of $95 billion to support its investments in artificial intelligence infrastructure.",
-      "author": "",
-      "published_at": "2026-10-27T09:07:41Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-27T18:02:39.151011Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "5cf04ff10a9aaa86e1f19ef1",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6018592/mississippi-senate-trump-colom-black-voter-turnout"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Can Black voting power and Trump fatigue break Mississippi's red wall?",
-      "url": "https://www.npr.org/2026/10/27/nx-s1-6018592/mississippi-senate-trump-colom-black-voter-turnout",
-      "summary": "Mississippi has the largest proportional Black population in the country. It's one reason the U.S. Senate race has seen millions in last-minute spending and high-profile campaign visits.",
-      "author": "Stephen Fowler",
-      "published_at": "2026-10-27T09:00:00Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T22:02:35.643527Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "3a76cd4936b27a19cbadc041",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6012304/polymarket-election-betting-surveillance"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Polymarket has investigated 'dozens' of election-related cases",
-      "url": "https://www.npr.org/2026/10/27/nx-s1-6012304/polymarket-election-betting-surveillance",
-      "summary": "The prediction market has hired a former FBI official to make sure political insiders don't use the platform for profit from confidential election information.",
-      "author": "Luke Garrett",
-      "published_at": "2026-10-27T09:00:00Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T00:02:35.378002Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "19a3c01385d52f0c8dd0317c",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6017479/2026-midterms-npr-poll-democrats-trump-approval"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Democrats still poised to make gains, but poll shows warning signs for just how many",
-      "url": "https://www.npr.org/2026/10/27/nx-s1-6017479/2026-midterms-npr-poll-democrats-trump-approval",
-      "summary": "Democrats hold significant advantages going into Election Day, according to a new NPR/PBS News/Marist poll. But lagging enthusiasm among key groups is just one indicator that gains may not come easy.",
-      "author": "Domenico Montanaro",
-      "published_at": "2026-10-27T09:00:00Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T20:02:40.628068Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "8ec745aef31e9cb6670908e2",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6012225/morning-news-brief",
-        "npr-news:https://www.npr.org/2026/10/28/nx-s1-6012226/morning-news-brief"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Morning news brief",
-      "url": "https://www.npr.org/2026/10/28/nx-s1-6012226/morning-news-brief",
-      "summary": "President Trump crisscrosses the country with scattershot closing messages midterms approach, deadlock after Israeli election shows no clear winner, Fed expected to hold interest rates steady.",
-      "author": "A Martínez",
-      "published_at": "2026-10-27T08:48:45Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-28T12:02:38.488545Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "dbc70ef8bae706222813fab5",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-6013555/congressional-democrats-are-forming-a-task-force-to-protect-election-results"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "How congressional Democrats are preparing for claims of election fraud by Trump",
-      "url": "https://www.npr.org/2026/10/27/nx-s1-6013555/congressional-democrats-are-forming-a-task-force-to-protect-election-results",
-      "summary": "Democrats in Congress are bracing for what they fear could be meddling by President Trump or his allies with the results of this year's midterm elections.",
-      "author": "Eric McDaniel",
-      "published_at": "2026-10-27T08:48:04Z",
-      "first_seen_at": "2026-10-27T16:02:51.005681Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T16:02:51.005681Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "aefc80202eede9734e17c2e2",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/27/nx-s1-5989174/candidates-work-to-ease-concerns-as-data-centers-become-hot-button-issue-for-ohioans"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Data centers are a hot-button issue for Ohioans as midterms near",
-      "url": "https://www.npr.org/2026/10/27/nx-s1-5989174/candidates-work-to-ease-concerns-as-data-centers-become-hot-button-issue-for-ohioans",
-      "summary": "In Ohio, many people are displeased with the state's rapid buildout of data centers. It's a hot-button issue in the midterms, as political candidates from both parties try to ease voter concerns.",
-      "author": "Andrea Hsu",
-      "published_at": "2026-10-27T08:45:52Z",
-      "first_seen_at": "2026-10-27T12:02:41.405506Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-27T14:06:51.141039Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "ebb8c3dfd2af6540f55d817b",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66118"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "「副首都」指定要件を決定 4道府県に指定可能性 政府",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66118",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-27T08:08:51Z",
-      "first_seen_at": "2026-10-27T10:02:44.346905Z",
-      "window_id": "2026-10-27T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-27T10:02:44.346905Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-27T16:00+08:00",
-      "start": "2026-10-27T08:00:00Z",
-      "end": "2026-10-27T10:00:00Z",
-      "date": "2026-10-27",
-      "article_ids": [
-        "58abbc65b8316f24d181e6cb",
-        "24459f05b100c76ff7c44f40",
-        "5ed20d50ae059eaf9de92fc9",
-        "509dde4586c115be10ec6ff9",
-        "e2ec725831f9e51b6bba8831",
-        "d903b96a408451fc182a3384",
-        "f360ba2418aa7d0c68f2be40",
-        "ce9d99c303755861ef94f034",
-        "5cf04ff10a9aaa86e1f19ef1",
-        "3a76cd4936b27a19cbadc041",
-        "19a3c01385d52f0c8dd0317c",
-        "8ec745aef31e9cb6670908e2",
-        "dbc70ef8bae706222813fab5",
-        "aefc80202eede9734e17c2e2",
-        "ebb8c3dfd2af6540f55d817b"
-      ]
-    },
     {
       "id": "2026-10-27T18:00+08:00",
       "start": "2026-10-27T10:00:00Z",
@@ -7993,9 +8150,7 @@
         "365ea83e27158207fdf525e1",
         "a1fc85697b327d9d24e17f71",
         "c847819f40921e598c34dcff",
-        "75ab48e6bfc8a59e1bb1e67a",
-        "36ceeb3617f144c933d7f356",
-        "3c398d43dfdc1d24365be569"
+        "75ab48e6bfc8a59e1bb1e67a"
       ]
     },
     {
@@ -8652,8 +8807,11 @@
       "end": "2026-10-30T08:00:00Z",
       "date": "2026-10-30",
       "article_ids": [
+        "d929dc9b780ab06c0c92c6e3",
         "5f65ed989eebac71a3555628",
         "1121261ae150ab2b9cd50262",
+        "55a266872245476cc7faa0f8",
+        "55a33f7cdd7f265fd6109980",
         "3cb733dcd9538e36efe5d16d",
         "477bfdd0f0e125fff6a2c82b",
         "e3e4d5d17c6e38aaf9aedc4b",
@@ -8664,6 +8822,38 @@
         "9ee9e5bee4f8dcef13574dc2",
         "60e827b1265c2ee991d4b95a",
         "fb51098161ffb1811476e801"
+      ]
+    },
+    {
+      "id": "2026-10-30T16:00+08:00",
+      "start": "2026-10-30T08:00:00Z",
+      "end": "2026-10-30T10:00:00Z",
+      "date": "2026-10-30",
+      "article_ids": [
+        "c3c35fdc4e832dac686b2b42",
+        "509ede55e3cd9083c80b36a7",
+        "39ab558f806aadfd5bdf9eca",
+        "312ad2b55c56865f123e4b2a",
+        "939bf9e8440b7cd40b296d4d",
+        "d967c5d6d8af50b1ac839c07",
+        "229c33866fa0443ea147b1b1",
+        "c4f95691031829f5e7af36ff",
+        "3e41f7036c09947b6552b11e",
+        "00f1d873475f329d087a3360",
+        "f5bbed342cf0239e0d8bf473",
+        "bfe509c77ce9528f4ff84d90",
+        "bca3bedd29eedb4bb083b364",
+        "855c9a0e870812e1357ef020",
+        "410dc3f6ae73f0490c04a271",
+        "2da910f4279ff078e174960a",
+        "218a1d1f24c2df8b6ff7cd8a",
+        "1f753e66ebc5214bd6c3cf6b",
+        "0b7a12830881e1b4fdd5aca6",
+        "09048da51e172fb99d7ec4a2",
+        "a8bcaf409221df97b26bea68",
+        "e01985b15a39195d6908a8c1",
+        "ab9ca63c6187e4f03d6c5e8b",
+        "bfcc21906becb45169aae98a"
       ]
     }
   ],
