@@ -1,19 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T08:02:42.208605Z",
+  "generated_at": "2026-11-02T08:27:46.892678Z",
   "trigger": {
-    "event": "workflow_dispatch",
-    "schedule": "",
+    "event": "schedule",
+    "schedule": "0 */2 * * *",
     "slot": "2026-11-02T16:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-02T08:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41410138318"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41413185418"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
   "latest_window_id": "2026-11-02T14:00+08:00",
   "today": "2026-11-02",
-  "last_success_at": "2026-11-02T08:02:42.208605Z",
+  "last_success_at": "2026-11-02T08:27:46.892678Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +35,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:02:42.208605Z",
-      "last_success_at": "2026-11-02T08:02:42.208605Z",
+      "checked_at": "2026-11-02T08:27:46.892678Z",
+      "last_success_at": "2026-11-02T08:27:46.892678Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +65,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:02:42.208605Z",
-      "last_success_at": "2026-11-02T08:02:42.208605Z",
+      "checked_at": "2026-11-02T08:27:46.892678Z",
+      "last_success_at": "2026-11-02T08:27:46.892678Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +94,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:02:42.208605Z",
-      "last_success_at": "2026-11-02T08:02:42.208605Z",
+      "checked_at": "2026-11-02T08:27:46.892678Z",
+      "last_success_at": "2026-11-02T08:27:46.892678Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +123,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:02:42.208605Z",
-      "last_success_at": "2026-11-02T08:02:42.208605Z",
+      "checked_at": "2026-11-02T08:27:46.892678Z",
+      "last_success_at": "2026-11-02T08:27:46.892678Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +152,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:02:42.208605Z",
-      "last_success_at": "2026-11-02T08:02:42.208605Z",
+      "checked_at": "2026-11-02T08:27:46.892678Z",
+      "last_success_at": "2026-11-02T08:27:46.892678Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +190,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-02T08:02:42.208605Z",
-      "last_success_at": "2026-11-02T08:02:42.208605Z",
+      "checked_at": "2026-11-02T08:27:46.892678Z",
+      "last_success_at": "2026-11-02T08:27:46.892678Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +201,78 @@
     }
   ],
   "articles": [
+    {
+      "id": "c4385c01f75300adc757b72d",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cr0qkve1x224o#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Ryanair may freeze workers' pay as fuel prices spike",
+      "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_campaign=rss&at_medium=RSS",
+      "summary": "The airline says fuel prices may rise by €2bn in 2028 unless there is an end to the US-Israel war with Iran.",
+      "author": "",
+      "published_at": "2026-11-02T08:06:10Z",
+      "first_seen_at": "2026-11-02T08:27:46.892678Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "bbda1f11e590aa62e821936f",
+      "identities": [
+        "bbc-business:https://www.bbc.co.uk/news/articles/cr0qkve1x224o#0"
+      ],
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Ryanair may freeze workers' pay as fuel prices spike",
+      "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_campaign=rss&at_medium=RSS",
+      "summary": "The airline says fuel prices may rise by €2bn in 2028 unless there is an end to the US-Israel war with Iran.",
+      "author": "",
+      "published_at": "2026-11-02T08:06:10Z",
+      "first_seen_at": "2026-11-02T08:27:46.892678Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "0fcd9437a7caec5004d53ba8",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cmjwe9nggp60o#1"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Popular Australian children's author jailed over child exploitation offences",
+      "url": "https://www.bbc.co.uk/news/articles/cmjwe9nggp60o?at_campaign=rss&at_medium=RSS",
+      "summary": "The author of Jasper Jones and Runt pleaded guilty in May after police raided his home months earlier.",
+      "author": "",
+      "published_at": "2026-11-02T08:03:39Z",
+      "first_seen_at": "2026-11-02T08:27:46.892678Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "208a3b6f670f7ac8a3551ef0",
+      "identities": [
+        "cnbc-world:108501880"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Ryanair CEO warns fares could rise by up to 20% in 2027 as fuel bill jumps by $2.2 billion",
+      "url": "https://www.cnbc.com/2026/11/02/ryanair-h1-earnings-iran-war-fuel-costs.html",
+      "summary": "Ryanair's CEO Michael O'Leary told CNBC that European airlines may have \"significantly higher airfares\" of up to 20% next year as fuel costs rise.",
+      "author": "",
+      "published_at": "2026-11-02T08:02:34Z",
+      "first_seen_at": "2026-11-02T08:27:46.892678Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "time_basis": "publication"
+    },
     {
       "id": "b43f37d3d550892e3ee33ea3",
       "identities": [
@@ -218,7 +288,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -236,7 +306,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -254,7 +324,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -272,7 +342,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -290,7 +360,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -308,7 +378,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -326,7 +396,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -344,7 +414,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -361,8 +431,8 @@
       "published_at": "2026-11-02T06:02:03Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -380,7 +450,7 @@
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -398,7 +468,7 @@
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -434,7 +504,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -452,7 +522,7 @@
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -470,7 +540,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -488,7 +558,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -506,7 +576,7 @@
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -524,7 +594,7 @@
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -542,7 +612,7 @@
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -560,7 +630,7 @@
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "community_collection"
     },
     {
@@ -631,8 +701,8 @@
       "published_at": "2026-11-02T02:58:53Z",
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -668,7 +738,7 @@
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -685,8 +755,8 @@
       "published_at": "2026-11-02T00:43:35Z",
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -710,7 +780,8 @@
     {
       "id": "32ba8576ac1bc50fdf71e50a",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cwvg05z184j0o#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cwvg05z184j0o#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cwvg05z184j0o#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -721,8 +792,8 @@
       "published_at": "2026-11-02T00:15:30Z",
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -739,8 +810,8 @@
       "published_at": "2026-11-02T00:11:37Z",
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -750,15 +821,15 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Don't get caught out by new Buy Now Pay Later rules",
+      "title": "New Buy Now Pay Later rules - don't get caught out",
       "url": "https://www.bbc.co.uk/news/articles/crpdgp4y017go?at_campaign=rss&at_medium=RSS",
       "summary": "New affordability checks mean you could be blocked from using Buy Now Pay Later but here are ways to avoid it.",
       "author": "",
       "published_at": "2026-11-01T23:34:49Z",
       "first_seen_at": "2026-11-02T00:02:31.659707Z",
       "window_id": "2026-11-02T06:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -866,7 +937,7 @@
       "first_seen_at": "2026-11-02T00:02:31.659707Z",
       "window_id": "2026-11-02T06:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -884,7 +955,7 @@
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T06:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -920,7 +991,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -938,7 +1009,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1010,7 +1081,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1028,7 +1099,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1046,7 +1117,7 @@
       "first_seen_at": "2026-11-01T18:02:30.920878Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1064,7 +1135,7 @@
       "first_seen_at": "2026-11-01T18:02:30.920878Z",
       "window_id": "2026-11-02T00:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1082,8 +1153,8 @@
       "published_at": "2026-11-01T17:56:47Z",
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1101,7 +1172,7 @@
       "first_seen_at": "2026-11-01T18:02:30.920878Z",
       "window_id": "2026-11-02T00:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1119,8 +1190,8 @@
       "published_at": "2026-11-01T17:06:32Z",
       "first_seen_at": "2026-11-01T17:16:11.079033Z",
       "window_id": "2026-11-02T00:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1156,8 +1227,8 @@
       "published_at": "2026-11-01T16:57:14Z",
       "first_seen_at": "2026-11-01T17:16:11.079033Z",
       "window_id": "2026-11-02T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1210,8 +1281,8 @@
       "published_at": "2026-11-01T14:31:29Z",
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-01T22:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1463,8 +1534,8 @@
       "published_at": "2026-11-01T09:28:06Z",
       "first_seen_at": "2026-11-01T10:50:12.340417Z",
       "window_id": "2026-11-01T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1608,7 +1679,7 @@
       "first_seen_at": "2026-11-01T10:02:30.193046Z",
       "window_id": "2026-11-01T14:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -1790,8 +1861,8 @@
       "published_at": "2026-11-01T00:17:05Z",
       "first_seen_at": "2026-11-01T10:02:30.193046Z",
       "window_id": "2026-11-01T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -2316,8 +2387,8 @@
       "published_at": "2026-10-31T12:58:43Z",
       "first_seen_at": "2026-10-31T13:56:13.233963Z",
       "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -2388,8 +2459,8 @@
       "published_at": "2026-10-31T12:00:01Z",
       "first_seen_at": "2026-11-01T10:50:12.340417Z",
       "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -2966,7 +3037,7 @@
       "first_seen_at": "2026-11-02T02:02:29.810792Z",
       "window_id": "2026-10-31T10:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -3257,7 +3328,7 @@
       "first_seen_at": "2026-10-30T20:02:39.659760Z",
       "window_id": "2026-10-31T02:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -3299,7 +3370,8 @@
     {
       "id": "983295745584348dc342f6a4",
       "identities": [
-        "bbc-business:https://www.bbc.co.uk/news/articles/c98rz4pxm4ymo#0"
+        "bbc-business:https://www.bbc.co.uk/news/articles/c98rz4pxm4ymo#0",
+        "bbc-business:https://www.bbc.co.uk/news/articles/c98rz4pxm4ymo#1"
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
@@ -3310,8 +3382,8 @@
       "published_at": "2026-10-30T18:00:24Z",
       "first_seen_at": "2026-10-30T18:09:14.445850Z",
       "window_id": "2026-10-31T02:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -3475,8 +3547,8 @@
       "published_at": "2026-10-30T15:46:28Z",
       "first_seen_at": "2026-10-30T16:02:38.665485Z",
       "window_id": "2026-10-30T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -3658,7 +3730,7 @@
       "first_seen_at": "2026-10-30T14:37:13.166712Z",
       "window_id": "2026-10-30T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -3984,8 +4056,8 @@
       "published_at": "2026-10-30T12:27:28Z",
       "first_seen_at": "2026-10-30T14:02:37.601962Z",
       "window_id": "2026-10-30T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -4367,7 +4439,7 @@
       "first_seen_at": "2026-10-30T12:02:43.876859Z",
       "window_id": "2026-10-30T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:02:42.208605Z",
+      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
     },
     {
@@ -4747,60 +4819,6 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-10-30T10:02:41.247608Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "e01985b15a39195d6908a8c1",
-      "identities": [
-        "cnbc-world:108484725"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Indian AI infrastructure firm reportedly seeks to raise $3 billion of debt to buy Nvidia's next-generation chips",
-      "url": "https://www.cnbc.com/2026/10/30/nvidia-india-ai-chips-computing.html",
-      "summary": "Within two years, AM Intelligence plans to set up 400 MW of compute capacity using Nvidia's Rubin graphics processing units.",
-      "author": "",
-      "published_at": "2026-10-30T08:19:14Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "ab9ca63c6187e4f03d6c5e8b",
-      "identities": [
-        "cnbc-world:108484647"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Trump rallies in Kansas and Iowa are back on after RNC said they were canceled: Source",
-      "url": "https://www.cnbc.com/2026/10/30/trump-vance-rally-midterm-elections-.html",
-      "summary": "Trump and Vance had canceled planned appearances across three states, reducing in-person campaigning in the final days before the midterm election.",
-      "author": "",
-      "published_at": "2026-10-30T08:18:13Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-10-30T18:09:14.445850Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "bfcc21906becb45169aae98a",
-      "identities": [
-        "cnbc-world:108483724"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Binance's $6.3 billion hack: What we know and what comes next",
-      "url": "https://www.cnbc.com/2026/10/30/billions-in-crypto-frozen-in-binance-hack-heres-what-happens-next-.html",
-      "summary": "Billions in crypto assets have been frozen following a potential Binance security breach, raising questions about whether the funds can be recovered.",
-      "author": "",
-      "published_at": "2026-10-30T08:04:50Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-31T06:02:31.895233Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
@@ -4830,10 +4848,7 @@
         "1f753e66ebc5214bd6c3cf6b",
         "0b7a12830881e1b4fdd5aca6",
         "09048da51e172fb99d7ec4a2",
-        "a8bcaf409221df97b26bea68",
-        "e01985b15a39195d6908a8c1",
-        "ab9ca63c6187e4f03d6c5e8b",
-        "bfcc21906becb45169aae98a"
+        "a8bcaf409221df97b26bea68"
       ]
     },
     {
