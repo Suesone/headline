@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T08:27:46.892678Z",
+  "generated_at": "2026-11-02T10:02:39.607496Z",
   "trigger": {
-    "event": "schedule",
-    "schedule": "0 */2 * * *",
-    "slot": "2026-11-02T16:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41413185418"
+    "event": "workflow_dispatch",
+    "schedule": "",
+    "slot": "2026-11-02T18:00+08:00",
+    "source": "cloudflare-watchdog",
+    "requested_slot": "2026-11-02T10:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41425468462"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-02T14:00+08:00",
+  "latest_window_id": "2026-11-02T16:00+08:00",
   "today": "2026-11-02",
-  "last_success_at": "2026-11-02T08:27:46.892678Z",
+  "last_success_at": "2026-11-02T10:02:39.607496Z",
   "status": "ok",
   "sources": [
     {
@@ -35,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:27:46.892678Z",
-      "last_success_at": "2026-11-02T08:27:46.892678Z",
+      "checked_at": "2026-11-02T10:02:39.607496Z",
+      "last_success_at": "2026-11-02T10:02:39.607496Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -65,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:27:46.892678Z",
-      "last_success_at": "2026-11-02T08:27:46.892678Z",
+      "checked_at": "2026-11-02T10:02:39.607496Z",
+      "last_success_at": "2026-11-02T10:02:39.607496Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -94,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:27:46.892678Z",
-      "last_success_at": "2026-11-02T08:27:46.892678Z",
+      "checked_at": "2026-11-02T10:02:39.607496Z",
+      "last_success_at": "2026-11-02T10:02:39.607496Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -123,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:27:46.892678Z",
-      "last_success_at": "2026-11-02T08:27:46.892678Z",
+      "checked_at": "2026-11-02T10:02:39.607496Z",
+      "last_success_at": "2026-11-02T10:02:39.607496Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -152,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T08:27:46.892678Z",
-      "last_success_at": "2026-11-02T08:27:46.892678Z",
+      "checked_at": "2026-11-02T10:02:39.607496Z",
+      "last_success_at": "2026-11-02T10:02:39.607496Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -190,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-02T08:27:46.892678Z",
-      "last_success_at": "2026-11-02T08:27:46.892678Z",
+      "checked_at": "2026-11-02T10:02:39.607496Z",
+      "last_success_at": "2026-11-02T10:02:39.607496Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -202,13 +204,103 @@
   ],
   "articles": [
     {
+      "id": "351879d0f32f7c9291a8682a",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/02/nx-s1-6023084/morning-news-brief"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Morning news brief",
+      "url": "https://www.npr.org/2026/11/02/nx-s1-6023084/morning-news-brief",
+      "summary": "Democratic Rep. Haley Stevens endorses GOP candidate in Michigan race, key races remain close in last day before midterm election, Gulf states concerned about possible U.S. attack on Iran.",
+      "author": "A Martínez",
+      "published_at": "2026-11-02T09:42:20Z",
+      "first_seen_at": "2026-11-02T10:02:39.607496Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "b49a3dad20addbdd5801cff8",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261102de69556"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "去年大量死 広島の養殖かき 今季水揚げ始まる 期待と不安の声",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69556",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T09:29:06Z",
+      "first_seen_at": "2026-11-02T10:02:39.607496Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "696bc3c62142509ec1140aba",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261102de69454"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ハンガリー動乱７０年で考えるロシアのウクライナ侵攻",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69454",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T09:16:20Z",
+      "first_seen_at": "2026-11-02T10:02:39.607496Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "b1f3fe0852181d66132acd66",
+      "identities": [
+        "cnbc-world:108501882"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Apollo launches $11 billion private credit platform, backed by Abu Dhabi",
+      "url": "https://www.cnbc.com/2026/11/02/apollo-private-credit-abu-dhabi.html",
+      "summary": "Apollo has launched a 10 billion euro European private credit platform backed by major global investors.",
+      "author": "",
+      "published_at": "2026-11-02T09:11:02Z",
+      "first_seen_at": "2026-11-02T10:02:39.607496Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "f22a7c60bb8e23f65b83e1f1",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261102de69622"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "サントリーHD 不正アクセスで個人情報約10万人分が漏えい",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69622",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T08:38:24Z",
+      "first_seen_at": "2026-11-02T10:02:39.607496Z",
+      "window_id": "2026-11-02T16:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
+      "time_basis": "community_collection"
+    },
+    {
       "id": "c4385c01f75300adc757b72d",
       "identities": [
         "bbc-world:https://www.bbc.co.uk/news/articles/cr0qkve1x224o#0"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Ryanair may freeze workers' pay as fuel prices spike",
+      "title": "Ryanair may freeze workers' pay and raise airfares",
       "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_campaign=rss&at_medium=RSS",
       "summary": "The airline says fuel prices may rise by €2bn in 2028 unless there is an end to the US-Israel war with Iran.",
       "author": "",
@@ -216,7 +308,7 @@
       "first_seen_at": "2026-11-02T08:27:46.892678Z",
       "window_id": "2026-11-02T16:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -226,7 +318,7 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Ryanair may freeze workers' pay as fuel prices spike",
+      "title": "Ryanair may freeze workers' pay and raise airfares",
       "url": "https://www.bbc.co.uk/news/articles/cr0qkve1x224o?at_campaign=rss&at_medium=RSS",
       "summary": "The airline says fuel prices may rise by €2bn in 2028 unless there is an end to the US-Israel war with Iran.",
       "author": "",
@@ -234,7 +326,7 @@
       "first_seen_at": "2026-11-02T08:27:46.892678Z",
       "window_id": "2026-11-02T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -252,7 +344,7 @@
       "first_seen_at": "2026-11-02T08:27:46.892678Z",
       "window_id": "2026-11-02T16:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -270,7 +362,7 @@
       "first_seen_at": "2026-11-02T08:27:46.892678Z",
       "window_id": "2026-11-02T16:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -288,7 +380,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -306,7 +398,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -323,8 +415,8 @@
       "published_at": "2026-11-02T07:31:51Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -341,8 +433,8 @@
       "published_at": "2026-11-02T07:19:35Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -359,8 +451,8 @@
       "published_at": "2026-11-02T07:13:41Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -377,8 +469,8 @@
       "published_at": "2026-11-02T07:08:05Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -395,8 +487,8 @@
       "published_at": "2026-11-02T07:05:27Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -413,8 +505,8 @@
       "published_at": "2026-11-02T06:13:28Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -431,8 +523,8 @@
       "published_at": "2026-11-02T06:02:03Z",
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -449,8 +541,8 @@
       "published_at": "2026-11-02T05:44:39Z",
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -467,8 +559,8 @@
       "published_at": "2026-11-02T05:21:53Z",
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -504,7 +596,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -522,7 +614,7 @@
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -532,7 +624,7 @@
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Trump makes fevered campaign push in final weekend before election",
+      "title": "Trump makes final campaign push in final weekend before election",
       "url": "https://www.bbc.co.uk/news/articles/c3j47gjx29vro?at_campaign=rss&at_medium=RSS",
       "summary": "The US president rallied in states that Republicans previously won - showcasing how tight Tuesday's elections could be in determining control of Congress.",
       "author": "",
@@ -540,7 +632,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -558,7 +650,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -575,8 +667,8 @@
       "published_at": "2026-11-02T03:57:08Z",
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "community_collection"
     },
     {
@@ -701,8 +793,8 @@
       "published_at": "2026-11-02T02:58:53Z",
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -738,7 +830,7 @@
       "first_seen_at": "2026-11-02T04:02:34.952012Z",
       "window_id": "2026-11-02T10:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -756,7 +848,7 @@
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -793,7 +885,7 @@
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -810,8 +902,8 @@
       "published_at": "2026-11-02T00:11:37Z",
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -821,7 +913,7 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "New Buy Now Pay Later rules - don't get caught out",
+      "title": "Don't get caught out by new Buy Now Pay Later rules",
       "url": "https://www.bbc.co.uk/news/articles/crpdgp4y017go?at_campaign=rss&at_medium=RSS",
       "summary": "New affordability checks mean you could be blocked from using Buy Now Pay Later but here are ways to avoid it.",
       "author": "",
@@ -829,7 +921,7 @@
       "first_seen_at": "2026-11-02T00:02:31.659707Z",
       "window_id": "2026-11-02T06:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -936,8 +1028,8 @@
       "published_at": "2026-11-01T22:22:12Z",
       "first_seen_at": "2026-11-02T00:02:31.659707Z",
       "window_id": "2026-11-02T06:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -954,8 +1046,26 @@
       "published_at": "2026-11-01T22:19:13Z",
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T06:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "c9daecaff936a946df3606c0",
+      "identities": [
+        "cnbc-world:108498328"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Democratic Rep. Stevens endorses Republican Rogers over rival El-Sayed in Michigan Senate election",
+      "url": "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html",
+      "summary": "Haley Stevens had lost the Democratic nomination for Senate in Michigan to Abdul El-Sayed earlier this year.",
+      "author": "",
+      "published_at": "2026-11-01T21:06:42Z",
+      "first_seen_at": "2026-11-02T10:02:39.607496Z",
+      "window_id": "2026-11-02T04:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -991,7 +1101,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1008,8 +1118,8 @@
       "published_at": "2026-11-01T19:49:15Z",
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1080,8 +1190,8 @@
       "published_at": "2026-11-01T19:00:58Z",
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1098,8 +1208,8 @@
       "published_at": "2026-11-01T18:27:06Z",
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1116,8 +1226,8 @@
       "published_at": "2026-11-01T18:00:37Z",
       "first_seen_at": "2026-11-01T18:02:30.920878Z",
       "window_id": "2026-11-02T02:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1134,8 +1244,8 @@
       "published_at": "2026-11-01T17:57:58Z",
       "first_seen_at": "2026-11-01T18:02:30.920878Z",
       "window_id": "2026-11-02T00:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1154,7 +1264,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T00:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1191,7 +1301,7 @@
       "first_seen_at": "2026-11-01T17:16:11.079033Z",
       "window_id": "2026-11-02T00:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1228,7 +1338,7 @@
       "first_seen_at": "2026-11-01T17:16:11.079033Z",
       "window_id": "2026-11-02T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1535,7 +1645,7 @@
       "first_seen_at": "2026-11-01T10:50:12.340417Z",
       "window_id": "2026-11-01T16:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1679,7 +1789,7 @@
       "first_seen_at": "2026-11-01T10:02:30.193046Z",
       "window_id": "2026-11-01T14:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -1862,7 +1972,7 @@
       "first_seen_at": "2026-11-01T10:02:30.193046Z",
       "window_id": "2026-11-01T08:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -2459,8 +2569,8 @@
       "published_at": "2026-10-31T12:00:01Z",
       "first_seen_at": "2026-11-01T10:50:12.340417Z",
       "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -3037,7 +3147,7 @@
       "first_seen_at": "2026-11-02T02:02:29.810792Z",
       "window_id": "2026-10-31T10:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -3328,7 +3438,7 @@
       "first_seen_at": "2026-10-30T20:02:39.659760Z",
       "window_id": "2026-10-31T02:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -3383,7 +3493,7 @@
       "first_seen_at": "2026-10-30T18:09:14.445850Z",
       "window_id": "2026-10-31T02:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -3548,7 +3658,7 @@
       "first_seen_at": "2026-10-30T16:02:38.665485Z",
       "window_id": "2026-10-30T22:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -3730,7 +3840,7 @@
       "first_seen_at": "2026-10-30T14:37:13.166712Z",
       "window_id": "2026-10-30T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -4057,7 +4167,7 @@
       "first_seen_at": "2026-10-30T14:02:37.601962Z",
       "window_id": "2026-10-30T20:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
     },
     {
@@ -4439,418 +4549,11 @@
       "first_seen_at": "2026-10-30T12:02:43.876859Z",
       "window_id": "2026-10-30T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
+      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "c3c35fdc4e832dac686b2b42",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68271"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "米制裁で入国困難なICC赤根所長 国連総会は動画で報告へ",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68271",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:53:57Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T12:02:43.876859Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "509ede55e3cd9083c80b36a7",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68325"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "どうなる？ 消費税減税と「支援金」",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68325",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:52:14Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-30T12:02:43.876859Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "39ab558f806aadfd5bdf9eca",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68521"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "皇居東御苑にカフェ備えた新施設「大手休憩所」が完成",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68521",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:49:18Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T12:02:43.876859Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "312ad2b55c56865f123e4b2a",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68694"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "外務省 不正アクセスで個人情報約3600件漏えいの可能性",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68694",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:47:47Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "939bf9e8440b7cd40b296d4d",
-      "identities": [
-        "cnbc-world:108484895"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Intel stock has worst day since 1970s, wiping about $12 billion off government's stake",
-      "url": "https://www.cnbc.com/2026/10/30/amazon-intel-earnings-big-tech-ai-spending-concerns.html",
-      "summary": "Investors are nervous about the massive AI spending from the tech giants and whether that will pay off.",
-      "author": "",
-      "published_at": "2026-10-30T09:16:27Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-01T06:02:28.965863Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "d967c5d6d8af50b1ac839c07",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68418"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "人気SFドラマ「スター・トレック」出演の英俳優死去",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68418",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:13:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "229c33866fa0443ea147b1b1",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68585"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "大和証券G 約11万人の個人情報流出おそれで“対策を強化”",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68585",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:05:33Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "c4f95691031829f5e7af36ff",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68570"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "全日空 3万7000人超の情報漏えいか 一部でパスポート番号も",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68570",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:05:27Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "3e41f7036c09947b6552b11e",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68476"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "使わないで！ハロウィーン仮装ナース服などに「赤十字マーク」",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68476",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:05:22Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "00f1d873475f329d087a3360",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261030de68230"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "トクリュウ対策で通信アプリ遠隔把握の法案 衆議院で審議入り",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68230",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T09:00:52Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "f5bbed342cf0239e0d8bf473",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/g-s1-149560/2026-vote-midterm-election-local-voter-guides"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "2026 midterm election voter guides: Find local resources in your community",
-      "url": "https://www.npr.org/2026/10/30/g-s1-149560/2026-vote-midterm-election-local-voter-guides",
-      "summary": "NPR member stations are gathering information for voters — from voter guides down to local races. Scroll through to find your state and the resources available from your local member station.",
-      "author": "The NPR Network",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-10-30T16:02:38.665485Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "bfe509c77ce9528f4ff84d90",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6022353/midterms-state-legislatures-pennsylvania"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Democrats seek to weaken the Republican lead in state legislatures",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-6022353/midterms-state-legislatures-pennsylvania",
-      "summary": "Republicans control 10 more state legislatures than Democrats. That's where most laws on taxes, abortion, crime and schools are made.",
-      "author": "Carmen Russell-Sluchansky",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-31T00:02:12.507257Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "bca3bedd29eedb4bb083b364",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6022278/ai-artificial-intelligence-teens-jed-common-sense-media"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Nearly 2 out of 3 teens and tweens use AI chatbots, new research shows",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-6022278/ai-artificial-intelligence-teens-jed-common-sense-media",
-      "summary": "Most kids say they use chatbots for help with homework and when they're stressed, lonely, or anxious. And how they use chatbots is tied to their mental health.",
-      "author": "Rhitu Chatterjee",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "855c9a0e870812e1357ef020",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/g-s1-149975/2026-midterms-senate-map"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Here are the Senate races to watch ahead of Election Day",
-      "url": "https://www.npr.org/2026/10/30/g-s1-149975/2026-midterms-senate-map",
-      "summary": "The competitive map for control of the U.S. Senate has expanded considerably in the final days before Election Day. Here's a ranking of those competitive races from most likely to flip to least likely.",
-      "author": "Domenico Montanaro",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T20:18:47.145074Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "410dc3f6ae73f0490c04a271",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6018566/halloween-candy-prices-chocolate"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Candy prices got you scared stiff? What to know about the cost of Halloween this year",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-6018566/halloween-candy-prices-chocolate",
-      "summary": "Prices for candy, the most popular Halloween purchase, and gum have risen 7.7% in one year and are up more than 18% in two years, according to the latest federal data.",
-      "author": "Joe Hernandez",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-31T08:02:30.553721Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "2da910f4279ff078e174960a",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6018258/affordability-florida-amendment-3"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "'Affordability? For who?' Voters decide between helping homeowners or public services",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-6018258/affordability-florida-amendment-3",
-      "summary": "Candidates across the U.S. have paid lip service to affordability issues. In Florida, the question of how to save voters money, and at what cost, is literally on the ballot.",
-      "author": "Marissa J. Lang",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-10-30T14:37:13.166712Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "218a1d1f24c2df8b6ff7cd8a",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/g-s1-150445/trump-midterms-ai-china-star-trek-dhs-news-quiz"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "On what anatomical feature was Trump fixated this week? The quiz knows — do you?",
-      "url": "https://www.npr.org/2026/10/30/g-s1-150445/trump-midterms-ai-china-star-trek-dhs-news-quiz",
-      "summary": "Hint: He likes them big (and he cannot lie).",
-      "author": "Holly J. Morris",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-30T16:02:38.665485Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "1f753e66ebc5214bd6c3cf6b",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/nx-s1-6022142/new-citizens-immigrant-voting-ice-trump"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "For voters from immigrant families and new citizens, voting is bigger than themselves",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-6022142/new-citizens-immigrant-voting-ice-trump",
-      "summary": "While many young voters are focused on the cost of living in the election, for some from immigrant families, the political calculation — and their votes — is often about even more than the economy.",
-      "author": "Saige Miller",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T22:02:36.465041Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "0b7a12830881e1b4fdd5aca6",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/nx-s1-5995628/trump-va-home-loan-program-veterans-paying"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Trump's VA killed a home loan program. Thousands of veterans are paying the price",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-5995628/trump-va-home-loan-program-veterans-paying",
-      "summary": "An NPR investigation finds that more than 15,000 military veterans were put into much-higher-cost home loans after the Trump administration cut a key program. Many now pay $1,000 more per month.",
-      "author": "Chris Arnold",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T14:37:13.166712Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "09048da51e172fb99d7ec4a2",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/30/g-s1-150761/israel-election-politics-deadlock-arabs"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Israel is in a political deadlock. What comes next?",
-      "url": "https://www.npr.org/2026/10/30/g-s1-150761/israel-election-politics-deadlock-arabs",
-      "summary": "Israel's consequential election has ended in a deadlock, with neither side able to claim a majority, What happens now?",
-      "author": "Itay Stern",
-      "published_at": "2026-10-30T09:00:00Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T12:02:43.876859Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "a8bcaf409221df97b26bea68",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261029de68115"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "共産 志位議長“綱領改定で躍進の時代を”党勢拡大目指す考え",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261029de68115",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T08:37:06Z",
-      "first_seen_at": "2026-10-30T10:02:41.247608Z",
-      "window_id": "2026-10-30T16:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-30T10:02:41.247608Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-30T16:00+08:00",
-      "start": "2026-10-30T08:00:00Z",
-      "end": "2026-10-30T10:00:00Z",
-      "date": "2026-10-30",
-      "article_ids": [
-        "c3c35fdc4e832dac686b2b42",
-        "509ede55e3cd9083c80b36a7",
-        "39ab558f806aadfd5bdf9eca",
-        "312ad2b55c56865f123e4b2a",
-        "939bf9e8440b7cd40b296d4d",
-        "d967c5d6d8af50b1ac839c07",
-        "229c33866fa0443ea147b1b1",
-        "c4f95691031829f5e7af36ff",
-        "3e41f7036c09947b6552b11e",
-        "00f1d873475f329d087a3360",
-        "f5bbed342cf0239e0d8bf473",
-        "bfe509c77ce9528f4ff84d90",
-        "bca3bedd29eedb4bb083b364",
-        "855c9a0e870812e1357ef020",
-        "410dc3f6ae73f0490c04a271",
-        "2da910f4279ff078e174960a",
-        "218a1d1f24c2df8b6ff7cd8a",
-        "1f753e66ebc5214bd6c3cf6b",
-        "0b7a12830881e1b4fdd5aca6",
-        "09048da51e172fb99d7ec4a2",
-        "a8bcaf409221df97b26bea68"
-      ]
-    },
     {
       "id": "2026-10-30T18:00+08:00",
       "start": "2026-10-30T10:00:00Z",
@@ -5280,7 +4983,9 @@
       "start": "2026-11-01T20:00:00Z",
       "end": "2026-11-01T22:00:00Z",
       "date": "2026-11-02",
-      "article_ids": []
+      "article_ids": [
+        "c9daecaff936a946df3606c0"
+      ]
     },
     {
       "id": "2026-11-02T06:00+08:00",
@@ -5358,6 +5063,23 @@
         "fdcf0bb153f32e946d7151ce",
         "f05a561b6b4ccf9cd2976ebf",
         "a8b9b9f7892ad7c0a1d07bd7"
+      ]
+    },
+    {
+      "id": "2026-11-02T16:00+08:00",
+      "start": "2026-11-02T08:00:00Z",
+      "end": "2026-11-02T10:00:00Z",
+      "date": "2026-11-02",
+      "article_ids": [
+        "351879d0f32f7c9291a8682a",
+        "b49a3dad20addbdd5801cff8",
+        "696bc3c62142509ec1140aba",
+        "b1f3fe0852181d66132acd66",
+        "f22a7c60bb8e23f65b83e1f1",
+        "c4385c01f75300adc757b72d",
+        "bbda1f11e590aa62e821936f",
+        "0fcd9437a7caec5004d53ba8",
+        "208a3b6f670f7ac8a3551ef0"
       ]
     }
   ],
