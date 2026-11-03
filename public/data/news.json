@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T22:02:33.340246Z",
+  "generated_at": "2026-11-03T00:02:41.830644Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-03T06:00+08:00",
+    "slot": "2026-11-03T08:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-02T22:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41533688744"
+    "requested_slot": "2026-11-03T00:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41549867960"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-03T04:00+08:00",
+  "latest_window_id": "2026-11-03T06:00+08:00",
   "today": "2026-11-03",
-  "last_success_at": "2026-11-02T22:02:33.340246Z",
+  "last_success_at": "2026-11-03T00:02:41.830644Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T22:02:33.340246Z",
-      "last_success_at": "2026-11-02T22:02:33.340246Z",
+      "checked_at": "2026-11-03T00:02:41.830644Z",
+      "last_success_at": "2026-11-03T00:02:41.830644Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T22:02:33.340246Z",
-      "last_success_at": "2026-11-02T22:02:33.340246Z",
+      "checked_at": "2026-11-03T00:02:41.830644Z",
+      "last_success_at": "2026-11-03T00:02:41.830644Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T22:02:33.340246Z",
-      "last_success_at": "2026-11-02T22:02:33.340246Z",
+      "checked_at": "2026-11-03T00:02:41.830644Z",
+      "last_success_at": "2026-11-03T00:02:41.830644Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T22:02:33.340246Z",
-      "last_success_at": "2026-11-02T22:02:33.340246Z",
+      "checked_at": "2026-11-03T00:02:41.830644Z",
+      "last_success_at": "2026-11-03T00:02:41.830644Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-02T22:02:33.340246Z",
-      "last_success_at": "2026-11-02T22:02:33.340246Z",
+      "checked_at": "2026-11-03T00:02:41.830644Z",
+      "last_success_at": "2026-11-03T00:02:41.830644Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-02T22:02:33.340246Z",
-      "last_success_at": "2026-11-02T22:02:33.340246Z",
+      "checked_at": "2026-11-03T00:02:41.830644Z",
+      "last_success_at": "2026-11-03T00:02:41.830644Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,126 @@
     }
   ],
   "articles": [
+    {
+      "id": "cd64d1f7e137f80ffdea30de",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ロードサービス利用者の個人情報 最大約550万件漏えい",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69807",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T23:56:48Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "ccd1aa865db8e7d17329208a",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "「ネットマイル」 最大で約549万人分の個人情報漏えいの可能性",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69784",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T23:56:19Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "6ad7c576821bea662a533954",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "米アンソロピック 売り上げ13倍もAI開発への支出は140兆円余に",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261103de69869",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T23:52:35Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "6db55228422a75bb45d3797c",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "CNBC's The China Connection newsletter: Nvidia's humanoid push relies on China-made robot hands",
+      "url": "https://www.cnbc.com/2026/11/02/cnbcs-the-china-connection-newsletter-nvidias-humanoid-push-relies-on-china-made-robot-hands.html",
+      "summary": "The U.S. chipmaker's humanoid robot systems feature mechanical hands from China-linked startups.",
+      "author": "",
+      "published_at": "2026-11-02T23:00:01Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "f0baa3be6a02f36c51b90a56",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "作家の山中恒さんの手記全文が初公開 憲法公布時期に執筆",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69842",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T22:37:18Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "c45a4ae96b6d2546540f2594",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "スルメイカ不漁 要因は“生態の異変”か",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69802",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T22:29:38Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "2d9a551d8090c4fa6ca1b577",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "10月 スルメイカ取扱量約120トン 前年同月並みに回復 函館",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69700",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T22:29:15Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "142a400f1f4fa0e0dd7695f3",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ベルギーやスウェーデン スーパーにサイバー攻撃か 食品に被害",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261103de69864",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T22:24:37Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T06:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
+    },
     {
       "id": "63e751038e4455594635f17f",
       "source_id": "cnbc-world",
@@ -215,7 +335,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -229,9 +349,24 @@
       "published_at": "2026-11-02T21:46:56Z",
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
+    },
+    {
+      "id": "1a5b13b88851c1283500e106",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "GMO 経営トップ含めセキュリティーリスク対応の体制構築が課題",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261103de69861",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-02T20:25:01Z",
+      "first_seen_at": "2026-11-03T00:02:41.830644Z",
+      "window_id": "2026-11-03T04:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
+      "time_basis": "community_collection"
     },
     {
       "id": "9300b5b3d9537c6dba20231c",
@@ -245,7 +380,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -260,7 +395,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -275,7 +410,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -290,7 +425,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -305,7 +440,7 @@
       "first_seen_at": "2026-11-02T19:51:47.056751Z",
       "window_id": "2026-11-03T02:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -320,7 +455,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T02:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -335,7 +470,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T02:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -350,7 +485,7 @@
       "first_seen_at": "2026-11-02T19:51:47.056751Z",
       "window_id": "2026-11-03T02:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -365,7 +500,7 @@
       "first_seen_at": "2026-11-02T19:51:47.056751Z",
       "window_id": "2026-11-03T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -379,8 +514,8 @@
       "published_at": "2026-11-02T17:57:35Z",
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -409,8 +544,8 @@
       "published_at": "2026-11-02T17:33:26Z",
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -425,7 +560,7 @@
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -440,37 +575,37 @@
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
       "id": "6ff28dc677678c3a21ea079a",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "DOJ asks Supreme Court to block California counting disputed mail-in ballots",
+      "title": "Supreme Court rejects DOJ's bid to block California from counting disputed ballots",
       "url": "https://www.cnbc.com/2026/11/02/supreme-court-california-mail-ballots-election.html",
-      "summary": "The Department of Justice's request to the Supreme Court in the California case comes as it appeals dismissal of a lawsuit over Alaska's Senate election.",
+      "summary": "The Department of Justice's request to the Supreme Court in the California case came as it appeals dismissal of a lawsuit over Alaska's Senate election.",
       "author": "",
       "published_at": "2026-11-02T17:26:55Z",
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
       "id": "e45ecb187d3c08c907ca7efc",
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "DOJ asks for Supreme Court to intervene on California ballot demands",
+      "title": "The Supreme Court rejects a DOJ push to separate California ballots",
       "url": "https://www.npr.org/2026/11/02/nx-s1-6023802/supreme-court-california-voting-ballots-trump",
-      "summary": "On the eve of the Nov. 3 election, the Trump administration is hoping the Supreme Court will reverse lower courts that rejected its request to order California to set aside the ballots of thousands of people it says are \"likely\" noncitizens.",
+      "summary": "The U.S. Supreme Court has denied a last-minute request from the Department of Justice to wade into its unprecedented feud with California over the state's voter rolls.",
       "author": "Jude Joffe-Block",
       "published_at": "2026-11-02T16:34:17Z",
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -499,8 +634,8 @@
       "published_at": "2026-11-02T15:30:41Z",
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-02T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -529,8 +664,8 @@
       "published_at": "2026-11-02T14:13:51Z",
       "first_seen_at": "2026-11-02T16:02:34.224042Z",
       "window_id": "2026-11-02T22:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "community_collection"
     },
     {
@@ -545,7 +680,7 @@
       "first_seen_at": "2026-11-02T16:02:34.224042Z",
       "window_id": "2026-11-02T20:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -560,7 +695,7 @@
       "first_seen_at": "2026-11-02T14:02:37.641010Z",
       "window_id": "2026-11-02T20:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -589,8 +724,8 @@
       "published_at": "2026-11-02T12:42:29Z",
       "first_seen_at": "2026-11-02T14:02:37.641010Z",
       "window_id": "2026-11-02T20:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "community_collection"
     },
     {
@@ -680,7 +815,7 @@
       "first_seen_at": "2026-11-02T14:02:37.641010Z",
       "window_id": "2026-11-02T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -695,7 +830,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -740,7 +875,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -800,7 +935,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -830,7 +965,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -935,7 +1070,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -950,7 +1085,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -965,7 +1100,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -980,7 +1115,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1115,7 +1250,7 @@
       "first_seen_at": "2026-11-02T08:27:46.892678Z",
       "window_id": "2026-11-02T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1175,7 +1310,7 @@
       "first_seen_at": "2026-11-02T08:02:42.208605Z",
       "window_id": "2026-11-02T14:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1340,7 +1475,7 @@
       "first_seen_at": "2026-11-02T06:02:27.671037Z",
       "window_id": "2026-11-02T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1565,7 +1700,7 @@
       "first_seen_at": "2026-11-02T01:04:37.317419Z",
       "window_id": "2026-11-02T08:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1625,7 +1760,7 @@
       "first_seen_at": "2026-11-02T00:02:31.659707Z",
       "window_id": "2026-11-02T06:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1775,7 +1910,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -1970,7 +2105,7 @@
       "first_seen_at": "2026-11-01T17:16:11.079033Z",
       "window_id": "2026-11-02T00:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -2345,7 +2480,7 @@
       "first_seen_at": "2026-11-01T10:02:30.193046Z",
       "window_id": "2026-11-01T14:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -2495,7 +2630,7 @@
       "first_seen_at": "2026-11-01T10:02:30.193046Z",
       "window_id": "2026-11-01T08:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -3470,7 +3605,7 @@
       "first_seen_at": "2026-11-02T02:02:29.810792Z",
       "window_id": "2026-10-31T10:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T22:02:33.340246Z",
+      "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
     },
     {
@@ -3532,97 +3667,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-11-01T02:02:32.327875Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "360157d855541b0119f1a5cf",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "ロシア独立系新聞が編集部閉鎖へ ノーベル委員会「深く憂慮」",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261031de68828",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T23:27:38Z",
-      "first_seen_at": "2026-10-31T00:02:12.507257Z",
-      "window_id": "2026-10-31T06:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-10-31T08:02:30.553721Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "dd13e98a70cd782ea8128012",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Meta outlook revised downward by S&P on cash flow and capex concerns",
-      "url": "https://www.cnbc.com/2026/10/30/meta-outlook-to-revised-to-negative-by-sp-after-cash-flow-negative.html",
-      "summary": "Meta has been given a negative outlook by S&P Global Ratings due to the company's hefty capital expenditures and concerns about free cash flow.",
-      "author": "",
-      "published_at": "2026-10-30T22:42:26Z",
-      "first_seen_at": "2026-10-31T07:35:36.263527Z",
-      "window_id": "2026-10-31T06:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-31T12:02:29.833011Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "ef1b8310b1ac28374ee25de3",
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "US approves sale of 500 Patriot missiles to Ukraine",
-      "url": "https://www.bbc.co.uk/news/articles/c3vgxznlx7jzo?at_campaign=rss&at_medium=RSS",
-      "summary": "The American-made interceptors are the only effective weapon for downing Russia's ballistic missiles.",
-      "author": "",
-      "published_at": "2026-10-30T22:20:52Z",
-      "first_seen_at": "2026-10-31T00:02:12.507257Z",
-      "window_id": "2026-10-31T06:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-10-31T18:00:44.929868Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "9afcd88cabf1416bb5b07c83",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "日銀 物価2％到達で定着に軸足移す 利上げどう進めるか焦点",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261031de68799",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-30T22:20:18Z",
-      "first_seen_at": "2026-10-31T00:02:12.507257Z",
-      "window_id": "2026-10-31T06:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-10-31T08:02:30.553721Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "00d1658323d4a92033d4f663",
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Despite concerns, the Trump administration still sends pregnant migrant minors to south Texas",
-      "url": "https://www.npr.org/2026/10/30/nx-s1-6022578/minors-pregnant-migrant-texas-trump",
-      "summary": "Several children have had to leave the state to receive medical care, including abortions, that is unavailable in Texas.",
-      "author": "Mark Betancourt",
-      "published_at": "2026-10-30T22:06:18Z",
-      "first_seen_at": "2026-10-31T00:02:12.507257Z",
-      "window_id": "2026-10-31T06:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-31T12:02:29.833011Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-31T06:00+08:00",
-      "start": "2026-10-30T22:00:00Z",
-      "end": "2026-10-31T00:00:00Z",
-      "date": "2026-10-31",
-      "article_ids": [
-        "360157d855541b0119f1a5cf",
-        "dd13e98a70cd782ea8128012",
-        "ef1b8310b1ac28374ee25de3",
-        "9afcd88cabf1416bb5b07c83",
-        "00d1658323d4a92033d4f663"
-      ]
-    },
     {
       "id": "2026-10-31T08:00+08:00",
       "start": "2026-10-31T00:00:00Z",
@@ -4119,10 +4166,27 @@
       "article_ids": [
         "63e751038e4455594635f17f",
         "0901fea3cf8848c116950998",
+        "1a5b13b88851c1283500e106",
         "9300b5b3d9537c6dba20231c",
         "ca3e00186f0efae9a2f85430",
         "882c74160db50da6b4f5e153",
         "a873dc7b7e9a3e88de9963f5"
+      ]
+    },
+    {
+      "id": "2026-11-03T06:00+08:00",
+      "start": "2026-11-02T22:00:00Z",
+      "end": "2026-11-03T00:00:00Z",
+      "date": "2026-11-03",
+      "article_ids": [
+        "cd64d1f7e137f80ffdea30de",
+        "ccd1aa865db8e7d17329208a",
+        "6ad7c576821bea662a533954",
+        "6db55228422a75bb45d3797c",
+        "f0baa3be6a02f36c51b90a56",
+        "c45a4ae96b6d2546540f2594",
+        "2d9a551d8090c4fa6ca1b577",
+        "142a400f1f4fa0e0dd7695f3"
       ]
     }
   ],
