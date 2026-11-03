@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T12:02:31.395912Z",
+  "generated_at": "2026-11-03T14:02:32.034654Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-03T20:00+08:00",
+    "slot": "2026-11-03T22:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-03T12:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41632325718"
+    "requested_slot": "2026-11-03T14:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41649734701"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-03T18:00+08:00",
+  "latest_window_id": "2026-11-03T20:00+08:00",
   "today": "2026-11-03",
-  "last_success_at": "2026-11-03T12:02:31.395912Z",
+  "last_success_at": "2026-11-03T14:02:32.034654Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-03T12:02:31.395912Z",
-      "last_success_at": "2026-11-03T12:02:31.395912Z",
+      "checked_at": "2026-11-03T14:02:32.034654Z",
+      "last_success_at": "2026-11-03T14:02:32.034654Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-03T12:02:31.395912Z",
-      "last_success_at": "2026-11-03T12:02:31.395912Z",
+      "checked_at": "2026-11-03T14:02:32.034654Z",
+      "last_success_at": "2026-11-03T14:02:32.034654Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-03T12:02:31.395912Z",
-      "last_success_at": "2026-11-03T12:02:31.395912Z",
+      "checked_at": "2026-11-03T14:02:32.034654Z",
+      "last_success_at": "2026-11-03T14:02:32.034654Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-03T12:02:31.395912Z",
-      "last_success_at": "2026-11-03T12:02:31.395912Z",
+      "checked_at": "2026-11-03T14:02:32.034654Z",
+      "last_success_at": "2026-11-03T14:02:32.034654Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-03T12:02:31.395912Z",
-      "last_success_at": "2026-11-03T12:02:31.395912Z",
+      "checked_at": "2026-11-03T14:02:32.034654Z",
+      "last_success_at": "2026-11-03T14:02:32.034654Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-03T12:02:31.395912Z",
-      "last_success_at": "2026-11-03T12:02:31.395912Z",
+      "checked_at": "2026-11-03T14:02:32.034654Z",
+      "last_success_at": "2026-11-03T14:02:32.034654Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,114 @@
     }
   ],
   "articles": [
+    {
+      "id": "68147982cb0bda762e313bde",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cwy8lm1m59mvo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Europe on alert after supermarket freezers hit by cyber-attacks in 10 countries",
+      "url": "https://www.bbc.co.uk/news/articles/cwy8lm1m59mvo?at_campaign=rss&at_medium=RSS",
+      "summary": "Supermarkets have reported problems from Estonia and Sweden to Portugal and Italy and many retainers have been forced to discard food.",
+      "author": "",
+      "published_at": "2026-11-03T13:55:47Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T20:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9d06510b0fc6996bd3fd0d5d",
+      "identities": [
+        "cnbc-world:108509759"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Russia confirms new Ukraine peace talks as Melania Trump prepares to host ceasefire meeting",
+      "url": "https://www.cnbc.com/2026/11/03/russia-ukraine-peace-talks-abu-dhabi-trump-putin-xi.html",
+      "summary": "Russia confirmed Ukraine peace talks in Abu Dhabi next week and signaled a possible Trump-Putin-Xi summit, raising questions over Kyiv's role in negotiations.",
+      "author": "",
+      "published_at": "2026-11-03T13:22:25Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9755b8695096761bcbe0a682",
+      "identities": [
+        "guardian-world:https://www.theguardian.com/environment/2026/nov/03/brazil-first-global-roadmap-phasing-out-fossil-fuels"
+      ],
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "Brazil publishes first global ‘roadmap’ for phasing out fossil fuels",
+      "url": "https://www.theguardian.com/environment/2026/nov/03/brazil-first-global-roadmap-phasing-out-fossil-fuels",
+      "summary": "",
+      "author": "Fiona Harvey Environment editor",
+      "published_at": "2026-11-03T13:00:07Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T20:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "365f9d38100380385555068e",
+      "identities": [
+        "cnbc-world:108508713"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Germany's car industry faces fresh cuts as Schaeffler axes 3,460 jobs and eyes defense",
+      "url": "https://www.cnbc.com/2026/11/03/schaeffler-job-cuts-europe.html",
+      "summary": "Schaeffler will shutter five plants across Europe as it looks to compete with China on cost and pivot into defense and robotics.",
+      "author": "",
+      "published_at": "2026-11-03T12:50:20Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T20:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "3dc9ae4eb9358239c13e6fa5",
+      "identities": [
+        "cnbc-world:108509046"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Supermarket fridges hit with cyberattacks across Europe — here's what's happening",
+      "url": "https://www.cnbc.com/2026/11/03/supermarket-fridges-hack-cyberattack-europe.html",
+      "summary": "European supermarkets have become the center of another cyberattack, with hackers remotely heating fridges and spoiling food.",
+      "author": "",
+      "published_at": "2026-11-03T12:46:58Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T20:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "218c1d4bc21f7b0b1be65da5",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cxg5jln586pno#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "US urges Venezuela to release remaining political prisoners",
+      "url": "https://www.bbc.co.uk/news/articles/cxg5jln586pno?at_campaign=rss&at_medium=RSS",
+      "summary": "The US secretary of state also discusses laying the groundwork for 'free, fair, and credible elections'.",
+      "author": "",
+      "published_at": "2026-11-03T12:09:20Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T20:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
     {
       "id": "eccaac2139b05337815a6afd",
       "identities": [
@@ -217,8 +325,26 @@
       "published_at": "2026-11-03T11:54:28Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "7cb22007b2465e66347ff0d8",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cmqlnx7z1549o#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Indian tourist killed after two helicopters collide near Everest base camp",
+      "url": "https://www.bbc.co.uk/news/articles/cmqlnx7z1549o?at_campaign=rss&at_medium=RSS",
+      "summary": "The two aircraft crashed just metres from the ground after trying to land at the same spot.",
+      "author": "",
+      "published_at": "2026-11-03T11:51:08Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T18:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -236,7 +362,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -254,7 +380,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -272,7 +398,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -290,7 +416,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -308,7 +434,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -325,8 +451,8 @@
       "published_at": "2026-11-03T11:00:01Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -344,7 +470,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -362,7 +488,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -380,7 +506,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -398,7 +524,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -416,13 +542,14 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
       "id": "8384e0ce750693d6e2a8482f",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cm9wz01dx8xro#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cm9wz01dx8xro#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cm9wz01dx8xro#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -433,8 +560,8 @@
       "published_at": "2026-11-03T10:02:48Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -451,8 +578,8 @@
       "published_at": "2026-11-03T10:00:00Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -469,8 +596,8 @@
       "published_at": "2026-11-03T10:00:00Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -487,8 +614,8 @@
       "published_at": "2026-11-03T10:00:00Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -505,8 +632,8 @@
       "published_at": "2026-11-03T10:00:00Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -523,8 +650,8 @@
       "published_at": "2026-11-03T10:00:00Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -534,15 +661,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Oil prices climb after U.S. strikes Iran's Qeshm Island",
+      "title": "U.S. crude oil falls below $95 per barrel as market hopes for diplomatic resolution to Iran war",
       "url": "https://www.cnbc.com/2026/11/03/oil-prices-climb-after-us-reportedly-strikes-irans-qeshm-island.html",
       "summary": "The rebound in oil prices come a day after the U.S. and Iranian presidents signalled they are open to a diplomatic solution to Iran war.",
       "author": "",
       "published_at": "2026-11-03T09:58:37Z",
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -552,15 +679,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Apple shares slide after weak margin outlook; Palantir slumps 8% after earnings",
+      "title": "Apple shares slide after weak margin outlook; Palantir slumps 6% after earnings",
       "url": "https://www.cnbc.com/2026/11/03/apple-palantir-stock-earnings.html",
       "summary": "The iPhone-maker and software giant fell after earnings failed to impress investors.",
       "author": "",
       "published_at": "2026-11-03T09:48:33Z",
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -578,7 +705,25 @@
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "b8c8ace14f7900f385e85fa3",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/03/nx-s1-6026459/connect250-creates-a-time-capsule-of-life-in-america"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Connect250 creates a time capsule of life in America",
+      "url": "https://www.npr.org/2026/11/03/nx-s1-6026459/connect250-creates-a-time-capsule-of-life-in-america",
+      "summary": "We hear some of the results of StoryCorps teaming up with Morning Edition to connect listeners across America for a series of conversations about the country on the 250th anniversary of its founding.",
+      "author": "Dan Collison",
+      "published_at": "2026-11-03T09:44:42Z",
+      "first_seen_at": "2026-11-03T14:02:32.034654Z",
+      "window_id": "2026-11-03T16:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -595,8 +740,8 @@
       "published_at": "2026-11-03T09:42:29Z",
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -614,7 +759,7 @@
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -631,8 +776,8 @@
       "published_at": "2026-11-03T09:35:47Z",
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -649,8 +794,8 @@
       "published_at": "2026-11-03T09:09:18Z",
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -668,7 +813,7 @@
       "first_seen_at": "2026-11-03T08:41:25.926602Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -704,7 +849,7 @@
       "first_seen_at": "2026-11-03T08:41:25.926602Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -728,7 +873,8 @@
     {
       "id": "a393ac170307e48c86ab59d9",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/sport/football/articles/c6y0e79yjg44o#0"
+        "bbc-world:https://www.bbc.co.uk/sport/football/articles/c6y0e79yjg44o#0",
+        "bbc-world:https://www.bbc.co.uk/sport/football/articles/c6y0e79yjg44o#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -740,7 +886,7 @@
       "first_seen_at": "2026-11-03T08:02:31.547592Z",
       "window_id": "2026-11-03T14:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -776,7 +922,7 @@
       "first_seen_at": "2026-11-03T08:02:31.547592Z",
       "window_id": "2026-11-03T14:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -830,7 +976,7 @@
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -884,7 +1030,7 @@
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
     },
     {
@@ -975,7 +1121,7 @@
       "first_seen_at": "2026-11-03T06:02:33.059899Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -993,7 +1139,7 @@
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1119,7 +1265,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1173,7 +1319,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1191,7 +1337,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1210,7 +1356,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1498,8 +1644,8 @@
       "published_at": "2026-11-02T20:00:27Z",
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1523,19 +1669,20 @@
     {
       "id": "7d5d302f2b8bf11db3dd81b6",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cjy56dndlyz0o#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cjy56dndlyz0o#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cjy56dndlyz0o#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "Russian bombing kills 29 people at Ukraine aid centre, Kyiv says",
+      "title": "Russian bombing kills 31 people at Ukraine aid centre, Kyiv says",
       "url": "https://www.bbc.co.uk/news/articles/cjy56dndlyz0o?at_campaign=rss&at_medium=RSS",
-      "summary": "Officials say at least nine 3,000kg aerial bombs hit a southern Ukrainian village in what the president called an \"utterly horrific\" attack.",
+      "summary": "Officials say at least nine 3,000kg aerial bombs hit a southern Ukrainian village in what the president calls an \"utterly horrific\" attack.",
       "author": "",
       "published_at": "2026-11-02T19:37:10Z",
       "first_seen_at": "2026-11-02T19:51:47.056751Z",
       "window_id": "2026-11-03T02:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1552,8 +1699,8 @@
       "published_at": "2026-11-02T19:33:10Z",
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1829,7 +1976,7 @@
       "first_seen_at": "2026-11-02T16:02:34.224042Z",
       "window_id": "2026-11-02T20:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -1847,7 +1994,7 @@
       "first_seen_at": "2026-11-02T14:02:37.641010Z",
       "window_id": "2026-11-02T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -2136,7 +2283,7 @@
       "first_seen_at": "2026-11-02T12:02:47.619428Z",
       "window_id": "2026-11-02T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -2517,7 +2664,7 @@
       "first_seen_at": "2026-11-02T08:27:46.892678Z",
       "window_id": "2026-11-02T16:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -3313,8 +3460,8 @@
       "published_at": "2026-11-01T19:50:39Z",
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-03T12:02:31.395912Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "publication"
     },
     {
@@ -4625,169 +4772,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-11-01T02:41:19.322449Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "515d954b3ad2cef0bf77fb44",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/10/31/nx-s1-6024423/criminal-probe-alaska-senate-candidate"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Justice Department seeks to isolate Alaska ballots amid criminal probe over Senate candidate",
-      "url": "https://www.npr.org/2026/10/31/nx-s1-6024423/criminal-probe-alaska-senate-candidate",
-      "summary": "The latest developments come amid allegations, first reported by The New York Times, that Democrats recruited a spoiler candidate in the toss-up U.S. Senate race.",
-      "author": "The Associated Press",
-      "published_at": "2026-10-31T13:50:58Z",
-      "first_seen_at": "2026-10-31T14:02:35.495170Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-01T10:02:30.193046Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "423cb67ae3d8269723224696",
-      "identities": [
-        "cnbc-world:108491317"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Qatari mediators held talks in Tehran aimed at restarting direct U.S.-Iran negotiations, source says",
-      "url": "https://www.cnbc.com/2026/10/31/qatar-iran-us-talks-mediation.html",
-      "summary": "Axios reported that Qatari mediators held more than 12 hours of talks in Tehran on Friday to reach a deal to avoid a resumption of American-led attacks on Iran.",
-      "author": "",
-      "published_at": "2026-10-31T13:47:03Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-01T18:02:30.920878Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "aedebff0004fca515933f037",
-      "identities": [
-        "cnbc-world:108482132"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Crypto industry pours more than $200 million into 2026 midterms to pressure Congress on favorable rules",
-      "url": "https://www.cnbc.com/2026/10/31/crypto-industry-spends-more-than-200-million-to-sway-the-midterms.html",
-      "summary": "Interest groups tied to cryptocurrency are spending millions to tilt the midterm elections. They had mixed success in 2024",
-      "author": "",
-      "published_at": "2026-10-31T13:04:29Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T02:02:29.810792Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "3584a0e813f09644ecf5c3d5",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261027de66374"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "アメリカ政治を揺るがす“キリスト教ナショナリズム”",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261027de66374",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-31T12:58:55Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-01T00:02:31.678424Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "4cd7a4cf6190268603a09593",
-      "identities": [
-        "cnbc-world:108486996"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "How to start an art collection on any budget",
-      "url": "https://www.cnbc.com/2026/10/31/how-to-invest-in-art-collecting.html",
-      "summary": "A guide to beginning an art collection, including how to research artists, what to buy, and where to connect, from galleries to fairs to auction houses.",
-      "author": "",
-      "published_at": "2026-10-31T12:58:43Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "dd3ff0caec96bf05a311baad",
-      "identities": [
-        "cnbc-world:108469236"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Trump promised to slash energy costs — but gasoline, diesel and jet fuel all soared instead",
-      "url": "https://www.cnbc.com/2026/10/31/trump-gas-diesel-price-midterm-election.html",
-      "summary": "President Donald Trump promised voters who were angry about inflation that he would slash gasoline prices below $2 a gallon in his first year in office.",
-      "author": "",
-      "published_at": "2026-10-31T12:49:58Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-01T12:02:34.674568Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "df9773080bf06467a6b328fd",
-      "identities": [
-        "cnbc-world:108487709"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Binance’s $6.3 billion hack raises questions about crypto wallet safety",
-      "url": "https://www.cnbc.com/2026/10/31/binance-hack-crypto-wallet-safety.html",
-      "summary": "Two high-profile security incidents this week, including the largest crypto theft in history, have raised custody and safety concerns.",
-      "author": "",
-      "published_at": "2026-10-31T12:47:08Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T00:02:31.659707Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "ad252bfbb7335d05f6fe265b",
-      "identities": [
-        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261031de69024"
-      ],
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "GMO 子会社がシステムぜい弱性を2年前に指摘 来週2日に会見へ",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261031de69024",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-10-31T12:04:26Z",
-      "first_seen_at": "2026-10-31T13:56:13.233963Z",
-      "window_id": "2026-10-31T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-10-31T22:52:55.752143Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-10-31T20:00+08:00",
-      "start": "2026-10-31T12:00:00Z",
-      "end": "2026-10-31T14:00:00Z",
-      "date": "2026-10-31",
-      "article_ids": [
-        "515d954b3ad2cef0bf77fb44",
-        "423cb67ae3d8269723224696",
-        "aedebff0004fca515933f037",
-        "3584a0e813f09644ecf5c3d5",
-        "4cd7a4cf6190268603a09593",
-        "dd3ff0caec96bf05a311baad",
-        "df9773080bf06467a6b328fd",
-        "ad252bfbb7335d05f6fe265b"
-      ]
-    },
     {
       "id": "2026-10-31T22:00+08:00",
       "start": "2026-10-31T14:00:00Z",
@@ -5277,6 +5264,7 @@
         "fdf3e59e118525adebf6b31f",
         "758486ebc972da1d09e68645",
         "d611e729696281f471f05dbc",
+        "b8c8ace14f7900f385e85fa3",
         "125602c8fd594cb523a40f03",
         "d60581044a28f84da7a7d998",
         "e377b980c2ba7c3c5cfe7225",
@@ -5293,6 +5281,7 @@
       "date": "2026-11-03",
       "article_ids": [
         "eccaac2139b05337815a6afd",
+        "7cb22007b2465e66347ff0d8",
         "8e03937ac238e24218b4a0b6",
         "664697c85676a4b5e37ce99f",
         "9fae15ebc33337213b36b3f5",
@@ -5310,6 +5299,20 @@
         "731fa1adf60a89239620b332",
         "6ae7aca3d03a74ccae9e3088",
         "5ac35a9caf1b81f777fddda6"
+      ]
+    },
+    {
+      "id": "2026-11-03T20:00+08:00",
+      "start": "2026-11-03T12:00:00Z",
+      "end": "2026-11-03T14:00:00Z",
+      "date": "2026-11-03",
+      "article_ids": [
+        "68147982cb0bda762e313bde",
+        "9d06510b0fc6996bd3fd0d5d",
+        "9755b8695096761bcbe0a682",
+        "365f9d38100380385555068e",
+        "3dc9ae4eb9358239c13e6fa5",
+        "218c1d4bc21f7b0b1be65da5"
       ]
     }
   ],
