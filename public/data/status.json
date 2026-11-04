@@ -1,14 +1,12 @@
 {
-  "generated_at": "2026-11-04T02:02:31.701867Z",
+  "generated_at": "2026-11-04T03:25:04.640157Z",
   "status": "ok",
-  "last_success_at": "2026-11-04T02:02:31.701867Z",
+  "last_success_at": "2026-11-04T03:25:04.640157Z",
   "trigger": {
-    "event": "workflow_dispatch",
-    "schedule": "",
+    "event": "schedule",
+    "schedule": "0 */2 * * *",
     "slot": "2026-11-04T10:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-04T02:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41758048231"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41766943046"
   },
   "sources": [
     {
@@ -24,7 +22,7 @@
     {
       "id": "npr-news",
       "status": "ok",
-      "received": 10
+      "received": 9
     },
     {
       "id": "cnbc-world",
