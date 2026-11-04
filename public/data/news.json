@@ -1,19 +1,17 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T10:33:17.984864Z",
+  "generated_at": "2026-11-04T11:38:33.524995Z",
   "trigger": {
-    "event": "workflow_dispatch",
-    "schedule": "",
+    "event": "schedule",
+    "schedule": "0 */2 * * *",
     "slot": "2026-11-04T18:00+08:00",
-    "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-04T10:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41814809414"
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41822512239"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
   "latest_window_id": "2026-11-04T16:00+08:00",
   "today": "2026-11-04",
-  "last_success_at": "2026-11-04T10:33:17.984864Z",
+  "last_success_at": "2026-11-04T11:38:33.524995Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +35,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T10:33:17.984864Z",
-      "last_success_at": "2026-11-04T10:33:17.984864Z",
+      "checked_at": "2026-11-04T11:38:33.524995Z",
+      "last_success_at": "2026-11-04T11:38:33.524995Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +65,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T10:33:17.984864Z",
-      "last_success_at": "2026-11-04T10:33:17.984864Z",
+      "checked_at": "2026-11-04T11:38:33.524995Z",
+      "last_success_at": "2026-11-04T11:38:33.524995Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +94,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T10:33:17.984864Z",
-      "last_success_at": "2026-11-04T10:33:17.984864Z",
+      "checked_at": "2026-11-04T11:38:33.524995Z",
+      "last_success_at": "2026-11-04T11:38:33.524995Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +123,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T10:33:17.984864Z",
-      "last_success_at": "2026-11-04T10:33:17.984864Z",
+      "checked_at": "2026-11-04T11:38:33.524995Z",
+      "last_success_at": "2026-11-04T11:38:33.524995Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +152,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T10:33:17.984864Z",
-      "last_success_at": "2026-11-04T10:33:17.984864Z",
+      "checked_at": "2026-11-04T11:38:33.524995Z",
+      "last_success_at": "2026-11-04T11:38:33.524995Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +190,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-04T10:33:17.984864Z",
-      "last_success_at": "2026-11-04T10:33:17.984864Z",
+      "checked_at": "2026-11-04T11:38:33.524995Z",
+      "last_success_at": "2026-11-04T11:38:33.524995Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +201,81 @@
     }
   ],
   "articles": [
+    {
+      "id": "442bf56cb8b65a1e55aa7509",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "「私は写れないから…」 逃げても逃げても続く恐怖",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69461",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T11:35:13Z",
+      "first_seen_at": "2026-11-04T11:38:33.524995Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "7d20f6334ba7f3c1e2fb18a7",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "A blue wave sends futures into the green",
+      "url": "https://www.cnbc.com/2026/11/04/a-blue-wave-sends-futures-into-the-green.html",
+      "summary": "Democrats flip the Senate after winning the House in rebuke to President Trump",
+      "author": "",
+      "published_at": "2026-11-04T11:29:29Z",
+      "first_seen_at": "2026-11-04T11:38:33.524995Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "459a390a593d2dc4ec13272d",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Rwanda's army team removed from Africa league after US sanctions, NBA says",
+      "url": "https://www.bbc.co.uk/news/articles/c699zdx9knmpo?at_campaign=rss&at_medium=RSS",
+      "summary": "The US imposed sanctions on Rwanda's army over its role in the conflict in DR Congo.",
+      "author": "",
+      "published_at": "2026-11-04T11:12:15Z",
+      "first_seen_at": "2026-11-04T11:38:33.524995Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "06b543422100a4e0c7ab7c87",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Review: The Legend of Zelda: Ocarina of Time remake is superb, streamlined and safe",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6026597/review-legend-of-zelda-ocarina-of-time-remake-switch-2",
+      "summary": "Nintendo's new Ocarina of Time remake enshrines its place in the gaming canon for generations to come. But despite its stupendous production values, the game left me feeling oddly bereft.",
+      "author": "James Perkins Mastromarino",
+      "published_at": "2026-11-04T11:00:00Z",
+      "first_seen_at": "2026-11-04T11:38:33.524995Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "772b82ef68d79dd4aede332e",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms",
+      "url": "https://www.cnbc.com/2026/11/04/euro-zone-cpi-inflation-october-ecb-rate-hike.html",
+      "summary": "It was driven by energy inflation, which surged above 20% in October.",
+      "author": "",
+      "published_at": "2026-11-04T10:47:30Z",
+      "first_seen_at": "2026-11-04T11:38:33.524995Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
+      "time_basis": "publication"
+    },
     {
       "id": "763d31f34905cbb984fc67f8",
       "source_id": "cnbc-world",
@@ -215,7 +288,7 @@
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -229,8 +302,8 @@
       "published_at": "2026-11-04T10:20:19Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "community_collection"
     },
     {
@@ -244,8 +317,8 @@
       "published_at": "2026-11-04T10:12:27Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "community_collection"
     },
     {
@@ -259,8 +332,8 @@
       "published_at": "2026-11-04T10:12:11Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "community_collection"
     },
     {
@@ -274,8 +347,8 @@
       "published_at": "2026-11-04T10:11:19Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "community_collection"
     },
     {
@@ -289,8 +362,8 @@
       "published_at": "2026-11-04T10:07:37Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "community_collection"
     },
     {
@@ -304,8 +377,8 @@
       "published_at": "2026-11-04T10:06:16Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "community_collection"
     },
     {
@@ -364,8 +437,8 @@
       "published_at": "2026-11-04T10:00:00Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -379,8 +452,8 @@
       "published_at": "2026-11-04T10:00:00Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -409,15 +482,15 @@
       "published_at": "2026-11-04T09:48:40Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T16:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
       "id": "e8c026bb30db3696ccb516ec",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Novo shares jump 6% as Wegovy pill sales impress, drugmaker hikes outlook",
+      "title": "Novo shares jump as Wegovy pill sales impress, drugmaker hikes outlook",
       "url": "https://www.cnbc.com/2026/11/04/novo-q3-earnings-wegovy-sales.html",
       "summary": "Novo posted quarterly earnings ahead of expectations early Wednesday as sales of its Wegovy pill blew past estimates",
       "author": "",
@@ -425,7 +498,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -439,8 +512,8 @@
       "published_at": "2026-11-04T07:43:43Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -455,7 +528,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -469,8 +542,8 @@
       "published_at": "2026-11-04T07:28:02Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -484,8 +557,8 @@
       "published_at": "2026-11-04T07:23:28Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -500,7 +573,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -515,7 +588,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -590,7 +663,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -604,8 +677,8 @@
       "published_at": "2026-11-04T06:50:28Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -620,7 +693,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -634,8 +707,8 @@
       "published_at": "2026-11-04T06:02:31Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -664,8 +737,8 @@
       "published_at": "2026-11-04T05:53:30Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -694,8 +767,8 @@
       "published_at": "2026-11-04T05:43:42Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -710,7 +783,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -754,8 +827,8 @@
       "published_at": "2026-11-04T05:14:01Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -950,7 +1023,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -994,8 +1067,8 @@
       "published_at": "2026-11-04T03:46:10Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1085,7 +1158,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T10:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1099,8 +1172,8 @@
       "published_at": "2026-11-04T03:24:03Z",
       "first_seen_at": "2026-11-04T04:02:36.442859Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1189,8 +1262,8 @@
       "published_at": "2026-11-04T02:11:40Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1212,7 +1285,7 @@
       "id": "04e8887dc5f635fe61e8330c",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "No more rice grains in Kellogg's Rice Krispies due to changing weather",
+      "title": "Uproar over missing 'pop' as Rice Krispies changes its recipe",
       "url": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_campaign=rss&at_medium=RSS",
       "summary": "The new recipes mean cereal packaging will now include a 'contains wheat gluten' warning.",
       "author": "",
@@ -1220,7 +1293,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1310,7 +1383,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1325,7 +1398,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1340,7 +1413,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1355,7 +1428,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1565,7 +1638,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1594,8 +1667,8 @@
       "published_at": "2026-11-03T21:40:42Z",
       "first_seen_at": "2026-11-03T22:02:37.951856Z",
       "window_id": "2026-11-04T04:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1789,8 +1862,8 @@
       "published_at": "2026-11-03T18:40:37Z",
       "first_seen_at": "2026-11-03T20:02:51.261655Z",
       "window_id": "2026-11-04T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -1910,7 +1983,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -2075,7 +2148,7 @@
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -2090,7 +2163,7 @@
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -2165,7 +2238,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -2555,7 +2628,7 @@
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -2915,7 +2988,7 @@
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -3065,7 +3138,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -3335,7 +3408,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -4835,7 +4908,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
+      "rank_observed_at": "2026-11-04T11:38:33.524995Z",
       "time_basis": "publication"
     },
     {
@@ -5197,51 +5270,6 @@
       "feed_rank": 8,
       "rank_observed_at": "2026-11-01T22:02:32.904746Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "1e9db39cd492c8998accde31",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "米中間選挙 世論調査の信頼揺らぎ“予測市場”が拡大 課題は",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69104",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-01T11:10:08Z",
-      "first_seen_at": "2026-11-01T12:02:34.674568Z",
-      "window_id": "2026-11-01T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-01T22:02:32.904746Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "82216d9d94dbe6748a1fb631",
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "How Gen Z Republicans running for Congress are thinking about the future of the party",
-      "url": "https://www.npr.org/2026/11/01/nx-s1-5946869/midterm-elections-gen-z-republicans",
-      "summary": "On the eve of what may prove to be a tough election for the GOP, young conservatives vying to be part of the first class of Gen Z Republicans in Congress want a role shaping the party's next chapter.",
-      "author": "Elena Moore",
-      "published_at": "2026-11-01T11:00:00Z",
-      "first_seen_at": "2026-11-01T12:02:34.674568Z",
-      "window_id": "2026-11-01T18:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T04:02:34.952012Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "9be0740062d4b9695c0eda38",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "日本ハム 伊藤大海投手がポスティングで大リーグ挑戦へ",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69197",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-01T10:42:02Z",
-      "first_seen_at": "2026-11-01T10:50:12.340417Z",
-      "window_id": "2026-11-01T18:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-01T22:02:32.904746Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
@@ -5255,10 +5283,7 @@
         "4a14316bad4a7f22d1fdd53c",
         "32f2a8809ec331ca23523441",
         "cd759e34bdc673834de793d0",
-        "040e59951ab08b73db809d1c",
-        "1e9db39cd492c8998accde31",
-        "82216d9d94dbe6748a1fb631",
-        "9be0740062d4b9695c0eda38"
+        "040e59951ab08b73db809d1c"
       ]
     },
     {
