@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T12:02:35.912702Z",
+  "generated_at": "2026-11-04T14:02:35.508255Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-04T20:00+08:00",
+    "slot": "2026-11-04T22:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-04T12:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41825784659"
+    "requested_slot": "2026-11-04T14:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41843566203"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-04T18:00+08:00",
+  "latest_window_id": "2026-11-04T20:00+08:00",
   "today": "2026-11-04",
-  "last_success_at": "2026-11-04T12:02:35.912702Z",
+  "last_success_at": "2026-11-04T14:02:35.508255Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T12:02:35.912702Z",
-      "last_success_at": "2026-11-04T12:02:35.912702Z",
+      "checked_at": "2026-11-04T14:02:35.508255Z",
+      "last_success_at": "2026-11-04T14:02:35.508255Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T12:02:35.912702Z",
-      "last_success_at": "2026-11-04T12:02:35.912702Z",
+      "checked_at": "2026-11-04T14:02:35.508255Z",
+      "last_success_at": "2026-11-04T14:02:35.508255Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T12:02:35.912702Z",
-      "last_success_at": "2026-11-04T12:02:35.912702Z",
+      "checked_at": "2026-11-04T14:02:35.508255Z",
+      "last_success_at": "2026-11-04T14:02:35.508255Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T12:02:35.912702Z",
-      "last_success_at": "2026-11-04T12:02:35.912702Z",
+      "checked_at": "2026-11-04T14:02:35.508255Z",
+      "last_success_at": "2026-11-04T14:02:35.508255Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T12:02:35.912702Z",
-      "last_success_at": "2026-11-04T12:02:35.912702Z",
+      "checked_at": "2026-11-04T14:02:35.508255Z",
+      "last_success_at": "2026-11-04T14:02:35.508255Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-04T12:02:35.912702Z",
-      "last_success_at": "2026-11-04T12:02:35.912702Z",
+      "checked_at": "2026-11-04T14:02:35.508255Z",
+      "last_success_at": "2026-11-04T14:02:35.508255Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,240 @@
     }
   ],
   "articles": [
+    {
+      "id": "2988776906cb9d4fa209bf3a",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70500"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "名古屋城復元計画のBF対策とりまとめ 来年度以降に延期",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70500",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T13:27:22Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "6376ff7acaad5a5418726b1b",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70538"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "埼玉県警 巡査部長が警察から拳銃奪い自分に発砲",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70538",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T13:18:14Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "1e659d2a83aa8f7557fe2d5f",
+      "identities": [
+        "cnbc-world:108478777"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "China expands overseas mining stakes, tightening grip on critical minerals",
+      "url": "https://www.cnbc.com/2026/11/04/china-critical-minerals-rare-earths-trump-japan-export-control-.html",
+      "summary": "Beijing is building a system of agencies and state-backed vehicles to own more of the metals it depends on, while keeping its edge in processing skills.",
+      "author": "",
+      "published_at": "2026-11-04T13:00:01Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "654afda8b4a4f1bcec361117",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70597"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "維新 不正アクセス受け 個人情報の消去義務化で法改正など提言",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70597",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T12:57:56Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "4bd93a6ceff2b357eb53914e",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70407"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "「斎宮跡」で「平城宮跡」と似た建物を発見 三重",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70407",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T12:56:02Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "8fdb8c1dc76ae9d78847168f",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70380"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "平城京跡で奈良時代の道路の交差点出土 奈良",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70380",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T12:54:17Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "94ce4579139300f18e5080eb",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70625"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "ソラシドエア 49万人分のメールアドレス流出 宮崎",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70625",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T12:42:15Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "4c3137fd1a96d35430254506",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/04/nx-s1-6028664/world-reacts-midterm-elections"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "World reacts to Democrats' midterm elections victory",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028664/world-reacts-midterm-elections",
+      "summary": "From Kyiv to Moscow, and Tehran to Tel Aviv, all eyes were on the Democrats big win on Wednesday, as foreign powers weigh up how a flipped Congress will impact international relations.",
+      "author": "Kate Bartlett",
+      "published_at": "2026-11-04T12:34:35Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "b0342a1f6c37f0731663500f",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/cvglw7x239pwo#1"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Sharp objects found in Halloween sweets in three European nations",
+      "url": "https://www.bbc.co.uk/news/articles/cvglw7x239pwo?at_campaign=rss&at_medium=RSS",
+      "summary": "Dozens of cases are reported in Austria, Germany and Hungary, including a nine-year-old girl hurting her tongue while eating chocolate containing a pin.",
+      "author": "",
+      "published_at": "2026-11-04T12:34:33Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "03379f08c249b44458d3e583",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70569"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "参政 都議補選で子宮けいがんめぐる発言のボードメンバー 交代",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70569",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T12:20:03Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "5a1f21ff24cc6fe8202f6e72",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/04/g-s1-151745/up-first-newsletter-midterms-democrats-congress-control"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrats seize full control of Congress. And, which candidates made history last night",
+      "url": "https://www.npr.org/2026/11/04/g-s1-151745/up-first-newsletter-midterms-democrats-congress-control",
+      "summary": "Democrats have won the House and the Senate, taking full control of Congress for the first time since 2023. And history was made in several states. Here's what happened last night.",
+      "author": "Brittney Melton",
+      "published_at": "2026-11-04T12:18:39Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "54a5ae99df2751220b0e01ae",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261104de70394"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "高市首相“北海道新聞記者の解放へ努力”鈴木宗男氏と会談",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70394",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T12:17:59Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "c4a6bf73d4f88e43d9ca2b0c",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/04/nx-s1-6022216/midterms-democrats-trump-republicans-analysis"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "6 takeaways from Democrats' big wave on election night",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6022216/midterms-democrats-trump-republicans-analysis",
+      "summary": "The magnitude of the Democrats' outcome was always a possibility, but the depth and breadth of their victories were jaw-dropping.",
+      "author": "Domenico Montanaro",
+      "published_at": "2026-11-04T12:02:38Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
     {
       "id": "442bf56cb8b65a1e55aa7509",
       "identities": [
@@ -217,8 +451,8 @@
       "published_at": "2026-11-04T11:35:13Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "community_collection"
     },
     {
@@ -235,8 +469,8 @@
       "published_at": "2026-11-04T11:29:29Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -253,8 +487,8 @@
       "published_at": "2026-11-04T11:12:15Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -271,8 +505,8 @@
       "published_at": "2026-11-04T11:00:00Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -290,7 +524,7 @@
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -308,7 +542,7 @@
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -328,6 +562,24 @@
       "feed_rank": 5,
       "rank_observed_at": "2026-11-04T12:02:35.912702Z",
       "time_basis": "community_collection"
+    },
+    {
+      "id": "3e5c0289d6b0f638e80d5163",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/c6073l9y15xxo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Trump takes aim at Republicans but says Democrats did a 'good job'",
+      "url": "https://www.bbc.co.uk/news/articles/c6073l9y15xxo?at_campaign=rss&at_medium=RSS",
+      "summary": "He wrote on Truth Social that Republicans would have won \"in a landslide\" if his name had been on the ballot.",
+      "author": "",
+      "published_at": "2026-11-04T10:15:42Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
     },
     {
       "id": "7f3417b7577b0fe351bcb0c2",
@@ -438,6 +690,24 @@
       "time_basis": "community_collection"
     },
     {
+      "id": "49815217e63b2b5a722125af",
+      "identities": [
+        "bbc-world:https://www.bbc.co.uk/news/articles/c893z55pxrewo#0"
+      ],
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Left-wing Democrat Abdul El-Sayed wins in Michigan to become first Muslim senator",
+      "url": "https://www.bbc.co.uk/news/articles/c893z55pxrewo?at_campaign=rss&at_medium=RSS",
+      "summary": "El-Sayed bested Republican Mike Rogers to become the first Muslim senator in US history.",
+      "author": "",
+      "published_at": "2026-11-04T10:03:19Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "62779877bb9642271c2d16d9",
       "identities": [
         "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261103de70061"
@@ -487,8 +757,8 @@
       "published_at": "2026-11-04T10:00:00Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -498,15 +768,15 @@
       ],
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "These 9 candidates for governor just made history",
+      "title": "These 9 candidates for governor made history in the 2026 election",
       "url": "https://www.npr.org/2026/11/04/nx-s1-6028546/governor-candidates-history-election-2026",
       "summary": "Voters on Tuesday elected the nation's first Black woman governor and the nation's first Native American woman governor.",
       "author": "Maham Javaid",
       "published_at": "2026-11-04T10:00:00Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -528,6 +798,24 @@
       "time_basis": "community_collection"
     },
     {
+      "id": "2b4583299b19ecb90f66dd5e",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/04/nx-s1-6022528/democrats-midterm-election-results-senate-house-congress"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "'We have great leverage here': DNC chair Ken Martin on Democrats' midterms sweep",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6022528/democrats-midterm-election-results-senate-house-congress",
+      "summary": "Democrats flipped Senate seats in Republican strongholds and won control of Congress. DNC chair Ken Martin explains why he believes voters gave his party a mandate and what comes next.",
+      "author": "Steve Inskeep",
+      "published_at": "2026-11-04T09:50:37Z",
+      "first_seen_at": "2026-11-04T14:02:35.508255Z",
+      "window_id": "2026-11-04T16:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "87406df4ecef6d20690ab89f",
       "identities": [
         "npr-news:https://www.npr.org/2026/11/04/g-s1-151138/midterms-ford-nevada-governor-lombardo"
@@ -541,8 +829,8 @@
       "published_at": "2026-11-04T09:48:40Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T16:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -577,8 +865,8 @@
       "published_at": "2026-11-04T07:43:43Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -595,8 +883,8 @@
       "published_at": "2026-11-04T07:39:38Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -613,8 +901,8 @@
       "published_at": "2026-11-04T07:28:02Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -631,8 +919,8 @@
       "published_at": "2026-11-04T07:23:28Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -649,8 +937,8 @@
       "published_at": "2026-11-04T07:17:08Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -667,8 +955,8 @@
       "published_at": "2026-11-04T07:12:21Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -758,7 +1046,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -793,8 +1081,8 @@
       "published_at": "2026-11-04T06:45:36Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -847,8 +1135,8 @@
       "published_at": "2026-11-04T05:53:30Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -901,8 +1189,8 @@
       "published_at": "2026-11-04T05:39:36Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -912,15 +1200,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "AI stocks slide as Texas governor result raises data center risks",
+      "title": "AI data center stocks and Musk's SpaceX decline as Texas governor result raises risks of a slowdown",
       "url": "https://www.cnbc.com/2026/11/04/ai-stocks-texas-governor-data-centers.html",
-      "summary": "Tech stocks were down in overnight trading, and grew more severe as the night wore on, as the likelihood of a blue wave grew.",
+      "summary": "AI fortunes were mixed as premarket trading opened on Wednesday.",
       "author": "",
       "published_at": "2026-11-04T05:36:19Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1190,7 +1478,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1363,15 +1651,15 @@
       ],
       "source_id": "cnbc-world",
       "publisher": "CNBC",
-      "title": "Treasury yields fall as investors crowd into bonds for safety amid election stock sell-off",
+      "title": "Treasury yields fall after Democrats win House and Senate majorities",
       "url": "https://www.cnbc.com/2026/11/03/treasury-yields-fall-as-democrats-win-big-in-us-midterm-elections.html",
-      "summary": "Treasury yields fell on Tuesday night, as investors sought shelter from a sell-off in equity futures sparked by big victories from Democrats in the U.S. midterm elections.",
+      "summary": "Treasury yields moved lower on Wednesday as investors weighed big wins from Democrats in the U.S. midterm elections.",
       "author": "",
       "published_at": "2026-11-04T03:24:03Z",
       "first_seen_at": "2026-11-04T04:02:36.442859Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1478,8 +1766,8 @@
       "published_at": "2026-11-04T02:11:40Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1515,7 +1803,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1623,7 +1911,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1641,13 +1929,14 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
       "id": "b746f2b8e08388827c6b57a6",
       "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo#0"
+        "bbc-world:https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo#0",
+        "bbc-world:https://www.bbc.co.uk/news/articles/cr4g1x6l77xyo#1"
       ],
       "source_id": "bbc-world",
       "publisher": "BBC",
@@ -1658,8 +1947,8 @@
       "published_at": "2026-11-04T00:03:19Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1669,15 +1958,15 @@
       ],
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Poundland supplier 'will lose millions' if retailer collapses",
+      "title": "Poundland owner in crunch talks as retailer's collapse looms",
       "url": "https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_campaign=rss&at_medium=RSS",
-      "summary": "Highcrest Retail Brands says it will lose millions if Poundland collapses, while other suppliers have said they would go under.",
+      "summary": "Gordon Brothers will meet Jonathan Reynolds on Wednesday as the investment firm faces scrutiny over Poundland.",
       "author": "",
       "published_at": "2026-11-04T00:03:17Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -1929,7 +2218,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -2346,7 +2635,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -2546,7 +2835,7 @@
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -2565,7 +2854,7 @@
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -2657,7 +2946,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -3128,7 +3417,7 @@
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -3563,7 +3852,7 @@
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -3745,7 +4034,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -4072,7 +4361,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -5888,7 +6177,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T12:02:35.912702Z",
+      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
       "time_basis": "publication"
     },
     {
@@ -6182,55 +6471,9 @@
       "feed_rank": 8,
       "rank_observed_at": "2026-11-02T08:27:46.892678Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "45a7b69aeef4996081071432",
-      "identities": [
-        "npr-news:https://www.npr.org/2026/11/01/nx-s1-5945628/living-with-high-prices-in-virginias-1st-congressional-district"
-      ],
-      "source_id": "npr-news",
-      "publisher": "NPR",
-      "title": "Living with high prices in Virginia's 1st Congressional District",
-      "url": "https://www.npr.org/2026/11/01/nx-s1-5945628/living-with-high-prices-in-virginias-1st-congressional-district",
-      "summary": "High prices are straining budgets for both a small business owner and a single mom in a rural part of Va.'s 1st Congressional district. They explain how they're handling the economic stress of these times.",
-      "author": "Ayesha Rascoe",
-      "published_at": "2026-11-01T13:00:00Z",
-      "first_seen_at": "2026-11-01T14:02:35.747698Z",
-      "window_id": "2026-11-01T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T06:02:27.671037Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "c9bef596c770f010e303e511",
-      "identities": [
-        "cnbc-world:108486861"
-      ],
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "The midterm election could reshape the muni bond market. Here’s what investors need to know",
-      "url": "https://www.cnbc.com/2026/11/01/election-municipal-bonds.html",
-      "summary": "The 2026 election could affect municipal bonds through state tax measures, new bond supply and the makeup of Congress.",
-      "author": "",
-      "published_at": "2026-11-01T12:30:48Z",
-      "first_seen_at": "2026-11-01T14:02:35.747698Z",
-      "window_id": "2026-11-01T20:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-02T02:02:29.810792Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-01T20:00+08:00",
-      "start": "2026-11-01T12:00:00Z",
-      "end": "2026-11-01T14:00:00Z",
-      "date": "2026-11-01",
-      "article_ids": [
-        "45a7b69aeef4996081071432",
-        "c9bef596c770f010e303e511"
-      ]
-    },
     {
       "id": "2026-11-01T22:00+08:00",
       "start": "2026-11-01T14:00:00Z",
@@ -6813,6 +7056,7 @@
       "date": "2026-11-04",
       "article_ids": [
         "f29fdf647ccd17564ef7aacf",
+        "2b4583299b19ecb90f66dd5e",
         "87406df4ecef6d20690ab89f"
       ]
     },
@@ -6829,16 +7073,39 @@
         "772b82ef68d79dd4aede332e",
         "763d31f34905cbb984fc67f8",
         "d392c68b3989fb6780233873",
+        "3e5c0289d6b0f638e80d5163",
         "7f3417b7577b0fe351bcb0c2",
         "36814955c4e6d70e582578aa",
         "8998d068c4747b9194d6065f",
         "bb349d0c3ca9474a7eb41541",
         "6a29a274478f48351ad719a3",
         "c1ec89777961e90b22282ab7",
+        "49815217e63b2b5a722125af",
         "62779877bb9642271c2d16d9",
         "8da8ec32a6c44bb55e2ed416",
         "7e89f66c0afec5270ef13c22",
         "5f30591e029a26dc6ac4f17a"
+      ]
+    },
+    {
+      "id": "2026-11-04T20:00+08:00",
+      "start": "2026-11-04T12:00:00Z",
+      "end": "2026-11-04T14:00:00Z",
+      "date": "2026-11-04",
+      "article_ids": [
+        "2988776906cb9d4fa209bf3a",
+        "6376ff7acaad5a5418726b1b",
+        "1e659d2a83aa8f7557fe2d5f",
+        "654afda8b4a4f1bcec361117",
+        "4bd93a6ceff2b357eb53914e",
+        "8fdb8c1dc76ae9d78847168f",
+        "94ce4579139300f18e5080eb",
+        "4c3137fd1a96d35430254506",
+        "b0342a1f6c37f0731663500f",
+        "03379f08c249b44458d3e583",
+        "5a1f21ff24cc6fe8202f6e72",
+        "54a5ae99df2751220b0e01ae",
+        "c4a6bf73d4f88e43d9ca2b0c"
       ]
     }
   ],
