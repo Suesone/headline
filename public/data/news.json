@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T04:02:36.442859Z",
+  "generated_at": "2026-11-04T06:02:48.287708Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-04T12:00+08:00",
+    "slot": "2026-11-04T14:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-04T04:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41770705929"
+    "requested_slot": "2026-11-04T06:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41782892792"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-04T10:00+08:00",
+  "latest_window_id": "2026-11-04T12:00+08:00",
   "today": "2026-11-04",
-  "last_success_at": "2026-11-04T04:02:36.442859Z",
+  "last_success_at": "2026-11-04T06:02:48.287708Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T04:02:36.442859Z",
-      "last_success_at": "2026-11-04T04:02:36.442859Z",
+      "checked_at": "2026-11-04T06:02:48.287708Z",
+      "last_success_at": "2026-11-04T06:02:48.287708Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T04:02:36.442859Z",
-      "last_success_at": "2026-11-04T04:02:36.442859Z",
+      "checked_at": "2026-11-04T06:02:48.287708Z",
+      "last_success_at": "2026-11-04T06:02:48.287708Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,12 +96,12 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T04:02:36.442859Z",
-      "last_success_at": "2026-11-04T04:02:36.442859Z",
-      "received": 9,
+      "checked_at": "2026-11-04T06:02:48.287708Z",
+      "last_success_at": "2026-11-04T06:02:48.287708Z",
+      "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
-      "message": "已读取 9 条；跳过 0 条无效记录",
+      "message": "已读取 10 条；跳过 0 条无效记录",
       "active_feed_url": "https://feeds.npr.org/1001/rss.xml",
       "using_fallback": false
     },
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T04:02:36.442859Z",
-      "last_success_at": "2026-11-04T04:02:36.442859Z",
+      "checked_at": "2026-11-04T06:02:48.287708Z",
+      "last_success_at": "2026-11-04T06:02:48.287708Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T04:02:36.442859Z",
-      "last_success_at": "2026-11-04T04:02:36.442859Z",
+      "checked_at": "2026-11-04T06:02:48.287708Z",
+      "last_success_at": "2026-11-04T06:02:48.287708Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-04T04:02:36.442859Z",
-      "last_success_at": "2026-11-04T04:02:36.442859Z",
+      "checked_at": "2026-11-04T06:02:48.287708Z",
+      "last_success_at": "2026-11-04T06:02:48.287708Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,321 @@
     }
   ],
   "articles": [
+    {
+      "id": "1c22e8d0bce4b0513a35d9f8",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Troy Jackson wins Maine Senate race over Susan Collins, in major coup for Democrats",
+      "url": "https://www.npr.org/2026/11/04/g-s1-148952/maine-senate-race-susan-collins-troy-jackson",
+      "summary": "The result is a crucial victory for Democrats in their push to retake the Senate majority, flipping a seat that Collins has held for nearly 30 years.",
+      "author": "Elena Moore",
+      "published_at": "2026-11-04T06:02:31Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T14:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "d6f73efa2d635261191dfd10",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "劇場版「虎に翼」監督がロケ地名古屋でトークショー",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261103de69955",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T06:00:26Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T14:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "387aaa7049585fba5e58d748",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "U.S. midterm elections in pictures: Democrats' sweeping victories deliver rebuke to Trump",
+      "url": "https://www.cnbc.com/2026/11/04/us-midterm-elections-in-pictures-democrats-republicans-trump.html",
+      "summary": "Democrats scored sweeping victories in the U.S. midterm elections on Wednesday, flipping key Republican-held seats in Congress.",
+      "author": "",
+      "published_at": "2026-11-04T05:53:30Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "fe775d935d9973c5cc788e6d",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "米中間選挙 赤色テキサス州が紫色に？",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261015de59677",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T05:44:46Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a9e9ce0d63cc052a09ab1069",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Here's how some key demographic groups voted in the midterms",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028080/voter-polls-midterms-demographics",
+      "summary": "These charts show how various demographic groups voted in the midterm election. The data comes from a poll of tens of thousands of voters, conducted by the firm SSRS for a number of news outlets.",
+      "author": "Julianna Conley",
+      "published_at": "2026-11-04T05:43:42Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "534e608dcb4528d5820dbb15",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "AI stocks slide as Texas governor result raises data center risks",
+      "url": "https://www.cnbc.com/2026/11/04/ai-stocks-texas-governor-data-centers.html",
+      "summary": "Tech stocks were down in overnight trading, and grew more severe as the night wore on, as the likelihood of a blue wave grew.",
+      "author": "",
+      "published_at": "2026-11-04T05:36:19Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "2480fd8cccf56dd507bad7e8",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "トランプ大統領「結果を受け入れるつもり」",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70306",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T05:30:10Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "f4c20cd7e86fe6fa3f3ab4e6",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Former Arkansas governor says Democrats' gains are 'more significant than ever anticipated'",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028116/former-arkansas-governor-says-democrats-gains-are-more-significant-than-ever-anticipated",
+      "summary": "NPR's Scott Detrow speaks with former Arkansas Gov. Asa Hutchinson about Democratic victories in states typically considered Republican strongholds.",
+      "author": "Scott Detrow",
+      "published_at": "2026-11-04T05:14:01Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "272b37dac7b66e6a301561b6",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "三菱UFJ 新ネット銀行ではキャッシュカード“発行しない”方針",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70251",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T05:13:46Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "0e0c4ead13ad76346634a941",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrats win the Senate, setting up divided government for remainder of Trump's term",
+      "url": "https://www.npr.org/2026/11/03/g-s1-149526/2026-midterms-congress-balance-of-power",
+      "summary": "Democrats won by making inroads in several states where they have long struggled, boosted by a challenging political environment for the GOP dominated by voter frustration over high prices.",
+      "author": "Claudia Grisales",
+      "published_at": "2026-11-04T04:44:55Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "69867a143d6c37953499b36d",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrat Josh Turek wins the Senate seat in Iowa",
+      "url": "https://www.npr.org/2026/11/03/g-s1-148956/iowa-senate-race-josh-turek",
+      "summary": "Democrat Josh Turek has defeated Sen. Ashley Hinson in Iowa, according to a race call by the Associated Press.",
+      "author": "Natalie Krebs",
+      "published_at": "2026-11-04T04:37:55Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "60325b2feabe2c23235fe8d6",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "On a historic night for democratic socialists, Mamdani says midterms show power of working-class voters",
+      "url": "https://www.npr.org/2026/11/03/nx-s1-6028105/on-a-historic-night-for-democratic-socialists-mamdani-says-midterms-show-power-of-working-class-voters",
+      "summary": "The New York mayor tells NPR's Juana Summers that newly elected democratic socialists need to seize this moment and show voters what politics can deliver.",
+      "author": "Juana Summers",
+      "published_at": "2026-11-04T04:37:44Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "c2af5b0670e3251e79cae615",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "デニーズ 旧アプリ利用者の個人情報漏えいか 不正アクセス受け",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70279",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T04:30:07Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "449e0b2460d24ad4bb9a2ff1",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "文化功労者 アニメーション映画監督りんたろうさんなど顕彰式",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70288",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T04:29:57Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "103ebcff630e04dc9d5cb541",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrat David Crowley will be Wisconsin's first Black governor",
+      "url": "https://www.npr.org/2026/11/03/g-s1-151235/democrat-david-crowley-will-be-wisconsins-first-black-governor",
+      "summary": "Democrat David Crowley defeated Republican Congressman Tom Tiffany in a campaign that focused on \"lowering costs for working families\" and bringing more jobs to Wisconsin.",
+      "author": "Maayan Silver",
+      "published_at": "2026-11-04T04:28:24Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "ad44c35fa3c33cd2b0252259",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Adam Hamilton becomes the first Democratic senator from Kansas in nearly a century",
+      "url": "https://www.npr.org/2026/11/03/g-s1-151587/kansas-senate-race-hamilton-marshall",
+      "summary": "Democrat Adam Hamilton beat Sen. Roger Marshall, a fierce loyalist to President Trump, per a race call by the Associated Press.",
+      "author": "Grace Hills",
+      "published_at": "2026-11-04T04:25:28Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "1bad9e8b711f5b11e5eb2751",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Missourians reject ballot proposal that would have re-imposed an abortion ban",
+      "url": "https://www.npr.org/2026/11/03/g-s1-151063/missouri-abortion-ban-transgender",
+      "summary": "Missouri voters defeated a measure that would have banned abortion just two years after voters legalized abortion in another vote. Voters in Missouri legalized abortion two years ago but this time the abortion ban was coupled with a ban on transgender treatment for minors. Opponents said it was misleading.",
+      "author": "Jason Rosenbaum",
+      "published_at": "2026-11-04T04:25:05Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "94d2afad0d317e186e9eb66f",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democrat Gina Hinojosa wins race for Texas governor, ousting Greg Abbott",
+      "url": "https://www.npr.org/2026/11/03/g-s1-150844/gina-hinojosa-texas-governor-abbott",
+      "summary": "Hinojosa, an Austin state representative, is set to be the state's first Democratic governor since 1995 and will be the state's first Latina governor.",
+      "author": "Blaise Gainey",
+      "published_at": "2026-11-04T04:19:12Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "4161547b27fe9f74be639726",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "トランプ大統領「私には究極の権限“拒否権”がある」",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70148",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T04:17:45Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "9f486931d784417ed75ec6bd",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "民主党の「ブルーウェーブが起きつつある」 ポリティコ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70271",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T04:14:12Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "423c2302668b91a13b5a1355",
+      "source_id": "guardian-world",
+      "publisher": "The Guardian",
+      "title": "ANC faces anger over poor services as South Africans vote in local elections",
+      "url": "https://www.theguardian.com/world/2026/nov/04/anc-south-africa-local-elections-water-outages-power-cuts",
+      "summary": "",
+      "author": "Rachel Savage in Johannesburg",
+      "published_at": "2026-11-04T04:00:23Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T12:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
     {
       "id": "f27564de39b979ac24c5704d",
       "source_id": "nhk-hatena",
@@ -214,8 +529,8 @@
       "published_at": "2026-11-04T03:50:52Z",
       "first_seen_at": "2026-11-04T04:02:36.442859Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "community_collection"
     },
     {
@@ -234,6 +549,21 @@
       "time_basis": "publication"
     },
     {
+      "id": "5e9bce5069ea2781976e16a1",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Weapon or wine bottle? China disputes reports of artillery shell in Papua New Guinea",
+      "url": "https://www.bbc.co.uk/news/articles/cm0qkxzv3j99o?at_campaign=rss&at_medium=RSS",
+      "summary": "Papua New Guinea police had earlier dismissed speculation that the 32kg object was \"merely a dummy\".",
+      "author": "",
+      "published_at": "2026-11-04T03:46:10Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T10:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "5565d45cff521d1e950f2b6b",
       "source_id": "nhk-hatena",
       "publisher": "NHK",
@@ -244,8 +574,8 @@
       "published_at": "2026-11-04T03:45:34Z",
       "first_seen_at": "2026-11-04T04:02:36.442859Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "community_collection"
     },
     {
@@ -309,6 +639,21 @@
       "time_basis": "community_collection"
     },
     {
+      "id": "ead67a2a1fa32da651a63e30",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "South Carolina elects Democratic senator for first time in almost three decades",
+      "url": "https://www.bbc.co.uk/news/articles/cjy56z440nl9o?at_campaign=rss&at_medium=RSS",
+      "summary": "Annie Andrews is projected to defeat Darline Graham, who was handpicked by President Trump to take her brother's seat after his death.",
+      "author": "",
+      "published_at": "2026-11-04T03:24:34Z",
+      "first_seen_at": "2026-11-04T06:02:48.287708Z",
+      "window_id": "2026-11-04T10:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "2655f14f60f9df80a55cfcf8",
       "source_id": "cnbc-world",
       "publisher": "CNBC",
@@ -319,8 +664,8 @@
       "published_at": "2026-11-04T03:24:03Z",
       "first_seen_at": "2026-11-04T04:02:36.442859Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -349,8 +694,8 @@
       "published_at": "2026-11-04T02:38:07Z",
       "first_seen_at": "2026-11-04T04:02:36.442859Z",
       "window_id": "2026-11-04T10:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -425,7 +770,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -470,7 +815,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -515,7 +860,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -530,7 +875,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -545,7 +890,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -589,8 +934,8 @@
       "published_at": "2026-11-03T23:37:07Z",
       "first_seen_at": "2026-11-04T00:02:32.716145Z",
       "window_id": "2026-11-04T06:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -755,7 +1100,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -769,8 +1114,8 @@
       "published_at": "2026-11-03T21:53:38Z",
       "first_seen_at": "2026-11-03T22:02:37.951856Z",
       "window_id": "2026-11-04T04:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -784,8 +1129,8 @@
       "published_at": "2026-11-03T21:40:42Z",
       "first_seen_at": "2026-11-03T22:02:37.951856Z",
       "window_id": "2026-11-04T04:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -814,8 +1159,8 @@
       "published_at": "2026-11-03T21:20:14Z",
       "first_seen_at": "2026-11-03T22:02:37.951856Z",
       "window_id": "2026-11-04T04:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -979,8 +1324,8 @@
       "published_at": "2026-11-03T18:40:37Z",
       "first_seen_at": "2026-11-03T20:02:51.261655Z",
       "window_id": "2026-11-04T02:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-03T22:02:37.951856Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1009,8 +1354,8 @@
       "published_at": "2026-11-03T18:29:24Z",
       "first_seen_at": "2026-11-04T03:25:04.640157Z",
       "window_id": "2026-11-04T02:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1024,8 +1369,8 @@
       "published_at": "2026-11-03T17:56:03Z",
       "first_seen_at": "2026-11-03T18:02:51.739826Z",
       "window_id": "2026-11-04T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1084,8 +1429,8 @@
       "published_at": "2026-11-03T16:57:41Z",
       "first_seen_at": "2026-11-03T18:02:51.739826Z",
       "window_id": "2026-11-04T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1100,7 +1445,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1114,8 +1459,8 @@
       "published_at": "2026-11-03T16:19:29Z",
       "first_seen_at": "2026-11-03T18:02:51.739826Z",
       "window_id": "2026-11-04T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1265,7 +1610,7 @@
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1280,7 +1625,7 @@
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1294,8 +1639,8 @@
       "published_at": "2026-11-03T14:56:46Z",
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1324,8 +1669,8 @@
       "published_at": "2026-11-03T13:55:47Z",
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1355,7 +1700,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1415,7 +1760,7 @@
       "first_seen_at": "2026-11-03T12:02:31.395912Z",
       "window_id": "2026-11-03T18:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -1745,7 +2090,7 @@
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -2105,7 +2450,7 @@
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -2255,7 +2600,7 @@
       "first_seen_at": "2026-11-03T01:53:37.659777Z",
       "window_id": "2026-11-03T08:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -2525,7 +2870,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -2629,8 +2974,8 @@
       "published_at": "2026-11-02T17:57:35Z",
       "first_seen_at": "2026-11-02T18:02:34.846192Z",
       "window_id": "2026-11-03T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -4025,7 +4370,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T04:02:36.442859Z",
+      "rank_observed_at": "2026-11-04T06:02:48.287708Z",
       "time_basis": "publication"
     },
     {
@@ -4582,88 +4927,15 @@
       "feed_rank": 9,
       "rank_observed_at": "2026-11-01T17:16:11.079033Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "b6dae6825e03dc701039fa23",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Companies promised AI gains — here's how the payoff showed up in earnings",
-      "url": "https://www.cnbc.com/2026/11/01/ai-investments-company-earnings.html",
-      "summary": "Santander, Novartis and other companies say AI is beginning to boost revenue, cut costs or improve profitability as investors seek returns.",
-      "author": "",
-      "published_at": "2026-11-01T06:00:01Z",
-      "first_seen_at": "2026-11-01T10:02:30.193046Z",
-      "window_id": "2026-11-01T14:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T04:02:39.827634Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "23a4f1d93b8be72b912aee0f",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "“クラスター弾の評価試験実施”と伝える 北朝鮮メディア",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69103",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-01T05:26:45Z",
-      "first_seen_at": "2026-11-01T06:02:28.965863Z",
-      "window_id": "2026-11-01T12:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-01T10:50:12.340417Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "a035a43953d45ae982a9db68",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "暗号資産大手バイナンスへのサイバー攻撃 FBI“北朝鮮が関与”",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69102",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-01T05:23:53Z",
-      "first_seen_at": "2026-11-01T06:02:28.965863Z",
-      "window_id": "2026-11-01T12:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-01T10:50:12.340417Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "6fc23d135e8c318a7a9133ed",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "G20外相会合閉幕 茂木外相“サプライチェーンでもG20協調を”",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69059",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-01T05:01:18Z",
-      "first_seen_at": "2026-11-01T06:02:28.965863Z",
-      "window_id": "2026-11-01T12:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-01T10:50:12.340417Z",
-      "time_basis": "community_collection"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-01T12:00+08:00",
-      "start": "2026-11-01T04:00:00Z",
-      "end": "2026-11-01T06:00:00Z",
-      "date": "2026-11-01",
-      "article_ids": [
-        "23a4f1d93b8be72b912aee0f",
-        "a035a43953d45ae982a9db68",
-        "6fc23d135e8c318a7a9133ed"
-      ]
-    },
     {
       "id": "2026-11-01T14:00+08:00",
       "start": "2026-11-01T06:00:00Z",
       "end": "2026-11-01T08:00:00Z",
       "date": "2026-11-01",
-      "article_ids": [
-        "b6dae6825e03dc701039fa23"
-      ]
+      "article_ids": []
     },
     {
       "id": "2026-11-01T16:00+08:00",
@@ -5215,11 +5487,13 @@
       "article_ids": [
         "f27564de39b979ac24c5704d",
         "1a425e99f6be9cfd48e37347",
+        "5e9bce5069ea2781976e16a1",
         "5565d45cff521d1e950f2b6b",
         "333a4e4ae62d08ab88a06455",
         "7e90272cc748d33157911a04",
         "a9305d16ce33db730773ccac",
         "cf9ab27468b486a181577e2d",
+        "ead67a2a1fa32da651a63e30",
         "2655f14f60f9df80a55cfcf8",
         "de5aef9f8fbb9f428ac458f3",
         "b899fd13370f7fa49ec8e89f",
@@ -5227,6 +5501,33 @@
         "5522c39654f87d1b113f584a",
         "a2bbf7e6af51677fa23979bf",
         "068a8cbb9dab1d758eb246bf"
+      ]
+    },
+    {
+      "id": "2026-11-04T12:00+08:00",
+      "start": "2026-11-04T04:00:00Z",
+      "end": "2026-11-04T06:00:00Z",
+      "date": "2026-11-04",
+      "article_ids": [
+        "387aaa7049585fba5e58d748",
+        "fe775d935d9973c5cc788e6d",
+        "a9e9ce0d63cc052a09ab1069",
+        "534e608dcb4528d5820dbb15",
+        "2480fd8cccf56dd507bad7e8",
+        "f4c20cd7e86fe6fa3f3ab4e6",
+        "272b37dac7b66e6a301561b6",
+        "0e0c4ead13ad76346634a941",
+        "69867a143d6c37953499b36d",
+        "60325b2feabe2c23235fe8d6",
+        "c2af5b0670e3251e79cae615",
+        "449e0b2460d24ad4bb9a2ff1",
+        "103ebcff630e04dc9d5cb541",
+        "ad44c35fa3c33cd2b0252259",
+        "1bad9e8b711f5b11e5eb2751",
+        "94d2afad0d317e186e9eb66f",
+        "4161547b27fe9f74be639726",
+        "9f486931d784417ed75ec6bd",
+        "423c2302668b91a13b5a1355"
       ]
     }
   ],
