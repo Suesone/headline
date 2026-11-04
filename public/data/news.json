@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T14:02:35.508255Z",
+  "generated_at": "2026-11-04T16:18:08.229702Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-04T22:00+08:00",
+    "slot": "2026-11-05T00:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-04T14:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41843566203"
+    "requested_slot": "2026-11-04T16:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41863551396"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-04T20:00+08:00",
-  "today": "2026-11-04",
-  "last_success_at": "2026-11-04T14:02:35.508255Z",
+  "latest_window_id": "2026-11-04T22:00+08:00",
+  "today": "2026-11-05",
+  "last_success_at": "2026-11-04T16:18:08.229702Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T14:02:35.508255Z",
-      "last_success_at": "2026-11-04T14:02:35.508255Z",
+      "checked_at": "2026-11-04T16:18:08.229702Z",
+      "last_success_at": "2026-11-04T16:18:08.229702Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T14:02:35.508255Z",
-      "last_success_at": "2026-11-04T14:02:35.508255Z",
+      "checked_at": "2026-11-04T16:18:08.229702Z",
+      "last_success_at": "2026-11-04T16:18:08.229702Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T14:02:35.508255Z",
-      "last_success_at": "2026-11-04T14:02:35.508255Z",
+      "checked_at": "2026-11-04T16:18:08.229702Z",
+      "last_success_at": "2026-11-04T16:18:08.229702Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T14:02:35.508255Z",
-      "last_success_at": "2026-11-04T14:02:35.508255Z",
+      "checked_at": "2026-11-04T16:18:08.229702Z",
+      "last_success_at": "2026-11-04T16:18:08.229702Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T14:02:35.508255Z",
-      "last_success_at": "2026-11-04T14:02:35.508255Z",
+      "checked_at": "2026-11-04T16:18:08.229702Z",
+      "last_success_at": "2026-11-04T16:18:08.229702Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-04T14:02:35.508255Z",
-      "last_success_at": "2026-11-04T14:02:35.508255Z",
+      "checked_at": "2026-11-04T16:18:08.229702Z",
+      "last_success_at": "2026-11-04T16:18:08.229702Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,156 @@
     }
   ],
   "articles": [
+    {
+      "id": "4c69ea8e07ff3e0be3f8e4fe",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Elon Musk's millions fail to deliver Texas for the Republicans in fierce midterms",
+      "url": "https://www.bbc.co.uk/news/articles/cv8ez3p3ge5ko?at_campaign=rss&at_medium=RSS",
+      "summary": "The billionaire's political action committee (Pac) contributed $47m (£35m) to Ken Paxton's campaign.",
+      "author": "",
+      "published_at": "2026-11-04T15:51:37Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "007d5adc21b6e2ac74a349e0",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Trump hammers Fox News, blaming network for GOP losses as ratings slide",
+      "url": "https://www.cnbc.com/2026/11/04/trump-fox-news-gop-midterm-losses.html",
+      "summary": "Trump is a frequent critic of media companies, especially broadcasters that he views as being biased against him.",
+      "author": "",
+      "published_at": "2026-11-04T15:45:51Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "a1a60150d501b9038de70774",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Israel's president to begin consultations with parties after election deadlock",
+      "url": "https://www.bbc.co.uk/news/articles/c6z98z5z91ppo?at_campaign=rss&at_medium=RSS",
+      "summary": "Herzog warned politicians that \"not every commitment and promise can be fulfilled\" if they want to avoid another election.",
+      "author": "",
+      "published_at": "2026-11-04T15:45:45Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "31cd04371465e181f88c3b47",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Analysis: The Democrats have one chance to extract concessions from Trump. Markets will hate it",
+      "url": "https://www.cnbc.com/2026/11/04/democrats-trump-debt-ceiling-fight.html",
+      "summary": "The next debt-ceiling confrontation could reverse Washington's traditional political roles, raising the possibility of spending concessions, market volatility and a damaging default.",
+      "author": "",
+      "published_at": "2026-11-04T15:05:19Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9eef48b25f1760b83601fe91",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Zelensky gives Melania Trump Ukraine's highest award after Oleshky ceasefire",
+      "url": "https://www.bbc.co.uk/news/articles/cm87zvpzwq0no?at_campaign=rss&at_medium=RSS",
+      "summary": "Russian and Ukrainian delegations will meet the US first lady at the White House on Thursday.",
+      "author": "",
+      "published_at": "2026-11-04T15:01:10Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "75e1f15f9c6b4423f810c805",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "“共和党大敗”受け 専門家「日本は民主側とも太いパイプを」",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70619",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T14:26:20Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a34e8ce12793ff2360a14b80",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "有罪判決の競泳 本多灯選手に1年9か月の資格停止処分",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70644",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T14:24:41Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "a8bdc6e0cc4326674168dffa",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Blood banks targeted in latest European fridge cyberattacks",
+      "url": "https://www.cnbc.com/2026/11/04/blood-bank-fridges-cyberattacks.html",
+      "summary": "French blood banks were hit by cybersecurity attacks on Monday, with hackers cranking up temperatures in refrigerators storing blood.",
+      "author": "",
+      "published_at": "2026-11-04T14:15:32Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T22:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "f90865189cb25d656e209215",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Abdul El-Sayed welcomes Trump's plan to cut Israel aid, calls for end to arms sales",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028702/abdul-el-sayed-michigan-senate-israel-aid",
+      "summary": "Michigan's first Muslim senator-elect, Abdul El-Sayed, discusses his historic victory, an unlikely agreement with Trump on Israel military aid and the political divisions that remain.",
+      "author": "Steve Inskeep",
+      "published_at": "2026-11-04T13:38:09Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9c64c1ab6e46bad376209edc",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "'This is a disaster': Angry Republicans blame Trump for midterms defeat",
+      "url": "https://www.bbc.co.uk/news/articles/c6x29rr8djy3o?at_campaign=rss&at_medium=RSS",
+      "summary": "Some Republicans tell the BBC the president's focus on his legacy and indifference to voter concerns cost them.",
+      "author": "",
+      "published_at": "2026-11-04T13:33:30Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
     {
       "id": "2988776906cb9d4fa209bf3a",
       "source_id": "nhk-hatena",
@@ -214,9 +364,24 @@
       "published_at": "2026-11-04T13:27:22Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
+    },
+    {
+      "id": "c4a4ac4c965b6d56b73d139d",
+      "source_id": "bbc-world",
+      "publisher": "BBC",
+      "title": "Nadal set to join Real Madrid board of directors",
+      "url": "https://www.bbc.co.uk/sport/articles/cmy56zekeneqo?at_campaign=rss&at_medium=RSS",
+      "summary": "Tennis great Rafael Nadal is set to join the board of Spanish football giants Real Madrid.",
+      "author": "",
+      "published_at": "2026-11-04T13:21:01Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T20:00+08:00",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
     },
     {
       "id": "6376ff7acaad5a5418726b1b",
@@ -229,8 +394,8 @@
       "published_at": "2026-11-04T13:18:14Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
@@ -259,8 +424,8 @@
       "published_at": "2026-11-04T12:57:56Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
@@ -274,8 +439,8 @@
       "published_at": "2026-11-04T12:56:02Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
@@ -289,8 +454,8 @@
       "published_at": "2026-11-04T12:54:17Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
@@ -304,23 +469,23 @@
       "published_at": "2026-11-04T12:42:15Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
       "id": "4c3137fd1a96d35430254506",
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "World reacts to Democrats' midterm elections victory",
+      "title": "The world is reacting to the Democrats' sweeping midterm elections victory",
       "url": "https://www.npr.org/2026/11/04/nx-s1-6028664/world-reacts-midterm-elections",
-      "summary": "From Kyiv to Moscow, and Tehran to Tel Aviv, all eyes were on the Democrats big win on Wednesday, as foreign powers weigh up how a flipped Congress will impact international relations.",
+      "summary": "From Kyiv to Moscow, and Tehran to Tel Aviv, all eyes were on the Democrats big win as foreign powers weigh how a flipped Congress will affect international relations.",
       "author": "Kate Bartlett",
       "published_at": "2026-11-04T12:34:35Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -334,8 +499,8 @@
       "published_at": "2026-11-04T12:34:33Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -349,8 +514,8 @@
       "published_at": "2026-11-04T12:20:03Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
@@ -364,8 +529,8 @@
       "published_at": "2026-11-04T12:18:39Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -379,8 +544,8 @@
       "published_at": "2026-11-04T12:17:59Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "community_collection"
     },
     {
@@ -394,8 +559,23 @@
       "published_at": "2026-11-04T12:02:38Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "e164754cbb43ae110a0bda21",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Votes are still being counted to see who will represent Mississippi in the Senate",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028618/votes-are-still-being-counted-in-mississippi-u-s-senate-race",
+      "summary": "Votes are still being counted to determine who will represent Mississippi in the U.S. Senate. Democrat Scott Colom was only a handful of votes ahead of Republican Cindy Hyde-Smith early Wednesday.",
+      "author": "Stephen Fowler",
+      "published_at": "2026-11-04T11:57:23Z",
+      "first_seen_at": "2026-11-04T16:18:08.229702Z",
+      "window_id": "2026-11-04T18:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -424,8 +604,8 @@
       "published_at": "2026-11-04T11:29:29Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -454,8 +634,8 @@
       "published_at": "2026-11-04T11:00:00Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -469,8 +649,8 @@
       "published_at": "2026-11-04T10:47:30Z",
       "first_seen_at": "2026-11-04T11:38:33.524995Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -619,8 +799,8 @@
       "published_at": "2026-11-04T10:03:19Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -664,23 +844,23 @@
       "published_at": "2026-11-04T10:00:00Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
       "id": "5f30591e029a26dc6ac4f17a",
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "These 9 candidates for governor made history in the 2026 election",
+      "title": "These 10 candidates for governor made history in the 2026 election",
       "url": "https://www.npr.org/2026/11/04/nx-s1-6028546/governor-candidates-history-election-2026",
       "summary": "Voters on Tuesday elected the nation's first Black woman governor and the nation's first Native American woman governor.",
       "author": "Maham Javaid",
       "published_at": "2026-11-04T10:00:00Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -709,23 +889,23 @@
       "published_at": "2026-11-04T09:50:37Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
       "id": "87406df4ecef6d20690ab89f",
       "source_id": "npr-news",
       "publisher": "NPR",
-      "title": "Nevada Attorney General Aaron Ford beats GOP incumbent for governor",
+      "title": "Nevada Attorney General Aaron Ford beats Republican incumbent for governor",
       "url": "https://www.npr.org/2026/11/04/g-s1-151138/midterms-ford-nevada-governor-lombardo",
       "summary": "Democrat Aaron Ford defeated Republican Gov. Joe Lombardo. He's set to become Nevada's first Black governor.",
       "author": "Lucia Starbuck",
       "published_at": "2026-11-04T09:48:40Z",
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -749,13 +929,13 @@
       "publisher": "CNBC",
       "title": "Gold, silver and precious metals prices jump, dollar dips as Democrats take control of Congress",
       "url": "https://www.cnbc.com/2026/11/04/gold-silver-platinum-dollar-midterms.html",
-      "summary": "Precious metals saw strong gains on Tuesday morning, as investors digested a Democratic sweep in the U.S. midterm elections.",
+      "summary": "Precious metals saw strong gains Wednesday as investors digested a Democratic sweep in the U.S. midterm elections.",
       "author": "",
       "published_at": "2026-11-04T07:43:43Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -769,8 +949,8 @@
       "published_at": "2026-11-04T07:39:38Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -814,8 +994,8 @@
       "published_at": "2026-11-04T07:17:08Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -905,7 +1085,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -934,8 +1114,8 @@
       "published_at": "2026-11-04T06:45:36Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -980,7 +1160,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1024,8 +1204,8 @@
       "published_at": "2026-11-04T05:39:36Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1039,8 +1219,8 @@
       "published_at": "2026-11-04T05:36:19Z",
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1265,7 +1445,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1527,15 +1707,15 @@
       "id": "04e8887dc5f635fe61e8330c",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Uproar over missing 'pop' as Rice Krispies changes its recipe",
+      "title": "Kellogg's admits snap, crackle and pop is quieter after uproar over Rice Krispies recipe change",
       "url": "https://www.bbc.co.uk/news/articles/cqvg0y44ym7vo?at_campaign=rss&at_medium=RSS",
-      "summary": "The new recipes mean cereal packaging will now include a 'contains wheat gluten' warning.",
+      "summary": "The cereal giant has changed the recipes for Rice Krispies and Coco Pops, sparking a backlash online.",
       "author": "",
       "published_at": "2026-11-04T01:36:06Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1624,8 +1804,8 @@
       "published_at": "2026-11-04T00:09:35Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1640,7 +1820,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1654,8 +1834,8 @@
       "published_at": "2026-11-04T00:03:19Z",
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1669,8 +1849,8 @@
       "published_at": "2026-11-04T00:03:17Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -1880,7 +2060,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -2224,8 +2404,8 @@
       "published_at": "2026-11-03T16:19:29Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -2389,8 +2569,8 @@
       "published_at": "2026-11-03T15:12:35Z",
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -2404,8 +2584,8 @@
       "published_at": "2026-11-03T15:05:01Z",
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -2480,7 +2660,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -2869,8 +3049,8 @@
       "published_at": "2026-11-03T09:45:39Z",
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -3229,8 +3409,8 @@
       "published_at": "2026-11-03T02:11:13Z",
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -3650,7 +3830,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -5150,7 +5330,7 @@
       "first_seen_at": "2026-11-01T20:02:28.440265Z",
       "window_id": "2026-11-02T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T14:02:35.508255Z",
+      "rank_observed_at": "2026-11-04T16:18:08.229702Z",
       "time_basis": "publication"
     },
     {
@@ -5347,65 +5527,9 @@
       "feed_rank": 10,
       "rank_observed_at": "2026-11-03T08:41:25.926602Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "d844d36af60d932bab432f95",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Everything changed for the oil, AI and bond trades over the past month",
-      "url": "https://www.cnbc.com/2026/11/01/oil-bond-yields-ai-market.html",
-      "summary": "The market expects oil to keep rising, but treasury yields have declined, a warning traders and investors may be more worried about an AI crash than inflation.",
-      "author": "",
-      "published_at": "2026-11-01T15:58:24Z",
-      "first_seen_at": "2026-11-01T17:16:11.079033Z",
-      "window_id": "2026-11-01T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-02T04:02:34.952012Z",
-      "time_basis": "publication"
-    },
-    {
-      "id": "115b57875310a6436e00505c",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "GMO傘下 顧客情報漏えい 9年近く外部から取得可能な状態",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261101de69281",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-01T14:46:54Z",
-      "first_seen_at": "2026-11-01T16:02:32.876108Z",
-      "window_id": "2026-11-01T22:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T02:02:29.810792Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "8361bd52cfbfc86c117e5a87",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Why AI is boosting Meta's ad business while hurting Google search",
-      "url": "https://www.cnbc.com/2026/11/01/ai-meta-ads-google-search.html",
-      "summary": "The gap between Meta's ad revenue growth and Google's search expansion was the widest it's been since 2021 in the latest quarter.",
-      "author": "",
-      "published_at": "2026-11-01T14:31:29Z",
-      "first_seen_at": "2026-11-01T20:02:28.440265Z",
-      "window_id": "2026-11-01T22:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-02T08:27:46.892678Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-01T22:00+08:00",
-      "start": "2026-11-01T14:00:00Z",
-      "end": "2026-11-01T16:00:00Z",
-      "date": "2026-11-01",
-      "article_ids": [
-        "d844d36af60d932bab432f95",
-        "115b57875310a6436e00505c",
-        "8361bd52cfbfc86c117e5a87"
-      ]
-    },
     {
       "id": "2026-11-02T00:00+08:00",
       "start": "2026-11-01T16:00:00Z",
@@ -5987,6 +6111,7 @@
       "end": "2026-11-04T12:00:00Z",
       "date": "2026-11-04",
       "article_ids": [
+        "e164754cbb43ae110a0bda21",
         "442bf56cb8b65a1e55aa7509",
         "7d20f6334ba7f3c1e2fb18a7",
         "459a390a593d2dc4ec13272d",
@@ -6014,7 +6139,10 @@
       "end": "2026-11-04T14:00:00Z",
       "date": "2026-11-04",
       "article_ids": [
+        "f90865189cb25d656e209215",
+        "9c64c1ab6e46bad376209edc",
         "2988776906cb9d4fa209bf3a",
+        "c4a4ac4c965b6d56b73d139d",
         "6376ff7acaad5a5418726b1b",
         "1e659d2a83aa8f7557fe2d5f",
         "654afda8b4a4f1bcec361117",
@@ -6028,6 +6156,22 @@
         "54a5ae99df2751220b0e01ae",
         "c4a6bf73d4f88e43d9ca2b0c"
       ]
+    },
+    {
+      "id": "2026-11-04T22:00+08:00",
+      "start": "2026-11-04T14:00:00Z",
+      "end": "2026-11-04T16:00:00Z",
+      "date": "2026-11-04",
+      "article_ids": [
+        "4c69ea8e07ff3e0be3f8e4fe",
+        "007d5adc21b6e2ac74a349e0",
+        "a1a60150d501b9038de70774",
+        "31cd04371465e181f88c3b47",
+        "9eef48b25f1760b83601fe91",
+        "75e1f15f9c6b4423f810c805",
+        "a34e8ce12793ff2360a14b80",
+        "a8bdc6e0cc4326674168dffa"
+      ]
     }
   ],
   "days": [
@@ -6039,9 +6183,6 @@
     },
     {
       "date": "2026-11-02"
-    },
-    {
-      "date": "2026-11-01"
     }
   ],
   "retention_days": 3,
