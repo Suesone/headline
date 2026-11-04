@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T20:02:42.340622Z",
+  "generated_at": "2026-11-04T22:02:36.385732Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-05T04:00+08:00",
+    "slot": "2026-11-05T06:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-04T20:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/41902678113"
+    "requested_slot": "2026-11-04T22:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/41921578025"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-05T02:00+08:00",
+  "latest_window_id": "2026-11-05T04:00+08:00",
   "today": "2026-11-05",
-  "last_success_at": "2026-11-04T20:02:42.340622Z",
+  "last_success_at": "2026-11-04T22:02:36.385732Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T20:02:42.340622Z",
-      "last_success_at": "2026-11-04T20:02:42.340622Z",
+      "checked_at": "2026-11-04T22:02:36.385732Z",
+      "last_success_at": "2026-11-04T22:02:36.385732Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T20:02:42.340622Z",
-      "last_success_at": "2026-11-04T20:02:42.340622Z",
+      "checked_at": "2026-11-04T22:02:36.385732Z",
+      "last_success_at": "2026-11-04T22:02:36.385732Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T20:02:42.340622Z",
-      "last_success_at": "2026-11-04T20:02:42.340622Z",
+      "checked_at": "2026-11-04T22:02:36.385732Z",
+      "last_success_at": "2026-11-04T22:02:36.385732Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T20:02:42.340622Z",
-      "last_success_at": "2026-11-04T20:02:42.340622Z",
+      "checked_at": "2026-11-04T22:02:36.385732Z",
+      "last_success_at": "2026-11-04T22:02:36.385732Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-04T20:02:42.340622Z",
-      "last_success_at": "2026-11-04T20:02:42.340622Z",
+      "checked_at": "2026-11-04T22:02:36.385732Z",
+      "last_success_at": "2026-11-04T22:02:36.385732Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-04T20:02:42.340622Z",
-      "last_success_at": "2026-11-04T20:02:42.340622Z",
+      "checked_at": "2026-11-04T22:02:36.385732Z",
+      "last_success_at": "2026-11-04T22:02:36.385732Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -204,10 +204,145 @@
   ],
   "articles": [
     {
+      "id": "f85d14bb68e124082c8616ec",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Where voters stand on state ballot measures, from abortion to LGBTQ rights to guns",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028833/midterms-ballot-measures-abortion-lgbtq-guns",
+      "summary": "Voters in dozens of states considered 146 statewide ballot measures this midterm cycle, on topics spanning LGBTQ rights, wealth taxes, abortion, redistricting, guns and more.",
+      "author": "Rachel Treisman",
+      "published_at": "2026-11-04T21:49:17Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "4bf6bbc00ead2a69309e21aa",
+      "source_id": "bbc-business",
+      "publisher": "BBC",
+      "title": "Pound rises to its highest level since the Brexit referendum",
+      "url": "https://www.bbc.co.uk/news/articles/c6lykq2qjn2vo?at_campaign=rss&at_medium=RSS",
+      "summary": "Pound reaches highest level against a basket of currencies since the Brexit referendum a decade ago",
+      "author": "",
+      "published_at": "2026-11-04T21:35:50Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "dee315db1d0ab9dfdb9232e8",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Elon Musk will face scrutiny from Democrats after midterms",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6029650/elon-musk-midterms-democrats-texas-congress",
+      "summary": "Democrats are likely to launch investigations into Musk's influence, including his leadership of DOGE and government contracts",
+      "author": "Katie McQue",
+      "published_at": "2026-11-04T21:11:23Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "52eef9338f6b6d7861a88537",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "みらい セキュリティー対策で勉強会 与野党議員が参加",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261104de70634",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-04T21:04:07Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "d0b6d87d777321b55e5f51d0",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Democratic leaders reflect on midterm results and what's next for the party",
+      "url": "https://www.npr.org/2026/11/04/g-s1-151868/democratic-leaders-election-results-reactions-takeaways",
+      "summary": "Democratic party leaders and political analysts spoke with Morning Edition about the results of the midterm elections, the effects of mid-decade redistricting efforts, and the next steps for the party.",
+      "author": "Ruby Siefken",
+      "published_at": "2026-11-04T20:49:59Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "43050318418fe89a562bc8ec",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "It was a big night for doctors to win seats in Congress, riding the blue wave",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6017757/democrats-republicans-doctors-acton-andrews-blue-wave",
+      "summary": "Historically, most physicians who served in the House or Senate have been Republicans. In the next Congress, physicians who are Democrats made significant gains.",
+      "author": "Selena Simmons-Duffin",
+      "published_at": "2026-11-04T20:46:26Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "eaff24ff0c766f6c69e6784b",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Navajo voters hop tractors, make extraordinary efforts to vote after widespread flooding",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6023272/navajo-voters-hop-tractors-make-extraordinary-efforts-to-vote-after-widespread-flooding",
+      "summary": "Four weeks of flooding washed out roads and sent thousands fleeing their homes on the Navajo Reservation. But many worked hard to get to polling places and voting day became part of the recovery process.",
+      "author": "Adam Burke",
+      "published_at": "2026-11-04T20:24:30Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "0ee7d29d38121630a5e45e8b",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Herbert Blomstedt, conductor of great orchestras for seven decades, dies at 99",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-5740271/herbert-blomstedt-conductor-dead",
+      "summary": "Modest in his demeanor but remarkably enduring, the American-born, Swedish conductor continually fell in love with music, leading orchestras with no-nonsense insight and integrity well into his 90s.",
+      "author": "Tom Huizenga",
+      "published_at": "2026-11-04T20:11:14Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T04:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "09cfeeb90dace29f652afbc1",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "CVS Health plans to split itself up. Here's why a breakup could make sense now",
+      "url": "https://www.cnbc.com/2026/11/04/cvs-health-pharmacy-aetna-split.html",
+      "summary": "Analysts say that after a roughly two-year turnaround the company's retail pharmacy business and other units may be strong enough to stand on their own.",
+      "author": "",
+      "published_at": "2026-11-04T19:58:41Z",
+      "first_seen_at": "2026-11-04T22:02:36.385732Z",
+      "window_id": "2026-11-05T02:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
+      "time_basis": "publication"
+    },
+    {
       "id": "cb2679abe62247b690fe7614",
       "source_id": "guardian-world",
       "publisher": "The Guardian",
-      "title": "Mother and daughter both killed in grizzly bear attack, Canadian authorities confirm",
+      "title": "Mother and daughter killed in grizzly bear attack, Canadian authorities confirm",
       "url": "https://www.theguardian.com/world/2026/nov/04/canada-bear-attack-mother-daughter-killed",
       "summary": "",
       "author": "Leyland Cecco in Toronto",
@@ -215,7 +350,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -230,7 +365,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -244,8 +379,8 @@
       "published_at": "2026-11-04T19:14:43Z",
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -259,8 +394,8 @@
       "published_at": "2026-11-04T18:37:34Z",
       "first_seen_at": "2026-11-04T18:54:15.783911Z",
       "window_id": "2026-11-05T02:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -275,7 +410,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -289,8 +424,8 @@
       "published_at": "2026-11-04T18:16:29Z",
       "first_seen_at": "2026-11-04T18:54:15.783911Z",
       "window_id": "2026-11-05T02:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -304,8 +439,8 @@
       "published_at": "2026-11-04T18:14:13Z",
       "first_seen_at": "2026-11-04T18:54:15.783911Z",
       "window_id": "2026-11-05T02:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -320,7 +455,7 @@
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -335,7 +470,7 @@
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T00:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -349,8 +484,8 @@
       "published_at": "2026-11-04T17:38:36Z",
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -365,7 +500,7 @@
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -380,7 +515,7 @@
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T00:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -394,8 +529,8 @@
       "published_at": "2026-11-04T16:30:36Z",
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -410,7 +545,7 @@
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-05T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -424,23 +559,23 @@
       "published_at": "2026-11-04T16:08:41Z",
       "first_seen_at": "2026-11-04T18:54:15.783911Z",
       "window_id": "2026-11-05T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
       "id": "4c69ea8e07ff3e0be3f8e4fe",
       "source_id": "bbc-business",
       "publisher": "BBC",
-      "title": "Elon Musk's millions fail to deliver Texas for the Republicans in fierce midterms",
+      "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms",
       "url": "https://www.bbc.co.uk/news/articles/cv8ez3p3ge5ko?at_campaign=rss&at_medium=RSS",
-      "summary": "The billionaire's political action committee (Pac) contributed $47m (£35m) to Ken Paxton's campaign.",
+      "summary": "Musk spent nearly $500m in the 2026 US midterm elections, an individual election spending record.",
       "author": "",
       "published_at": "2026-11-04T15:51:37Z",
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -454,8 +589,8 @@
       "published_at": "2026-11-04T15:45:51Z",
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -470,7 +605,7 @@
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -484,8 +619,8 @@
       "published_at": "2026-11-04T15:29:01Z",
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-04T22:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -500,7 +635,7 @@
       "first_seen_at": "2026-11-04T18:02:32.976928Z",
       "window_id": "2026-11-04T22:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -515,7 +650,7 @@
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -544,8 +679,8 @@
       "published_at": "2026-11-04T14:26:20Z",
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -559,8 +694,8 @@
       "published_at": "2026-11-04T14:24:41Z",
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -574,8 +709,8 @@
       "published_at": "2026-11-04T14:15:32Z",
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T22:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -605,7 +740,7 @@
       "first_seen_at": "2026-11-04T16:18:08.229702Z",
       "window_id": "2026-11-04T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -619,8 +754,8 @@
       "published_at": "2026-11-04T13:27:22Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -649,8 +784,8 @@
       "published_at": "2026-11-04T13:18:14Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -679,8 +814,8 @@
       "published_at": "2026-11-04T12:57:56Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -694,8 +829,8 @@
       "published_at": "2026-11-04T12:56:02Z",
       "first_seen_at": "2026-11-04T14:02:35.508255Z",
       "window_id": "2026-11-04T20:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "community_collection"
     },
     {
@@ -1205,7 +1340,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -1220,7 +1355,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -1265,7 +1400,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -1355,7 +1490,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T14:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -1430,7 +1565,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -1715,7 +1850,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -1984,8 +2119,8 @@
       "published_at": "2026-11-04T01:36:06Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2074,8 +2209,8 @@
       "published_at": "2026-11-04T00:09:35Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2089,8 +2224,8 @@
       "published_at": "2026-11-04T00:04:35Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2105,7 +2240,7 @@
       "first_seen_at": "2026-11-04T08:02:31.264957Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2119,8 +2254,8 @@
       "published_at": "2026-11-04T00:03:17Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2330,7 +2465,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2674,8 +2809,8 @@
       "published_at": "2026-11-03T16:19:29Z",
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T00:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2839,8 +2974,8 @@
       "published_at": "2026-11-03T15:12:35Z",
       "first_seen_at": "2026-11-03T16:02:38.091184Z",
       "window_id": "2026-11-03T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -2930,7 +3065,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -3319,8 +3454,8 @@
       "published_at": "2026-11-03T09:45:39Z",
       "first_seen_at": "2026-11-03T10:02:34.508118Z",
       "window_id": "2026-11-03T16:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -3679,8 +3814,8 @@
       "published_at": "2026-11-03T02:11:13Z",
       "first_seen_at": "2026-11-03T04:02:39.827634Z",
       "window_id": "2026-11-03T10:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -4100,7 +4235,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -5540,7 +5675,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-02T06:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T20:02:42.340622Z",
+      "rank_observed_at": "2026-11-04T22:02:36.385732Z",
       "time_basis": "publication"
     },
     {
@@ -5572,33 +5707,9 @@
       "feed_rank": 5,
       "rank_observed_at": "2026-11-02T10:02:39.607496Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "c9daecaff936a946df3606c0",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Democratic Rep. Stevens endorses Republican Rogers over rival El-Sayed in Michigan Senate election",
-      "url": "https://www.cnbc.com/2026/11/01/michigan-senate-stevens-rogers-endorsement-el-sayed.html",
-      "summary": "Haley Stevens had lost the Democratic nomination for Senate in Michigan to Abdul El-Sayed earlier this year.",
-      "author": "",
-      "published_at": "2026-11-01T21:06:42Z",
-      "first_seen_at": "2026-11-02T10:02:39.607496Z",
-      "window_id": "2026-11-02T04:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-02T10:02:39.607496Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-02T04:00+08:00",
-      "start": "2026-11-01T20:00:00Z",
-      "end": "2026-11-01T22:00:00Z",
-      "date": "2026-11-02",
-      "article_ids": [
-        "c9daecaff936a946df3606c0"
-      ]
-    },
     {
       "id": "2026-11-02T06:00+08:00",
       "start": "2026-11-01T22:00:00Z",
@@ -6227,6 +6338,7 @@
       "end": "2026-11-04T20:00:00Z",
       "date": "2026-11-05",
       "article_ids": [
+        "09cfeeb90dace29f652afbc1",
         "cb2679abe62247b690fe7614",
         "6d47cad70b64fbe15c579fdd",
         "cb7f43c412f092b8220e63f0",
@@ -6235,6 +6347,22 @@
         "fee08727dfadd7de2b60dc0b",
         "ad79685a7ca3c8620fcf56ed",
         "ba48420a5729be5ae7d3ecdc"
+      ]
+    },
+    {
+      "id": "2026-11-05T04:00+08:00",
+      "start": "2026-11-04T20:00:00Z",
+      "end": "2026-11-04T22:00:00Z",
+      "date": "2026-11-05",
+      "article_ids": [
+        "f85d14bb68e124082c8616ec",
+        "4bf6bbc00ead2a69309e21aa",
+        "dee315db1d0ab9dfdb9232e8",
+        "52eef9338f6b6d7861a88537",
+        "d0b6d87d777321b55e5f51d0",
+        "43050318418fe89a562bc8ec",
+        "eaff24ff0c766f6c69e6784b",
+        "0ee7d29d38121630a5e45e8b"
       ]
     }
   ],
