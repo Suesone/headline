@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T17:42:29.419855Z",
+  "generated_at": "2026-11-05T18:02:40.686368Z",
   "trigger": {
-    "event": "schedule",
-    "schedule": "0 */2 * * *",
-    "slot": "2026-11-06T00:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/42077166218"
+    "event": "workflow_dispatch",
+    "schedule": "",
+    "slot": "2026-11-06T02:00+08:00",
+    "source": "cloudflare-watchdog",
+    "requested_slot": "2026-11-05T18:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/42080358868"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-05T22:00+08:00",
+  "latest_window_id": "2026-11-06T00:00+08:00",
   "today": "2026-11-06",
-  "last_success_at": "2026-11-05T17:42:29.419855Z",
+  "last_success_at": "2026-11-05T18:02:40.686368Z",
   "status": "ok",
   "sources": [
     {
@@ -35,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T17:42:29.419855Z",
-      "last_success_at": "2026-11-05T17:42:29.419855Z",
+      "checked_at": "2026-11-05T18:02:40.686368Z",
+      "last_success_at": "2026-11-05T18:02:40.686368Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -65,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T17:42:29.419855Z",
-      "last_success_at": "2026-11-05T17:42:29.419855Z",
+      "checked_at": "2026-11-05T18:02:40.686368Z",
+      "last_success_at": "2026-11-05T18:02:40.686368Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -94,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T17:42:29.419855Z",
-      "last_success_at": "2026-11-05T17:42:29.419855Z",
+      "checked_at": "2026-11-05T18:02:40.686368Z",
+      "last_success_at": "2026-11-05T18:02:40.686368Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -123,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T17:42:29.419855Z",
-      "last_success_at": "2026-11-05T17:42:29.419855Z",
+      "checked_at": "2026-11-05T18:02:40.686368Z",
+      "last_success_at": "2026-11-05T18:02:40.686368Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -152,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T17:42:29.419855Z",
-      "last_success_at": "2026-11-05T17:42:29.419855Z",
+      "checked_at": "2026-11-05T18:02:40.686368Z",
+      "last_success_at": "2026-11-05T18:02:40.686368Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -190,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-05T17:42:29.419855Z",
-      "last_success_at": "2026-11-05T17:42:29.419855Z",
+      "checked_at": "2026-11-05T18:02:40.686368Z",
+      "last_success_at": "2026-11-05T18:02:40.686368Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -213,7 +215,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -228,7 +230,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -243,7 +245,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -258,7 +260,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -273,7 +275,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -288,7 +290,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -303,7 +305,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -318,7 +320,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -333,7 +335,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -348,7 +350,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -363,7 +365,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -378,7 +380,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -393,7 +395,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -423,7 +425,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -438,7 +440,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -453,7 +455,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -483,7 +485,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -498,7 +500,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -528,7 +530,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -543,7 +545,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -558,7 +560,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -573,7 +575,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -588,7 +590,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -603,7 +605,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -633,7 +635,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -648,7 +650,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -663,7 +665,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "community_collection"
     },
     {
@@ -693,7 +695,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -723,7 +725,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -783,7 +785,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -903,7 +905,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -918,7 +920,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -933,7 +935,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -963,22 +965,22 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
       "id": "605901a0a2549e61145dd526",
       "source_id": "bbc-world",
       "publisher": "BBC",
-      "title": "France holds new strikes and protests as unions demand immediate answers",
+      "title": "French protests see numbers surge as unions join strikes over high cost of living",
       "url": "https://www.bbc.co.uk/news/articles/ckx2qzv835pgo?at_campaign=rss&at_medium=RSS",
-      "summary": "Five of France's unions join a wave of strikes and protests in a national day of action.",
+      "summary": "The interior ministry estimates 600,000 people joined protests across France, while the unions say the number was far higher.",
       "author": "",
       "published_at": "2026-11-05T10:26:03Z",
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -993,7 +995,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1008,7 +1010,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1022,8 +1024,8 @@
       "published_at": "2026-11-05T10:00:00Z",
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1037,8 +1039,8 @@
       "published_at": "2026-11-05T10:00:00Z",
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1053,7 +1055,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1083,7 +1085,7 @@
       "first_seen_at": "2026-11-05T10:02:30.325515Z",
       "window_id": "2026-11-05T16:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1218,7 +1220,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T16:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1413,7 +1415,7 @@
       "first_seen_at": "2026-11-05T08:02:35.548679Z",
       "window_id": "2026-11-05T14:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1533,7 +1535,7 @@
       "first_seen_at": "2026-11-05T06:02:29.190226Z",
       "window_id": "2026-11-05T10:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1563,7 +1565,7 @@
       "first_seen_at": "2026-11-05T04:02:45.589052Z",
       "window_id": "2026-11-05T10:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1653,7 +1655,7 @@
       "first_seen_at": "2026-11-05T06:02:29.190226Z",
       "window_id": "2026-11-05T10:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1728,7 +1730,7 @@
       "first_seen_at": "2026-11-05T00:02:52.085602Z",
       "window_id": "2026-11-05T08:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1848,7 +1850,7 @@
       "first_seen_at": "2026-11-05T06:02:29.190226Z",
       "window_id": "2026-11-05T06:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -1968,7 +1970,7 @@
       "first_seen_at": "2026-11-04T22:02:36.385732Z",
       "window_id": "2026-11-05T04:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -2103,7 +2105,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -2163,7 +2165,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -2838,7 +2840,7 @@
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -3618,7 +3620,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -3993,7 +3995,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -4233,7 +4235,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -4833,7 +4835,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -6003,7 +6005,7 @@
       "first_seen_at": "2026-11-02T22:02:33.340246Z",
       "window_id": "2026-11-03T04:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T17:42:29.419855Z",
+      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
       "time_basis": "publication"
     },
     {
@@ -6095,33 +6097,9 @@
       "feed_rank": 9,
       "rank_observed_at": "2026-11-03T00:02:41.830644Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "1a9ecbe6fb6281f9808d23f1",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "Stock market after midterm elections: What S&P 500 history shows",
-      "url": "https://www.cnbc.com/2026/11/02/stock-market-after-midterm-elections-sp-500-history.html",
-      "summary": "Midterms historically precede a strong year for the S&P 500. What to know if Democrats win back Congress",
-      "author": "",
-      "published_at": "2026-11-02T17:57:35Z",
-      "first_seen_at": "2026-11-02T18:02:34.846192Z",
-      "window_id": "2026-11-03T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-04T10:33:17.984864Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-03T00:00+08:00",
-      "start": "2026-11-02T16:00:00Z",
-      "end": "2026-11-02T18:00:00Z",
-      "date": "2026-11-03",
-      "article_ids": [
-        "1a9ecbe6fb6281f9808d23f1"
-      ]
-    },
     {
       "id": "2026-11-03T02:00+08:00",
       "start": "2026-11-02T18:00:00Z",
@@ -6784,6 +6762,23 @@
         "f2cde24facf5c87c96c20402",
         "b0bd5931253474364d39f7e5",
         "620a5d8a46df00a232b40667"
+      ]
+    },
+    {
+      "id": "2026-11-06T00:00+08:00",
+      "start": "2026-11-05T16:00:00Z",
+      "end": "2026-11-05T18:00:00Z",
+      "date": "2026-11-06",
+      "article_ids": [
+        "c442ff971379e941dd377be7",
+        "c5eca471837235c6233f878f",
+        "78839e681d5cb6a97671d47f",
+        "28b04392a7f097f1cd27d5d0",
+        "b4c3734a33cbcacc0035551d",
+        "76a4db688e236748d4739f98",
+        "e687cad9ab43492611fd5ef7",
+        "3d5c0ad12e70c325351a4a6e",
+        "5b8b98eaf142424380f5f565"
       ]
     }
   ],
