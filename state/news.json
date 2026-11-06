@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-06T04:02:34.541189Z",
+  "generated_at": "2026-11-06T06:02:35.858405Z",
   "trigger": {
     "event": "workflow_dispatch",
     "schedule": "",
-    "slot": "2026-11-06T12:00+08:00",
+    "slot": "2026-11-06T14:00+08:00",
     "source": "cloudflare-watchdog",
-    "requested_slot": "2026-11-06T04:00:00Z",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/42160053168"
+    "requested_slot": "2026-11-06T06:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/42171909619"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-06T10:00+08:00",
+  "latest_window_id": "2026-11-06T12:00+08:00",
   "today": "2026-11-06",
-  "last_success_at": "2026-11-06T04:02:34.541189Z",
+  "last_success_at": "2026-11-06T06:02:35.858405Z",
   "status": "ok",
   "sources": [
     {
@@ -37,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-06T04:02:34.541189Z",
-      "last_success_at": "2026-11-06T04:02:34.541189Z",
+      "checked_at": "2026-11-06T06:02:35.858405Z",
+      "last_success_at": "2026-11-06T06:02:35.858405Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -67,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-06T04:02:34.541189Z",
-      "last_success_at": "2026-11-06T04:02:34.541189Z",
+      "checked_at": "2026-11-06T06:02:35.858405Z",
+      "last_success_at": "2026-11-06T06:02:35.858405Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -96,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-06T04:02:34.541189Z",
-      "last_success_at": "2026-11-06T04:02:34.541189Z",
+      "checked_at": "2026-11-06T06:02:35.858405Z",
+      "last_success_at": "2026-11-06T06:02:35.858405Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -125,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-06T04:02:34.541189Z",
-      "last_success_at": "2026-11-06T04:02:34.541189Z",
+      "checked_at": "2026-11-06T06:02:35.858405Z",
+      "last_success_at": "2026-11-06T06:02:35.858405Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -154,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-06T04:02:34.541189Z",
-      "last_success_at": "2026-11-06T04:02:34.541189Z",
+      "checked_at": "2026-11-06T06:02:35.858405Z",
+      "last_success_at": "2026-11-06T06:02:35.858405Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -192,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-06T04:02:34.541189Z",
-      "last_success_at": "2026-11-06T04:02:34.541189Z",
+      "checked_at": "2026-11-06T06:02:35.858405Z",
+      "last_success_at": "2026-11-06T06:02:35.858405Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -203,6 +203,186 @@
     }
   ],
   "articles": [
+    {
+      "id": "808d72b2a683e7e8fa1b77d7",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261106de71431"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "路上で突然平手打ちの暴行疑い逮捕 女性ばかり7人被害か",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261106de71431",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-06T05:50:11Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "3c41f8ec450cfb3408a855cf",
+      "identities": [
+        "cnbc-world:108530110"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "India as an AI hedge? The country's stocks could see robust inflows as markets globally tank",
+      "url": "https://www.cnbc.com/2026/11/06/india-ai-tech-hedge-nifty50.html",
+      "summary": "Over the last month, India's benchmark Nifty 50 has gained nearly 8%, outperforming global tech-heavy markets such as South Korea, Taiwan and the U.S.",
+      "author": "",
+      "published_at": "2026-11-06T05:41:51Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "28177ca39b824ed42ff029bb",
+      "identities": [
+        "cnbc-world:108508711"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "The world's best airline is updating its business and first-class experience",
+      "url": "https://www.cnbc.com/2026/11/06/singapore-airlines-new-first-business-class-a350-starlink.html",
+      "summary": "Singapore Airlines is rolling out new onboard seating, dining and entertainment options that are part of an over $2 billion Singapore dollar investment.",
+      "author": "",
+      "published_at": "2026-11-06T05:36:10Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "304734a8c4d6fef359e73480",
+      "identities": [
+        "cnbc-world:108529377"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Renewed U.S.-Iran tension could push oil past $100: Rapidan Energy",
+      "url": "https://www.cnbc.com/2026/11/06/us-iran-war-trump-hormuz-oil-midterms.html",
+      "summary": "Bob McNally predicts that both Brent and West Texas Intermediate futures will jump above $100.",
+      "author": "",
+      "published_at": "2026-11-06T05:27:24Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "fa3d4803402119e7071188ce",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261106de71419"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "消費税減税法案“所得応じた支援金 勤労者の3割以上”高市首相",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261106de71419",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-06T05:09:34Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "1d9917e577fca659ca95c006",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261106de71359"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "消費税減税法案 衆議院を通過 自民・維新などの賛成多数で可決",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261106de71359",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-06T05:06:57Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "ef1961f5714c1a1068bbe121",
+      "identities": [
+        "cnbc-world:108530432"
+      ],
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Oil prices rise as investors weigh renewed U.S.-Iran conflict risks after midterm elections",
+      "url": "https://www.cnbc.com/2026/11/06/oil-price-today-brent-wti.html",
+      "summary": "Oil prices rose Friday as investors weighed the risk of renewed U.S.-Iran military escalation after the midterms, alongside prospects for a diplomatic breakthrough.",
+      "author": "",
+      "published_at": "2026-11-06T05:06:56Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "67c1e13eb1fab82c1e486697",
+      "identities": [
+        "npr-news:https://www.npr.org/2026/11/06/nx-s1-6031990/trump-arch-planning-commission-injunction"
+      ],
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "A judge blocks construction of Trump's arch moments after it won federal approval",
+      "url": "https://www.npr.org/2026/11/06/nx-s1-6031990/trump-arch-planning-commission-injunction",
+      "summary": "The Trump administration hoped to begin construction immediately after a federal panel approved its arch late Thursday. But just after midnight, the judge issued an order blocking work for 14 days.",
+      "author": "Rachel Treisman",
+      "published_at": "2026-11-06T05:05:43Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "d8c89ad845bd877416905d72",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261105de71148"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "なぜ共和党はここまで大敗した？トランプ大統領の次の一手は？",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261105de71148",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-06T04:41:54Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "abbc646211e49cf99676b467",
+      "identities": [
+        "nhk-hatena:https://news.web.nhk/newsweb/na/nd-20261106de71388"
+      ],
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "武部農相 公共事業受注企業から選挙中に受けた寄付を返金へ",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261106de71388",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-06T04:13:45Z",
+      "first_seen_at": "2026-11-06T06:02:35.858405Z",
+      "window_id": "2026-11-06T12:00+08:00",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
+      "time_basis": "community_collection"
+    },
     {
       "id": "463e654cf7d8b78856d10b99",
       "identities": [
@@ -218,7 +398,7 @@
       "first_seen_at": "2026-11-06T03:45:01.142295Z",
       "window_id": "2026-11-06T10:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -235,8 +415,8 @@
       "published_at": "2026-11-06T02:48:23Z",
       "first_seen_at": "2026-11-06T03:45:01.142295Z",
       "window_id": "2026-11-06T10:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "community_collection"
     },
     {
@@ -254,7 +434,7 @@
       "first_seen_at": "2026-11-06T03:45:01.142295Z",
       "window_id": "2026-11-06T10:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -271,8 +451,8 @@
       "published_at": "2026-11-06T01:41:32Z",
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -291,7 +471,7 @@
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -309,7 +489,7 @@
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -326,8 +506,8 @@
       "published_at": "2026-11-06T01:13:40Z",
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "community_collection"
     },
     {
@@ -344,8 +524,8 @@
       "published_at": "2026-11-06T01:03:14Z",
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "community_collection"
     },
     {
@@ -362,8 +542,8 @@
       "published_at": "2026-11-06T01:01:39Z",
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "community_collection"
     },
     {
@@ -380,8 +560,8 @@
       "published_at": "2026-11-06T00:16:53Z",
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -399,7 +579,7 @@
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -416,8 +596,8 @@
       "published_at": "2026-11-06T00:03:45Z",
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -435,7 +615,7 @@
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -453,7 +633,7 @@
       "first_seen_at": "2026-11-06T02:02:36.548319Z",
       "window_id": "2026-11-06T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -488,8 +668,8 @@
       "published_at": "2026-11-05T23:52:48Z",
       "first_seen_at": "2026-11-06T00:02:32.277822Z",
       "window_id": "2026-11-06T06:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -506,8 +686,8 @@
       "published_at": "2026-11-05T23:52:14Z",
       "first_seen_at": "2026-11-06T00:02:32.277822Z",
       "window_id": "2026-11-06T06:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "community_collection"
     },
     {
@@ -524,8 +704,8 @@
       "published_at": "2026-11-05T23:34:36Z",
       "first_seen_at": "2026-11-06T00:02:32.277822Z",
       "window_id": "2026-11-06T06:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -615,7 +795,7 @@
       "first_seen_at": "2026-11-05T22:56:30.652150Z",
       "window_id": "2026-11-06T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -634,7 +814,7 @@
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -651,8 +831,8 @@
       "published_at": "2026-11-05T21:43:33Z",
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -670,7 +850,7 @@
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -741,8 +921,8 @@
       "published_at": "2026-11-05T20:17:16Z",
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -780,7 +960,7 @@
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -852,7 +1032,7 @@
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -905,8 +1085,8 @@
       "published_at": "2026-11-05T18:30:16Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -995,8 +1175,8 @@
       "published_at": "2026-11-05T18:01:57Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1014,7 +1194,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1032,7 +1212,7 @@
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1068,7 +1248,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1103,8 +1283,8 @@
       "published_at": "2026-11-05T16:30:00Z",
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1157,8 +1337,8 @@
       "published_at": "2026-11-05T16:15:02Z",
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1284,8 +1464,8 @@
       "published_at": "2026-11-05T15:00:00Z",
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1411,7 +1591,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1429,7 +1609,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1464,8 +1644,8 @@
       "published_at": "2026-11-05T12:53:14Z",
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1917,7 +2097,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1972,7 +2152,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -1991,7 +2171,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -2100,7 +2280,7 @@
       "first_seen_at": "2026-11-05T10:02:30.325515Z",
       "window_id": "2026-11-05T16:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -2297,8 +2477,8 @@
       "published_at": "2026-11-05T08:07:43Z",
       "first_seen_at": "2026-11-05T08:37:15.506909Z",
       "window_id": "2026-11-05T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -2876,7 +3056,7 @@
       "first_seen_at": "2026-11-05T00:02:52.085602Z",
       "window_id": "2026-11-05T08:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -3166,7 +3346,7 @@
       "first_seen_at": "2026-11-04T22:02:36.385732Z",
       "window_id": "2026-11-05T04:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -3328,7 +3508,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -3400,7 +3580,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -4214,7 +4394,7 @@
       "first_seen_at": "2026-11-04T10:33:17.984864Z",
       "window_id": "2026-11-04T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -5152,7 +5332,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -5894,7 +6074,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-06T04:02:34.541189Z",
+      "rank_observed_at": "2026-11-06T06:02:35.858405Z",
       "time_basis": "publication"
     },
     {
@@ -7314,36 +7494,9 @@
       "feed_rank": 9,
       "rank_observed_at": "2026-11-03T14:02:32.034654Z",
       "time_basis": "community_collection"
-    },
-    {
-      "id": "00c231716e6b926ee676cc29",
-      "identities": [
-        "bbc-world:https://www.bbc.co.uk/news/articles/cq2d6k4r5n9ro#0"
-      ],
-      "source_id": "bbc-world",
-      "publisher": "BBC",
-      "title": "Americans head to the polls for elections that could define Trump's closing chapter",
-      "url": "https://www.bbc.co.uk/news/articles/cq2d6k4r5n9ro?at_campaign=rss&at_medium=RSS",
-      "summary": "The midterms will shape Congress for the last years of his presidency, writes Sarah Smith, but they are also a test of what politics may look like without him.",
-      "author": "",
-      "published_at": "2026-11-03T05:00:43Z",
-      "first_seen_at": "2026-11-03T08:02:31.547592Z",
-      "window_id": "2026-11-03T12:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-03T10:02:34.508118Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-03T12:00+08:00",
-      "start": "2026-11-03T04:00:00Z",
-      "end": "2026-11-03T06:00:00Z",
-      "date": "2026-11-03",
-      "article_ids": [
-        "00c231716e6b926ee676cc29"
-      ]
-    },
     {
       "id": "2026-11-03T14:00+08:00",
       "start": "2026-11-03T06:00:00Z",
@@ -8015,6 +8168,24 @@
         "463e654cf7d8b78856d10b99",
         "e6b31ca23257f6a2cbb3c332",
         "c54ef3156a2550f023422880"
+      ]
+    },
+    {
+      "id": "2026-11-06T12:00+08:00",
+      "start": "2026-11-06T04:00:00Z",
+      "end": "2026-11-06T06:00:00Z",
+      "date": "2026-11-06",
+      "article_ids": [
+        "808d72b2a683e7e8fa1b77d7",
+        "3c41f8ec450cfb3408a855cf",
+        "28177ca39b824ed42ff029bb",
+        "304734a8c4d6fef359e73480",
+        "fa3d4803402119e7071188ce",
+        "1d9917e577fca659ca95c006",
+        "ef1961f5714c1a1068bbe121",
+        "67c1e13eb1fab82c1e486697",
+        "d8c89ad845bd877416905d72",
+        "abbc646211e49cf99676b467"
       ]
     }
   ],
