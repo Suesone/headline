@@ -1,12 +1,14 @@
 {
-  "generated_at": "2026-11-05T22:56:30.652150Z",
+  "generated_at": "2026-11-06T00:02:32.277822Z",
   "status": "ok",
-  "last_success_at": "2026-11-05T22:56:30.652150Z",
+  "last_success_at": "2026-11-06T00:02:32.277822Z",
   "trigger": {
-    "event": "schedule",
-    "schedule": "0 */2 * * *",
-    "slot": "2026-11-06T06:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/42125600611"
+    "event": "workflow_dispatch",
+    "schedule": "",
+    "slot": "2026-11-06T08:00+08:00",
+    "source": "cloudflare-watchdog",
+    "requested_slot": "2026-11-06T00:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/42133827508"
   },
   "sources": [
     {

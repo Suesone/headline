@@ -1,17 +1,19 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T22:56:30.652150Z",
+  "generated_at": "2026-11-06T00:02:32.277822Z",
   "trigger": {
-    "event": "schedule",
-    "schedule": "0 */2 * * *",
-    "slot": "2026-11-06T06:00+08:00",
-    "run_url": "https://github.com/Suesone/headline/actions/runs/42125600611"
+    "event": "workflow_dispatch",
+    "schedule": "",
+    "slot": "2026-11-06T08:00+08:00",
+    "source": "cloudflare-watchdog",
+    "requested_slot": "2026-11-06T00:00:00Z",
+    "run_url": "https://github.com/Suesone/headline/actions/runs/42133827508"
   },
   "timezone": "Asia/Shanghai",
   "window_hours": 2,
-  "latest_window_id": "2026-11-06T04:00+08:00",
+  "latest_window_id": "2026-11-06T06:00+08:00",
   "today": "2026-11-06",
-  "last_success_at": "2026-11-05T22:56:30.652150Z",
+  "last_success_at": "2026-11-06T00:02:32.277822Z",
   "status": "ok",
   "sources": [
     {
@@ -35,8 +37,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T22:56:30.652150Z",
-      "last_success_at": "2026-11-05T22:56:30.652150Z",
+      "checked_at": "2026-11-06T00:02:32.277822Z",
+      "last_success_at": "2026-11-06T00:02:32.277822Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -65,8 +67,8 @@
       "max_feed_age_hours": 96,
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T22:56:30.652150Z",
-      "last_success_at": "2026-11-05T22:56:30.652150Z",
+      "checked_at": "2026-11-06T00:02:32.277822Z",
+      "last_success_at": "2026-11-06T00:02:32.277822Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -94,8 +96,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T22:56:30.652150Z",
-      "last_success_at": "2026-11-05T22:56:30.652150Z",
+      "checked_at": "2026-11-06T00:02:32.277822Z",
+      "last_success_at": "2026-11-06T00:02:32.277822Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -123,8 +125,8 @@
       ],
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T22:56:30.652150Z",
-      "last_success_at": "2026-11-05T22:56:30.652150Z",
+      "checked_at": "2026-11-06T00:02:32.277822Z",
+      "last_success_at": "2026-11-06T00:02:32.277822Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -152,8 +154,8 @@
       "note": "社区目录收录的卫报官方 World RSS；仅展示标题与原文链接。",
       "max_items": 10,
       "status": "ok",
-      "checked_at": "2026-11-05T22:56:30.652150Z",
-      "last_success_at": "2026-11-05T22:56:30.652150Z",
+      "checked_at": "2026-11-06T00:02:32.277822Z",
+      "last_success_at": "2026-11-06T00:02:32.277822Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -190,8 +192,8 @@
       "license": "原标题归 NHK；社区收录不授予额外内容权利",
       "note": "Hatena 社区收录的 NHK 日语新闻 RSS，链接直达 NHK 原文；仅标题，不保存摘要或评论，不抓取全文。时间为社区收录时间，可能包含近期重新被关注的旧文；并非 NHK 完整新闻流。",
       "status": "ok",
-      "checked_at": "2026-11-05T22:56:30.652150Z",
-      "last_success_at": "2026-11-05T22:56:30.652150Z",
+      "checked_at": "2026-11-06T00:02:32.277822Z",
+      "last_success_at": "2026-11-06T00:02:32.277822Z",
       "received": 10,
       "skipped": 0,
       "fetch_limit": 10,
@@ -201,6 +203,111 @@
     }
   ],
   "articles": [
+    {
+      "id": "20942b863ffea7b1f4338282",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Costco is taking aim at its May record high — how it got here and where's it going",
+      "url": "https://www.cnbc.com/investingclub/2026/11/05/costco-is-taking-aim-at-its-may-record-high-how-it-got-here-and-wheres-going.html",
+      "summary": "Costco is finally back.",
+      "author": "",
+      "published_at": "2026-11-05T23:56:24Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "061eda581f466161f897cb89",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "Melania Trump touts rare agreement she brokered between Russia and Ukraine",
+      "url": "https://www.npr.org/2026/11/05/nx-s1-6030662/melania-trump-touts-rare-agreement-she-brokered-between-russia-and-ukraine",
+      "summary": "The six-day pause from the Russian-occupied city of Oleshky comes as the administration ramps up efforts to secure an agreement to end the war in Ukraine.",
+      "author": "Franco Ordoñez",
+      "published_at": "2026-11-05T23:52:48Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "0fd87070a83bf82393d748a1",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "9月の実質賃金9か月連続プラス 夏のボーナスも5年連続増",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261105de71108",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-05T23:52:14Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "9db4dd8d8e95ce5729e14ea1",
+      "source_id": "npr-news",
+      "publisher": "NPR",
+      "title": "How North Carolina Democrats flipped several House seats in historically GOP districts",
+      "url": "https://www.npr.org/2026/11/05/nx-s1-6031719/north-carolina-democrats-flip-house-seats-republican-districts",
+      "summary": "All of these seats were in districts redrawn in 2023 to favor Republican candidates.",
+      "author": "Adam Wagner",
+      "published_at": "2026-11-05T23:34:36Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "62ea05b64eab44fb67a7dc54",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "メラニア夫人“ウクライナの局地的な停戦を永続的な平和へ”",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261106de71316",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-05T23:24:16Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "community_collection"
+    },
+    {
+      "id": "f39129f1ee811ecf9aff4d9b",
+      "source_id": "cnbc-world",
+      "publisher": "CNBC",
+      "title": "Jim Cramer says the AI sell-off isn't over, but it isn't another dot-com crash",
+      "url": "https://www.cnbc.com/2026/11/05/jim-cramer-ai-stocks-sell-off.html",
+      "summary": "Cramer warned that the sell-off in AI stocks likely has further to run.",
+      "author": "",
+      "published_at": "2026-11-05T23:17:51Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "publication"
+    },
+    {
+      "id": "9c808eec23492529877962d0",
+      "source_id": "nhk-hatena",
+      "publisher": "NHK",
+      "title": "原発賠償で国から東電への支援15兆円余 回収に最長39年と試算",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261106de71317",
+      "summary": "",
+      "author": "",
+      "published_at": "2026-11-05T23:00:25Z",
+      "first_seen_at": "2026-11-06T00:02:32.277822Z",
+      "window_id": "2026-11-06T06:00+08:00",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
+      "time_basis": "community_collection"
+    },
     {
       "id": "3935fb19eec9af6952036029",
       "source_id": "nhk-hatena",
@@ -212,8 +319,8 @@
       "published_at": "2026-11-05T22:41:14Z",
       "first_seen_at": "2026-11-05T22:56:30.652150Z",
       "window_id": "2026-11-06T06:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -228,7 +335,7 @@
       "first_seen_at": "2026-11-05T22:56:30.652150Z",
       "window_id": "2026-11-06T06:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -242,8 +349,8 @@
       "published_at": "2026-11-05T21:56:00Z",
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 1,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -258,7 +365,7 @@
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -273,7 +380,7 @@
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -287,8 +394,8 @@
       "published_at": "2026-11-05T21:09:56Z",
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -302,8 +409,8 @@
       "published_at": "2026-11-05T20:20:55Z",
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -317,8 +424,8 @@
       "published_at": "2026-11-05T20:20:10Z",
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -333,7 +440,7 @@
       "first_seen_at": "2026-11-05T22:02:30.083267Z",
       "window_id": "2026-11-06T04:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -347,8 +454,8 @@
       "published_at": "2026-11-05T19:58:40Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -363,7 +470,7 @@
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -377,8 +484,8 @@
       "published_at": "2026-11-05T19:32:37Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -408,7 +515,7 @@
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -423,7 +530,7 @@
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -437,8 +544,8 @@
       "published_at": "2026-11-05T18:40:18Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -452,8 +559,8 @@
       "published_at": "2026-11-05T18:39:31Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -467,8 +574,8 @@
       "published_at": "2026-11-05T18:30:16Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 3,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -482,8 +589,8 @@
       "published_at": "2026-11-05T18:25:59Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "community_collection"
     },
     {
@@ -542,8 +649,8 @@
       "published_at": "2026-11-05T18:01:57Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T02:00+08:00",
-      "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 4,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -558,7 +665,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -572,8 +679,8 @@
       "published_at": "2026-11-05T17:39:48Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-06T00:00+08:00",
-      "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 2,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -603,7 +710,7 @@
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -632,8 +739,8 @@
       "published_at": "2026-11-05T16:30:00Z",
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
-      "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 5,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -677,8 +784,8 @@
       "published_at": "2026-11-05T16:15:02Z",
       "first_seen_at": "2026-11-05T17:42:29.419855Z",
       "window_id": "2026-11-06T00:00+08:00",
-      "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 6,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -723,7 +830,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -738,7 +845,7 @@
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -782,8 +889,8 @@
       "published_at": "2026-11-05T15:00:00Z",
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T22:00+08:00",
-      "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 7,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -888,7 +995,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -903,7 +1010,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 5,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -933,7 +1040,7 @@
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1007,8 +1114,8 @@
       "published_at": "2026-11-05T12:24:14Z",
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
-      "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 8,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1052,8 +1159,8 @@
       "published_at": "2026-11-05T12:02:24Z",
       "first_seen_at": "2026-11-05T14:02:37.093882Z",
       "window_id": "2026-11-05T20:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1082,8 +1189,8 @@
       "published_at": "2026-11-05T11:45:35Z",
       "first_seen_at": "2026-11-05T20:02:31.248150Z",
       "window_id": "2026-11-05T18:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1157,8 +1264,8 @@
       "published_at": "2026-11-05T11:21:35Z",
       "first_seen_at": "2026-11-05T16:12:48.364791Z",
       "window_id": "2026-11-05T18:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1293,7 +1400,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1308,7 +1415,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1353,7 +1460,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 4,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1368,7 +1475,7 @@
       "first_seen_at": "2026-11-05T12:02:40.343836Z",
       "window_id": "2026-11-05T18:00+08:00",
       "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1458,7 +1565,7 @@
       "first_seen_at": "2026-11-05T10:02:30.325515Z",
       "window_id": "2026-11-05T16:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -1622,8 +1729,8 @@
       "published_at": "2026-11-05T08:07:43Z",
       "first_seen_at": "2026-11-05T08:37:15.506909Z",
       "window_id": "2026-11-05T16:00+08:00",
-      "feed_rank": 7,
-      "rank_observed_at": "2026-11-05T12:02:40.343836Z",
+      "feed_rank": 9,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -2027,8 +2134,8 @@
       "published_at": "2026-11-05T02:09:23Z",
       "first_seen_at": "2026-11-05T06:02:29.190226Z",
       "window_id": "2026-11-05T10:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T18:02:40.686368Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -2087,8 +2194,8 @@
       "published_at": "2026-11-05T00:04:36Z",
       "first_seen_at": "2026-11-05T00:33:55.932499Z",
       "window_id": "2026-11-05T08:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T10:02:30.325515Z",
+      "feed_rank": 10,
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -2103,7 +2210,7 @@
       "first_seen_at": "2026-11-05T00:02:52.085602Z",
       "window_id": "2026-11-05T08:00+08:00",
       "feed_rank": 3,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -2343,7 +2450,7 @@
       "first_seen_at": "2026-11-04T22:02:36.385732Z",
       "window_id": "2026-11-05T04:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -2478,7 +2585,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 8,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -2538,7 +2645,7 @@
       "first_seen_at": "2026-11-04T20:02:42.340622Z",
       "window_id": "2026-11-05T02:00+08:00",
       "feed_rank": 1,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -3993,7 +4100,7 @@
       "first_seen_at": "2026-11-04T06:02:48.287708Z",
       "window_id": "2026-11-04T12:00+08:00",
       "feed_rank": 2,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -4368,7 +4475,7 @@
       "first_seen_at": "2026-11-04T02:02:31.701867Z",
       "window_id": "2026-11-04T08:00+08:00",
       "feed_rank": 6,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -4608,7 +4715,7 @@
       "first_seen_at": "2026-11-03T22:37:02.433752Z",
       "window_id": "2026-11-04T06:00+08:00",
       "feed_rank": 9,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -5208,7 +5315,7 @@
       "first_seen_at": "2026-11-03T14:02:32.034654Z",
       "window_id": "2026-11-03T20:00+08:00",
       "feed_rank": 10,
-      "rank_observed_at": "2026-11-05T22:56:30.652150Z",
+      "rank_observed_at": "2026-11-06T00:02:32.277822Z",
       "time_basis": "publication"
     },
     {
@@ -6140,81 +6247,9 @@
       "feed_rank": 9,
       "rank_observed_at": "2026-11-03T17:24:31.966957Z",
       "time_basis": "publication"
-    },
-    {
-      "id": "cd64d1f7e137f80ffdea30de",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "ロードサービス利用者の個人情報 最大約550万件漏えい",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69807",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-02T23:56:48Z",
-      "first_seen_at": "2026-11-03T00:02:41.830644Z",
-      "window_id": "2026-11-03T06:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-03T06:02:33.059899Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "ccd1aa865db8e7d17329208a",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "「ネットマイル」 最大で約549万人分の個人情報漏えいの可能性",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261102de69784",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-02T23:56:19Z",
-      "first_seen_at": "2026-11-03T00:02:41.830644Z",
-      "window_id": "2026-11-03T06:00+08:00",
-      "feed_rank": 8,
-      "rank_observed_at": "2026-11-03T02:02:34.239569Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "6ad7c576821bea662a533954",
-      "source_id": "nhk-hatena",
-      "publisher": "NHK",
-      "title": "米アンソロピック 売り上げ13倍もAI開発への支出は140兆円余に",
-      "url": "https://news.web.nhk/newsweb/na/nd-20261103de69869",
-      "summary": "",
-      "author": "",
-      "published_at": "2026-11-02T23:52:35Z",
-      "first_seen_at": "2026-11-03T00:02:41.830644Z",
-      "window_id": "2026-11-03T06:00+08:00",
-      "feed_rank": 9,
-      "rank_observed_at": "2026-11-03T02:02:34.239569Z",
-      "time_basis": "community_collection"
-    },
-    {
-      "id": "6db55228422a75bb45d3797c",
-      "source_id": "cnbc-world",
-      "publisher": "CNBC",
-      "title": "CNBC's The China Connection newsletter: Nvidia's humanoid push relies on China-made robot hands",
-      "url": "https://www.cnbc.com/2026/11/02/cnbcs-the-china-connection-newsletter-nvidias-humanoid-push-relies-on-china-made-robot-hands.html",
-      "summary": "The U.S. chipmaker's humanoid robot systems feature mechanical hands from China-linked startups.",
-      "author": "",
-      "published_at": "2026-11-02T23:00:01Z",
-      "first_seen_at": "2026-11-03T00:02:41.830644Z",
-      "window_id": "2026-11-03T06:00+08:00",
-      "feed_rank": 10,
-      "rank_observed_at": "2026-11-04T02:02:31.701867Z",
-      "time_basis": "publication"
     }
   ],
   "windows": [
-    {
-      "id": "2026-11-03T06:00+08:00",
-      "start": "2026-11-02T22:00:00Z",
-      "end": "2026-11-03T00:00:00Z",
-      "date": "2026-11-03",
-      "article_ids": [
-        "cd64d1f7e137f80ffdea30de",
-        "ccd1aa865db8e7d17329208a",
-        "6ad7c576821bea662a533954",
-        "6db55228422a75bb45d3797c"
-      ]
-    },
     {
       "id": "2026-11-03T08:00+08:00",
       "start": "2026-11-03T00:00:00Z",
@@ -6887,6 +6922,23 @@
         "a11ca35589cef8aef61bf25f",
         "ac234d5bde8ff435dc903b47",
         "573830bc45fb4931f97ed949"
+      ]
+    },
+    {
+      "id": "2026-11-06T06:00+08:00",
+      "start": "2026-11-05T22:00:00Z",
+      "end": "2026-11-06T00:00:00Z",
+      "date": "2026-11-06",
+      "article_ids": [
+        "20942b863ffea7b1f4338282",
+        "061eda581f466161f897cb89",
+        "0fd87070a83bf82393d748a1",
+        "9db4dd8d8e95ce5729e14ea1",
+        "62ea05b64eab44fb67a7dc54",
+        "f39129f1ee811ecf9aff4d9b",
+        "9c808eec23492529877962d0",
+        "3935fb19eec9af6952036029",
+        "c4dfca13eee552fc0224bec6"
       ]
     }
   ],

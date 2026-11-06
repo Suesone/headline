@@ -370,13 +370,27 @@
       },
       "articles": 400,
       "failed_sources": []
+    },
+    {
+      "at": "2026-11-06T00:02:32.277822Z",
+      "slot": "2026-11-06T08:00+08:00",
+      "status": "ok",
+      "ai": "on_demand",
+      "trigger": {
+        "event": "workflow_dispatch",
+        "schedule": "",
+        "slot": "2026-11-06T08:00+08:00",
+        "source": "cloudflare-watchdog",
+        "requested_slot": "2026-11-06T00:00:00Z",
+        "run_url": "https://github.com/Suesone/headline/actions/runs/42133827508"
+      },
+      "articles": 403,
+      "failed_sources": []
     }
   ],
   "note": "更新频率变更为两小时，重新开始覆盖观察",
   "window_hours": 2,
   "observation_complete": true,
-  "missing_slots": [
-    "2026-11-04T06:00+08:00"
-  ],
-  "healthy": false
+  "missing_slots": [],
+  "healthy": true
 }
