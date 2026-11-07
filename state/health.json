@@ -2,20 +2,6 @@
   "started_at": "2026-10-18T13:28:49.481265Z",
   "runs": [
     {
-      "at": "2026-11-05T08:37:15.506909Z",
-      "slot": "2026-11-05T16:00+08:00",
-      "status": "ok",
-      "ai": "on_demand",
-      "trigger": {
-        "event": "schedule",
-        "schedule": "0 */2 * * *",
-        "slot": "2026-11-05T16:00+08:00",
-        "run_url": "https://github.com/Suesone/headline/actions/runs/41995817091"
-      },
-      "articles": 373,
-      "failed_sources": []
-    },
-    {
       "at": "2026-11-05T10:02:30.325515Z",
       "slot": "2026-11-05T18:00+08:00",
       "status": "ok",
@@ -383,6 +369,22 @@
         "run_url": "https://github.com/Suesone/headline/actions/runs/42353728545"
       },
       "articles": 359,
+      "failed_sources": []
+    },
+    {
+      "at": "2026-11-07T10:02:29.340472Z",
+      "slot": "2026-11-07T18:00+08:00",
+      "status": "ok",
+      "ai": "on_demand",
+      "trigger": {
+        "event": "workflow_dispatch",
+        "schedule": "",
+        "slot": "2026-11-07T18:00+08:00",
+        "source": "cloudflare-watchdog",
+        "requested_slot": "2026-11-07T10:00:00Z",
+        "run_url": "https://github.com/Suesone/headline/actions/runs/42362203335"
+      },
+      "articles": 363,
       "failed_sources": []
     }
   ],
